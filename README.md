@@ -1,4 +1,6 @@
-# Te Reo Māori *The Māori language*
+# Te Reo Māori 
+
+*The Māori language*
 
 This is a top-down 2D puzzle game focused on exploring a museum to gather information for a school project!
 
