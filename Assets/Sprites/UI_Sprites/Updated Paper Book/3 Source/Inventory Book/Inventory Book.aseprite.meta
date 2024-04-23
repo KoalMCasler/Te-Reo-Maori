@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -4110,6 +4112,7 @@ ScriptedImporter:
     cells:
     - name: Inventory Book_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4118,6 +4121,7 @@ ScriptedImporter:
       spriteId: 5cb2f13b4260b9b43aef986d69bed39c
     - name: Inventory Book_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4126,6 +4130,7 @@ ScriptedImporter:
       spriteId: 4673b199ea43ee7499e68ffa13ad9462
     - name: Inventory Book_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4134,6 +4139,7 @@ ScriptedImporter:
       spriteId: 61393893c8879234ca963701968e72bc
     - name: Inventory Book_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4142,6 +4148,7 @@ ScriptedImporter:
       spriteId: 5f214d73fd066b541b6eef8ad66ce86d
     - name: Inventory Book_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4150,6 +4157,7 @@ ScriptedImporter:
       spriteId: ddc56edd90aadf442b782562e5eaa9e9
     - name: Inventory Book_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4158,6 +4166,7 @@ ScriptedImporter:
       spriteId: 8717a1ba6ce4a2a49a35f5b6fd4a9502
     - name: Inventory Book_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4166,6 +4175,7 @@ ScriptedImporter:
       spriteId: 7866d57cbd594e54cbe07e72d7fc6e8d
     - name: Inventory Book_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4174,6 +4184,7 @@ ScriptedImporter:
       spriteId: ac0d3e19aebfb01418d68d596eac8d14
     - name: Inventory Book_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4182,6 +4193,7 @@ ScriptedImporter:
       spriteId: 157cd48165998794fbc9604ca8ec99fe
     - name: Inventory Book_Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4190,6 +4202,7 @@ ScriptedImporter:
       spriteId: 6977852b2f02dc9488bb2d0e6896eea9
     - name: Inventory Book_Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4198,6 +4211,7 @@ ScriptedImporter:
       spriteId: ccc69b987dca9004f9fff20198150110
     - name: Inventory Book_Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4206,6 +4220,7 @@ ScriptedImporter:
       spriteId: e603649db02315840931bf3435bf9098
     - name: Inventory Book_Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4214,6 +4229,7 @@ ScriptedImporter:
       spriteId: c853d8cceb05fd84d9c67154e41dbe7e
     - name: Inventory Book_Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4222,6 +4238,7 @@ ScriptedImporter:
       spriteId: 63571e77d28c2fa42811f1c2b7bc7c46
     - name: Inventory Book_Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4230,6 +4247,7 @@ ScriptedImporter:
       spriteId: fdb72f5bd39a3d841bdbb5710b5473c0
     - name: Inventory Book_Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4238,6 +4256,7 @@ ScriptedImporter:
       spriteId: cc597448a82ec8d4a8822634965f48bf
     - name: Inventory Book_Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4246,6 +4265,7 @@ ScriptedImporter:
       spriteId: 56dcb2337752ae54b829c4119b2ad972
     - name: Inventory Book_Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4254,6 +4274,7 @@ ScriptedImporter:
       spriteId: 0cd49040dec3f93468e2b1d1592915f3
     - name: Inventory Book_Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4262,6 +4283,7 @@ ScriptedImporter:
       spriteId: 1deebb0c9007db74cbdc5af466b534ec
     - name: Inventory Book_Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4270,6 +4292,7 @@ ScriptedImporter:
       spriteId: 87ae6c3da45bbaa48aaed1db6ca823d9
     - name: Inventory Book_Frame_20
       frameIndex: 20
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4278,6 +4301,7 @@ ScriptedImporter:
       spriteId: b0178ec932454b843a6f3f7afc30190f
     - name: Inventory Book_Frame_21
       frameIndex: 21
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4286,6 +4310,7 @@ ScriptedImporter:
       spriteId: f838e7224e36bfc4b8b1514e6cae3b0a
     - name: Inventory Book_Frame_22
       frameIndex: 22
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4294,6 +4319,7 @@ ScriptedImporter:
       spriteId: fdcfe05e59cad7548b294bf99fd61a00
     - name: Inventory Book_Frame_23
       frameIndex: 23
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4302,6 +4328,7 @@ ScriptedImporter:
       spriteId: e05d78f80bd922a40ab4e82c7982b8fd
     - name: Inventory Book_Frame_24
       frameIndex: 24
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4310,6 +4337,7 @@ ScriptedImporter:
       spriteId: aa0ff5a95233d554aa90500fd0d1c623
     - name: Inventory Book_Frame_25
       frameIndex: 25
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4318,6 +4346,7 @@ ScriptedImporter:
       spriteId: d78ca7b191967e1459ad3282329f5558
     - name: Inventory Book_Frame_26
       frameIndex: 26
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4326,6 +4355,7 @@ ScriptedImporter:
       spriteId: d071d90c80bf1e84c8a667311147faf2
     - name: Inventory Book_Frame_27
       frameIndex: 27
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4334,6 +4364,7 @@ ScriptedImporter:
       spriteId: 745d1d81c81fd884bbb1ecb4d5d22d07
     - name: Inventory Book_Frame_28
       frameIndex: 28
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4342,6 +4373,7 @@ ScriptedImporter:
       spriteId: bf03d20ba38dd2d41bd10e5639d910e4
     - name: Inventory Book_Frame_29
       frameIndex: 29
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4350,6 +4382,7 @@ ScriptedImporter:
       spriteId: fab50f8e89c6ce143ba74771c9ccfc5a
     - name: Inventory Book_Frame_30
       frameIndex: 30
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4358,6 +4391,7 @@ ScriptedImporter:
       spriteId: 8f22ac4f609bec14a9ae31b532c11e6e
     - name: Inventory Book_Frame_31
       frameIndex: 31
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4366,6 +4400,7 @@ ScriptedImporter:
       spriteId: 6e5da61bf777179438f20d6e626993b6
     - name: Inventory Book_Frame_32
       frameIndex: 32
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4374,6 +4409,7 @@ ScriptedImporter:
       spriteId: eb08c720f6423574b99f7486a909fab1
     - name: Inventory Book_Frame_33
       frameIndex: 33
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4382,6 +4418,7 @@ ScriptedImporter:
       spriteId: 3b155022c1ca1b54aa74497c1fecb7d2
     - name: Inventory Book_Frame_34
       frameIndex: 34
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4390,6 +4427,7 @@ ScriptedImporter:
       spriteId: 493ec20fb7179944695ebad6907ffc7b
     - name: Inventory Book_Frame_35
       frameIndex: 35
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4398,6 +4436,7 @@ ScriptedImporter:
       spriteId: 56c4ffe696abde94ca84844fcf318827
     - name: Inventory Book_Frame_36
       frameIndex: 36
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4406,6 +4445,7 @@ ScriptedImporter:
       spriteId: c3b45c4538c43bc49a38a7aa3c5e0f97
     - name: Inventory Book_Frame_37
       frameIndex: 37
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4414,6 +4454,7 @@ ScriptedImporter:
       spriteId: ddde9056424f6e943b3a87c909164ecc
     - name: Inventory Book_Frame_38
       frameIndex: 38
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4422,6 +4463,7 @@ ScriptedImporter:
       spriteId: af57bce5354f8464ab2587c3e6f43ea8
     - name: Inventory Book_Frame_39
       frameIndex: 39
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4430,6 +4472,7 @@ ScriptedImporter:
       spriteId: 1ba48b1b219f44343b4f70e6c0ee9b0c
     - name: Inventory Book_Frame_40
       frameIndex: 40
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4438,6 +4481,7 @@ ScriptedImporter:
       spriteId: ff7fe35fb812020448e22e1e090cf6a2
     - name: Inventory Book_Frame_41
       frameIndex: 41
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4446,6 +4490,7 @@ ScriptedImporter:
       spriteId: 643cb50c717ed7b4b888df3e49ef1bc3
     - name: Inventory Book_Frame_42
       frameIndex: 42
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4454,6 +4499,7 @@ ScriptedImporter:
       spriteId: 9194830308d1135419b78bbf371ac864
     - name: Inventory Book_Frame_43
       frameIndex: 43
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4462,6 +4508,7 @@ ScriptedImporter:
       spriteId: 893b3bab4e414fa42aac18a80b38d693
     - name: Inventory Book_Frame_44
       frameIndex: 44
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4470,6 +4517,7 @@ ScriptedImporter:
       spriteId: 9e26f498f8b6d6848801ab9921a4eefa
     - name: Inventory Book_Frame_45
       frameIndex: 45
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4478,6 +4526,7 @@ ScriptedImporter:
       spriteId: 3c6b7b9bcfe432a469423090e53df403
     - name: Inventory Book_Frame_46
       frameIndex: 46
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4486,6 +4535,7 @@ ScriptedImporter:
       spriteId: fad2a864148e65743afce4a2d35297c3
     - name: Inventory Book_Frame_47
       frameIndex: 47
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4494,6 +4544,7 @@ ScriptedImporter:
       spriteId: 47090a339d553e54a8da9ee2145ee61d
     - name: Inventory Book_Frame_48
       frameIndex: 48
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4502,6 +4553,7 @@ ScriptedImporter:
       spriteId: 3d762a7df66108f4c9d254c388cf419e
     - name: Inventory Book_Frame_49
       frameIndex: 49
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4510,6 +4562,7 @@ ScriptedImporter:
       spriteId: 04f131d52178fc3438045c65e210eb49
     - name: Inventory Book_Frame_50
       frameIndex: 50
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4518,6 +4571,7 @@ ScriptedImporter:
       spriteId: 09e95d14628dce84ea487fdad1327a1b
     - name: Inventory Book_Frame_51
       frameIndex: 51
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4526,6 +4580,7 @@ ScriptedImporter:
       spriteId: 5663d233222672743ab2e8d12528be25
     - name: Inventory Book_Frame_52
       frameIndex: 52
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4534,6 +4589,7 @@ ScriptedImporter:
       spriteId: 3195af14434d1a14a8726223234806f8
     - name: Inventory Book_Frame_53
       frameIndex: 53
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4542,6 +4598,7 @@ ScriptedImporter:
       spriteId: c0e5f0e149267834a968878ad5019e6d
     - name: Inventory Book_Frame_54
       frameIndex: 54
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4550,6 +4607,7 @@ ScriptedImporter:
       spriteId: e67595406905de641a78b00750ed8184
     - name: Inventory Book_Frame_55
       frameIndex: 55
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4558,6 +4616,7 @@ ScriptedImporter:
       spriteId: 77707e6b78d45ac4491e342e875fdaa9
     - name: Inventory Book_Frame_56
       frameIndex: 56
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4566,6 +4625,7 @@ ScriptedImporter:
       spriteId: 53d96841710e31e4fa5a67f4cfc9ebab
     - name: Inventory Book_Frame_57
       frameIndex: 57
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4574,6 +4634,7 @@ ScriptedImporter:
       spriteId: bfa6a249b4c65084ba7780931920fc1a
     - name: Inventory Book_Frame_58
       frameIndex: 58
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4582,6 +4643,7 @@ ScriptedImporter:
       spriteId: b0dbc96f303834f4888319c84d01f516
     - name: Inventory Book_Frame_59
       frameIndex: 59
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4590,6 +4652,7 @@ ScriptedImporter:
       spriteId: aae125797f31c8a429765c3e6261a8f0
     - name: Inventory Book_Frame_60
       frameIndex: 60
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4598,6 +4661,7 @@ ScriptedImporter:
       spriteId: 6af0a4e4f96cf734b8384e0074e2be1f
     - name: Inventory Book_Frame_61
       frameIndex: 61
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4606,6 +4670,7 @@ ScriptedImporter:
       spriteId: c128c96d0bca9a645b6ef6b9f2ce0b52
     - name: Inventory Book_Frame_62
       frameIndex: 62
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4614,6 +4679,7 @@ ScriptedImporter:
       spriteId: 04e453bba2eddc247a5b2d8489e71d7e
     - name: Inventory Book_Frame_63
       frameIndex: 63
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4622,6 +4688,7 @@ ScriptedImporter:
       spriteId: 363cb7852262b6a41bd36a6967c2942e
     - name: Inventory Book_Frame_64
       frameIndex: 64
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4630,6 +4697,7 @@ ScriptedImporter:
       spriteId: 3bae27d093624f149badf60ba98e5768
     - name: Inventory Book_Frame_65
       frameIndex: 65
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4638,6 +4706,7 @@ ScriptedImporter:
       spriteId: 0d0808f2f5eae0746a53c47cb304421b
     - name: Inventory Book_Frame_66
       frameIndex: 66
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4646,6 +4715,7 @@ ScriptedImporter:
       spriteId: b1c6e9808c912fd47ae96359f0cc77b7
     - name: Inventory Book_Frame_67
       frameIndex: 67
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4654,6 +4724,7 @@ ScriptedImporter:
       spriteId: 153811ca638626645879993e7e20d533
     - name: Inventory Book_Frame_68
       frameIndex: 68
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4662,6 +4733,7 @@ ScriptedImporter:
       spriteId: d2a0f4ccd36931d4ca38d451c2f89c8e
     - name: Inventory Book_Frame_69
       frameIndex: 69
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4670,6 +4742,7 @@ ScriptedImporter:
       spriteId: 35851a2717937e64dbb09157d20079e2
     - name: Inventory Book_Frame_70
       frameIndex: 70
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4678,6 +4751,7 @@ ScriptedImporter:
       spriteId: 73fc6a88f6dca6c4ebd45339c22184d8
     - name: Inventory Book_Frame_71
       frameIndex: 71
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4686,6 +4760,7 @@ ScriptedImporter:
       spriteId: 3768110275586fa469ed92d6d65680e4
     - name: Inventory Book_Frame_72
       frameIndex: 72
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4694,6 +4769,7 @@ ScriptedImporter:
       spriteId: 3bcc47858fb655241aaaff0124056e82
     - name: Inventory Book_Frame_73
       frameIndex: 73
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4702,6 +4778,7 @@ ScriptedImporter:
       spriteId: 853aa5e899955d94f9b78a1fb8d1dd2a
     - name: Inventory Book_Frame_74
       frameIndex: 74
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4710,6 +4787,7 @@ ScriptedImporter:
       spriteId: 33f917eb8d522494d84325582b81d6fd
     - name: Inventory Book_Frame_75
       frameIndex: 75
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4718,6 +4796,7 @@ ScriptedImporter:
       spriteId: 833856a43ba83b649b9f7e211f4bc8e4
     - name: Inventory Book_Frame_76
       frameIndex: 76
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4726,6 +4805,7 @@ ScriptedImporter:
       spriteId: 7c062065fecf70144ae16d176344ede1
     - name: Inventory Book_Frame_77
       frameIndex: 77
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4734,6 +4814,7 @@ ScriptedImporter:
       spriteId: 4a2439f615916e042b9efb051c694a9e
     - name: Inventory Book_Frame_78
       frameIndex: 78
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4742,6 +4823,7 @@ ScriptedImporter:
       spriteId: 2dc8c988628b83e45b695bd66941c9bf
     - name: Inventory Book_Frame_79
       frameIndex: 79
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4750,6 +4832,7 @@ ScriptedImporter:
       spriteId: 5d79ebc7283281447b2626d8e73516f4
     - name: Inventory Book_Frame_80
       frameIndex: 80
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4758,6 +4841,7 @@ ScriptedImporter:
       spriteId: 8b23db014f73089428f9dd8c8fe70206
     - name: Inventory Book_Frame_81
       frameIndex: 81
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4766,6 +4850,7 @@ ScriptedImporter:
       spriteId: 43aa896eb129a294fab5d93c9c9f2424
     - name: Inventory Book_Frame_82
       frameIndex: 82
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4774,6 +4859,7 @@ ScriptedImporter:
       spriteId: 5417d3d525b2f774eb64d689eeeadce7
     - name: Inventory Book_Frame_83
       frameIndex: 83
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4782,6 +4868,7 @@ ScriptedImporter:
       spriteId: e7758b1a86ffd8e4cbbbf6721842c3ba
     - name: Inventory Book_Frame_84
       frameIndex: 84
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4790,6 +4877,7 @@ ScriptedImporter:
       spriteId: c0eda0e83d0a2c04e9d7165ff6c9cab4
     - name: Inventory Book_Frame_85
       frameIndex: 85
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4798,6 +4886,7 @@ ScriptedImporter:
       spriteId: 82e2617f0e4731d4c8e06902edaea6b1
     - name: Inventory Book_Frame_86
       frameIndex: 86
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4806,6 +4895,7 @@ ScriptedImporter:
       spriteId: c3deccf577fddfa4fbd8287401fc6221
     - name: Inventory Book_Frame_87
       frameIndex: 87
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4814,6 +4904,7 @@ ScriptedImporter:
       spriteId: a7b1c8a5003a0ee4bb99121cf823d596
     - name: Inventory Book_Frame_88
       frameIndex: 88
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4822,6 +4913,7 @@ ScriptedImporter:
       spriteId: 8cba568bde39fd94a93d62cdb962b902
     - name: Inventory Book_Frame_89
       frameIndex: 89
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4830,6 +4922,7 @@ ScriptedImporter:
       spriteId: 4014b6a88863af64db85f0cc6639c042
     - name: Inventory Book_Frame_90
       frameIndex: 90
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4838,6 +4931,7 @@ ScriptedImporter:
       spriteId: a08dbbda65f2032488560cb3a2364fe0
     - name: Inventory Book_Frame_91
       frameIndex: 91
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4846,6 +4940,7 @@ ScriptedImporter:
       spriteId: c7e9c509811518c4680c03f702818be9
     - name: Inventory Book_Frame_92
       frameIndex: 92
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4854,6 +4949,7 @@ ScriptedImporter:
       spriteId: 2c1081345e162ca44881c5489b84e18d
     - name: Inventory Book_Frame_93
       frameIndex: 93
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4862,6 +4958,7 @@ ScriptedImporter:
       spriteId: 7e52ec679c33e684bb855029d9f3d0cb
     - name: Inventory Book_Frame_94
       frameIndex: 94
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4870,6 +4967,7 @@ ScriptedImporter:
       spriteId: c374baae5899cbe499ad3d03799e00e7
     - name: Inventory Book_Frame_95
       frameIndex: 95
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4878,6 +4976,7 @@ ScriptedImporter:
       spriteId: 4eb29d98602b9db468a622024b7c4bf5
     - name: Inventory Book_Frame_96
       frameIndex: 96
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4886,6 +4985,7 @@ ScriptedImporter:
       spriteId: 70ba5f3b4cbe3bc43aa45ca822b827da
     - name: Inventory Book_Frame_97
       frameIndex: 97
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4894,6 +4994,7 @@ ScriptedImporter:
       spriteId: 16d267487c82bd842b4ab3ef46c32a5d
     - name: Inventory Book_Frame_98
       frameIndex: 98
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4902,6 +5003,7 @@ ScriptedImporter:
       spriteId: 4b65daddfc0df2b4bb2b5d5b9df8eb4b
     - name: Inventory Book_Frame_99
       frameIndex: 99
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4910,6 +5012,7 @@ ScriptedImporter:
       spriteId: 0ec1fc1cd01f6a54dbf885f4af420c4d
     - name: Inventory Book_Frame_100
       frameIndex: 100
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4918,6 +5021,7 @@ ScriptedImporter:
       spriteId: f0ab8a4b44dd89949b7c4cc87857f48b
     - name: Inventory Book_Frame_101
       frameIndex: 101
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4926,6 +5030,7 @@ ScriptedImporter:
       spriteId: 1acdd88c3bc128f40aa8086ae3db6763
     - name: Inventory Book_Frame_102
       frameIndex: 102
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4934,6 +5039,7 @@ ScriptedImporter:
       spriteId: d239aba3e3900ec4282e25262c422c55
     - name: Inventory Book_Frame_103
       frameIndex: 103
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4942,6 +5048,7 @@ ScriptedImporter:
       spriteId: 0d4d4b866adcb9340bebe0a6ea3dc126
     - name: Inventory Book_Frame_104
       frameIndex: 104
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4950,6 +5057,7 @@ ScriptedImporter:
       spriteId: be6f29ca671bc7a4288cf90e9b4db264
     - name: Inventory Book_Frame_105
       frameIndex: 105
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4958,6 +5066,7 @@ ScriptedImporter:
       spriteId: e967c2e6984aed9449b2858f4f771183
     - name: Inventory Book_Frame_106
       frameIndex: 106
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4966,6 +5075,7 @@ ScriptedImporter:
       spriteId: da2d3af6a6e421f4abc45562b80e9f10
     - name: Inventory Book_Frame_107
       frameIndex: 107
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4974,6 +5084,7 @@ ScriptedImporter:
       spriteId: cfe545aa6a9d4324084d6286a69059e3
     - name: Inventory Book_Frame_108
       frameIndex: 108
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4982,6 +5093,7 @@ ScriptedImporter:
       spriteId: 25a82dc9c99eda7459364b5aa6b1fe7f
     - name: Inventory Book_Frame_109
       frameIndex: 109
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4990,6 +5102,7 @@ ScriptedImporter:
       spriteId: 899bdcb639bee85429cf4c2b874446c7
     - name: Inventory Book_Frame_110
       frameIndex: 110
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -4998,6 +5111,7 @@ ScriptedImporter:
       spriteId: 99ba8156d74b5ba48bf91f5b7b418444
     - name: Inventory Book_Frame_111
       frameIndex: 111
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5006,6 +5120,7 @@ ScriptedImporter:
       spriteId: c1559703d07f8894dbbfab7969d91ce6
     - name: Inventory Book_Frame_112
       frameIndex: 112
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5014,6 +5129,7 @@ ScriptedImporter:
       spriteId: bb842a17eaddfbb4394536e52891a588
     - name: Inventory Book_Frame_113
       frameIndex: 113
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5022,6 +5138,7 @@ ScriptedImporter:
       spriteId: 57a00b871cc9a374b95af8539cb99fc3
     - name: Inventory Book_Frame_114
       frameIndex: 114
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5030,6 +5147,7 @@ ScriptedImporter:
       spriteId: cda70a70a9373ac4380c88714cac91eb
     - name: Inventory Book_Frame_115
       frameIndex: 115
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5038,6 +5156,7 @@ ScriptedImporter:
       spriteId: 0b9c4261946741646a37266e1f2e2fda
     - name: Inventory Book_Frame_116
       frameIndex: 116
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5046,6 +5165,7 @@ ScriptedImporter:
       spriteId: 48dcac0d2eb08e64890ede179b7a6552
     - name: Inventory Book_Frame_117
       frameIndex: 117
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5054,6 +5174,7 @@ ScriptedImporter:
       spriteId: 75f169b6ecbbe1749b04468bee4deefa
     - name: Inventory Book_Frame_118
       frameIndex: 118
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5062,6 +5183,7 @@ ScriptedImporter:
       spriteId: e65cbc2fe1f7466418577d32ad0114b1
     - name: Inventory Book_Frame_119
       frameIndex: 119
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5070,6 +5192,7 @@ ScriptedImporter:
       spriteId: f9351aa3f8a20564eb903195738f8816
     - name: Inventory Book_Frame_120
       frameIndex: 120
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5078,6 +5201,7 @@ ScriptedImporter:
       spriteId: d6ae05582fc2d6f41bb2590803ba2c00
     - name: Inventory Book_Frame_121
       frameIndex: 121
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5086,6 +5210,7 @@ ScriptedImporter:
       spriteId: 0be1045d799abd446bb70b9186cf26d9
     - name: Inventory Book_Frame_122
       frameIndex: 122
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5094,6 +5219,7 @@ ScriptedImporter:
       spriteId: 09ccb4a21aeebe74e9f830ecd724b32c
     - name: Inventory Book_Frame_123
       frameIndex: 123
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5102,6 +5228,7 @@ ScriptedImporter:
       spriteId: 5abd6e486f127c04480cf9fbf93df28e
     - name: Inventory Book_Frame_124
       frameIndex: 124
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5110,6 +5237,7 @@ ScriptedImporter:
       spriteId: fceadea02ab09a74684b33e79cfe8eb0
     - name: Inventory Book_Frame_125
       frameIndex: 125
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5118,6 +5246,7 @@ ScriptedImporter:
       spriteId: fdddf41dfcdb8ce4a9ebc8a8b696d3fb
     - name: Inventory Book_Frame_126
       frameIndex: 126
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5126,6 +5255,7 @@ ScriptedImporter:
       spriteId: 747f000f86ea01a48a832dfab55b7473
     - name: Inventory Book_Frame_127
       frameIndex: 127
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5134,6 +5264,7 @@ ScriptedImporter:
       spriteId: 0a32a31b5714cec4a846afb2de31a10c
     - name: Inventory Book_Frame_128
       frameIndex: 128
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5142,6 +5273,7 @@ ScriptedImporter:
       spriteId: 977bfb07402082e4586106e1e0e4f632
     - name: Inventory Book_Frame_129
       frameIndex: 129
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5150,6 +5282,7 @@ ScriptedImporter:
       spriteId: ca67b0f53e9ce7644b3d69562d8e1a8c
     - name: Inventory Book_Frame_130
       frameIndex: 130
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5158,6 +5291,7 @@ ScriptedImporter:
       spriteId: a79d9be7048b63147a18d0f40d271e5e
     - name: Inventory Book_Frame_131
       frameIndex: 131
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5166,6 +5300,7 @@ ScriptedImporter:
       spriteId: 480b915e5b5f9404485ae845d918ac93
     - name: Inventory Book_Frame_132
       frameIndex: 132
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5174,6 +5309,7 @@ ScriptedImporter:
       spriteId: 364cd82d035d40c47842e462b25a86c1
     - name: Inventory Book_Frame_133
       frameIndex: 133
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5182,6 +5318,7 @@ ScriptedImporter:
       spriteId: 59a2c7fc05f983a46a7266bcd0166290
     - name: Inventory Book_Frame_134
       frameIndex: 134
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5190,6 +5327,7 @@ ScriptedImporter:
       spriteId: 27c34ccbc24893a419a1965b09a99140
     - name: Inventory Book_Frame_135
       frameIndex: 135
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5198,6 +5336,7 @@ ScriptedImporter:
       spriteId: 07be28445107bc8459c14ff2ea727c31
     - name: Inventory Book_Frame_136
       frameIndex: 136
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5206,6 +5345,7 @@ ScriptedImporter:
       spriteId: af60c28e6bc415047854f1cecf069c7e
     - name: Inventory Book_Frame_137
       frameIndex: 137
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5214,6 +5354,7 @@ ScriptedImporter:
       spriteId: 9f0368da11019fe4281ec5c1c25dcec1
     - name: Inventory Book_Frame_138
       frameIndex: 138
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5222,6 +5363,7 @@ ScriptedImporter:
       spriteId: 44927dd43b7f1b04f87716700498b5e8
     - name: Inventory Book_Frame_139
       frameIndex: 139
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5230,6 +5372,7 @@ ScriptedImporter:
       spriteId: fddf8cd1bc8345445be09bcaae86dc6e
     - name: Inventory Book_Frame_140
       frameIndex: 140
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5238,6 +5381,7 @@ ScriptedImporter:
       spriteId: 69cbd46ab2c7caa4d92de78f91af2d00
     - name: Inventory Book_Frame_141
       frameIndex: 141
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5246,6 +5390,7 @@ ScriptedImporter:
       spriteId: 121537181a601044cb4fc7c21f6a08f3
     - name: Inventory Book_Frame_142
       frameIndex: 142
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5254,6 +5399,7 @@ ScriptedImporter:
       spriteId: d454a3fb3e7f40646a64fee66a4c9a42
     - name: Inventory Book_Frame_143
       frameIndex: 143
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5262,6 +5408,7 @@ ScriptedImporter:
       spriteId: 75f6852c8ef5177498acfb9a59f8d4a9
     - name: Inventory Book_Frame_144
       frameIndex: 144
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5270,6 +5417,7 @@ ScriptedImporter:
       spriteId: 2a2e6795b0a2b8642a02ad7b44bccf60
     - name: Inventory Book_Frame_145
       frameIndex: 145
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5278,6 +5426,7 @@ ScriptedImporter:
       spriteId: cff5584ee17a37e4883cf50191c86289
     - name: Inventory Book_Frame_146
       frameIndex: 146
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5286,6 +5435,7 @@ ScriptedImporter:
       spriteId: 65fc5185a3d2fee43801701adab340d5
     - name: Inventory Book_Frame_147
       frameIndex: 147
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5294,6 +5444,7 @@ ScriptedImporter:
       spriteId: cfafc5fafaf170645a5ddcce9709217d
     - name: Inventory Book_Frame_148
       frameIndex: 148
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5302,6 +5453,7 @@ ScriptedImporter:
       spriteId: b75442ca69f78f746a656b99d2ed7a83
     - name: Inventory Book_Frame_149
       frameIndex: 149
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5310,6 +5462,7 @@ ScriptedImporter:
       spriteId: 06fbc087d64d9184eb533f4104767ea9
     - name: Inventory Book_Frame_150
       frameIndex: 150
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5318,6 +5471,7 @@ ScriptedImporter:
       spriteId: 1734b7f1dbe1a314493e2207f68aa9b2
     - name: Inventory Book_Frame_151
       frameIndex: 151
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5326,6 +5480,7 @@ ScriptedImporter:
       spriteId: 834f811019d58a849b9c627c6f60f395
     - name: Inventory Book_Frame_152
       frameIndex: 152
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5334,6 +5489,7 @@ ScriptedImporter:
       spriteId: 0bf3f4ea79d097f4595dff10d376f400
     - name: Inventory Book_Frame_153
       frameIndex: 153
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5342,6 +5498,7 @@ ScriptedImporter:
       spriteId: c65f5a83e47f49d4e8db82313a6bf08d
     - name: Inventory Book_Frame_154
       frameIndex: 154
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5350,6 +5507,7 @@ ScriptedImporter:
       spriteId: 1eec08075d7e32a4c86772797f8535c3
     - name: Inventory Book_Frame_155
       frameIndex: 155
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5358,6 +5516,7 @@ ScriptedImporter:
       spriteId: 0b9b60631e11dc24f884d9a3800bc209
     - name: Inventory Book_Frame_156
       frameIndex: 156
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5366,6 +5525,7 @@ ScriptedImporter:
       spriteId: 7ad31e5df362d804790114367efe863b
     - name: Inventory Book_Frame_157
       frameIndex: 157
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5374,6 +5534,7 @@ ScriptedImporter:
       spriteId: d34c29b304f714245a6f7d45725ce230
     - name: Inventory Book_Frame_158
       frameIndex: 158
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5382,6 +5543,7 @@ ScriptedImporter:
       spriteId: 3ecf3a847cbeb5349bf2f7a0363cf0d7
     - name: Inventory Book_Frame_159
       frameIndex: 159
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5390,6 +5552,7 @@ ScriptedImporter:
       spriteId: ef6794d58219128429cb8f2b43725de4
     - name: Inventory Book_Frame_160
       frameIndex: 160
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5398,6 +5561,7 @@ ScriptedImporter:
       spriteId: 6487479b978ac2e4996ee4e69e701e33
     - name: Inventory Book_Frame_161
       frameIndex: 161
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5406,6 +5570,7 @@ ScriptedImporter:
       spriteId: b1ea54f1e606db644a7dfd54f5b0ce06
     - name: Inventory Book_Frame_162
       frameIndex: 162
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5414,6 +5579,7 @@ ScriptedImporter:
       spriteId: 797bdaf2e40ed3d478412ad0bbf34e22
     - name: Inventory Book_Frame_163
       frameIndex: 163
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5422,6 +5588,7 @@ ScriptedImporter:
       spriteId: 303fd69fb4bf0454ca783e8076ca992f
     - name: Inventory Book_Frame_164
       frameIndex: 164
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5430,6 +5597,7 @@ ScriptedImporter:
       spriteId: fae3591358938254e904757094b596fc
     - name: Inventory Book_Frame_165
       frameIndex: 165
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5438,6 +5606,7 @@ ScriptedImporter:
       spriteId: eadffbde9208d944eb06841736e94e8c
     - name: Inventory Book_Frame_166
       frameIndex: 166
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5446,6 +5615,7 @@ ScriptedImporter:
       spriteId: 60de3302f673714479b0ebeac286dbf5
     - name: Inventory Book_Frame_167
       frameIndex: 167
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5454,6 +5624,7 @@ ScriptedImporter:
       spriteId: c89af25d13004714c9f26be8c70cbf6a
     - name: Inventory Book_Frame_168
       frameIndex: 168
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5462,6 +5633,7 @@ ScriptedImporter:
       spriteId: ec584e557d12a3c4e8897df63ad53099
     - name: Inventory Book_Frame_169
       frameIndex: 169
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5470,6 +5642,7 @@ ScriptedImporter:
       spriteId: a9a65058a2f9f264faa25930967a0655
     - name: Inventory Book_Frame_170
       frameIndex: 170
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5478,6 +5651,7 @@ ScriptedImporter:
       spriteId: 193ce1fdc15707449a98c56364afd4fa
     - name: Inventory Book_Frame_171
       frameIndex: 171
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5486,6 +5660,7 @@ ScriptedImporter:
       spriteId: e0436451552144340a7869b373211d8f
     - name: Inventory Book_Frame_172
       frameIndex: 172
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5494,6 +5669,7 @@ ScriptedImporter:
       spriteId: 032985fa72b099a4c84949ce89210dc3
     - name: Inventory Book_Frame_173
       frameIndex: 173
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5502,6 +5678,7 @@ ScriptedImporter:
       spriteId: 6826f33f6899b1649af08d4a96cae437
     - name: Inventory Book_Frame_174
       frameIndex: 174
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5510,6 +5687,7 @@ ScriptedImporter:
       spriteId: 45a633e62c77ab64fad293c1f4429534
     - name: Inventory Book_Frame_175
       frameIndex: 175
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5518,6 +5696,7 @@ ScriptedImporter:
       spriteId: 2e9a740e4b13f5f42b6bb10a84f37c01
     - name: Inventory Book_Frame_176
       frameIndex: 176
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5526,6 +5705,7 @@ ScriptedImporter:
       spriteId: 72bf3cf672954e3499335064c6faf858
     - name: Inventory Book_Frame_177
       frameIndex: 177
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5534,6 +5714,7 @@ ScriptedImporter:
       spriteId: 87c69f80454a6184f9373c87d80f6c4b
     - name: Inventory Book_Frame_178
       frameIndex: 178
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5542,6 +5723,7 @@ ScriptedImporter:
       spriteId: fa08ffe607759f647b7e3fca1f0e6159
     - name: Inventory Book_Frame_179
       frameIndex: 179
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5550,6 +5732,7 @@ ScriptedImporter:
       spriteId: 6df7f68f6c91de5469d6f3266ccd3295
     - name: Inventory Book_Frame_180
       frameIndex: 180
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5558,6 +5741,7 @@ ScriptedImporter:
       spriteId: a1df207d210d6d240b3d4384d21097ac
     - name: Inventory Book_Frame_181
       frameIndex: 181
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5566,6 +5750,7 @@ ScriptedImporter:
       spriteId: a161876139009d94da0a708b961aa447
     - name: Inventory Book_Frame_182
       frameIndex: 182
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5574,6 +5759,7 @@ ScriptedImporter:
       spriteId: 7042f71b8228cb24480391f8054f8b99
     - name: Inventory Book_Frame_183
       frameIndex: 183
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5582,6 +5768,7 @@ ScriptedImporter:
       spriteId: 1054b204d70fe464db6cb674f77235a0
     - name: Inventory Book_Frame_184
       frameIndex: 184
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5590,6 +5777,7 @@ ScriptedImporter:
       spriteId: 49cb3d03454fc1449a8a6de601e09193
     - name: Inventory Book_Frame_185
       frameIndex: 185
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5598,6 +5786,7 @@ ScriptedImporter:
       spriteId: ed73d6ce5fb375b4c8a7050ae6b52a05
     - name: Inventory Book_Frame_186
       frameIndex: 186
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5606,6 +5795,7 @@ ScriptedImporter:
       spriteId: e3a93d0ba0a470a47961604bbeefb1d2
     - name: Inventory Book_Frame_187
       frameIndex: 187
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5614,6 +5804,7 @@ ScriptedImporter:
       spriteId: d7d86674f3197a44cb9e43be60118aaa
     - name: Inventory Book_Frame_188
       frameIndex: 188
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5622,6 +5813,7 @@ ScriptedImporter:
       spriteId: 6d3866031c9b03f4682103be1d5c1f2e
     - name: Inventory Book_Frame_189
       frameIndex: 189
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5630,6 +5822,7 @@ ScriptedImporter:
       spriteId: 3de83e44e50340f44a783db39ebf2eaa
     - name: Inventory Book_Frame_190
       frameIndex: 190
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5638,6 +5831,7 @@ ScriptedImporter:
       spriteId: 218a5569b22f1bc42bcf70ae6f4d4509
     - name: Inventory Book_Frame_191
       frameIndex: 191
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5646,6 +5840,7 @@ ScriptedImporter:
       spriteId: b2903024ba6f73840af389470c568237
     - name: Inventory Book_Frame_192
       frameIndex: 192
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5654,6 +5849,7 @@ ScriptedImporter:
       spriteId: 09709534e8ba05447aa5778514b8d4a8
     - name: Inventory Book_Frame_193
       frameIndex: 193
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5662,6 +5858,7 @@ ScriptedImporter:
       spriteId: 9e6ee5951e80ecb4887f79b982ae5816
     - name: Inventory Book_Frame_194
       frameIndex: 194
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5670,6 +5867,7 @@ ScriptedImporter:
       spriteId: c8d7f82ad64184f44a125b9d87592055
     - name: Inventory Book_Frame_195
       frameIndex: 195
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5678,6 +5876,7 @@ ScriptedImporter:
       spriteId: 7d1061312447e1544906b66f233f3e04
     - name: Inventory Book_Frame_196
       frameIndex: 196
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5686,6 +5885,7 @@ ScriptedImporter:
       spriteId: 9e0009b34ac01904aa09eabfbd2b65c4
     - name: Inventory Book_Frame_197
       frameIndex: 197
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5694,6 +5894,7 @@ ScriptedImporter:
       spriteId: b55023de79f7557409774051e607e246
     - name: Inventory Book_Frame_198
       frameIndex: 198
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 64
@@ -5703,6 +5904,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 896, y: 720}

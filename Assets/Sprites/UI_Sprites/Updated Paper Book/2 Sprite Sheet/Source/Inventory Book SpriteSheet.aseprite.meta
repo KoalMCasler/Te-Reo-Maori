@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -630,6 +632,7 @@ ScriptedImporter:
     cells:
     - name: Inventory Book SpriteSheet_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 61
         y: 144
@@ -638,6 +641,7 @@ ScriptedImporter:
       spriteId: 896bf413695723b468719768a7a8bf0e
     - name: Inventory Book SpriteSheet_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 64
         y: 144
@@ -646,6 +650,7 @@ ScriptedImporter:
       spriteId: c9dd2091dcbdc1b4f8280f6d1f3fd43a
     - name: Inventory Book SpriteSheet_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 112
         y: 179
@@ -654,6 +659,7 @@ ScriptedImporter:
       spriteId: 06ce490cf69d94241bb335dafcb8f78f
     - name: Inventory Book SpriteSheet_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 61
         y: 663
@@ -662,6 +668,7 @@ ScriptedImporter:
       spriteId: 65ec68bab3432ba4b814078aa08fca93
     - name: Inventory Book SpriteSheet_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 118
         y: 875
@@ -670,6 +677,7 @@ ScriptedImporter:
       spriteId: efa89830a739c6a4b83fa811197a33f8
     - name: Inventory Book SpriteSheet_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 299
         y: 5252
@@ -678,6 +686,7 @@ ScriptedImporter:
       spriteId: f290c9f6052ab9d488afdd55ef4d0641
     - name: Inventory Book SpriteSheet_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 137
         y: 914
@@ -686,6 +695,7 @@ ScriptedImporter:
       spriteId: 94df1169ce5a3304f8b8fc2d6c77bbd2
     - name: Inventory Book SpriteSheet_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 1293
         y: 2331
@@ -694,6 +704,7 @@ ScriptedImporter:
       spriteId: 5c4ef7960517c944ba6e3c2caa9cdf3b
     - name: Inventory Book SpriteSheet_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 1263
         y: 2323
@@ -702,6 +713,7 @@ ScriptedImporter:
       spriteId: 950eb86c8821c08459ef97ff7a32446a
     - name: Inventory Book SpriteSheet_Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 1265
         y: 2331
@@ -710,6 +722,7 @@ ScriptedImporter:
       spriteId: 09ba20bc3601ecd46be4e8b27d398739
     - name: Inventory Book SpriteSheet_Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 158
         y: 921
@@ -718,6 +731,7 @@ ScriptedImporter:
       spriteId: fbcf4dad328608d44a33e0cd1495d52d
     - name: Inventory Book SpriteSheet_Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 158
         y: 921
@@ -726,6 +740,7 @@ ScriptedImporter:
       spriteId: 3d32e7d5967f29d44bdbf7b62245163f
     - name: Inventory Book SpriteSheet_Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 145
         y: 929
@@ -734,6 +749,7 @@ ScriptedImporter:
       spriteId: ef15c974cd530f3499e4e861812749f1
     - name: Inventory Book SpriteSheet_Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 544
         y: 998
@@ -742,6 +758,7 @@ ScriptedImporter:
       spriteId: 30ecd9202cfeacc41a4c1750f2b4ab8a
     - name: Inventory Book SpriteSheet_Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 1375
         y: 1773
@@ -750,6 +767,7 @@ ScriptedImporter:
       spriteId: be5281505f10da14aaa3ebad5cb4c680
     - name: Inventory Book SpriteSheet_Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 160
         y: 918
@@ -758,6 +776,7 @@ ScriptedImporter:
       spriteId: b01434dd73843254cad444a7da036359
     - name: Inventory Book SpriteSheet_Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 979
         y: 1748
@@ -766,6 +785,7 @@ ScriptedImporter:
       spriteId: 1af7bcfd8e375d94c86f85d35386891c
     - name: Inventory Book SpriteSheet_Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 1080
         y: 1736
@@ -774,6 +794,7 @@ ScriptedImporter:
       spriteId: 055e0040c9dbf2048b9eb63435f72042
     - name: Inventory Book SpriteSheet_Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 177
         y: 931
@@ -782,6 +803,7 @@ ScriptedImporter:
       spriteId: 716528017c6623a4cb4fc036958f66cd
     - name: Inventory Book SpriteSheet_Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 1070
         y: 1648
@@ -790,6 +812,7 @@ ScriptedImporter:
       spriteId: 3eb6cb8a6d0df0542b866dd68ddf9297
     - name: Inventory Book SpriteSheet_Frame_20
       frameIndex: 20
+      additiveSortOrder: 0
       cellRect:
         x: 1088
         y: 1670
@@ -798,6 +821,7 @@ ScriptedImporter:
       spriteId: 0abe1f46aab522a4f95a300aae098cba
     - name: Inventory Book SpriteSheet_Frame_21
       frameIndex: 21
+      additiveSortOrder: 0
       cellRect:
         x: 1067
         y: 1664
@@ -806,6 +830,7 @@ ScriptedImporter:
       spriteId: e524f3d0a37d2fe4183b18d86aa3efe6
     - name: Inventory Book SpriteSheet_Frame_22
       frameIndex: 22
+      additiveSortOrder: 0
       cellRect:
         x: 1062
         y: 1640
@@ -814,6 +839,7 @@ ScriptedImporter:
       spriteId: db6b8f4d9d9d2cc43b89320453123cad
     - name: Inventory Book SpriteSheet_Frame_23
       frameIndex: 23
+      additiveSortOrder: 0
       cellRect:
         x: 771
         y: 1009
@@ -822,6 +848,7 @@ ScriptedImporter:
       spriteId: 77b4571048cf22f42aba0e02680a7d03
     - name: Inventory Book SpriteSheet_Frame_24
       frameIndex: 24
+      additiveSortOrder: 0
       cellRect:
         x: 778
         y: 1014
@@ -831,6 +858,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 7472, y: 5808}
