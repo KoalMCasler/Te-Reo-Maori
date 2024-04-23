@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    public GameManager gameManager;
+
     [Header("UI Manager")]
     public GameObject MainMenuUI;
     public GameObject AcknowledgementUI;
     public GameObject GameplayUI;
+    public GameObject DialogueUI;
     public GameObject CreditsUI;
     public GameObject ControlsUI;
     public GameObject PauseUI;
@@ -29,6 +32,11 @@ public class UIManager : MonoBehaviour
     public void UI_Gameplay()
     {
         CurrentUI(GameplayUI);
+    }
+
+    public void UI_Dialogue()
+    {
+        CurrentUI(DialogueUI);
     }
 
     public void UI_Controls()
@@ -69,5 +77,10 @@ public class UIManager : MonoBehaviour
         EndGameUI.SetActive(false);
 
         activeUI.SetActive(true);
+
+        if(gameManager.isPaused)
+            Time.timeScale = 0f;
+        else
+            Time.timeScale = 1f;
     }
 }

@@ -17,9 +17,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveDirection;
     public float moveSpeed = 5f;
     
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
+
         playerRB = gameObject.GetComponent<Rigidbody2D>();
         playerAnim = gameObject.GetComponent<Animator>();
     }
@@ -37,6 +41,12 @@ public class PlayerMovement : MonoBehaviour
     {
         Move();
     }
+
+    void OnPause()
+    {
+        gameManager.PausingState();
+    }
+
     void OnMove(InputValue movementValue)
     {
         //Movement logic

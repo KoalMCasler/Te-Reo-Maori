@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,8 +25,16 @@ public class GameManager : MonoBehaviour
     [Header("Managers")]
     public UIManager uiManager;
 
+    [Header("Player")]
+    public GameObject player;
+    private PlayerInput playerInput;
+
+    internal bool isPaused;
+
     private void Start()
     {
+        playerInput = player.GetComponent<PlayerInput>();
+        
         SetState(GameState.MainMenu);
         currentState = gameState;
     }
@@ -67,51 +76,65 @@ public class GameManager : MonoBehaviour
     // This can be changed but I used this function to decide what happens when pressing the key for pause depending on the current state.
     public void PausingState()
     {
-        if (gameState == GameState.Pause) 
+        if (gameState == GameState.Pause)
+        {
             SetState(GameState.Gameplay);
-        else if(gameState == GameState.Gameplay) 
+            playerInput.actions.FindAction("Move").Enable();
+        }
+        else if(gameState == GameState.Gameplay)
+        {
             SetState(GameState.Pause);
+            playerInput.actions.FindAction("Move").Disable();
+        }
     }
 
     // These will be used for SoundManager, UIManager & any other things that may need to change with each state
     #region GameStates
     private void MainMenu()
     {
+        isPaused = false;
         uiManager.UI_MainMenu();
     }
 
     private void Acknowledgment()
     {
+        isPaused = false;
         uiManager.UI_Acknowledgement();
     }
 
     private void Gameplay()
     {
+        isPaused = false;
         uiManager.UI_Gameplay();
     }
 
     private void Pause()
     {
+        isPaused = true;
         uiManager.UI_Pause();
     }
 
     private void Credits()
     {
+        isPaused = false;
         uiManager.UI_Credits();
     }
 
     private void Options()
     {
+        isPaused = true;
         uiManager.UI_Options();
     }
 
     private void Controls()
     {
+        isPaused = true;
         uiManager.UI_Controls();
     }
 
     private void EndGame()
     {
+        isPaused = false;
         uiManager.UI_EndGame();
     }
 
