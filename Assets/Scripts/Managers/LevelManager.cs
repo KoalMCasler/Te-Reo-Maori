@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     [Header("Game Manager")]
     [SerializeField]
     private GameManager gameManager;
+    //used for the camrea and bounding shape, lets each scene have its own shape. 
     [Header("Camera & bounding shape")]
     [SerializeField]
     public GameObject mainCamera;
@@ -18,6 +19,7 @@ public class LevelManager : MonoBehaviour
 
     public void Start()
     {
+        // makes sure on scene loaded works. 
         SceneManager.sceneLoaded += OnSceneLoaded;
         gameManager = FindObjectOfType<GameManager>();
     }
@@ -34,6 +36,7 @@ public class LevelManager : MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        // used to find bouding shape and set it to the virtual camera. 
         foundBoundingShape = GameObject.FindWithTag("Confiner").GetComponent<Collider2D>();
         confiner2D.m_BoundingShape2D = foundBoundingShape;
     }
