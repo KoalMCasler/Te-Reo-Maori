@@ -1,0 +1,7 @@
+In April 2022 I completely overhauled the visual style of all my NPCs.
+They now have a more consistent look and size, but also fewer frames.
+I removed the standing idle pose and some of the animations because I felt they were unecessary for generic NPCs.
+However, I am still keeping the old stuff here in case you prefer it and want to use them.
+
+Thanks for understanding!
+Seliel
