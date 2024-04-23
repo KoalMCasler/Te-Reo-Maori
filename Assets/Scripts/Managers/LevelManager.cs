@@ -19,9 +19,9 @@ public class LevelManager : MonoBehaviour
 
     public void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
         // makes sure on scene loaded works. 
         SceneManager.sceneLoaded += OnSceneLoaded;
-        gameManager = FindObjectOfType<GameManager>();
     }
 
 
