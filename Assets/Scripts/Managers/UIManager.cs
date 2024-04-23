@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public GameObject ControlsUI;
     public GameObject PauseUI;
     public GameObject OptionsUI;
+    public GameObject EndGameUI;
 
     // Sound Manager will need to decreased audio / or change audio during paused or dialogue.
 
@@ -50,6 +51,11 @@ public class UIManager : MonoBehaviour
         CurrentUI(OptionsUI);
     }
 
+    public void UI_EndGame()
+    {
+        CurrentUI(EndGameUI);
+    }
+
     // Sets UI to the required panel
     void CurrentUI(GameObject activeUI)
     {
@@ -60,6 +66,7 @@ public class UIManager : MonoBehaviour
         CreditsUI.SetActive(false);
         PauseUI.SetActive(false);
         OptionsUI.SetActive(false);
+        EndGameUI.SetActive(false);
 
         activeUI.SetActive(true);
     }
