@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         playerAnim.SetBool("IsIdle", true);
     }
     // Update is called once per frame
-    void Update()
+    void Awake()
     {
         
     }
