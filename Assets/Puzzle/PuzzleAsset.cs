@@ -14,6 +14,6 @@ public class PuzzleAsset : ScriptableObject
     public Status status;
 
 // this might need to go? depends on how we structure the other two puzzles
-    public string[] requirements;
+    public string[] answers;
 }
 

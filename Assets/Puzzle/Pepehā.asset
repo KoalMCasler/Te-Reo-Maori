@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleName: "Pepeh\u0101"
   status: 0
-  requirements:
+  answers:
   - Mountain
   - Water
   - People

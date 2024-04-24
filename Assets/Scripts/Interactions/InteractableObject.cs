@@ -14,9 +14,11 @@ public class InteractableObject : MonoBehaviour
         Book,
         Door
     }
+
     [Header("Interaction Type")]
     [SerializeField]
     public InteractType interactType;
+    
     [Header("Door Variables")]
     [SerializeField]
     //Doors
@@ -27,6 +29,7 @@ public class InteractableObject : MonoBehaviour
     public Animator doorAnim;
     public float animDelay = 1f;
     public Animator fadeAnim;
+    
     [Header("Info Object variables")]
     [SerializeField]
     //Info
@@ -34,13 +37,16 @@ public class InteractableObject : MonoBehaviour
     public float InfoTextDelay = 3;
     public string message;
     public float textSpeed = 0.01f;
+    
     [Header("NPC Variables")]
     [SerializeField]
     //NPCS
     public Dialogue dialogue;
+    
     [Header("Scriptable Object")]
     public ScriptableIO scriptableIO;
     public ScriptableNPC scriptableNPC;
+    
     void Start()
     {
         infoText = GameObject.Find("InfoText").GetComponent<TextMeshProUGUI>();
@@ -59,6 +65,7 @@ public class InteractableObject : MonoBehaviour
             fadeAnim.SetTrigger("FadeIn");
         }
     }
+    
     public void Dialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
