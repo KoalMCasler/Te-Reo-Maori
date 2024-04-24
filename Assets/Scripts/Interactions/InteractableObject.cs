@@ -8,6 +8,8 @@ public class InteractableObject : MonoBehaviour
     {
         Info,
         Dialogue,
+        Book,
+        Door
     }
 
     public InteractType interactType;
