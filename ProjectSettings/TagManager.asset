@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Confiner
   - Interactable
+  - Spawn
   layers:
   - Default
   - TransparentFX

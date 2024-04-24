@@ -20,13 +20,18 @@ public class InteractableObject : MonoBehaviour
     [Header("Door Variables")]
     [SerializeField]
     //Doors
-    public bool IsLocked;
+    public bool isLocked;
+    public bool isClosed;
+    public string destinantionRoom;
     public LevelManager levelManager;
+    public Animator doorAnim;
+    public float animDelay = 1f;
+    public Animator fadeAnim;
     [Header("Info Object variables")]
     [SerializeField]
     //Info
     private TextMeshProUGUI infoText;
-    public float InfoTextDelay;
+    public float InfoTextDelay = 3;
     public string message;
     public float textSpeed = 0.01f;
     [Header("NPC Variables")]
@@ -38,21 +43,55 @@ public class InteractableObject : MonoBehaviour
     public ScriptableNPC scriptableNPC;
     void Start()
     {
-        levelManager = FindObjectOfType<LevelManager>();
-        IsLocked = true;
         infoText = GameObject.Find("InfoText").GetComponent<TextMeshProUGUI>();
         infoText.text = null;
         if(interactType == InteractType.Nothing)
         {
             Debug.Log(this.name + " Has a type of nothing, Was this by mistake?");
         }
+        if(interactType == InteractType.Door)
+        {
+            levelManager = FindObjectOfType<LevelManager>();
+            isLocked = true;
+            isClosed = true;
+            doorAnim = this.gameObject.GetComponent<Animator>();
+            fadeAnim = GameObject.Find("CrossFade").GetComponent<Animator>();
+            fadeAnim.SetTrigger("FadeIn");
+        }
     }
-
     public void Dialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
+
+    // All needed for door objects to work. 
+    public void Door()
+    {
+        if(isClosed)
+        {
+            if(isLocked)
+            {
+                StartCoroutine(ShowInfo(message, InfoTextDelay));
+                isLocked = false; //Debug line to test before quest is added.
+            }
+            else
+            {
+                OpenDoor();
+            }
+        }
+        else if(!isClosed)
+        {
+            fadeAnim.SetTrigger("FadeOut");
+            levelManager.LoadScene(destinantionRoom, animDelay);
+        }
+    }
+    private void OpenDoor()
+    {
+        doorAnim.SetBool("IsOpen", true);
+        isClosed = false;
+    }
      
+    // All needed for info text.
     public void Info()
     {
         Debug.Log("Reading info from " + this.name);

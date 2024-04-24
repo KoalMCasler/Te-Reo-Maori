@@ -29,13 +29,12 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnEnable()
     {
-        //used to make it so the character is idle on scene change. 
+        //used to make it so the character is idle and facing up on scene change. 
         playerAnim.SetBool("IsIdle", true);
-    }
-    // Update is called once per frame
-    void Awake()
-    {
-        
+        playerAnim.SetBool("IsFacingUp", true);
+        playerAnim.SetBool("IsFacingLeft", false);
+        playerAnim.SetBool("IsFacingDown", false);
+        playerAnim.SetBool("IsFacingRight", false);
     }
     void FixedUpdate()
     {

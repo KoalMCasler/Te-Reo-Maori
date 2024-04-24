@@ -13162,8 +13162,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1990075885}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+        m_MethodName: LoadFirstScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17043,9 +17043,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
-  mainCamera: {fileID: 0}
+  mainCamera: {fileID: 1385452072}
   foundBoundingShape: {fileID: 1689798628}
-  confiner2D: {fileID: 0}
+  confiner2D: {fileID: 1385452073}
+  playerSpawn: {fileID: 0}
 --- !u!1 &2007157577
 GameObject:
   m_ObjectHideFlags: 0

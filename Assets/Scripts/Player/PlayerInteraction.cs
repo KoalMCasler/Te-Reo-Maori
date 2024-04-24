@@ -42,6 +42,10 @@ public class PlayerInteraction : MonoBehaviour
             {
                 currentInterObjScript.Info();
             }
+            if(currentInterObjScript.interactType == InteractableObject.InteractType.Door)
+            {
+                currentInterObjScript.Door();
+            }
         }
         else
         {
