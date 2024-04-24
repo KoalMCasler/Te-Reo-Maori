@@ -1,18 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PuzzleManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public PuzzleAsset[] puzzlesToComplete;
+    
+    private void Start() 
     {
-        
+        ResetAllPuzzles();
+    }
+    
+
+    public void StartPuzzle(PuzzleAsset puzzle)
+    {
+        puzzle.status = PuzzleAsset.Status.InProgress;
+
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void CompletePuzzle(PuzzleAsset puzzle)
     {
-        
+        puzzle.status = PuzzleAsset.Status.Finished;
+    }
+
+
+//Resets all puzzles to not started.
+    private void ResetAllPuzzles()
+    {
+        foreach(PuzzleAsset puzzle in puzzlesToComplete)
+        {
+            puzzle.status = PuzzleAsset.Status.NotStarted;
+        }
     }
 }

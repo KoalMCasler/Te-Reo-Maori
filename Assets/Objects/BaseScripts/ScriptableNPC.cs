@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ScriptableNPC", menuName = "Scriptables")]
+[CreateAssetMenu(fileName = "ScriptableNPC", menuName = "Scriptables/NPC")]
 public class ScriptableNPC : ScriptableObject
 {
     public bool HasMetPlayer;

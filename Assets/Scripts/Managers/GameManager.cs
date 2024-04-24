@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
         MainMenu,
         Acknowledgment,
         Gameplay,
+        Puzzle,
         Pause,
         Credits,
         Controls,
@@ -59,6 +60,7 @@ public class GameManager : MonoBehaviour
             case GameState.Credits: Credits(); break;
             case GameState.Controls: Controls(); break;
             case GameState.Options: Options(); break;
+            case GameState.Puzzle: Puzzle(); break;
             case GameState.EndGame: EndGame(); break;
         }
         currentState = gameState;
@@ -104,6 +106,7 @@ public class GameManager : MonoBehaviour
 
     private void Gameplay()
     {
+        playerInput.actions.FindAction("Move").Enable();
         isPaused = false;
         uiManager.UI_Gameplay();
     }
@@ -130,6 +133,12 @@ public class GameManager : MonoBehaviour
     {
         isPaused = true;
         uiManager.UI_Controls();
+    }
+
+    private void Puzzle()
+    {
+        playerInput.actions.FindAction("Move").Disable();
+        uiManager.UI_Puzzle();
     }
 
     private void EndGame()
