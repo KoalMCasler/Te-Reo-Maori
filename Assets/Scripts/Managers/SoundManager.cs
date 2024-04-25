@@ -22,12 +22,15 @@ public class SoundManager : MonoBehaviour
     // This should be used for looping audio.
     public void PlayAudio(string audio)
     {
+        audioSource.Stop();
         switch(audio)
         {
-            case "Mainmenu": audioSource.clip = mainMenuClip; break;
+            case "MainMenu": audioSource.clip = mainMenuClip; break;
             case "Gameplay": audioSource.clip = gameplayClip; break;
         }
+        audioSource.loop = true;
         audioSource.Play();
+
     }
 
     // This should be used for sfx?

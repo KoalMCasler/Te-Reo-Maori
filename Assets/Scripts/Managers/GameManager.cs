@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Managers")]
     public UIManager uiManager;
+    public SoundManager soundManager;
 
     [Header("Player")]
     public GameObject player;
@@ -102,6 +103,7 @@ public class GameManager : MonoBehaviour
     {
         isPaused = false;
         uiManager.UI_MainMenu();
+        soundManager.PlayAudio("MainMenu");
     }
 
     private void Acknowledgment()
@@ -116,6 +118,7 @@ public class GameManager : MonoBehaviour
         playerInput.actions.FindAction("Interact").Enable();
         isPaused = false;
         uiManager.UI_Gameplay();
+        soundManager.PlayAudio("Gameplay");
     }
 
     private void Pause()
