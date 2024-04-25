@@ -92,6 +92,7 @@ public class PuzzleManager : MonoBehaviour
         {
             //enter door stuff
             door.GetComponent<InteractableObject>().isLocked = false;
+            door.GetComponent<InteractableObject>().doorLight.SetActive(true);
         }
 
     }

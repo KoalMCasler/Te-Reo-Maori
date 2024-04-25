@@ -31,6 +31,7 @@ public class InteractableObject : MonoBehaviour
     public Animator doorAnim;
     public float animDelay = 1f;
     public Animator fadeAnim;
+    public GameObject doorLight;
 
     [Header("Info Object variables")]
     [SerializeField]
@@ -67,6 +68,7 @@ public class InteractableObject : MonoBehaviour
             doorAnim = this.gameObject.GetComponent<Animator>();
             fadeAnim = GameObject.Find("CrossFade").GetComponent<Animator>();
             fadeAnim.SetTrigger("FadeIn");
+            doorLight.SetActive(false);
         }
     }
 
@@ -102,6 +104,7 @@ public class InteractableObject : MonoBehaviour
             levelManager.LoadScene(destinantionRoom, animDelay);
         }
     }
+
     private void OpenDoor()
     {
         doorAnim.SetBool("IsOpen", true);
