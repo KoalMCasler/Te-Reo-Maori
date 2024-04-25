@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
         playerRB = gameObject.GetComponent<Rigidbody2D>();
         playerAnim = gameObject.GetComponent<Animator>();
     }
+    
     void OnEnable()
     {
         //used to make it so the character is idle and facing up on scene change. 
@@ -52,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 moveVector2 = movementValue.Get<Vector2>();
         moveDirection = new Vector3(moveVector2.x,moveVector2.y,0);
     }
+
     void Move()
     {
         if(moveDirection.x == 0 && moveDirection.y == 0)
@@ -67,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
             CheckDirection();
         }
     }
+    
     void CheckDirection()
     {
         if(moveDirection.x > 0)
