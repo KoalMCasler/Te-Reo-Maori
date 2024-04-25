@@ -6,9 +6,10 @@ using Cinemachine;
 
 public class LevelManager : MonoBehaviour
 {
-    [Header("Game Manager")]
+    [Header("Managers")]
     [SerializeField]
     private GameManager gameManager;
+    public PuzzleManager puzzleManager;
 
     //used for the camera and bounding shape, lets each scene have its own shape. 
     [Header("Camera & bounding shape")]
@@ -71,6 +72,7 @@ public class LevelManager : MonoBehaviour
             playerSpawn = GameObject.FindWithTag("Spawn").GetComponent<Transform>();
             gameManager.player.transform.position = playerSpawn.position;
             gameManager.player.SetActive(true);
+            puzzleManager.door = GameObject.Find("Door");
         }
         
     }

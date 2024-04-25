@@ -10,6 +10,9 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] 
     private GameManager gameManager;
 
+    [Header("Pepeha Puzzle")]
+    public GameObject door;
+
     [Header("Puzzle Information")]
     public PuzzleAsset[] puzzlesToComplete;
 
@@ -88,6 +91,7 @@ public class PuzzleManager : MonoBehaviour
         if(puzzle.name == "Pepehā")
         {
             //enter door stuff
+            door.GetComponent<InteractableObject>().isLocked = false;
         }
 
     }

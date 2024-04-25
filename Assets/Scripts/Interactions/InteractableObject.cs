@@ -93,7 +93,7 @@ public class InteractableObject : MonoBehaviour
             if (isLocked)
             {
                 StartCoroutine(ShowInfo(message, InfoTextDelay));
-                isLocked = false; //Debug line to test before quest is added.
+                //isLocked = false; //Debug line to test before quest is added.
             }
             else
             {

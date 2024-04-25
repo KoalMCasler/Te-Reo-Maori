@@ -9451,6 +9451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1289818631}
+  door: {fileID: 0}
   puzzlesToComplete:
   - {fileID: 11400000, guid: 334c3e73515358f4e85428b19509dda9, type: 2}
   puzzleFields:
@@ -19260,6 +19261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  puzzleManager: {fileID: 981146684}
   mainCamera: {fileID: 1385452072}
   foundBoundingShape: {fileID: 1689798628}
   confiner2D: {fileID: 1385452073}
