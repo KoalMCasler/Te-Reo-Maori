@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    public UIManager UIManager;
 
     public GameObject currentInterObj = null;
     public InteractableObject currentInterObjScript = null;
@@ -47,7 +48,7 @@ public class PlayerInteraction : MonoBehaviour
             {
                 currentInterObjScript.Door();
             }
-            else if(currentInterObjScript.interactType == InteractableObject.InteractType.Book)
+            if(currentInterObjScript.interactType == InteractableObject.InteractType.Book)
             {
                 currentInterObjScript.Book();
             }

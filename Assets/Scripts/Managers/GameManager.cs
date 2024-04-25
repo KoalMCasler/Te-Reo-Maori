@@ -16,10 +16,11 @@ public class GameManager : MonoBehaviour
         Credits,
         Controls,
         Options,
-        EndGame,
+        GameEnd,
     }
 
     public GameState gameState;
+    public GameState beforeSettings ;
     // currentState is used to test to make sure the UI is working properly.
     private GameState currentState;
 
@@ -40,11 +41,11 @@ public class GameManager : MonoBehaviour
         currentState = gameState;
     }
 
-    public void Update()
-    {
-        if (gameState != currentState)
-            SetState(gameState);
-    }
+    //public void Update()
+    //{
+    //    if (gameState != currentState)
+    //        SetState(gameState);
+    //}
 
     // Changes the state and UI
     private void SetState(GameState state)
@@ -61,7 +62,7 @@ public class GameManager : MonoBehaviour
             case GameState.Controls: Controls(); break;
             case GameState.Options: Options(); break;
             case GameState.Puzzle: Puzzle(); break;
-            case GameState.EndGame: EndGame(); break;
+            case GameState.GameEnd: GameEnd(); break;
         }
         currentState = gameState;
     }
@@ -70,9 +71,17 @@ public class GameManager : MonoBehaviour
     public void LoadState(string state)
     {
         if (Enum.TryParse(state, out GameState gameState))
-            SetState(gameState);
+            LoadState(gameState);
         else
             Debug.LogError("Invalid state: " + state);
+    }
+
+    private void LoadState(GameState state)
+    {
+        if (state == GameState.Options || state == GameState.Controls)
+            beforeSettings = gameState;
+
+        SetState(state);
     }
 
     // This can be changed but I used this function to decide what happens when pressing the key for pause depending on the current state.
@@ -88,6 +97,8 @@ public class GameManager : MonoBehaviour
             SetState(GameState.Pause);
             playerInput.actions.FindAction("Move").Disable();
         }
+        else if (gameState == GameState.Options || gameState == GameState.Controls)
+            LoadState(beforeSettings);
     }
 
     // These will be used for SoundManager, UIManager & any other things that may need to change with each state
@@ -107,6 +118,7 @@ public class GameManager : MonoBehaviour
     private void Gameplay()
     {
         playerInput.actions.FindAction("Move").Enable();
+        playerInput.actions.FindAction("Interact").Enable();
         isPaused = false;
         uiManager.UI_Gameplay();
     }
@@ -138,10 +150,11 @@ public class GameManager : MonoBehaviour
     private void Puzzle()
     {
         playerInput.actions.FindAction("Move").Disable();
+        playerInput.actions.FindAction("Interact").Disable();
         uiManager.UI_Puzzle();
     }
 
-    private void EndGame()
+    private void GameEnd()
     {
         isPaused = false;
         uiManager.UI_EndGame();

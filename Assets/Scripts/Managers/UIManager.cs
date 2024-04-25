@@ -64,14 +64,15 @@ public class UIManager : MonoBehaviour
 
     public void ShowBook(string name)
     {
-        if(name == "Book1")
-            CurrentUI(Book1, true);
-        else if(name == "Book2")
-            CurrentUI(Book2, true);
-        else if(name == "Book3")
-            CurrentUI(Book3, true);
-        else if(name == "Book4")
-            CurrentUI(Book4, true);
+        Debug.Log(name);
+        switch (name)
+        {
+            case "Book1": CurrentUI(Book1, true); break;
+            case "Book2": CurrentUI(Book2, true); break;
+            case "Book3": CurrentUI(Book3, true); break;
+            case "Book4": CurrentUI(Book4, true); break;
+            default: Debug.Log($"{name} doesnt exist"); break;
+        }
     }
 
     public void UI_Dialogue()
@@ -133,3 +134,4 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 1f;
     }
 }
+

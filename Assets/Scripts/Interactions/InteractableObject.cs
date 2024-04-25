@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class InteractableObject : MonoBehaviour
 {
-    [Header("Manager")]
-    public UIManager uiManager;
-
     //All objects
     public enum InteractType
     {
@@ -21,7 +19,7 @@ public class InteractableObject : MonoBehaviour
     [Header("Interaction Type")]
     [SerializeField]
     public InteractType interactType;
-    
+
     [Header("Door Variables")]
     [SerializeField]
     //Doors
@@ -32,7 +30,7 @@ public class InteractableObject : MonoBehaviour
     public Animator doorAnim;
     public float animDelay = 1f;
     public Animator fadeAnim;
-    
+
     [Header("Info Object variables")]
     [SerializeField]
     //Info
@@ -40,26 +38,26 @@ public class InteractableObject : MonoBehaviour
     public float InfoTextDelay = 3;
     public string message;
     public float textSpeed = 0.01f;
-    
+
     [Header("NPC Variables")]
     [SerializeField]
     //NPCS
     public Dialogue dialogue;
-    
+
     [Header("Scriptable Object")]
     public ScriptableIO scriptableIO;
     public ScriptableNPC scriptableNPC;
 
-    
+
     void Start()
     {
         infoText = GameObject.Find("InfoText").GetComponent<TextMeshProUGUI>();
         infoText.text = null;
-        if(interactType == InteractType.Nothing)
+        if (interactType == InteractType.Nothing)
         {
             Debug.Log(this.name + " Has a type of nothing, Was this by mistake?");
         }
-        if(interactType == InteractType.Door)
+        if (interactType == InteractType.Door)
         {
             levelManager = FindObjectOfType<LevelManager>();
             isLocked = true;
@@ -67,11 +65,6 @@ public class InteractableObject : MonoBehaviour
             doorAnim = this.gameObject.GetComponent<Animator>();
             fadeAnim = GameObject.Find("CrossFade").GetComponent<Animator>();
             fadeAnim.SetTrigger("FadeIn");
-        }
-        if (interactType == InteractType.Book)
-        {
-            if (uiManager == null)
-                FindObjectOfType<UIManager>();
         }
     }
 
@@ -82,15 +75,20 @@ public class InteractableObject : MonoBehaviour
 
     public void Book()
     {
-        uiManager.ShowBook(this.name.ToString());
+        UIManager uiMan = FindObjectOfType<UIManager>();
+        if(uiMan != null)
+            Debug.Log("found" +  uiMan.name);
+
+        uiMan.ShowBook(this.name);
+            //FindObjectOfType<UIManager>().ShowBook(this.name.ToString());
     }
 
     // All needed for door objects to work. 
     public void Door()
     {
-        if(isClosed)
+        if (isClosed)
         {
-            if(isLocked)
+            if (isLocked)
             {
                 StartCoroutine(ShowInfo(message, InfoTextDelay));
                 isLocked = false; //Debug line to test before quest is added.
@@ -100,7 +98,7 @@ public class InteractableObject : MonoBehaviour
                 OpenDoor();
             }
         }
-        else if(!isClosed)
+        else if (!isClosed)
         {
             fadeAnim.SetTrigger("FadeOut");
             levelManager.LoadScene(destinantionRoom, animDelay);
@@ -111,7 +109,7 @@ public class InteractableObject : MonoBehaviour
         doorAnim.SetBool("IsOpen", true);
         isClosed = false;
     }
-     
+
     // All needed for info text.
     public void Info()
     {
@@ -129,9 +127,9 @@ public class InteractableObject : MonoBehaviour
 
     private IEnumerator ScrollingText(string currentLine)
     {
-        for(int i = 0; i < currentLine.Length + 1; i++)
+        for (int i = 0; i < currentLine.Length + 1; i++)
         {
-            infoText.text = currentLine.Substring(0,i);
+            infoText.text = currentLine.Substring(0, i);
             yield return new WaitForSeconds(textSpeed);
         }
     }
