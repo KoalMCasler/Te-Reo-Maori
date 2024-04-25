@@ -9,6 +9,7 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject currentInterObj = null;
     public InteractableObject currentInterObjScript = null;
     public GameObject indicator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +46,10 @@ public class PlayerInteraction : MonoBehaviour
             if(currentInterObjScript.interactType == InteractableObject.InteractType.Door)
             {
                 currentInterObjScript.Door();
+            }
+            else if(currentInterObjScript.interactType == InteractableObject.InteractType.Book)
+            {
+                currentInterObjScript.Book();
             }
         }
         else

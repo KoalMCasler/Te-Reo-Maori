@@ -5,6 +5,9 @@ using TMPro;
 
 public class InteractableObject : MonoBehaviour
 {
+    [Header("Manager")]
+    public UIManager uiManager;
+
     //All objects
     public enum InteractType
     {
@@ -46,6 +49,7 @@ public class InteractableObject : MonoBehaviour
     [Header("Scriptable Object")]
     public ScriptableIO scriptableIO;
     public ScriptableNPC scriptableNPC;
+
     
     void Start()
     {
@@ -64,11 +68,21 @@ public class InteractableObject : MonoBehaviour
             fadeAnim = GameObject.Find("CrossFade").GetComponent<Animator>();
             fadeAnim.SetTrigger("FadeIn");
         }
+        if (interactType == InteractType.Book)
+        {
+            if (uiManager == null)
+                FindObjectOfType<UIManager>();
+        }
     }
-    
+
     public void Dialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+    }
+
+    public void Book()
+    {
+        uiManager.ShowBook(this.name.ToString());
     }
 
     // All needed for door objects to work. 

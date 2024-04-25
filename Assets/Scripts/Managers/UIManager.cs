@@ -20,6 +20,10 @@ public class UIManager : MonoBehaviour
     public GameObject Room1Puzzle;
     public GameObject Room2Puzzle;
     public GameObject Room3Puzzle;
+    public GameObject Book1;
+    public GameObject Book2;
+    public GameObject Book3;
+    public GameObject Book4;
 
     //[Header("UI for Interactions")]
     // add interaction UI
@@ -56,6 +60,18 @@ public class UIManager : MonoBehaviour
             CurrentUI(Room2Puzzle, true);
         else if (SceneManager.GetActiveScene().name == "Room 3")
             CurrentUI(Room3Puzzle, true);
+    }
+
+    public void ShowBook(string name)
+    {
+        if(name == "Book1")
+            CurrentUI(Book1, true);
+        else if(name == "Book2")
+            CurrentUI(Book2, true);
+        else if(name == "Book3")
+            CurrentUI(Book3, true);
+        else if(name == "Book4")
+            CurrentUI(Book4, true);
     }
 
     public void UI_Dialogue()
@@ -103,6 +119,10 @@ public class UIManager : MonoBehaviour
         Room1Puzzle.SetActive(false);
         Room2Puzzle.SetActive(false);
         Room3Puzzle.SetActive(false);
+        Book1.SetActive(false);
+        Book2.SetActive(false);
+        Book3.SetActive(false);
+        Book4.SetActive(false);
 
         activeUI.SetActive(true);
         playerSprite.enabled = isActive;
