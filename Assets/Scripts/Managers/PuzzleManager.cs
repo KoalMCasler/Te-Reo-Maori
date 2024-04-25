@@ -27,11 +27,11 @@ public class PuzzleManager : MonoBehaviour
     {
         if (inputFields[0].text == puzzlesToComplete[0].answers[0].ToString())
             inputFields[0].interactable = false;
-        else if (inputFields[1].text == puzzlesToComplete[0].answers[1].ToString())
+        if (inputFields[1].text == puzzlesToComplete[0].answers[1].ToString())
             inputFields[1].interactable = false;
-        else if ((inputFields[2].text == puzzlesToComplete[0].answers[2].ToString()) || (inputFields[2].text == puzzlesToComplete[0].answers[3].ToString()))
+        if ((inputFields[2].text == puzzlesToComplete[0].answers[2].ToString()) || (inputFields[2].text == puzzlesToComplete[0].answers[3].ToString()))
             inputFields[2].interactable = false;
-        else if (inputFields[3].text == puzzlesToComplete[0].answers[4].ToString())
+        if (inputFields[3].text == puzzlesToComplete[0].answers[4].ToString())
             inputFields[3].interactable = false;
     }
 
