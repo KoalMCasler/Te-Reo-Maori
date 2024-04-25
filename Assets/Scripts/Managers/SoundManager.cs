@@ -16,13 +16,14 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
+        sfxSource = GameObject.Find("SFX").GetComponent<AudioSource>();
     }
 
     // This should be used for looping audio.
     public void PlayAudio(string audio)
     {
-        audioSource.Stop();
+        //audioSource.Stop();
         switch(audio)
         {
             case "MainMenu": audioSource.clip = mainMenuClip; break;
@@ -36,10 +37,14 @@ public class SoundManager : MonoBehaviour
     // This should be used for sfx?
     public void PlaySfxAudio(string audio)
     {
-        //switch (audio)
-        //{
-            
-        //}
-        sfxSource.Play();
+        switch (audio)
+        {
+            case "PlayerWalk": sfxSource.clip = footsteps; break;
+        } 
+        sfxSource.PlayOneShot(footsteps, 1f);
+    }
+    public void StopSFXAudio()
+    {
+        sfxSource.Stop();
     }
 }

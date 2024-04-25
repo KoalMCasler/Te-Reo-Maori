@@ -9,7 +9,11 @@ public class LevelManager : MonoBehaviour
     [Header("Managers")]
     [SerializeField]
     private GameManager gameManager;
-    public PuzzleManager puzzleManager;
+    [SerializeField]
+    private PuzzleManager puzzleManager;
+    [SerializeField]
+    private SoundManager soundManager;
+    
 
     //used for the camera and bounding shape, lets each scene have its own shape. 
     [Header("Camera & bounding shape")]
@@ -17,7 +21,7 @@ public class LevelManager : MonoBehaviour
     public Collider2D foundBoundingShape;
     public CinemachineConfiner2D confiner2D;
     
-    [Header("Game Manager")]
+    [Header("Player Spawn Location")]
     public Transform playerSpawn;
 
 
@@ -50,11 +54,14 @@ public class LevelManager : MonoBehaviour
         {
             case "MainMenu": 
                 gameManager.LoadState(sceneName); 
+                soundManager.PlayAudio("MainMenu");
                 break;
             case string name when name.StartsWith("Room"): 
+                soundManager.PlayAudio("Gameplay");
                 gameManager.LoadState("Gameplay"); 
                 break;
             case "GameEnd":
+                soundManager.PlayAudio("MainMenu");
                 gameManager.LoadState(sceneName);
                 break;
         }

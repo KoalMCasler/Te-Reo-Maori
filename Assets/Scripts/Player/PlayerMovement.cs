@@ -16,14 +16,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Vector3 moveDirection;
     public float moveSpeed = 5f;
-    
     private GameManager gameManager;
+    private SoundManager soundManager;
+    private bool SFXPlaying;
 
     // Start is called before the first frame update
     void Start()
     {
+        SFXPlaying = false;
         gameManager = FindObjectOfType<GameManager>();
-
+        soundManager = FindObjectOfType<SoundManager>();
         playerRB = gameObject.GetComponent<Rigidbody2D>();
         playerAnim = gameObject.GetComponent<Animator>();
     }
@@ -52,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
         //Movement logic
         Vector2 moveVector2 = movementValue.Get<Vector2>();
         moveDirection = new Vector3(moveVector2.x,moveVector2.y,0);
+        
     }
 
     void Move()
@@ -59,9 +62,16 @@ public class PlayerMovement : MonoBehaviour
         if(moveDirection.x == 0 && moveDirection.y == 0)
         {
             playerAnim.SetBool("IsIdle", true);
+            soundManager.StopSFXAudio();
+            SFXPlaying = false;
         }
         else
         {
+            if(!SFXPlaying)
+            {
+                soundManager.PlaySfxAudio("PlayerWalk");
+                SFXPlaying = true;
+            }
             playerAnim.SetBool("IsIdle", false);
             playerAnim.SetFloat("InputX", moveDirection.x);
             playerAnim.SetFloat("InputY", moveDirection.y);
