@@ -103,7 +103,6 @@ public class GameManager : MonoBehaviour
     {
         isPaused = false;
         uiManager.UI_MainMenu();
-        
     }
 
     private void Acknowledgment()
