@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
@@ -35,6 +36,7 @@ public class InteractableObject : MonoBehaviour
     [SerializeField]
     //Info
     private TextMeshProUGUI infoText;
+    private GameObject infoImage;
     public float InfoTextDelay = 3;
     public string message;
     public float textSpeed = 0.01f;
@@ -120,9 +122,12 @@ public class InteractableObject : MonoBehaviour
 
     IEnumerator ShowInfo(string message, float delay)
     {
+        infoImage = GameObject.Find("Image_Info");
+        infoImage.GetComponent<Image>().enabled = true;
         StartCoroutine(ScrollingText(message));
         yield return new WaitForSeconds(delay);
         infoText.text = "";
+        infoImage.GetComponent<Image>().enabled = false;
     }
 
     private IEnumerator ScrollingText(string currentLine)
