@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -151,7 +152,7 @@ public class GameManager : MonoBehaviour
     {
         playerInput.actions.FindAction("Move").Disable();
         playerInput.actions.FindAction("Interact").Disable();
-        uiManager.UI_Puzzle();
+        uiManager.UI_Puzzle(SceneManager.GetActiveScene().name.ToString());
     }
 
     private void GameEnd()

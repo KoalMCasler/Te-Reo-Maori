@@ -78,11 +78,7 @@ public class InteractableObject : MonoBehaviour
     public void Book()
     {
         UIManager uiMan = FindObjectOfType<UIManager>();
-        if(uiMan != null)
-            Debug.Log("found" +  uiMan.name);
-
         uiMan.ShowBook(this.name);
-            //FindObjectOfType<UIManager>().ShowBook(this.name.ToString());
     }
 
     // All needed for door objects to work. 

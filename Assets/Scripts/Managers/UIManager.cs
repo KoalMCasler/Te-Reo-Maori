@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,6 +17,10 @@ public class UIManager : MonoBehaviour
     public GameObject OptionsUI;
     public GameObject EndGameUI;
 
+    [Header("Confirmation Exit")]
+    public GameObject ConfirmationUI;
+    public TextMeshProUGUI confirmationText;
+
     [Header("UI for Puzzles")]
     public GameObject Room1Puzzle;
     public GameObject Room2Puzzle;
@@ -25,8 +30,6 @@ public class UIManager : MonoBehaviour
     public GameObject Book3;
     public GameObject Book4;
 
-    //[Header("UI for Interactions")]
-    // add interaction UI
 
     [Header("Player Settings")]
     public GameObject player;
@@ -52,19 +55,37 @@ public class UIManager : MonoBehaviour
         CurrentUI(GameplayUI, true);
     }
 
-    public void UI_Puzzle()
+    public void UI_Confirmation(string name)
     {
-        if (SceneManager.GetActiveScene().name == "Room 1")
-            CurrentUI(Room1Puzzle, true);
-        else if (SceneManager.GetActiveScene().name == "Room 2")
-            CurrentUI(Room2Puzzle, true);
-        else if (SceneManager.GetActiveScene().name == "Room 3")
-            CurrentUI(Room3Puzzle, true);
+        CurrentUI(ConfirmationUI, true);
+        
+        switch(name)
+        {
+            case "quit":
+            confirmationText.text = "Are you sure you want to quit?"; break;
+            case "mainmenu":
+                confirmationText.text = "Are you sure you want to go to Main Menu? All progress will not be saved"; break;
+            default:
+                confirmationText.text = ""; break;
+        }
+
+    }
+
+    public void UI_Puzzle(string name)
+    {
+        switch (name)
+        {
+            case "Room 1":
+                CurrentUI(Room1Puzzle, true); break;
+            case "Room 2":
+                CurrentUI(Room2Puzzle, true); break;
+            case "Room 3":
+                CurrentUI(Room3Puzzle, true); break;
+        }
     }
 
     public void ShowBook(string name)
     {
-        Debug.Log(name);
         switch (name)
         {
             case "Book1": CurrentUI(Book1, true); break;
