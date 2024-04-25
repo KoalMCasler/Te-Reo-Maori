@@ -31,13 +31,13 @@ public class PuzzleManager : MonoBehaviour
     {
         int interactableCount = 0;
 
-        if (puzzleFields[0].text == puzzlesToComplete[0].answers[0].ToString())
+        if (puzzleFields[0].text.ToLower() == "mountain")
             puzzleFields[0].interactable = false;
-        if (puzzleFields[1].text == puzzlesToComplete[0].answers[1].ToString())
+        if ((puzzleFields[1].text.ToLower() == "water")|| (puzzleFields[1].text.ToLower() == "river"))
             puzzleFields[1].interactable = false;
-        if ((puzzleFields[2].text == puzzlesToComplete[0].answers[2].ToString()) || (puzzleFields[2].text == puzzlesToComplete[0].answers[3].ToString()))
+        if ((puzzleFields[2].text.ToLower() == "tribe")|| (puzzleFields[2].text.ToLower() == "people"))
             puzzleFields[2].interactable = false;
-        if (puzzleFields[3].text == puzzlesToComplete[0].answers[4].ToString())
+        if (puzzleFields[3].text.ToLower() == "name")
             puzzleFields[3].interactable = false;
 
         foreach(TMP_InputField field in puzzleFields)

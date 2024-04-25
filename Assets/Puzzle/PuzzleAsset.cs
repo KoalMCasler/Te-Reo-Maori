@@ -12,8 +12,4 @@ public class PuzzleAsset : ScriptableObject
         Finished,
     }
     public Status status;
-
-// this might need to go? depends on how we structure the other two puzzles
-    public string[] answers;
 }
-

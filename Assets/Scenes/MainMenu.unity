@@ -931,7 +931,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Iwi is your people or your tribe
+  m_text: In the tapestry of our history, each iwi weaves a unique thread, contributing
+    to the rich fabric of our collective identity.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6b0490b7d9778974394ecef04c28b18c, type: 2}
   m_sharedMaterial: {fileID: -4844301765400902384, guid: 6b0490b7d9778974394ecef04c28b18c, type: 2}
@@ -6569,7 +6570,7 @@ GameObject:
   - component: {fileID: 663347908}
   - component: {fileID: 663347907}
   m_Layer: 0
-  m_Name: Book2_Water
+  m_Name: Book2_River
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8435,7 +8436,7 @@ GameObject:
   - component: {fileID: 830216315}
   - component: {fileID: 830216314}
   m_Layer: 0
-  m_Name: Txt_Water
+  m_Name: Txt_River
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8480,7 +8481,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: An awa is special to you or one that you have lived by.
+  m_text: As the waters of the awa flowed, they whispered tales of old, carrying
+    the memories of our people through time.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6b0490b7d9778974394ecef04c28b18c, type: 2}
   m_sharedMaterial: {fileID: -4844301765400902384, guid: 6b0490b7d9778974394ecef04c28b18c, type: 2}
@@ -9173,7 +9175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &931201596
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11415,7 +11417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1244521742
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15202,7 +15204,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Your name
+  m_text: Within the pages of our ancestral scrolls, each ingoa is etched with significance,
+    carrying the essence of its bearer across generations.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6b0490b7d9778974394ecef04c28b18c, type: 2}
   m_sharedMaterial: {fileID: -4844301765400902384, guid: 6b0490b7d9778974394ecef04c28b18c, type: 2}
@@ -15424,7 +15427,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A maunga is special to you or one that you have lived by.
+  m_text: In the legends of our ancestors, the mighty maunga stood as guardians,
+    their peaks piercing the sky.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6b0490b7d9778974394ecef04c28b18c, type: 2}
   m_sharedMaterial: {fileID: -4844301765400902384, guid: 6b0490b7d9778974394ecef04c28b18c, type: 2}
