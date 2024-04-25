@@ -42,12 +42,6 @@ public class GameManager : MonoBehaviour
         currentState = gameState;
     }
 
-    //public void Update()
-    //{
-    //    if (gameState != currentState)
-    //        SetState(gameState);
-    //}
-
     // Changes the state and UI
     private void SetState(GameState state)
     {

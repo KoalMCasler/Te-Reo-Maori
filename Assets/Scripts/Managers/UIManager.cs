@@ -1,12 +1,14 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public GameManager gameManager;
+    public LevelManager levelManager;
 
-    [Header("UI Manager")]
+    [Header("UI Panels")]
     public GameObject MainMenuUI;
     public GameObject AcknowledgementUI;
     public GameObject GameplayUI;
@@ -20,6 +22,8 @@ public class UIManager : MonoBehaviour
     [Header("Confirmation Exit")]
     public GameObject ConfirmationUI;
     public TextMeshProUGUI confirmationText;
+    public Button yesButton;
+    public Button noButton;
 
     [Header("UI for Puzzles")]
     public GameObject Room1Puzzle;
@@ -57,18 +61,23 @@ public class UIManager : MonoBehaviour
 
     public void UI_Confirmation(string name)
     {
+        yesButton.onClick.RemoveAllListeners();
         CurrentUI(ConfirmationUI, true);
-        
-        switch(name)
+
+        switch (name)
         {
             case "quit":
-            confirmationText.text = "Are you sure you want to quit?"; break;
+                confirmationText.text = "Are you sure you want to quit?";
+                yesButton.onClick.AddListener(() => gameManager.QuitGame());
+                break;
             case "mainmenu":
-                confirmationText.text = "Are you sure you want to go to Main Menu? All progress will not be saved"; break;
+                confirmationText.text = "Are you sure you want to go to Main Menu? All progress will not be saved";
+                yesButton.onClick.AddListener(() => levelManager.LoadScene("MainMenu"));
+                break;
             default:
-                confirmationText.text = ""; break;
+                confirmationText.text = "";
+                break;
         }
-
     }
 
     public void UI_Puzzle(string name)
@@ -145,6 +154,7 @@ public class UIManager : MonoBehaviour
         Book2.SetActive(false);
         Book3.SetActive(false);
         Book4.SetActive(false);
+        ConfirmationUI.SetActive(false);
 
         activeUI.SetActive(true);
         playerSprite.enabled = isActive;

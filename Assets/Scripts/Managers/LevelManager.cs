@@ -32,16 +32,15 @@ public class LevelManager : MonoBehaviour
     //Will be used for inspector
     public void LoadScene(string sceneName)
     {
-        if (sceneName == "MainMenu")
-            LoadScene("MainMenu", 0f);
-        if (sceneName == "Room 1")
-            LoadScene("Room 1", 0f);
-        if (sceneName == "Room 2")
-            LoadScene("Room 2", 0f);
-        if (sceneName == "Room 3")
-            LoadScene("Room 3", 0f);
-        if (sceneName == "GameEnd")
-            LoadScene("GameEnd", 0f);
+        switch (sceneName)
+        {
+            case "MainMenu": LoadScene("MainMenu", 0f); break;
+            case "Room 1": LoadScene("Room 1", 0f); break;
+            case "Room 2": LoadScene("Room 2", 0f); break;
+            case "Room 3": LoadScene("Room 3", 0f); break;
+            case "GameEnd": LoadScene("GameEnd", 0f); break;
+            default: Debug.Log($"{sceneName} doesnt exist"); break;
+        }
     }
 
     // Used for scripts
