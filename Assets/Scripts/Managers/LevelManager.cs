@@ -71,7 +71,7 @@ public class LevelManager : MonoBehaviour
         // used to find bouding shape and set it to the virtual camera. 
         foundBoundingShape = GameObject.FindWithTag("Confiner").GetComponent<Collider2D>();
         confiner2D.m_BoundingShape2D = foundBoundingShape;
-       
+
         if (scene.name.StartsWith("Room"))
         {
             if (!GameplayMusicIsPlaying)
