@@ -23,10 +23,12 @@ public class LevelManager : MonoBehaviour
     
     [Header("Player Spawn Location")]
     public Transform playerSpawn;
+    private bool GameplayMusicIsPlaying;
 
 
     public void Start()
     {
+        GameplayMusicIsPlaying = false;
         gameManager = FindObjectOfType<GameManager>();
         gameManager.player.SetActive(false);
         // makes sure on scene loaded works. 
@@ -55,14 +57,15 @@ public class LevelManager : MonoBehaviour
             case "MainMenu": 
                 gameManager.LoadState(sceneName); 
                 soundManager.PlayAudio("MainMenu");
+                GameplayMusicIsPlaying = false;
                 break;
             case string name when name.StartsWith("Room"): 
-                soundManager.PlayAudio("Gameplay");
                 gameManager.LoadState("Gameplay"); 
                 break;
             case "GameEnd":
                 soundManager.PlayAudio("MainMenu");
                 gameManager.LoadState(sceneName);
+                GameplayMusicIsPlaying = false;
                 break;
         }
         StartCoroutine(LevelMoveWithDeley(delay,sceneName));
@@ -79,6 +82,11 @@ public class LevelManager : MonoBehaviour
             gameManager.player.transform.position = playerSpawn.position;
             gameManager.player.SetActive(true);
             puzzleManager.door = GameObject.Find("Door");
+        }
+        if(scene.name.StartsWith("Room") && !GameplayMusicIsPlaying)
+        {
+            soundManager.PlayAudio("Gameplay");
+            GameplayMusicIsPlaying = true;
         }
         
     }
