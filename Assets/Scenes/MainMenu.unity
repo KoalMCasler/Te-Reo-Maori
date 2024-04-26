@@ -20617,6 +20617,7 @@ MonoBehaviour:
   mainCamera: {fileID: 1385452072}
   foundBoundingShape: {fileID: 1689798628}
   confiner2D: {fileID: 1385452073}
+  player: {fileID: 1459926653}
   playerSpawn: {fileID: 0}
   fadeAnimator: {fileID: 1990075886}
 --- !u!95 &1990075886

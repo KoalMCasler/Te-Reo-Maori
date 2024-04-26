@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviour
     [Header("Player Settings")]
     public GameObject player;
     private SpriteRenderer playerSprite;
+    public bool isPlayerActive;
 
     private void Start()
     {
@@ -158,6 +159,10 @@ public class UIManager : MonoBehaviour
 
         activeUI.SetActive(true);
         playerSprite.enabled = isActive;
+        if (playerSprite.enabled == true)
+            isPlayerActive = true;
+        else
+            isPlayerActive = false;
 
         if (gameManager.isPaused)
             Time.timeScale = 0f;

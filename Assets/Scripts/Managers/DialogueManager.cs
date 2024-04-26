@@ -9,7 +9,6 @@ public class DialogueManager : MonoBehaviour
 {
     private Queue<string> sentences;
     private GameManager gameManager;
-    private PuzzleManager puzzleManager;
     public PlayerMovement playerMovement;
 
     [Header("Dialogue UI")]
@@ -29,7 +28,6 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-        puzzleManager = FindObjectOfType<PuzzleManager>();
     }
 
 

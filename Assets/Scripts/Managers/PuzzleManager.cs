@@ -6,10 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class PuzzleManager : MonoBehaviour
 {
-    [Header("Managers")]
-    [SerializeField] 
-    private GameManager gameManager;
-
     [Header("Pepeha Puzzle")]
     public GameObject door;
 
@@ -23,7 +19,6 @@ public class PuzzleManager : MonoBehaviour
     
     private void Start() 
     {
-        gameManager = FindObjectOfType<GameManager>();
         ResetAllPuzzles();
     }
 

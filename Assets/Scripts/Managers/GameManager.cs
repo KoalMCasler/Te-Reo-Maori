@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public GameState gameState;
     public GameState beforeSettings ;
     // currentState is used to test to make sure the UI is working properly.
-    private GameState currentState;
+    //private GameState currentState;
 
     [Header("Managers")]
     public UIManager uiManager;
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         playerInput = player.GetComponent<PlayerInput>();
         
         SetState(GameState.MainMenu);
-        currentState = gameState;
+        //currentState = gameState;
     }
 
     // Changes the state and UI
@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
             case GameState.Puzzle: Puzzle(); break;
             case GameState.GameEnd: GameEnd(); break;
         }
-        currentState = gameState;
+        //currentState = gameState;
     }
 
     // Allows state to be set by string which converts it to a gameState
