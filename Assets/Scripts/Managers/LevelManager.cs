@@ -7,14 +7,10 @@ using Cinemachine;
 public class LevelManager : MonoBehaviour
 {
     [Header("Managers")]
-    [SerializeField]
-    private GameManager gameManager;
-    [SerializeField]
-    private PuzzleManager puzzleManager;
-    [SerializeField]
-    private SoundManager soundManager;
+    [SerializeField] private GameManager gameManager;
+    [SerializeField] private PuzzleManager puzzleManager;
+    [SerializeField] private SoundManager soundManager;
     
-
     //used for the camera and bounding shape, lets each scene have its own shape. 
     [Header("Camera & bounding shape")]
     public GameObject mainCamera;
@@ -25,9 +21,16 @@ public class LevelManager : MonoBehaviour
     public Transform playerSpawn;
     private bool GameplayMusicIsPlaying;
 
+    [Header("Scene Fade")]
+    public Animator fadeAnimator;
+
+    // Callback function to be invoked adter fade animation completes
+    private System.Action fadeCallback;
+
 
     public void Start()
     {
+
         GameplayMusicIsPlaying = false;
         gameManager = FindObjectOfType<GameManager>();
         gameManager.player.SetActive(false);
@@ -35,40 +38,33 @@ public class LevelManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    //Will be used for inspector
     public void LoadScene(string sceneName)
     {
-        switch (sceneName)
+        Fade("FadeOut", () =>
         {
-            case "MainMenu": LoadScene("MainMenu", 0f); break;
-            case "Room 1": LoadScene("Room 1", 0f); break;
-            case "Room 2": LoadScene("Room 2", 0f); break;
-            case "Room 3": LoadScene("Room 3", 0f); break;
-            case "GameEnd": LoadScene("GameEnd", 0f); break;
-            default: Debug.Log($"{sceneName} doesnt exist"); break;
-        }
-    }
-
-    // Used for scripts
-    public void LoadScene(string sceneName, float delay)
-    {
-        switch(sceneName)
-        {
-            case "MainMenu": 
-                gameManager.LoadState(sceneName); 
-                soundManager.PlayAudio("MainMenu");
-                GameplayMusicIsPlaying = false;
-                break;
-            case string name when name.StartsWith("Room"): 
-                gameManager.LoadState("Gameplay"); 
-                break;
-            case "GameEnd":
-                soundManager.PlayAudio("MainMenu");
-                gameManager.LoadState(sceneName);
-                GameplayMusicIsPlaying = false;
-                break;
-        }
-        StartCoroutine(LevelMoveWithDeley(delay,sceneName));
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            
+            switch(sceneName)
+            {
+                case "MainMenu": 
+                    gameManager.LoadState(sceneName); 
+                    soundManager.PlayAudio("MainMenu");
+                    GameplayMusicIsPlaying = false;
+                    break;
+                case string name when name.StartsWith("Room"): 
+                    gameManager.LoadState("Gameplay"); 
+                    break;
+                case "GameEnd":
+                    soundManager.PlayAudio("MainMenu");
+                    gameManager.LoadState(sceneName);
+                    GameplayMusicIsPlaying = false;
+                    break;
+                default: 
+                    Debug.Log($"{sceneName} doesnt exist"); 
+                    break;
+            }
+            SceneManager.LoadScene(sceneName);
+        });
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -78,21 +74,30 @@ public class LevelManager : MonoBehaviour
         confiner2D.m_BoundingShape2D = foundBoundingShape;
         if(scene.name.StartsWith("Room"))
         {
+            if(!GameplayMusicIsPlaying)
+            {
+                soundManager.PlayAudio("Gameplay");
+                GameplayMusicIsPlaying = true;
+            }
             playerSpawn = GameObject.FindWithTag("Spawn").GetComponent<Transform>();
             gameManager.player.transform.position = playerSpawn.position;
             gameManager.player.SetActive(true);
             puzzleManager.door = GameObject.Find("Door");
+            Fade("FadeIn");
+            SceneManager.sceneLoaded -= OnSceneLoaded;
         }
-        if(scene.name.StartsWith("Room") && !GameplayMusicIsPlaying)
-        {
-            soundManager.PlayAudio("Gameplay");
-            GameplayMusicIsPlaying = true;
-        }
-        
     }
-    IEnumerator LevelMoveWithDeley(float delay, string sceneName)
+    
+    public void Fade(string fadeDir, System.Action callback = null)
     {
-        yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(sceneName);
+        fadeCallback = callback;
+        fadeAnimator.SetTrigger(fadeDir);
     }
+
+    public void FadeAnimationComplete()
+    {
+        // Invoke the callback if it's not null
+        fadeCallback?.Invoke();    
+    }
+
 }

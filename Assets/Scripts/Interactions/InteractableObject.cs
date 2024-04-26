@@ -18,12 +18,10 @@ public class InteractableObject : MonoBehaviour
     }
 
     [Header("Interaction Type")]
-    [SerializeField]
     public InteractType interactType;
 
-    [Header("Door Variables")]
-    [SerializeField]
     //Doors
+    [Header("Door Variables")]
     public bool isLocked;
     public bool isClosed;
     public string destinantionRoom;
@@ -33,18 +31,17 @@ public class InteractableObject : MonoBehaviour
     public Animator fadeAnim;
     public GameObject doorLight;
 
+    //Info
     [Header("Info Object variables")]
     [SerializeField]
-    //Info
     private TextMeshProUGUI infoText;
     private GameObject infoImage;
     public float InfoTextDelay = 3;
     public string message;
     public float textSpeed = 0.01f;
 
-    [Header("NPC Variables")]
-    [SerializeField]
     //NPCS
+    [Header("NPC Variables")]
     public Dialogue dialogue;
 
     [Header("Scriptable Object")]
@@ -100,8 +97,7 @@ public class InteractableObject : MonoBehaviour
         }
         else if (!isClosed)
         {
-            fadeAnim.SetTrigger("FadeOut");
-            levelManager.LoadScene(destinantionRoom, animDelay);
+            levelManager.LoadScene(destinantionRoom);
         }
     }
 
