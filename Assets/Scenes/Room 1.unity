@@ -22708,6 +22708,14 @@ PrefabInstance:
       value: Book4
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
+      propertyPath: openBook
+      value: 
+      objectReference: {fileID: -713064794, guid: 2418ce107e799764ba19acfe78501e95, type: 3}
+    - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
+      propertyPath: currentBook
+      value: 
+      objectReference: {fileID: 425833419}
+    - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: interactType
       value: 3
       objectReference: {fileID: 0}
@@ -22719,6 +22727,11 @@ PrefabInstance:
 --- !u!4 &425833418 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1314685154117566016, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
+  m_PrefabInstance: {fileID: 425833417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &425833419 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5626644043220066522, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
   m_PrefabInstance: {fileID: 425833417}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &495342382 stripped
@@ -22792,8 +22805,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0036000013, y: -4.8803, z: 0}
-    m_Extent: {x: 0.9948, y: 5.6224, z: 0}
+    m_Center: {x: 0.0027000308, y: -4.8783, z: 0}
+    m_Extent: {x: 1.0062001, y: 5.629, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -22878,12 +22891,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -25090,8 +25103,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.003450036, y: -4.8746, z: 0}
-    m_Extent: {x: 0.99685, y: 5.6295, z: 0}
+    m_Center: {x: -0.007950008, y: -4.88295, z: 0}
+    m_Extent: {x: 1.0014501, y: 5.62315, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25172,8 +25185,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.002849996, y: -4.87775, z: 0}
-    m_Extent: {x: 0.99395, y: 5.6210504, z: 0}
+    m_Center: {x: 0.0032999814, y: -4.8811, z: 0}
+    m_Extent: {x: 0.99549997, y: 5.6254, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25254,8 +25267,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00515002, y: -4.87295, z: 0}
-    m_Extent: {x: 0.99575, y: 5.6287503, z: 0}
+    m_Center: {x: -0.0015000105, y: -4.876, z: 0}
+    m_Extent: {x: 1.0062, y: 5.6261, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25323,6 +25336,14 @@ PrefabInstance:
       value: Book3
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
+      propertyPath: openBook
+      value: 
+      objectReference: {fileID: -713064794, guid: 2418ce107e799764ba19acfe78501e95, type: 3}
+    - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
+      propertyPath: currentBook
+      value: 
+      objectReference: {fileID: 911627622}
+    - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: interactType
       value: 3
       objectReference: {fileID: 0}
@@ -25334,6 +25355,11 @@ PrefabInstance:
 --- !u!4 &911627621 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1314685154117566016, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
+  m_PrefabInstance: {fileID: 911627620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &911627622 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5626644043220066522, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
   m_PrefabInstance: {fileID: 911627620}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &999527167
@@ -25402,8 +25428,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.002849996, y: -4.87305, z: 0}
-    m_Extent: {x: 1.0044501, y: 5.62135, z: 0}
+    m_Center: {x: -0.0026499927, y: -4.87585, z: 0}
+    m_Extent: {x: 0.99545, y: 5.6167502, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25812,6 +25838,14 @@ PrefabInstance:
       value: Book2
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
+      propertyPath: openBook
+      value: 
+      objectReference: {fileID: -713064794, guid: 2418ce107e799764ba19acfe78501e95, type: 3}
+    - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
+      propertyPath: currentBook
+      value: 
+      objectReference: {fileID: 1439644888}
+    - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: interactType
       value: 3
       objectReference: {fileID: 0}
@@ -25823,6 +25857,11 @@ PrefabInstance:
 --- !u!4 &1439644887 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1314685154117566016, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
+  m_PrefabInstance: {fileID: 1439644886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1439644888 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5626644043220066522, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
   m_PrefabInstance: {fileID: 1439644886}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1583420468
@@ -26187,8 +26226,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.004000008, y: -4.878, z: 0}
-    m_Extent: {x: 0.9956, y: 5.6212, z: 0}
+    m_Center: {x: 0.006250024, y: -4.8709, z: 0}
+    m_Extent: {x: 1.00045, y: 5.6249, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -26399,6 +26438,14 @@ PrefabInstance:
       value: Book1
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
+      propertyPath: openBook
+      value: 
+      objectReference: {fileID: -713064794, guid: 2418ce107e799764ba19acfe78501e95, type: 3}
+    - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
+      propertyPath: currentBook
+      value: 
+      objectReference: {fileID: 1801902209637464337}
+    - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: interactType
       value: 3
       objectReference: {fileID: 0}
@@ -26407,6 +26454,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
+--- !u!212 &1801902209637464337 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5626644043220066522, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
+  m_PrefabInstance: {fileID: 1801902209637464336}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4865820670912236908
 PrefabInstance:
   m_ObjectHideFlags: 0
