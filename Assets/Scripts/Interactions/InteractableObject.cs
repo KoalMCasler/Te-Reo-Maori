@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.VFX;
 
 public class InteractableObject : MonoBehaviour
 {
@@ -38,6 +39,8 @@ public class InteractableObject : MonoBehaviour
     public float InfoTextDelay = 3;
     public string message;
     public float textSpeed = 0.01f;
+    public VisualEffect fogAmount;
+    public bool hasFog;
 
     //NPCS
     [Header("NPC Variables")]
@@ -107,6 +110,11 @@ public class InteractableObject : MonoBehaviour
     // All needed for info text.
     public void Info()
     {
+        if(hasFog)
+        {
+            fogAmount.SetFloat("FogAmount", 0);
+            fogAmount.SetFloat("Lifetime", 1);
+        }
         Debug.Log("Reading info from " + this.name);
         //Debug.Log(message);
         StartCoroutine(ShowInfo(message, InfoTextDelay));

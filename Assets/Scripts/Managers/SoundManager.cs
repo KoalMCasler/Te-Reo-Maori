@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
@@ -14,22 +16,35 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip sfx2;
     [SerializeField] private AudioClip sfx3;
 
+    [Header("Audio Settings")]
+    [SerializeField] private AudioMixer audioMixer;
+    [SerializeField] private Slider audioSlider;
+    [SerializeField] private Slider masterSlider;
+    [SerializeField] private Slider sfxSlider;
+    [SerializeField] private Slider musicSlider;
+
     private void Start()
     {
         audioSource = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
         sfxSource = GameObject.Find("SFX").GetComponent<AudioSource>();
+
+        SetVolume("Master");
+        SetVolume("Music");
+        SetVolume("SFX");
     }
 
     // This should be used for looping audio.
     public void PlayAudio(string audio)
     {
-        switch(audio)
+        switch (audio)
         {
             case "MainMenu": audioSource.clip = mainMenuClip; break;
             case "Gameplay": audioSource.clip = gameplayClip; break;
         }
         audioSource.loop = true;
         audioSource.Play();
+
+        audioMixer.SetFloat("", 0);
     }
 
     // This should be used for sfx?
@@ -38,11 +53,61 @@ public class SoundManager : MonoBehaviour
         switch (audio)
         {
             case "PlayerWalk": sfxSource.clip = footsteps; break;
-        } 
+        }
         sfxSource.PlayOneShot(footsteps, 1f);
     }
     public void StopSFXAudio()
     {
         sfxSource.Stop();
+    }
+
+    public void SetVolume(string slider)
+    {
+        switch (slider)
+        {
+            case "SFX":
+                audioMixer.SetFloat(slider, Mathf.Log10(sfxSlider.value) * 20);
+                break;
+            case "Music":
+                audioMixer.SetFloat(slider, Mathf.Log10(musicSlider.value) * 20);
+                break;
+            case "Master":
+                audioMixer.SetFloat(slider, Mathf.Log10(masterSlider.value) * 20);
+                break;
+            default: Debug.Log(slider + " doesnt exist"); break;
+        }
+    }
+
+    public void IncreaseAudio(AudioMixerGroup mixerGroup)
+    {
+        switch (mixerGroup.name)
+        {
+            case "SFX":
+                    sfxSlider.value += 0.1f;
+                break;
+            case "Music":
+                    musicSlider.value += 0.1f;
+                break;
+            case "Master":
+                    masterSlider.value += 0.1f;
+                break;
+        }
+
+    }
+
+    public void DecreaseAudio(AudioMixerGroup mixerGroup)
+    {
+        switch (mixerGroup.name)
+        {
+            case "SFX":
+                    sfxSlider.value -= 0.1f;
+                break;
+            case "Music":
+                    musicSlider.value -= 0.1f;
+                break;
+            case "Master":
+                    masterSlider.value -= 0.1f;
+                break;
+        }
     }
 }
