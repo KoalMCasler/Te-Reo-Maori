@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PuzzleManager : MonoBehaviour
 {
+    private SoundManager soundManager;
+
     [Header("Pepeha Puzzle")]
     public GameObject door;
 
@@ -19,6 +21,7 @@ public class PuzzleManager : MonoBehaviour
     
     private void Start() 
     {
+        soundManager = FindObjectOfType<SoundManager>();
         ResetAllPuzzles();
     }
 
@@ -48,10 +51,7 @@ public class PuzzleManager : MonoBehaviour
         }
 
         if(interactableCount == puzzleFields.Length)
-        {
             createOwn.SetActive(true);
-            interactableCount = 0;
-        }
     }
 
     public void CheckCompletedPepeha()
@@ -60,15 +60,11 @@ public class PuzzleManager : MonoBehaviour
 
         foreach (TMP_InputField field in inputFields)
         {
-            if(field.text != null)
+            if(!string.IsNullOrEmpty(field.text))
                 interactableCount++;
         }
-
         if (interactableCount == puzzleFields.Length)
-        {
             CompletePuzzle(puzzlesToComplete[0]);
-            interactableCount = 0;
-        }
     }
 
     #endregion
@@ -77,7 +73,6 @@ public class PuzzleManager : MonoBehaviour
     {
         puzzle.status = PuzzleAsset.Status.InProgress;
     }
-
 
     public void CompletePuzzle(PuzzleAsset puzzle)
     {
@@ -88,6 +83,7 @@ public class PuzzleManager : MonoBehaviour
             //enter door stuff
             door.GetComponent<InteractableObject>().isLocked = false;
             door.GetComponent<InteractableObject>().doorLight.SetActive(true);
+            soundManager.PlaySfxAudio("Door");
         }
 
     }

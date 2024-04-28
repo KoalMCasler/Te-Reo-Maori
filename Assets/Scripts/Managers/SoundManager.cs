@@ -13,7 +13,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip mainMenuClip;
     [SerializeField] private AudioClip gameplayClip;
     [SerializeField] private AudioClip footsteps;
-    [SerializeField] private AudioClip sfx2;
+    [SerializeField] private AudioClip doorUnlock;
     [SerializeField] private AudioClip sfx3;
 
     [Header("Audio Settings")]
@@ -28,6 +28,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private Image masterImage;
     [SerializeField] private Gradient gradient;
 
+    public bool playSound;
 
     private void Start()
     {
@@ -37,6 +38,17 @@ public class SoundManager : MonoBehaviour
         SetVolume("Master");
         SetVolume("Music");
         SetVolume("SFX");
+    }
+
+    private void Update()
+    {
+        if(playSound)
+        {
+            PlaySfxAudio("Door");
+            Debug.Log("played");
+            playSound = !playSound;
+        }
+
     }
 
     // This should be used for looping audio.
@@ -57,14 +69,18 @@ public class SoundManager : MonoBehaviour
         switch (audio)
         {
             case "PlayerWalk": sfxSource.clip = footsteps; break;
+            case "Door": sfxSource.clip = doorUnlock; 
+            Debug.Log("door played"); break;
         }
-        sfxSource.PlayOneShot(footsteps, 1f);
+        sfxSource.PlayOneShot(sfxSource.clip, 1f);
     }
+
     public void StopSFXAudio()
     {
         sfxSource.Stop();
     }
 
+    // Sets volume
     public void SetVolume(string slider)
     {
         switch (slider)
@@ -85,6 +101,7 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    // used for increase volume button
     public void IncreaseAudio(AudioMixerGroup mixerGroup)
     {
         switch (mixerGroup.name)
@@ -102,6 +119,7 @@ public class SoundManager : MonoBehaviour
 
     }
 
+    // used for decrease volume button
     public void DecreaseAudio(AudioMixerGroup mixerGroup)
     {
         switch (mixerGroup.name)
