@@ -14,14 +14,13 @@ public class GameManager : MonoBehaviour
         Gameplay,
         Puzzle,
         Pause,
-        Credits,
-        Controls,
         Options,
         GameEnd,
     }
 
     public GameState gameState;
     public GameState beforeSettings ;
+
     // currentState is used to test to make sure the UI is working properly.
     //private GameState currentState;
 
@@ -54,8 +53,6 @@ public class GameManager : MonoBehaviour
             case GameState.Acknowledgment: Acknowledgment(); break;
             case GameState.Gameplay: Gameplay(); break;
             case GameState.Pause: Pause(); break;
-            case GameState.Credits: Credits(); break;
-            case GameState.Controls: Controls(); break;
             case GameState.Options: Options(); break;
             case GameState.Puzzle: Puzzle(); break;
             case GameState.GameEnd: GameEnd(); break;
@@ -74,7 +71,7 @@ public class GameManager : MonoBehaviour
 
     private void LoadState(GameState state)
     {
-        if (state == GameState.Options || state == GameState.Controls)
+        if (state == GameState.Options)
             beforeSettings = gameState;
 
         SetState(state);
@@ -93,7 +90,7 @@ public class GameManager : MonoBehaviour
             SetState(GameState.Pause);
             playerInput.actions.FindAction("Move").Disable();
         }
-        else if (gameState == GameState.Options || gameState == GameState.Controls)
+        else if (gameState == GameState.Options)
             LoadState(beforeSettings);
     }
 
@@ -126,22 +123,10 @@ public class GameManager : MonoBehaviour
         uiManager.UI_Pause();
     }
 
-    private void Credits()
-    {
-        isPaused = false;
-        uiManager.UI_Credits();
-    }
-
     private void Options()
     {
         isPaused = true;
         uiManager.UI_Options();
-    }
-
-    private void Controls()
-    {
-        isPaused = true;
-        uiManager.UI_Controls();
     }
 
     private void Puzzle()

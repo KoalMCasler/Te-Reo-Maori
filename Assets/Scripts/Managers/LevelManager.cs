@@ -33,6 +33,7 @@ public class LevelManager : MonoBehaviour
     {
         GameplayMusicIsPlaying = false;
         gameManager = FindObjectOfType<GameManager>();
+        fadeAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
         // makes sure on scene loaded works. 
         SceneManager.sceneLoaded += OnSceneLoaded;
     }

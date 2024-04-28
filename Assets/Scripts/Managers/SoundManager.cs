@@ -18,10 +18,16 @@ public class SoundManager : MonoBehaviour
 
     [Header("Audio Settings")]
     [SerializeField] private AudioMixer audioMixer;
-    [SerializeField] private Slider audioSlider;
     [SerializeField] private Slider masterSlider;
     [SerializeField] private Slider sfxSlider;
     [SerializeField] private Slider musicSlider;
+
+    [Header("Audio Image Settings")]
+    [SerializeField] private Image sfxImage;
+    [SerializeField] private Image musicImage;
+    [SerializeField] private Image masterImage;
+    [SerializeField] private Gradient gradient;
+
 
     private void Start()
     {
@@ -43,8 +49,6 @@ public class SoundManager : MonoBehaviour
         }
         audioSource.loop = true;
         audioSource.Play();
-
-        audioMixer.SetFloat("", 0);
     }
 
     // This should be used for sfx?
@@ -67,12 +71,15 @@ public class SoundManager : MonoBehaviour
         {
             case "SFX":
                 audioMixer.SetFloat(slider, Mathf.Log10(sfxSlider.value) * 20);
+                sfxImage.color = gradient.Evaluate(sfxImage.fillAmount);
                 break;
             case "Music":
                 audioMixer.SetFloat(slider, Mathf.Log10(musicSlider.value) * 20);
+                musicImage.color = gradient.Evaluate(musicImage.fillAmount);
                 break;
             case "Master":
                 audioMixer.SetFloat(slider, Mathf.Log10(masterSlider.value) * 20);
+                masterImage.color = gradient.Evaluate(masterImage.fillAmount);
                 break;
             default: Debug.Log(slider + " doesnt exist"); break;
         }
@@ -83,13 +90,13 @@ public class SoundManager : MonoBehaviour
         switch (mixerGroup.name)
         {
             case "SFX":
-                    sfxSlider.value += 0.1f;
+                sfxSlider.value += 0.1f;
                 break;
             case "Music":
-                    musicSlider.value += 0.1f;
+                musicSlider.value += 0.1f;
                 break;
             case "Master":
-                    masterSlider.value += 0.1f;
+                masterSlider.value += 0.1f;
                 break;
         }
 
@@ -100,13 +107,13 @@ public class SoundManager : MonoBehaviour
         switch (mixerGroup.name)
         {
             case "SFX":
-                    sfxSlider.value -= 0.1f;
+                sfxSlider.value -= 0.1f;
                 break;
             case "Music":
-                    musicSlider.value -= 0.1f;
+                musicSlider.value -= 0.1f;
                 break;
             case "Master":
-                    masterSlider.value -= 0.1f;
+                masterSlider.value -= 0.1f;
                 break;
         }
     }

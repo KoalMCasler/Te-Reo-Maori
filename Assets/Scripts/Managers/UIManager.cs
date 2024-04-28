@@ -23,7 +23,8 @@ public class UIManager : MonoBehaviour
     public GameObject ConfirmationUI;
     public TextMeshProUGUI confirmationText;
     public Button yesButton;
-    public Button noButton;
+    public GameObject yesMenuButton;
+    public GameObject yesQuitButton;
 
     [Header("UI for Puzzles")]
     public GameObject Room1Puzzle;
@@ -70,10 +71,14 @@ public class UIManager : MonoBehaviour
             case "quit":
                 confirmationText.text = "Are you sure you want to quit?";
                 yesButton.onClick.AddListener(() => gameManager.QuitGame());
+               // yesQuitButton.SetActive(true);
+                //yesMenuButton.SetActive(false);
                 break;
             case "mainmenu":
                 confirmationText.text = "Are you sure you want to go to Main Menu? All progress will not be saved";
                 yesButton.onClick.AddListener(() => levelManager.LoadScene("MainMenu"));
+                //yesQuitButton.SetActive(false);
+                //yesMenuButton.SetActive(true);
                 break;
             default:
                 confirmationText.text = "";
