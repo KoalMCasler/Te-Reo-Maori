@@ -28,8 +28,8 @@ public class InteractableObject : MonoBehaviour
     public bool isClosed;
     public string destinantionRoom;
     public LevelManager levelManager;
-    public Animator doorAnim;
-    public float animDelay = 1f;
+    public SpriteRenderer doorSprite;
+    public Sprite newDoor;
     public GameObject doorLight;
 
     //Info
@@ -66,7 +66,6 @@ public class InteractableObject : MonoBehaviour
             levelManager = FindObjectOfType<LevelManager>();
             isLocked = true;
             isClosed = true;
-            doorAnim = this.gameObject.GetComponent<Animator>();
             doorLight.SetActive(false);
         }
     }
@@ -111,7 +110,7 @@ public class InteractableObject : MonoBehaviour
 
     private void OpenDoor()
     {
-        doorAnim.SetBool("IsOpen", true);
+        doorSprite.sprite = newDoor;
         isClosed = false;
     }
 

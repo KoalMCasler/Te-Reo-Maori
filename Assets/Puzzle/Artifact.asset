@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bfafe96495ede54eba01664d67288ba, type: 3}
   m_Name: Artifact
   m_EditorClassIdentifier: 
-  puzzleName: 
+  puzzleName: OrderArtifacts
   status: 0

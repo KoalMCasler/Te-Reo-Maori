@@ -243,8 +243,8 @@ MonoBehaviour:
   isClosed: 0
   destinantionRoom: 
   levelManager: {fileID: 0}
-  doorAnim: {fileID: 0}
-  animDelay: 1
+  doorSprite: {fileID: 0}
+  newDoor: {fileID: 0}
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
   InfoTextDelay: 3
@@ -48094,8 +48094,8 @@ MonoBehaviour:
   isClosed: 0
   destinantionRoom: 
   levelManager: {fileID: 0}
-  doorAnim: {fileID: 0}
-  animDelay: 1
+  doorSprite: {fileID: 0}
+  newDoor: {fileID: 0}
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
   InfoTextDelay: 3
@@ -48423,8 +48423,8 @@ MonoBehaviour:
   isClosed: 0
   destinantionRoom: 
   levelManager: {fileID: 0}
-  doorAnim: {fileID: 0}
-  animDelay: 1
+  doorSprite: {fileID: 0}
+  newDoor: {fileID: 0}
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
   InfoTextDelay: 3
@@ -49893,6 +49893,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
+      propertyPath: newDoor
+      value: 
+      objectReference: {fileID: 1678966699, guid: bc70ccbe4f4437641bfc7f91b96d2159, type: 3}
+    - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
       propertyPath: destinantionRoom
       value: Room 0
       objectReference: {fileID: 0}
@@ -50026,8 +50030,8 @@ MonoBehaviour:
   isClosed: 0
   destinantionRoom: 
   levelManager: {fileID: 0}
-  doorAnim: {fileID: 0}
-  animDelay: 1
+  doorSprite: {fileID: 0}
+  newDoor: {fileID: 0}
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
   InfoTextDelay: 3
@@ -50122,8 +50126,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0010499954, y: -3.19485, z: 0}
-    m_Extent: {x: 1.00705, y: 3.9460502, z: 0}
+    m_Center: {x: -0.002000004, y: -3.19505, z: 0}
+    m_Extent: {x: 0.99319994, y: 3.9444501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

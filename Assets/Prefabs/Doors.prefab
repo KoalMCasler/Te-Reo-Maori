@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2238758350406404474}
   - component: {fileID: 2298270952027510607}
   - component: {fileID: 8837261881501411051}
-  - component: {fileID: 3313130944457313900}
   m_Layer: 0
   m_Name: Doors
   m_TagString: Interactable
@@ -150,37 +149,18 @@ MonoBehaviour:
   isClosed: 1
   destinantionRoom: Room 2
   levelManager: {fileID: 0}
-  doorAnim: {fileID: 3313130944457313900}
-  animDelay: 0.25
-  fadeAnim: {fileID: 0}
+  doorSprite: {fileID: 2238758350406404474}
+  newDoor: {fileID: 0}
   doorLight: {fileID: 5281551087430971397}
   infoText: {fileID: 0}
   InfoTextDelay: 3
   message: 'Its locked, I think I need to do somthing to open it. '
   textSpeed: 0.01
+  hasFog: 0
+  fog: {fileID: 0}
+  fogAmount: {fileID: 0}
   scriptableIO: {fileID: 0}
   scriptableNPC: {fileID: 0}
---- !u!95 &3313130944457313900
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2436820986063075953}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 14366e75c10c9444f838187376fe4873, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5281551087430971397
 GameObject:
   m_ObjectHideFlags: 0

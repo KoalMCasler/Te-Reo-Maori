@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -20,15 +21,21 @@ public class PuzzleManager : MonoBehaviour
     public GameObject createOwn;
     [Header("Artifact Puzzle")]
     public ArtifactSlot[] artifactSlots;
-    
-    private void Start() 
+
+    private void Start()
     {
         soundManager = FindObjectOfType<SoundManager>();
         ResetAllPuzzles();
     }
 
+    private void Update()
+    {
+        if(door == null)
+            door = GameObject.Find("Doors");
+    }
 
-    #region PepehaPuzzle
+
+    #region Puzzle 1
     // Should check through each input field to see if the input matches the answer of the puzzle
     public void CheckFirstPuzzle()
     {
@@ -36,23 +43,23 @@ public class PuzzleManager : MonoBehaviour
 
         if (puzzleFields[0].text.ToLower() == "mountain")
             puzzleFields[0].interactable = false;
-        if ((puzzleFields[1].text.ToLower() == "water")|| (puzzleFields[1].text.ToLower() == "river"))
+        if ((puzzleFields[1].text.ToLower() == "water") || (puzzleFields[1].text.ToLower() == "river"))
             puzzleFields[1].interactable = false;
-        if ((puzzleFields[2].text.ToLower() == "tribe")|| (puzzleFields[2].text.ToLower() == "people"))
+        if ((puzzleFields[2].text.ToLower() == "tribe") || (puzzleFields[2].text.ToLower() == "people"))
             puzzleFields[2].interactable = false;
         if (puzzleFields[3].text.ToLower() == "name")
             puzzleFields[3].interactable = false;
 
-        foreach(TMP_InputField field in puzzleFields)
+        foreach (TMP_InputField field in puzzleFields)
         {
-            if(!field.interactable)
+            if (!field.interactable)
             {
                 StartPuzzle(puzzlesToComplete[0]);
                 interactableCount++;
             }
         }
 
-        if(interactableCount == puzzleFields.Length)
+        if (interactableCount == puzzleFields.Length)
             createOwn.SetActive(true);
     }
 
@@ -62,7 +69,7 @@ public class PuzzleManager : MonoBehaviour
 
         foreach (TMP_InputField field in inputFields)
         {
-            if(!string.IsNullOrEmpty(field.text))
+            if (!string.IsNullOrEmpty(field.text))
                 interactableCount++;
         }
         if (interactableCount == puzzleFields.Length)
@@ -71,6 +78,22 @@ public class PuzzleManager : MonoBehaviour
 
     #endregion
 
+
+    #region Puzzle 2
+    public void CheckSecondPuzzle(PuzzleAsset puzzleAsset)
+    {
+        int slotedCorrectly = 0;
+
+        foreach (ArtifactSlot artifact in artifactSlots)
+        {
+            if (artifact.isSlotedCorrectly)
+                slotedCorrectly++;
+        }
+        if (slotedCorrectly == artifactSlots.Length)
+            CompletePuzzle(puzzleAsset);
+    }
+
+    #endregion
     public void StartPuzzle(PuzzleAsset puzzle)
     {
         puzzle.status = PuzzleAsset.Status.InProgress;
@@ -80,21 +103,16 @@ public class PuzzleManager : MonoBehaviour
     {
         puzzle.status = PuzzleAsset.Status.Finished;
 
-        if(puzzle.name == "Pepehā")
-        {
-            //enter door stuff
-            door.GetComponent<InteractableObject>().isLocked = false;
-            door.GetComponent<InteractableObject>().doorLight.SetActive(true);
-            soundManager.PlaySfxAudio("Door");
-        }
-
+        //enter door stuff
+        door.GetComponent<InteractableObject>().isLocked = false;
+        door.GetComponent<InteractableObject>().doorLight.SetActive(true);
+        soundManager.PlaySfxAudio("Door");
     }
 
-
-//Resets all puzzles to not started.
+    //Resets all puzzles to not started.
     private void ResetAllPuzzles()
     {
-        foreach(PuzzleAsset puzzle in puzzlesToComplete)
+        foreach (PuzzleAsset puzzle in puzzlesToComplete)
         {
             puzzle.status = PuzzleAsset.Status.NotStarted;
         }
