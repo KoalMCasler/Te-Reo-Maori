@@ -39,8 +39,9 @@ public class InteractableObject : MonoBehaviour
     public float InfoTextDelay = 3;
     public string message;
     public float textSpeed = 0.01f;
-    public VisualEffect fogAmount;
     public bool hasFog;
+    public GameObject fog;
+    public VisualEffect fogAmount;
 
     //NPCS
     [Header("NPC Variables")]
@@ -118,6 +119,7 @@ public class InteractableObject : MonoBehaviour
         Debug.Log("Reading info from " + this.name);
         //Debug.Log(message);
         StartCoroutine(ShowInfo(message, InfoTextDelay));
+        fog.SetActive(false);
     }
 
     IEnumerator ShowInfo(string message, float delay)
