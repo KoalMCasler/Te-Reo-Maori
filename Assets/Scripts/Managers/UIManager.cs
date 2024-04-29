@@ -18,25 +18,28 @@ public class UIManager : MonoBehaviour
     public GameObject PauseUI;
     public GameObject OptionsUI;
     public GameObject EndGameUI;
+    public GameObject ProjectInfo;
 
     [Header("Confirmation Exit")]
     public GameObject ConfirmationUI;
     public TextMeshProUGUI confirmationText;
     public Button yesButton;
-    public GameObject yesMenuButton;
-    public GameObject yesQuitButton;
 
-    [Header("UI for Puzzles")]
+    // UI for puzzles
+    [Header("Puzzle UI")]
     public GameObject Room1Puzzle;
     public GameObject Room2Puzzle;
     public GameObject Room3Puzzle;
 
     //Books for room 1
+    [Header("Puzzle 1 UI")]
     public GameObject Book1;
     public GameObject Book2;
     public GameObject Book3;
     public GameObject Book4;
+
     //Artifact for room 2
+    [Header("Puzzle 2 UI")]
     public GameObject Artifact1;
     public GameObject Artifact2;
     public GameObject Artifact3;
@@ -119,6 +122,11 @@ public class UIManager : MonoBehaviour
             case "Book4": CurrentUI(Book4, true); break;
             default: Debug.Log($"{name} doesnt exist"); break;
         }
+    }
+
+    public void ShowProjectInfo()
+    {
+        ProjectInfo.SetActive(true);   
     }
 
     //Failed atempt to get artifact objects to work like books.

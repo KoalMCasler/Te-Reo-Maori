@@ -121,13 +121,15 @@ public class InteractableObject : MonoBehaviour
         {
             fogAmount.SetFloat("FogAmount", 0);
             fogAmount.SetFloat("Lifetime", 1);
+            FindObjectOfType<UIManager>().ShowProjectInfo();
         }
+
         Debug.Log("Reading info from " + this.name);
         //Debug.Log(message);
         StartCoroutine(ShowInfo(message, InfoTextDelay));
 
         if(hasFog)
-            fog.SetActive(false);
+            StartCoroutine(GoAwayFog());
     }
 
     IEnumerator ShowInfo(string message, float delay)
@@ -138,6 +140,12 @@ public class InteractableObject : MonoBehaviour
         yield return new WaitForSeconds(delay);
         infoText.text = "";
         infoImage.GetComponent<Image>().enabled = false;
+    }
+
+    IEnumerator GoAwayFog()
+    {
+        yield return new WaitForSeconds(2);
+        fog.SetActive(false);
     }
 
     private IEnumerator ScrollingText(string currentLine)
