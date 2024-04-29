@@ -125,7 +125,9 @@ public class InteractableObject : MonoBehaviour
         Debug.Log("Reading info from " + this.name);
         //Debug.Log(message);
         StartCoroutine(ShowInfo(message, InfoTextDelay));
-        fog.SetActive(false);
+
+        if(hasFog)
+            fog.SetActive(false);
     }
 
     IEnumerator ShowInfo(string message, float delay)
