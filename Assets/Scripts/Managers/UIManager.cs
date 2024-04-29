@@ -121,6 +121,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    //Failed atempt to get artifact objects to work like books.
     public void ShowArtifact(string name)
     {
         switch (name)
