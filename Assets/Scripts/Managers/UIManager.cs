@@ -30,11 +30,21 @@ public class UIManager : MonoBehaviour
     public GameObject Room1Puzzle;
     public GameObject Room2Puzzle;
     public GameObject Room3Puzzle;
+
+    //Books for room 1
     public GameObject Book1;
     public GameObject Book2;
     public GameObject Book3;
     public GameObject Book4;
-
+    //Artifact for room 2
+    public GameObject Artifact1;
+    public GameObject Artifact2;
+    public GameObject Artifact3;
+    public GameObject Artifact4;
+    public GameObject ArtifactUI1;
+    public GameObject ArtifactUI2;
+    public GameObject ArtifactUI3;
+    public GameObject ArtifactUI4;
 
     [Header("Player Settings")]
     public GameObject player;
@@ -111,6 +121,18 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void ShowArtifact(string name)
+    {
+        switch (name)
+        {
+            case "Artifact1": CurrentUI(Artifact1, true);ArtifactUI1.SetActive(true); break;
+            case "Artifact2": CurrentUI(Artifact2, true);ArtifactUI2.SetActive(true); break;
+            case "Artifact3": CurrentUI(Artifact3, true);ArtifactUI3.SetActive(true); break;
+            case "Artifact4": CurrentUI(Artifact4, true);ArtifactUI4.SetActive(true); break;
+            default: Debug.Log($"{name} doesnt exist"); break;
+        }
+    }
+
     public void UI_Dialogue()
     {
         CurrentUI(DialogueUI, true);
@@ -160,6 +182,10 @@ public class UIManager : MonoBehaviour
         Book2.SetActive(false);
         Book3.SetActive(false);
         Book4.SetActive(false);
+        Artifact1.SetActive(false);
+        Artifact2.SetActive(false);
+        Artifact3.SetActive(false);
+        Artifact4.SetActive(false);
         ConfirmationUI.SetActive(false);
 
         activeUI.SetActive(true);

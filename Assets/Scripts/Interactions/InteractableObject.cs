@@ -15,7 +15,8 @@ public class InteractableObject : MonoBehaviour
         Info,
         Dialogue,
         Book,
-        Door
+        Door,
+        Artifact
     }
 
     [Header("Interaction Type")]
@@ -79,6 +80,12 @@ public class InteractableObject : MonoBehaviour
     {
         UIManager uiMan = FindObjectOfType<UIManager>();
         uiMan.ShowBook(this.name);
+    }
+
+    public void Artifact()
+    {
+        UIManager uiMan = FindObjectOfType<UIManager>();
+        uiMan.ShowArtifact(this.name);
     }
 
     // All needed for door objects to work. 

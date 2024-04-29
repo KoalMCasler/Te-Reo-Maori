@@ -52,6 +52,10 @@ public class PlayerInteraction : MonoBehaviour
             {
                 currentInterObjScript.Book();
             }
+            if(currentInterObjScript.interactType == InteractableObject.InteractType.Artifact)
+            {
+                currentInterObjScript.Artifact();
+            }
         }
         else
         {

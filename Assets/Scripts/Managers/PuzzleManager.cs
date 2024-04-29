@@ -18,6 +18,8 @@ public class PuzzleManager : MonoBehaviour
     public TMP_InputField[] puzzleFields;
     public TMP_InputField[] inputFields;
     public GameObject createOwn;
+    [Header("Artifact Puzzle")]
+    public ArtifactSlot[] artifactSlots;
     
     private void Start() 
     {

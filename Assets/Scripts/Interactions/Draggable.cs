@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public int orderPosition;
     public GameObject uICanvas;
     public Transform parentAfterDrag;
     public Image image;

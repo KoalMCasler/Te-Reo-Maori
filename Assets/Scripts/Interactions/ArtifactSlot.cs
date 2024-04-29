@@ -5,13 +5,21 @@ using UnityEngine.EventSystems;
 
 public class ArtifactSlot : MonoBehaviour, IDropHandler
 {
+    private GameObject dropped;
+    public int orderPosition;
+    public bool isSlotedCorectly;
     public void OnDrop(PointerEventData eventData)
     {
-        if(transform.childCount == 0)
+        if(transform.childCount == 0 && isSlotedCorectly == false)
         {
-            GameObject dropped = eventData.pointerDrag;
-            Draggable draggable = dropped.GetComponent<Draggable>();
-            draggable.parentAfterDrag = transform;
+            dropped = eventData.pointerDrag;
+            dropped.GetComponent<Draggable>().parentAfterDrag = transform;
+            if(dropped.GetComponent<Draggable>().orderPosition == orderPosition)
+            {
+                dropped.GetComponent<Draggable>().enabled = false;
+                dropped.transform.SetParent(transform);
+                isSlotedCorectly = true;
+            }
         }
     }
 }
