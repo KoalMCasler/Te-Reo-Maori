@@ -47,14 +47,15 @@ public class InteractableObject : MonoBehaviour
     //NPCS
     [Header("NPC Variables")]
     public Dialogue dialogue;
+    [Header("Sound Manager")]
+    [SerializeField] private SoundManager soundManager;
 
-    [Header("Scriptable Object")]
-    public ScriptableIO scriptableIO;
-    public ScriptableNPC scriptableNPC;
+    
 
 
     void Start()
     {
+        soundManager = FindObjectOfType<SoundManager>();
         infoText = GameObject.Find("InfoText").GetComponent<TextMeshProUGUI>();
         infoText.text = null;
         if (interactType == InteractType.Nothing)
@@ -77,12 +78,14 @@ public class InteractableObject : MonoBehaviour
 
     public void Book()
     {
+        soundManager.PlaySfxAudio("Book");
         UIManager uiMan = FindObjectOfType<UIManager>();
         uiMan.ShowBook(this.name);
     }
 
     public void Artifact()
     {
+        soundManager.PlaySfxAudio("Book");
         UIManager uiMan = FindObjectOfType<UIManager>();
         uiMan.ShowArtifact(this.name);
     }
@@ -112,6 +115,7 @@ public class InteractableObject : MonoBehaviour
     {
         doorSprite.sprite = newDoor;
         isClosed = false;
+        FindObjectOfType<SoundManager>().PlaySfxAudio("Door");
     }
 
     // All needed for info text.

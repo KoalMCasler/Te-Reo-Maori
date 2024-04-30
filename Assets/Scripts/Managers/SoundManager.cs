@@ -14,7 +14,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip gameplayClip;
     [SerializeField] private AudioClip footsteps;
     [SerializeField] private AudioClip doorUnlock;
-    [SerializeField] private AudioClip sfx3;
+    [SerializeField] private AudioClip openBook;
+    [SerializeField] private AudioClip enterText;
 
     [Header("Audio Settings")]
     [SerializeField] private AudioMixer audioMixer;
@@ -68,11 +69,13 @@ public class SoundManager : MonoBehaviour
     {
         switch (audio)
         {
-            case "PlayerWalk": sfxSource.clip = footsteps; break;
-            case "Door": sfxSource.clip = doorUnlock; 
+            case "PlayerWalk": sfxSource.PlayOneShot(footsteps, 1f); break;
+            case "Door": sfxSource.PlayOneShot(doorUnlock, 1f);  
             Debug.Log("door played"); break;
+            case "Book": sfxSource.PlayOneShot(openBook, 1f);  break;
+            case "EnterText": sfxSource.PlayOneShot(enterText, 1f); break;
         }
-        sfxSource.PlayOneShot(sfxSource.clip, 1f);
+        //sfxSource.PlayOneShot(sfxSource.clip, 1f);
     }
 
     public void StopSFXAudio()
