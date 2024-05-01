@@ -62,8 +62,11 @@ public class PlayerMovement : MonoBehaviour
         if(moveDirection.x == 0 && moveDirection.y == 0)
         {
             playerAnim.SetBool("IsIdle", true);
-            soundManager.StopSFXAudio();
-            SFXPlaying = false;
+            if(SFXPlaying)
+            {
+                soundManager.StopSFXAudio();
+                SFXPlaying = false;
+            }
         }
         else
         {
