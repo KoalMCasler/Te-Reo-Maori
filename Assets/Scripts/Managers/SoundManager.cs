@@ -69,11 +69,14 @@ public class SoundManager : MonoBehaviour
     {
         switch (audio)
         {
-            case "PlayerWalk": sfxSource.PlayOneShot(footsteps, 1f); break;
+            case "PlayerWalk": sfxSource.PlayOneShot(footsteps, 1f);
+            Debug.Log("Walk played"); break;
             case "Door": sfxSource.PlayOneShot(doorUnlock, 1f);  
             Debug.Log("door played"); break;
-            case "Book": sfxSource.PlayOneShot(openBook, 1f);  break;
-            case "EnterText": sfxSource.PlayOneShot(enterText, 1f); break;
+            case "Book": sfxSource.PlayOneShot(openBook, 1f);
+            Debug.Log("Book played");  break;
+            case "EnterText": sfxSource.PlayOneShot(enterText, 1f);
+            Debug.Log("Text played"); break;
         }
         //sfxSource.PlayOneShot(sfxSource.clip, 1f);
     }
