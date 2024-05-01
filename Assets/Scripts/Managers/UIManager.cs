@@ -35,12 +35,11 @@ public class UIManager : MonoBehaviour
     public GameObject Room3Puzzle;
 
     //Books for room 1
-    [Header("Puzzle 1 UI")]
-    public GameObject Book1;
-    public GameObject Book2;
-    public GameObject Book3;
-    public GameObject Book4;
-
+    [Header("Puzzle 1- Book UI")]
+    public GameObject Book;
+    public TextMeshProUGUI bookText;
+    public Image bookImage;
+   
     //Artifact for room 2
     [Header("Puzzle 2 UI")]
     public GameObject Artifact1;
@@ -124,18 +123,12 @@ public class UIManager : MonoBehaviour
     #region Puzzle UI
 
     // Depending on the book that's opening, it will open the corresponding UI. (I'd like to change this if I find time.)
-    public void ShowBook(string name)
+    public void ShowBook(Sprite image, string infoText)
     {
         PlayerMovement(false);
-
-        switch (name)
-        {
-            case "Book1": CurrentUI(Book1, true); break;
-            case "Book2": CurrentUI(Book2, true); break;
-            case "Book3": CurrentUI(Book3, true); break;
-            case "Book4": CurrentUI(Book4, true); break;
-            default: Debug.Log($"{name} doesnt exist"); break;
-        }
+        CurrentUI(Book, true);
+        bookImage.sprite = image;
+        bookText.text = infoText;
     }
 
     //Artifact objects work like books.
@@ -221,10 +214,7 @@ public class UIManager : MonoBehaviour
         Room1Puzzle.SetActive(false);
         Room2Puzzle.SetActive(false);
         Room3Puzzle.SetActive(false);
-        Book1.SetActive(false);
-        Book2.SetActive(false);
-        Book3.SetActive(false);
-        Book4.SetActive(false);
+        Book.SetActive(false);
         Artifact1.SetActive(false);
         Artifact2.SetActive(false);
         Artifact3.SetActive(false);

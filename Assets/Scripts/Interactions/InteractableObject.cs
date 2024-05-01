@@ -58,7 +58,7 @@ public class InteractableObject : MonoBehaviour
     public VisualEffect fogAmount;
 
     [Header("Image & Text")] // not sure if we're using text for the photos but adding that here anyways
-    [SerializeField] private Image picture;
+    [SerializeField] private Sprite picture;
     [SerializeField] private string pictureText;
 
 
@@ -93,7 +93,7 @@ public class InteractableObject : MonoBehaviour
     public void Book()
     {
         soundManager.PlaySfxAudio("Book");
-        uiManager.ShowBook(this.name);
+        uiManager.ShowBook(picture, pictureText);
     }
 
     public void Artifact()
@@ -105,7 +105,8 @@ public class InteractableObject : MonoBehaviour
     public void Picture()
     {
         // Sound?
-        uiManager.currentImage = picture;
+        if(picture != null)
+            uiManager.currentImage.sprite = picture;
         uiManager.ShowPicture();
     }
 
