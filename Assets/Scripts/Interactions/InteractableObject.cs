@@ -16,7 +16,8 @@ public class InteractableObject : MonoBehaviour
         Dialogue,
         Book,
         Door,
-        Artifact
+        Artifact,
+        Picture,
     }
 
     [Header("Interaction Type")]
@@ -47,10 +48,10 @@ public class InteractableObject : MonoBehaviour
     //NPCS
     [Header("NPC Variables")]
     public Dialogue dialogue;
+
     [Header("Sound Manager")]
     [SerializeField] private SoundManager soundManager;
 
-    
 
 
     void Start()
@@ -121,7 +122,7 @@ public class InteractableObject : MonoBehaviour
     // All needed for info text.
     public void Info()
     {
-        if(hasFog)
+        if (hasFog)
         {
             fogAmount.SetFloat("FogAmount", 0);
             fogAmount.SetFloat("Lifetime", 1);
@@ -132,7 +133,7 @@ public class InteractableObject : MonoBehaviour
         //Debug.Log(message);
         StartCoroutine(ShowInfo(message, InfoTextDelay));
 
-        if(hasFog)
+        if (hasFog)
             StartCoroutine(GoAwayFog());
     }
 

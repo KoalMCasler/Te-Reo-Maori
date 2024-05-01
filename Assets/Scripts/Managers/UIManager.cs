@@ -49,6 +49,14 @@ public class UIManager : MonoBehaviour
     public GameObject ArtifactUI3;
     public GameObject ArtifactUI4;
 
+    [Header("Puzzle 3")]
+    public Sprite Picture1;
+    public Sprite Picture2;
+    public Sprite Picture3;
+    public Sprite Picture4;
+    public GameObject PictureUI;
+    public SpriteRenderer currentSprite; // Might try to use only 1 UI object but just change the image that's shown
+
     [Header("Player Settings")]
     public GameObject player;
     private SpriteRenderer playerSprite;
@@ -129,7 +137,7 @@ public class UIManager : MonoBehaviour
         ProjectInfo.SetActive(true);   
     }
 
-    //Failed atempt to get artifact objects to work like books.
+    //Artifact objects work like books.
     public void ShowArtifact(string name)
     {
         switch (name)
@@ -138,6 +146,15 @@ public class UIManager : MonoBehaviour
             case "Artifact2": CurrentUI(Artifact2, true);ArtifactUI2.SetActive(true); break;
             case "Artifact3": CurrentUI(Artifact3, true);ArtifactUI3.SetActive(true); break;
             case "Artifact4": CurrentUI(Artifact4, true);ArtifactUI4.SetActive(true); break;
+            default: Debug.Log($"{name} doesnt exist"); break;
+        }
+    }
+
+    public void ShowPicture(string name)
+    {
+        switch (name)
+        {
+            case "Picture1": CurrentUI(PictureUI, true); break;
             default: Debug.Log($"{name} doesnt exist"); break;
         }
     }
