@@ -35,16 +35,13 @@ public class UIManager : MonoBehaviour
     public GameObject Room3Puzzle;
 
     //Books for room 1
-    [Header("Puzzle 1- Book UI")]
-    public GameObject Book;
-    public TextMeshProUGUI bookText;
-    public Image bookImage;
+    [Header("Puzzle 1/2 - Info UI")]
+    public GameObject InfoBookArtifact;
+    public TextMeshProUGUI bookArtifactText;
+    public Image bookArtifactImage;
    
     //Artifact for room 2
     [Header("Puzzle 2 UI")]
-    public GameObject ArtifactInfo;
-    public TextMeshProUGUI artifactText;
-    public Image artifactImage;
     public GameObject ArtifactUI1;
     public GameObject ArtifactUI2;
     public GameObject ArtifactUI3;
@@ -126,9 +123,9 @@ public class UIManager : MonoBehaviour
     public void ShowBook(Sprite image, string infoText)
     {
         PlayerMovement(false);
-        CurrentUI(Book, true);
-        bookImage.sprite = image;
-        bookText.text = infoText;
+        CurrentUI(InfoBookArtifact, true);
+        bookArtifactImage.sprite = image;
+        bookArtifactText.text = infoText;
     }
 
     //Artifact objects work like books.
@@ -136,9 +133,9 @@ public class UIManager : MonoBehaviour
     {
         PlayerMovement(false);
 
-        CurrentUI(ArtifactInfo, true);
-        artifactImage.sprite = image;
-        artifactText.text = infoText;
+        CurrentUI(InfoBookArtifact, true);
+        bookArtifactImage.sprite = image;
+        bookArtifactText.text = infoText;
 
         switch (artifactName)
         {
@@ -218,8 +215,7 @@ public class UIManager : MonoBehaviour
         Room1Puzzle.SetActive(false);
         Room2Puzzle.SetActive(false);
         Room3Puzzle.SetActive(false);
-        Book.SetActive(false);
-        ArtifactInfo.SetActive(false);
+        InfoBookArtifact.SetActive(false);
         ConfirmationUI.SetActive(false);
 
         activeUI.SetActive(true);
