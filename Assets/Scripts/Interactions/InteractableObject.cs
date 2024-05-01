@@ -41,28 +41,41 @@ public class InteractableObject : MonoBehaviour
     public float InfoTextDelay = 3;
     public string message;
     public float textSpeed = 0.01f;
-    public bool hasFog;
-    public GameObject fog;
-    public VisualEffect fogAmount;
 
     //NPCS
     [Header("NPC Variables")]
     public Dialogue dialogue;
 
-    [Header("Sound Manager")]
+    // Managers
+    [Header("Managers")]
     [SerializeField] private SoundManager soundManager;
+    [SerializeField] private UIManager uiManager;
+
+    // Fog
+    [Header("Fog Settings")]
+    public bool hasFog;
+    public GameObject fog;
+    public VisualEffect fogAmount;
+
+    [Header("Image & Text")] // not sure if we're using text for the photos but adding that here anyways
+    [SerializeField] private Image picture;
+    [SerializeField] private string pictureText;
 
 
 
     void Start()
     {
         soundManager = FindObjectOfType<SoundManager>();
+        uiManager = FindObjectOfType<UIManager>();
+
         infoText = GameObject.Find("InfoText").GetComponent<TextMeshProUGUI>();
         infoText.text = null;
+
         if (interactType == InteractType.Nothing)
         {
             Debug.Log(this.name + " Has a type of nothing, Was this by mistake?");
         }
+
         if (interactType == InteractType.Door)
         {
             levelManager = FindObjectOfType<LevelManager>();
@@ -80,15 +93,20 @@ public class InteractableObject : MonoBehaviour
     public void Book()
     {
         soundManager.PlaySfxAudio("Book");
-        UIManager uiMan = FindObjectOfType<UIManager>();
-        uiMan.ShowBook(this.name);
+        uiManager.ShowBook(this.name);
     }
 
     public void Artifact()
     {
         soundManager.PlaySfxAudio("Book");
-        UIManager uiMan = FindObjectOfType<UIManager>();
-        uiMan.ShowArtifact(this.name);
+        uiManager.ShowArtifact(this.name);
+    }
+
+    public void Picture()
+    {
+        // Sound?
+        uiManager.currentImage = picture;
+        uiManager.ShowPicture();
     }
 
     // All needed for door objects to work. 
@@ -112,6 +130,7 @@ public class InteractableObject : MonoBehaviour
         }
     }
 
+    // Changes door sprite
     private void OpenDoor()
     {
         doorSprite.sprite = newDoor;
@@ -147,6 +166,7 @@ public class InteractableObject : MonoBehaviour
         infoImage.GetComponent<Image>().enabled = false;
     }
 
+    // Sets fog inactive after 2 seconds
     IEnumerator GoAwayFog()
     {
         yield return new WaitForSeconds(2);

@@ -8699,6 +8699,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1793671293604047946}
   - {fileID: 1453289987}
   - {fileID: 2257378718370385938}
   m_Father: {fileID: 0}
@@ -14497,13 +14498,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7761887982115718875}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.9946747, y: 17.119278, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0053253174, y: -5.880722, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1826793580}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1019791633}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2257378718370385937
 PrefabInstance:
@@ -14677,7 +14678,7 @@ GameObject:
   - component: {fileID: 6161919869883444197}
   - component: {fileID: 7761887982115718876}
   m_Layer: 0
-  m_Name: Doors
+  m_Name: Gate
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14707,10 +14708,13 @@ MonoBehaviour:
   InfoTextDelay: 3
   message: 
   textSpeed: 0.01
+  soundManager: {fileID: 0}
+  uiManager: {fileID: 0}
   hasFog: 0
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
-  soundManager: {fileID: 0}
+  picture: {fileID: 0}
+  pictureText: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -14720,4 +14724,3 @@ SceneRoots:
   - {fileID: 1019791633}
   - {fileID: 404066566}
   - {fileID: 203192126}
-  - {fileID: 1793671293604047946}

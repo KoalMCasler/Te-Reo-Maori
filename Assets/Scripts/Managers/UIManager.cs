@@ -1,10 +1,13 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+
+    [Header("Managers")]
     public GameManager gameManager;
     public LevelManager levelManager;
 
@@ -50,23 +53,22 @@ public class UIManager : MonoBehaviour
     public GameObject ArtifactUI4;
 
     [Header("Puzzle 3")]
-    public Sprite Picture1;
-    public Sprite Picture2;
-    public Sprite Picture3;
-    public Sprite Picture4;
     public GameObject PictureUI;
-    public SpriteRenderer currentSprite; // Might try to use only 1 UI object but just change the image that's shown
+    public Image currentImage; // Might try to use only 1 UI object but just change the image that's shown
 
     [Header("Player Settings")]
     public GameObject player;
+    private PlayerInput playerInput;
     private SpriteRenderer playerSprite;
-    public bool isPlayerActive;
+   
 
     private void Start()
     {
         playerSprite = player.GetComponent<SpriteRenderer>();
+        playerInput = player.GetComponent<PlayerInput>();
     }
 
+    #region GameState UI
     public void UI_MainMenu()
     {
         CurrentUI(MainMenuUI, false);
@@ -79,36 +81,14 @@ public class UIManager : MonoBehaviour
 
     public void UI_Gameplay()
     {
+        PlayerMovement(true);
         CurrentUI(GameplayUI, true);
     }
 
-    public void UI_Confirmation(string name)
-    {
-        yesButton.onClick.RemoveAllListeners();
-        CurrentUI(ConfirmationUI, true);
-
-        switch (name)
-        {
-            case "quit":
-                confirmationText.text = "Are you sure you want to quit?";
-                yesButton.onClick.AddListener(() => gameManager.QuitGame());
-               // yesQuitButton.SetActive(true);
-                //yesMenuButton.SetActive(false);
-                break;
-            case "mainmenu":
-                confirmationText.text = "Are you sure you want to go to Main Menu? All progress will not be saved";
-                yesButton.onClick.AddListener(() => levelManager.LoadScene("MainMenu"));
-                //yesQuitButton.SetActive(false);
-                //yesMenuButton.SetActive(true);
-                break;
-            default:
-                confirmationText.text = "";
-                break;
-        }
-    }
-
+    // Shows The UI for the puzzle depending on the room name.
     public void UI_Puzzle(string name)
     {
+        PlayerMovement(false);
         switch (name)
         {
             case "Room 1":
@@ -120,8 +100,34 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void UI_Pause()
+    {
+        PlayerMovement(false);
+        CurrentUI(PauseUI, true);
+    }
+
+    public void UI_Options()
+    {
+        CurrentUI(OptionsUI, true);
+    }
+
+    public void UI_EndGame()
+    {
+        PlayerMovement(false);
+        CurrentUI(EndGameUI, false);
+    }
+
+    #endregion
+
+
+
+    #region Puzzle UI
+
+    // Depending on the book that's opening, it will open the corresponding UI. (I'd like to change this if I find time.)
     public void ShowBook(string name)
     {
+        PlayerMovement(false);
+
         switch (name)
         {
             case "Book1": CurrentUI(Book1, true); break;
@@ -132,31 +138,58 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void ShowProjectInfo()
-    {
-        ProjectInfo.SetActive(true);   
-    }
-
     //Artifact objects work like books.
     public void ShowArtifact(string name)
     {
+        PlayerMovement(false);
+
         switch (name)
         {
-            case "Artifact1": CurrentUI(Artifact1, true);ArtifactUI1.SetActive(true); break;
-            case "Artifact2": CurrentUI(Artifact2, true);ArtifactUI2.SetActive(true); break;
-            case "Artifact3": CurrentUI(Artifact3, true);ArtifactUI3.SetActive(true); break;
-            case "Artifact4": CurrentUI(Artifact4, true);ArtifactUI4.SetActive(true); break;
+            case "Artifact1": CurrentUI(Artifact1, true); ArtifactUI1.SetActive(true); break;
+            case "Artifact2": CurrentUI(Artifact2, true); ArtifactUI2.SetActive(true); break;
+            case "Artifact3": CurrentUI(Artifact3, true); ArtifactUI3.SetActive(true); break;
+            case "Artifact4": CurrentUI(Artifact4, true); ArtifactUI4.SetActive(true); break;
             default: Debug.Log($"{name} doesnt exist"); break;
         }
     }
 
-    public void ShowPicture(string name)
+    // Shows picture. The plan is to use 1 UI object and just change the image depending on the object (Image should be stored on the interactable)
+    public void ShowPicture()
     {
+        PlayerMovement(false);
+
+        CurrentUI(PictureUI, true);
+    }
+
+    #endregion
+
+    // UI confirmation for exiting to main menu or quit
+    public void UI_Confirmation(string name)
+    {
+        yesButton.onClick.RemoveAllListeners(); // removes listeners from the yes button.
+        CurrentUI(ConfirmationUI, true);
+
+        // Based on the string name, it will decide what's shown on the confirmation page.
         switch (name)
         {
-            case "Picture1": CurrentUI(PictureUI, true); break;
-            default: Debug.Log($"{name} doesnt exist"); break;
+            case "quit":
+                confirmationText.text = "Are you sure you want to quit?";
+                yesButton.onClick.AddListener(() => gameManager.QuitGame());
+                break;
+            case "mainmenu":
+                confirmationText.text = "Are you sure you want to go to Main Menu? All progress will not be saved";
+                yesButton.onClick.AddListener(() => levelManager.LoadScene("MainMenu"));
+                break;
+            default:
+                confirmationText.text = "";
+                break;
         }
+    }
+
+    // This is used at the beginning to turn on the project info UI for after you've interacted with the sign
+    public void ShowProjectInfo()
+    {
+        ProjectInfo.SetActive(true);
     }
 
     public void UI_Dialogue()
@@ -174,23 +207,7 @@ public class UIManager : MonoBehaviour
         CurrentUI(CreditsUI, false);
     }
 
-    public void UI_Pause()
-    {
-        CurrentUI(PauseUI, true);
-    }
-
-    public void UI_Options()
-    {
-        CurrentUI(OptionsUI, true);
-
-    }
-
-    public void UI_EndGame()
-    {
-        CurrentUI(EndGameUI, false);
-    }
-
-    // Sets UI to the required panel
+    // Sets UI to the required panel & enables or disables player sprite
     void CurrentUI(GameObject activeUI, bool isActive)
     {
         AcknowledgementUI.SetActive(false);
@@ -215,16 +232,26 @@ public class UIManager : MonoBehaviour
         ConfirmationUI.SetActive(false);
 
         activeUI.SetActive(true);
-        playerSprite.enabled = isActive;
-        if (playerSprite.enabled == true)
-            isPlayerActive = true;
-        else
-            isPlayerActive = false;
+        playerSprite.enabled = isActive; // Enables or disables player sprite
 
         if (gameManager.isPaused)
             Time.timeScale = 0f;
         else
             Time.timeScale = 1f;
     }
-}
 
+    // Enable and disable player Movement & interaction
+    private void PlayerMovement(bool playerMove)
+    {
+        if (playerMove == false)
+        {
+            playerInput.actions.FindAction("Move").Disable();
+            playerInput.actions.FindAction("Interact").Disable();
+        }
+        if (playerMove == true)
+        {
+            playerInput.actions.FindAction("Move").Enable();
+            playerInput.actions.FindAction("Interact").Enable();
+        }
+    }
+}
