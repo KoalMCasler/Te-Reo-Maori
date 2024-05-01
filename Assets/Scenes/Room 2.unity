@@ -248,13 +248,15 @@ MonoBehaviour:
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
   InfoTextDelay: 3
-  message: A book for the first puzzle.
+  message: 
   textSpeed: 0.01
+  soundManager: {fileID: 0}
+  uiManager: {fileID: 0}
   hasFog: 0
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
-  scriptableIO: {fileID: 0}
-  scriptableNPC: {fileID: 0}
+  picture: {fileID: 21300000, guid: 60b57a316e92edc4db0e4c40fee1e999, type: 3}
+  pictureText: insert stuff here
 --- !u!212 &65435298
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48099,13 +48101,15 @@ MonoBehaviour:
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
   InfoTextDelay: 3
-  message: A book for the first puzzle.
+  message: 
   textSpeed: 0.01
+  soundManager: {fileID: 0}
+  uiManager: {fileID: 0}
   hasFog: 0
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
-  scriptableIO: {fileID: 0}
-  scriptableNPC: {fileID: 0}
+  picture: {fileID: 921023191, guid: 67a745ba7d6aedc4b85554352324b899, type: 3}
+  pictureText: Insert information
 --- !u!212 &798550004
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48428,13 +48432,15 @@ MonoBehaviour:
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
   InfoTextDelay: 3
-  message: A book for the first puzzle.
+  message: 
   textSpeed: 0.01
+  soundManager: {fileID: 0}
+  uiManager: {fileID: 0}
   hasFog: 0
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
-  scriptableIO: {fileID: 0}
-  scriptableNPC: {fileID: 0}
+  picture: {fileID: 21300000, guid: 6b17cbb13ec309646ac6288cdfdfe072, type: 3}
+  pictureText: Insert information
 --- !u!212 &1281013533
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -50035,13 +50041,15 @@ MonoBehaviour:
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
   InfoTextDelay: 3
-  message: A book for the first puzzle.
+  message: 
   textSpeed: 0.01
+  soundManager: {fileID: 0}
+  uiManager: {fileID: 0}
   hasFog: 0
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
-  scriptableIO: {fileID: 0}
-  scriptableNPC: {fileID: 0}
+  picture: {fileID: 1814359040, guid: 01948f16e552692469b03963b415b8a7, type: 3}
+  pictureText: insert stuff about the thing
 --- !u!70 &6267510682082714943
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -50126,8 +50134,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.002000004, y: -3.19505, z: 0}
-    m_Extent: {x: 0.99319994, y: 3.9444501, z: 0}
+    m_Center: {x: 0.00014999509, y: -3.20005, z: 0}
+    m_Extent: {x: 0.99305, y: 3.94935, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

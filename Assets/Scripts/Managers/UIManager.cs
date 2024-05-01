@@ -42,10 +42,9 @@ public class UIManager : MonoBehaviour
    
     //Artifact for room 2
     [Header("Puzzle 2 UI")]
-    public GameObject Artifact1;
-    public GameObject Artifact2;
-    public GameObject Artifact3;
-    public GameObject Artifact4;
+    public GameObject ArtifactInfo;
+    public TextMeshProUGUI artifactText;
+    public Image artifactImage;
     public GameObject ArtifactUI1;
     public GameObject ArtifactUI2;
     public GameObject ArtifactUI3;
@@ -70,6 +69,7 @@ public class UIManager : MonoBehaviour
     #region GameState UI
     public void UI_MainMenu()
     {
+        PlayerMovement(false);
         CurrentUI(MainMenuUI, false);
     }
 
@@ -132,17 +132,21 @@ public class UIManager : MonoBehaviour
     }
 
     //Artifact objects work like books.
-    public void ShowArtifact(string name)
+    public void ShowArtifact(Sprite image, string infoText, string artifactName)
     {
         PlayerMovement(false);
 
-        switch (name)
+        CurrentUI(ArtifactInfo, true);
+        artifactImage.sprite = image;
+        artifactText.text = infoText;
+
+        switch (artifactName)
         {
-            case "Artifact1": CurrentUI(Artifact1, true); ArtifactUI1.SetActive(true); break;
-            case "Artifact2": CurrentUI(Artifact2, true); ArtifactUI2.SetActive(true); break;
-            case "Artifact3": CurrentUI(Artifact3, true); ArtifactUI3.SetActive(true); break;
-            case "Artifact4": CurrentUI(Artifact4, true); ArtifactUI4.SetActive(true); break;
-            default: Debug.Log($"{name} doesnt exist"); break;
+            case "Artifact1": ArtifactUI1.SetActive(true); break;
+            case "Artifact2": ArtifactUI2.SetActive(true); break;
+            case "Artifact3": ArtifactUI3.SetActive(true); break;
+            case "Artifact4": ArtifactUI4.SetActive(true); break;
+            default: Debug.Log($"{artifactName} doesnt exist"); break;
         }
     }
 
@@ -215,10 +219,7 @@ public class UIManager : MonoBehaviour
         Room2Puzzle.SetActive(false);
         Room3Puzzle.SetActive(false);
         Book.SetActive(false);
-        Artifact1.SetActive(false);
-        Artifact2.SetActive(false);
-        Artifact3.SetActive(false);
-        Artifact4.SetActive(false);
+        ArtifactInfo.SetActive(false);
         ConfirmationUI.SetActive(false);
 
         activeUI.SetActive(true);
