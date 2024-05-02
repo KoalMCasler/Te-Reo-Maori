@@ -49796,6 +49796,14 @@ PrefabInstance:
       propertyPath: message
       value: Gather and Identify all 4 artifacts
       objectReference: {fileID: 0}
+    - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
+      propertyPath: textSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
+      propertyPath: InfoTextDelay
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3381665521167207461, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.0945177
@@ -50134,8 +50142,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00014999509, y: -3.20005, z: 0}
-    m_Extent: {x: 0.99305, y: 3.94935, z: 0}
+    m_Center: {x: -0.005100012, y: -3.2069502, z: 0}
+    m_Extent: {x: 0.9978, y: 3.94665, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

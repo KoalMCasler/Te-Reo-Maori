@@ -179,6 +179,7 @@ public class InteractableObject : MonoBehaviour
         for (int i = 0; i < currentLine.Length + 1; i++)
         {
             infoText.text = currentLine.Substring(0, i);
+            FindObjectOfType<SoundManager>().PlaySfxAudio("TypeEffect");
             yield return new WaitForSeconds(textSpeed);
         }
     }

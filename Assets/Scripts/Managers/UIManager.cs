@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     [Header("Managers")]
     public GameManager gameManager;
     public LevelManager levelManager;
+    public SoundManager soundManager;
 
     [Header("UI Panels")]
     public GameObject MainMenuUI;
@@ -61,6 +62,7 @@ public class UIManager : MonoBehaviour
     {
         playerSprite = player.GetComponent<SpriteRenderer>();
         playerInput = player.GetComponent<PlayerInput>();
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     #region GameState UI
@@ -94,6 +96,7 @@ public class UIManager : MonoBehaviour
             case "Room 3":
                 CurrentUI(Room3Puzzle, true); break;
         }
+        soundManager.PlaySfxAudio("Book");
     }
 
     public void UI_Pause()

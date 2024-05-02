@@ -42,13 +42,25 @@ public class PuzzleManager : MonoBehaviour
         int interactableCount = 0;
 
         if (puzzleFields[0].text.ToLower() == "mountain")
+        {
+            soundManager.PlaySfxAudio("EnterText");
             puzzleFields[0].interactable = false;
+        }
         if ((puzzleFields[1].text.ToLower() == "water") || (puzzleFields[1].text.ToLower() == "river"))
+        {
+            soundManager.PlaySfxAudio("EnterText");
             puzzleFields[1].interactable = false;
+        }
         if ((puzzleFields[2].text.ToLower() == "tribe") || (puzzleFields[2].text.ToLower() == "people"))
+        {
+            soundManager.PlaySfxAudio("EnterText");
             puzzleFields[2].interactable = false;
+        }
         if (puzzleFields[3].text.ToLower() == "name")
+        {
+            soundManager.PlaySfxAudio("EnterText");
             puzzleFields[3].interactable = false;
+        }
 
         foreach (TMP_InputField field in puzzleFields)
         {

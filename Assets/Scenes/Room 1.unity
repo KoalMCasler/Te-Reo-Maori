@@ -25067,8 +25067,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.001249969, y: -4.8744, z: 0}
-    m_Extent: {x: 1.00565, y: 5.6207, z: 0}
+    m_Center: {x: -0.0011999905, y: -4.8835497, z: 0}
+    m_Extent: {x: 0.99109995, y: 5.62385, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25149,8 +25149,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0033499599, y: -4.8819504, z: 0}
-    m_Extent: {x: 1.00425, y: 5.62255, z: 0}
+    m_Center: {x: -0.0036500096, y: -4.8755, z: 0}
+    m_Extent: {x: 1.00015, y: 5.6191, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25231,8 +25231,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0040499866, y: -4.8698, z: 0}
-    m_Extent: {x: 1.0006499, y: 5.6269, z: 0}
+    m_Center: {x: 0.005850017, y: -4.8684497, z: 0}
+    m_Extent: {x: 0.99665004, y: 5.62645, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25401,8 +25401,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00395, y: -4.8751497, z: 0}
-    m_Extent: {x: 0.99745, y: 5.62895, z: 0}
+    m_Center: {x: 0.002700001, y: -4.87345, z: 0}
+    m_Extent: {x: 0.99319994, y: 5.62145, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -26386,8 +26386,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.003700018, y: -4.8703, z: 0}
-    m_Extent: {x: 1.0045, y: 5.6268, z: 0}
+    m_Center: {x: 0.007150024, y: -4.8837004, z: 0}
+    m_Extent: {x: 0.99944997, y: 5.6243, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -26920,15 +26920,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: message
-      value: "Finish your Pepeh\u0101 to continue into the next room."
+      value: "Finish your Pepeh\u0101 to unlock the door"
       objectReference: {fileID: 0}
     - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: fogAmount
       value: 
       objectReference: {fileID: 1080187802}
     - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
+      propertyPath: textSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: InfoTextDelay
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3381665521167207461, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: m_LocalPosition.x

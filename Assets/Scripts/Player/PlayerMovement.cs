@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
             playerAnim.SetBool("IsIdle", true);
             if(SFXPlaying)
             {
-                soundManager.StopSFXAudio();
+                soundManager.StopPlayerSFX();
                 SFXPlaying = false;
             }
         }
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if(!SFXPlaying)
             {
-                soundManager.PlaySfxAudio("PlayerWalk");
+                soundManager.PlayPlayerSFX();
                 SFXPlaying = true;
             }
             playerAnim.SetBool("IsIdle", false);

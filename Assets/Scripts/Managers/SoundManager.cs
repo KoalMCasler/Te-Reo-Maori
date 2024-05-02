@@ -8,11 +8,13 @@ public class SoundManager : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource; // for looping audio
     [SerializeField] private AudioSource sfxSource; // for sfx
+    [SerializeField] private AudioSource playerSFX; // for player walk, needed to prevent sfx interuptions. 
 
     [Header("Audio Clips")]
     [SerializeField] private AudioClip mainMenuClip;
     [SerializeField] private AudioClip gameplayClip;
     [SerializeField] private AudioClip footsteps;
+    [SerializeField] private AudioClip typeEffect;
     [SerializeField] private AudioClip doorUnlock;
     [SerializeField] private AudioClip openBook;
     [SerializeField] private AudioClip enterText;
@@ -69,6 +71,8 @@ public class SoundManager : MonoBehaviour
     {
         switch (audio)
         {
+            case "TypeEffect": sfxSource.PlayOneShot(typeEffect, 1f);
+            Debug.Log("typewrite played"); break;
             case "PlayerWalk": sfxSource.PlayOneShot(footsteps, 1f);
             Debug.Log("Walk played"); break;
             case "Door": sfxSource.PlayOneShot(doorUnlock, 1f);  
@@ -77,13 +81,20 @@ public class SoundManager : MonoBehaviour
             Debug.Log("Book played");  break;
             case "EnterText": sfxSource.PlayOneShot(enterText, 1f);
             Debug.Log("Text played"); break;
+
         }
         //sfxSource.PlayOneShot(sfxSource.clip, 1f);
     }
 
-    public void StopSFXAudio()
+    public void PlayPlayerSFX()
     {
-        sfxSource.Stop();
+        playerSFX.PlayOneShot(footsteps, 1f);
+    }
+
+
+    public void StopPlayerSFX()
+    {
+        playerSFX.Stop();
     }
 
     // Sets volume
