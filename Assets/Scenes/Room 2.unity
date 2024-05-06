@@ -49912,7 +49912,7 @@ PrefabInstance:
       objectReference: {fileID: 1678966699, guid: bc70ccbe4f4437641bfc7f91b96d2159, type: 3}
     - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
       propertyPath: destinantionRoom
-      value: Room 0
+      value: Room 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -50142,8 +50142,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.005100012, y: -3.2069502, z: 0}
-    m_Extent: {x: 0.9978, y: 3.94665, z: 0}
+    m_Center: {x: 0.0020999908, y: -3.201, z: 0}
+    m_Extent: {x: 0.9945, y: 3.9479, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

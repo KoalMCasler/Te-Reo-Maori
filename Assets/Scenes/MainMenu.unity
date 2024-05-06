@@ -11017,6 +11017,7 @@ MonoBehaviour:
   puzzlesToComplete:
   - {fileID: 11400000, guid: 334c3e73515358f4e85428b19509dda9, type: 2}
   - {fileID: 11400000, guid: 0f849536038efe84b907cf691e57468d, type: 2}
+  - {fileID: 11400000, guid: 5f0804e285c30864ebc2f999650698e8, type: 2}
   puzzleFields:
   - {fileID: 2025459570}
   - {fileID: 1205820993}
@@ -11033,6 +11034,8 @@ MonoBehaviour:
   - {fileID: 581623400}
   - {fileID: 1322230117}
   - {fileID: 1550017205}
+  pictureSlots: []
+  pictureInputFields: []
 --- !u!1001 &981406689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24602,6 +24605,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Gameplay
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1753154906}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1985364720

@@ -21,6 +21,9 @@ public class PuzzleManager : MonoBehaviour
     public GameObject createOwn;
     [Header("Artifact Puzzle")]
     public ArtifactSlot[] artifactSlots;
+    [Header("Picture Lable Puzzle")]
+    public PictureSlot[] pictureSlots;
+    public TMP_InputField[] pictureInputFields;
 
     private void Start()
     {
@@ -105,6 +108,52 @@ public class PuzzleManager : MonoBehaviour
             CompletePuzzle(puzzleAsset);
     }
 
+    #endregion
+
+    #region Puzzle 3
+    public void CheckThirdPuzzle(PuzzleAsset puzzleAsset)
+    {
+        int slotedCorrectly = 0;
+        int interactableCount = 0;
+        if (pictureInputFields[0].text.ToLower() == "a")
+        {
+            soundManager.PlaySfxAudio("EnterText");
+            pictureInputFields[0].interactable = false;
+        }
+        if (pictureInputFields[1].text.ToLower() == "b")
+        {
+            soundManager.PlaySfxAudio("EnterText");
+            pictureInputFields[1].interactable = false;
+        }
+        if (pictureInputFields[2].text.ToLower() == "c")
+        {
+            soundManager.PlaySfxAudio("EnterText");
+            pictureInputFields[2].interactable = false;
+        }
+        if (pictureInputFields[3].text.ToLower() == "d")
+        {
+            soundManager.PlaySfxAudio("EnterText");
+            pictureInputFields[3].interactable = false;
+        }
+        foreach(PictureSlot slot in pictureSlots)
+        {
+            if(slot.isSlotedCorrectly)
+            {
+                slotedCorrectly++;
+            }
+        }
+        foreach (TMP_InputField field in pictureInputFields)
+        {
+            if (!field.interactable)
+            {
+                interactableCount++;
+            }
+        }
+        if(slotedCorrectly == pictureSlots.Length && interactableCount == pictureInputFields.Length)
+        {
+            CompletePuzzle(puzzleAsset);
+        }
+    }
     #endregion
     public void StartPuzzle(PuzzleAsset puzzle)
     {

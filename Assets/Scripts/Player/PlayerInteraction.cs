@@ -56,6 +56,10 @@ public class PlayerInteraction : MonoBehaviour
             {
                 currentInterObjScript.Artifact();
             }
+            if(currentInterObjScript.interactType == InteractableObject.InteractType.Picture)
+            {
+                currentInterObjScript.Picture();
+            }
         }
         else
         {

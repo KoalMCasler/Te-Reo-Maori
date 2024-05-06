@@ -155,12 +155,14 @@ MonoBehaviour:
   infoText: {fileID: 0}
   InfoTextDelay: 3
   message: 'Its locked, I think I need to do somthing to open it. '
-  textSpeed: 0.01
+  textSpeed: 0.05
+  soundManager: {fileID: 0}
+  uiManager: {fileID: 0}
   hasFog: 0
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
-  scriptableIO: {fileID: 0}
-  scriptableNPC: {fileID: 0}
+  picture: {fileID: 0}
+  pictureText: 
 --- !u!1 &5281551087430971397
 GameObject:
   m_ObjectHideFlags: 0
