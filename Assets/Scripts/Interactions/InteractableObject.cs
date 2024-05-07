@@ -60,6 +60,9 @@ public class InteractableObject : MonoBehaviour
     [Header("Image & Text")] // not sure if we're using text for the photos but adding that here anyways
     [SerializeField] private Sprite picture;
     [SerializeField] private string pictureText;
+    [Header("Picture Index")]
+    public int pictureIndex;
+
 
 
 
@@ -104,13 +107,13 @@ public class InteractableObject : MonoBehaviour
 
     public void Picture()
     {
-        // Sound?
+        soundManager.PlaySfxAudio("Book");
         if(picture != null)
         {
             uiManager.currentImage.sprite = picture;
             uiManager.imageDescription.text = pictureText;
         }
-        uiManager.ShowPicture();
+        uiManager.ShowPicture(pictureIndex);
     }
 
     // All needed for door objects to work. 

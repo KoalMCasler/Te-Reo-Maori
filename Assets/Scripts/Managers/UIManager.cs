@@ -52,6 +52,11 @@ public class UIManager : MonoBehaviour
     public GameObject PictureUI;
     public Image currentImage; 
     public TextMeshProUGUI imageDescription;
+    [Header("Puzzle 3 UI")]
+    public GameObject pictureUI1;
+    public GameObject pictureUI2;
+    public GameObject pictureUI3;
+    public GameObject pictureUI4;
     
     [Header("Player Settings")]
     public GameObject player;
@@ -152,10 +157,17 @@ public class UIManager : MonoBehaviour
     }
 
     // Shows picture. The plan is to use 1 UI object and just change the image depending on the object (Image should be stored on the interactable)
-    public void ShowPicture()
+    public void ShowPicture(int pictureIndex)
     {
         PlayerMovement(false);
-
+        switch (pictureIndex)
+        {
+            case 1: pictureUI1.SetActive(true); break;
+            case 2: pictureUI2.SetActive(true); break;
+            case 3: pictureUI3.SetActive(true); break;
+            case 4: pictureUI4.SetActive(true); break;
+            default: Debug.Log($"No Matching picture index"); break;
+        }
         CurrentUI(PictureUI, true);
     }
 
