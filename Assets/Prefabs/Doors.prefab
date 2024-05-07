@@ -153,7 +153,7 @@ MonoBehaviour:
   newDoor: {fileID: 0}
   doorLight: {fileID: 5281551087430971397}
   infoText: {fileID: 0}
-  InfoTextDelay: 3
+  InfoTextDelay: 5
   message: 'Its locked, I think I need to do somthing to open it. '
   textSpeed: 0.05
   soundManager: {fileID: 0}
@@ -163,6 +163,7 @@ MonoBehaviour:
   fogAmount: {fileID: 0}
   picture: {fileID: 0}
   pictureText: 
+  pictureIndex: 0
 --- !u!1 &5281551087430971397
 GameObject:
   m_ObjectHideFlags: 0

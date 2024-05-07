@@ -182,16 +182,21 @@ MonoBehaviour:
   isClosed: 0
   destinantionRoom: 
   levelManager: {fileID: 0}
-  doorAnim: {fileID: 0}
-  animDelay: 1
-  fadeAnim: {fileID: 0}
+  doorSprite: {fileID: 0}
+  newDoor: {fileID: 0}
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
-  InfoTextDelay: 3
+  InfoTextDelay: 5
   message: "Finish your Pepeh\u0101 to continue into the next room."
-  textSpeed: 0.01
-  scriptableIO: {fileID: 0}
-  scriptableNPC: {fileID: 0}
+  textSpeed: 0.05
+  soundManager: {fileID: 0}
+  uiManager: {fileID: 0}
+  hasFog: 0
+  fog: {fileID: 0}
+  fogAmount: {fileID: 0}
+  picture: {fileID: 0}
+  pictureText: 
+  pictureIndex: 0
 --- !u!70 &8236061633730317542
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

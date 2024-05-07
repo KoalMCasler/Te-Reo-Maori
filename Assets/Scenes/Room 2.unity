@@ -257,6 +257,7 @@ MonoBehaviour:
   fogAmount: {fileID: 0}
   picture: {fileID: 21300000, guid: 60b57a316e92edc4db0e4c40fee1e999, type: 3}
   pictureText: insert stuff here
+  pictureIndex: 0
 --- !u!212 &65435298
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48110,6 +48111,7 @@ MonoBehaviour:
   fogAmount: {fileID: 0}
   picture: {fileID: 921023191, guid: 67a745ba7d6aedc4b85554352324b899, type: 3}
   pictureText: Insert information
+  pictureIndex: 0
 --- !u!212 &798550004
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48441,6 +48443,7 @@ MonoBehaviour:
   fogAmount: {fileID: 0}
   picture: {fileID: 21300000, guid: 6b17cbb13ec309646ac6288cdfdfe072, type: 3}
   pictureText: Insert information
+  pictureIndex: 0
 --- !u!212 &1281013533
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -49802,7 +49805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: InfoTextDelay
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3381665521167207461, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49910,6 +49913,10 @@ PrefabInstance:
       propertyPath: newDoor
       value: 
       objectReference: {fileID: 1678966699, guid: bc70ccbe4f4437641bfc7f91b96d2159, type: 3}
+    - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
+      propertyPath: InfoTextDelay
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
       propertyPath: destinantionRoom
       value: Room 3
@@ -50058,6 +50065,7 @@ MonoBehaviour:
   fogAmount: {fileID: 0}
   picture: {fileID: 1814359040, guid: 01948f16e552692469b03963b415b8a7, type: 3}
   pictureText: insert stuff about the thing
+  pictureIndex: 0
 --- !u!70 &6267510682082714943
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -50142,8 +50150,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0020999908, y: -3.201, z: 0}
-    m_Extent: {x: 0.9945, y: 3.9479, z: 0}
+    m_Center: {x: -0.0075000226, y: -3.1972, z: 0}
+    m_Extent: {x: 0.9993, y: 3.9417999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

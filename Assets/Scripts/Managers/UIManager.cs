@@ -23,6 +23,7 @@ public class UIManager : MonoBehaviour
     public GameObject OptionsUI;
     public GameObject EndGameUI;
     public GameObject ProjectInfo;
+    public bool overlayActive;
 
     [Header("Confirmation Exit")]
     public GameObject ConfirmationUI;
@@ -62,10 +63,20 @@ public class UIManager : MonoBehaviour
     public GameObject player;
     private PlayerInput playerInput;
     private SpriteRenderer playerSprite;
+    [Header("Target Buttons")] //Needed for controller suport for UI.
+    public Button mainMenuTarget;
+    public Button optionsTarget;
+    public Button acknowledgmentTarget;
+    public Button creditsTarget;
+    public Button pauseTarget;
+    public Button controlsTarget;
+    public Button confermationTarget;
+
    
 
     private void Start()
     {
+        overlayActive = false;
         playerSprite = player.GetComponent<SpriteRenderer>();
         playerInput = player.GetComponent<PlayerInput>();
         soundManager = FindObjectOfType<SoundManager>();
@@ -76,11 +87,13 @@ public class UIManager : MonoBehaviour
     {
         PlayerMovement(false);
         CurrentUI(MainMenuUI, false);
+        mainMenuTarget.Select();
     }
 
     public void UI_Acknowledgement()
     {
         CurrentUI(AcknowledgementUI, false);
+        acknowledgmentTarget.Select();
     }
 
     public void UI_Gameplay()
@@ -109,11 +122,13 @@ public class UIManager : MonoBehaviour
     {
         PlayerMovement(false);
         CurrentUI(PauseUI, true);
+        pauseTarget.Select();
     }
 
     public void UI_Options()
     {
         CurrentUI(OptionsUI, true);
+        optionsTarget.Select();
     }
 
     public void UI_EndGame()
@@ -135,17 +150,17 @@ public class UIManager : MonoBehaviour
         CurrentUI(InfoBookArtifact, true);
         bookArtifactImage.sprite = image;
         bookArtifactText.text = infoText;
+        overlayActive = true;
     }
 
     //Artifact objects work like books.
     public void ShowArtifact(Sprite image, string infoText, string artifactName)
     {
         PlayerMovement(false);
-
         CurrentUI(InfoBookArtifact, true);
         bookArtifactImage.sprite = image;
         bookArtifactText.text = infoText;
-
+        overlayActive = true;
         switch (artifactName)
         {
             case "Artifact1": ArtifactUI1.SetActive(true); break;
@@ -178,7 +193,7 @@ public class UIManager : MonoBehaviour
     {
         yesButton.onClick.RemoveAllListeners(); // removes listeners from the yes button.
         CurrentUI(ConfirmationUI, true);
-
+        confermationTarget.Select();
         // Based on the string name, it will decide what's shown on the confirmation page.
         switch (name)
         {
@@ -210,11 +225,13 @@ public class UIManager : MonoBehaviour
     public void UI_Controls()
     {
         CurrentUI(ControlsUI, false);
+        controlsTarget.Select();
     }
 
     public void UI_Credits()
     {
         CurrentUI(CreditsUI, false);
+        creditsTarget.Select();
     }
 
     // Sets UI to the required panel & enables or disables player sprite
@@ -233,6 +250,7 @@ public class UIManager : MonoBehaviour
         Room3Puzzle.SetActive(false);
         InfoBookArtifact.SetActive(false);
         ConfirmationUI.SetActive(false);
+        overlayActive = false;
 
         activeUI.SetActive(true);
         playerSprite.enabled = isActive; // Enables or disables player sprite

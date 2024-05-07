@@ -25067,8 +25067,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0011999905, y: -4.8835497, z: 0}
-    m_Extent: {x: 0.99109995, y: 5.62385, z: 0}
+    m_Center: {x: -0.004150033, y: -4.8719497, z: 0}
+    m_Extent: {x: 0.99755, y: 5.62155, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25149,8 +25149,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0036500096, y: -4.8755, z: 0}
-    m_Extent: {x: 1.00015, y: 5.6191, z: 0}
+    m_Center: {x: 0.001549989, y: -4.8763504, z: 0}
+    m_Extent: {x: 0.99905, y: 5.61615, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25231,8 +25231,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.005850017, y: -4.8684497, z: 0}
-    m_Extent: {x: 0.99665004, y: 5.62645, z: 0}
+    m_Center: {x: 0.0033499897, y: -4.8796496, z: 0}
+    m_Extent: {x: 1.00235, y: 5.62425, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25401,8 +25401,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.002700001, y: -4.87345, z: 0}
-    m_Extent: {x: 0.99319994, y: 5.62145, z: 0}
+    m_Center: {x: -0.006700009, y: -4.8795, z: 0}
+    m_Extent: {x: 0.9971, y: 5.6269, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -26386,8 +26386,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.007150024, y: -4.8837004, z: 0}
-    m_Extent: {x: 0.99944997, y: 5.6243, z: 0}
+    m_Center: {x: -0.00034999847, y: -4.87895, z: 0}
+    m_Extent: {x: 1.00105, y: 5.62605, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -26788,6 +26788,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4865820670912236909}
     - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
+      propertyPath: InfoTextDelay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
       propertyPath: destinantionRoom
       value: Room 2
       objectReference: {fileID: 0}
@@ -26932,7 +26936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: InfoTextDelay
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3381665521167207461, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: m_LocalPosition.x

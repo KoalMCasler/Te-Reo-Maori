@@ -5,8 +5,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    [Header("Managers")]
     public UIManager UIManager;
-
+    public GameManager gameManager;
+    public SoundManager soundManager;
+    [Header("Interactions")]
     public GameObject currentInterObj = null;
     public InteractableObject currentInterObjScript = null;
     public GameObject indicator;
@@ -64,6 +67,33 @@ public class PlayerInteraction : MonoBehaviour
         else
         {
             Debug.Log("Nothing to interact with.");
+        }
+    }
+
+    void OnBackFromUI()
+    {
+        if(gameManager.gameState == GameManager.GameState.Options)
+        {
+            gameManager.PausingState();
+            soundManager.PlaySfxAudio("TypeEffect");
+        }
+        else if(gameManager.gameState == GameManager.GameState.Pause || gameManager.gameState == GameManager.GameState.Puzzle)
+        {
+            gameManager.LoadState("Gameplay");
+            soundManager.PlaySfxAudio("Book");
+        }
+        else if(UIManager.overlayActive)
+        {
+            UIManager.UI_Gameplay();
+            soundManager.PlaySfxAudio("Book");
+        }
+    }
+    void OnOpenPuzzle()
+    {
+        if(UIManager.ProjectInfo.activeSelf && gameManager.gameState != GameManager.GameState.Puzzle)
+        {
+            gameManager.LoadState("Puzzle");
+            soundManager.PlaySfxAudio("Book");
         }
     }
 }

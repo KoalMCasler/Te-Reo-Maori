@@ -47,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     void OnPause()
     {
         gameManager.PausingState();
+        soundManager.PlaySfxAudio("Book");
     }
 
     void OnMove(InputValue movementValue)

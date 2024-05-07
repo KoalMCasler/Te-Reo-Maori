@@ -41,6 +41,7 @@ public class InteractableObject : MonoBehaviour
     public float InfoTextDelay = 3;
     public string message;
     public float textSpeed = 0.01f;
+    public bool isDisplayingText;
 
     //NPCS
     [Header("NPC Variables")]
@@ -73,7 +74,7 @@ public class InteractableObject : MonoBehaviour
 
         infoText = GameObject.Find("InfoText").GetComponent<TextMeshProUGUI>();
         infoText.text = null;
-
+        isDisplayingText = false;
         if (interactType == InteractType.Nothing)
         {
             Debug.Log(this.name + " Has a type of nothing, Was this by mistake?");
@@ -123,7 +124,11 @@ public class InteractableObject : MonoBehaviour
         {
             if (isLocked)
             {
-                StartCoroutine(ShowInfo(message, InfoTextDelay));
+                if(isDisplayingText == false)
+                {
+                    isDisplayingText = true;
+                    StartCoroutine(ShowInfo(message, InfoTextDelay));
+                }
                 //isLocked = false; //Debug line to test before quest is added.
             }
             else
@@ -148,19 +153,23 @@ public class InteractableObject : MonoBehaviour
     // All needed for info text.
     public void Info()
     {
-        if (hasFog)
+        if(!isDisplayingText)
         {
-            fogAmount.SetFloat("FogAmount", 0);
-            fogAmount.SetFloat("Lifetime", 1);
-            FindObjectOfType<UIManager>().ShowProjectInfo();
+            isDisplayingText = true;
+            if (hasFog)
+            {
+                fogAmount.SetFloat("FogAmount", 0);
+                fogAmount.SetFloat("Lifetime", 1);
+                FindObjectOfType<UIManager>().ShowProjectInfo();
+            }
+
+            Debug.Log("Reading info from " + this.name);
+            //Debug.Log(message);
+            StartCoroutine(ShowInfo(message, InfoTextDelay));
+
+            if (hasFog)
+                StartCoroutine(GoAwayFog());
         }
-
-        Debug.Log("Reading info from " + this.name);
-        //Debug.Log(message);
-        StartCoroutine(ShowInfo(message, InfoTextDelay));
-
-        if (hasFog)
-            StartCoroutine(GoAwayFog());
     }
 
     IEnumerator ShowInfo(string message, float delay)
@@ -170,6 +179,7 @@ public class InteractableObject : MonoBehaviour
         StartCoroutine(ScrollingText(message));
         yield return new WaitForSeconds(delay);
         infoText.text = "";
+        isDisplayingText = false;
         infoImage.GetComponent<Image>().enabled = false;
     }
 
