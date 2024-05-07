@@ -50,8 +50,9 @@ public class UIManager : MonoBehaviour
 
     [Header("Puzzle 3")]
     public GameObject PictureUI;
-    public Image currentImage; // Might try to use only 1 UI object but just change the image that's shown
-
+    public Image currentImage; 
+    public TextMeshProUGUI imageDescription;
+    
     [Header("Player Settings")]
     public GameObject player;
     private PlayerInput playerInput;

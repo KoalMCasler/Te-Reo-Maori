@@ -106,7 +106,10 @@ public class InteractableObject : MonoBehaviour
     {
         // Sound?
         if(picture != null)
+        {
             uiManager.currentImage.sprite = picture;
+            uiManager.imageDescription.text = pictureText;
+        }
         uiManager.ShowPicture();
     }
 
