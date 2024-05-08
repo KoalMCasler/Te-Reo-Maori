@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
 {
@@ -23,7 +24,6 @@ public class UIManager : MonoBehaviour
     public GameObject OptionsUI;
     public GameObject EndGameUI;
     public GameObject ProjectInfo;
-    public bool overlayActive;
 
     [Header("Confirmation Exit")]
     public GameObject ConfirmationUI;
@@ -32,6 +32,7 @@ public class UIManager : MonoBehaviour
 
     // UI for puzzles
     [Header("Puzzle UI")]
+    public bool overlayActive;
     public GameObject Room1Puzzle;
     public GameObject Room2Puzzle;
     public GameObject Room3Puzzle;
@@ -71,20 +72,44 @@ public class UIManager : MonoBehaviour
     public Button pauseTarget;
     public Button controlsTarget;
     public Button confermationTarget;
+    //public TMP_InputField puzzle1Target;
+    public Button puzzle2Target;
+    public Button puzzle3Target;
+    [Header("Needed for Controller")]
+    public bool isHoldingItem;
+    public bool puzzle2IsOpen;
+    public bool puzzle3IsOpen;
+    public GameObject selector; //needed to attach objects for drag and drop. 
+
 
    
 
     private void Start()
     {
+        isHoldingItem = false;
+        puzzle2IsOpen =false;
+        puzzle3IsOpen =false;
         overlayActive = false;
         playerSprite = player.GetComponent<SpriteRenderer>();
         playerInput = player.GetComponent<PlayerInput>();
         soundManager = FindObjectOfType<SoundManager>();
     }
+    void Update()
+    {
+        if(EventSystem.current.currentSelectedGameObject != null)
+        {
+            if(puzzle2IsOpen || puzzle3IsOpen)
+            {
+                selector.transform.position = EventSystem.current.currentSelectedGameObject.transform.position;
+            }
+        }
+    }
 
     #region GameState UI
     public void UI_MainMenu()
     {
+        puzzle3IsOpen =false;
+        puzzle2IsOpen =false;
         PlayerMovement(false);
         CurrentUI(MainMenuUI, false);
         mainMenuTarget.Select();
@@ -98,6 +123,8 @@ public class UIManager : MonoBehaviour
 
     public void UI_Gameplay()
     {
+        puzzle3IsOpen =false;
+        puzzle2IsOpen = false;
         PlayerMovement(true);
         CurrentUI(GameplayUI, true);
     }
@@ -109,17 +136,19 @@ public class UIManager : MonoBehaviour
         switch (name)
         {
             case "Room 1":
-                CurrentUI(Room1Puzzle, true); break;
+                CurrentUI(Room1Puzzle, true); break; //text imput for controller still WIP.
             case "Room 2":
-                CurrentUI(Room2Puzzle, true); break;
+                CurrentUI(Room2Puzzle, true); puzzle2Target.Select(); puzzle2IsOpen = true; break;
             case "Room 3":
-                CurrentUI(Room3Puzzle, true); break;
+                CurrentUI(Room3Puzzle, true); puzzle3Target.Select(); puzzle3IsOpen = true;break;
         }
         soundManager.PlaySfxAudio("Book");
     }
 
     public void UI_Pause()
     {
+        puzzle3IsOpen =false;
+        puzzle2IsOpen = false;
         PlayerMovement(false);
         CurrentUI(PauseUI, true);
         pauseTarget.Select();
@@ -127,12 +156,16 @@ public class UIManager : MonoBehaviour
 
     public void UI_Options()
     {
+        puzzle3IsOpen =false;
+        puzzle2IsOpen = false;
         CurrentUI(OptionsUI, true);
         optionsTarget.Select();
     }
 
     public void UI_EndGame()
     {
+        puzzle3IsOpen =false;
+        puzzle2IsOpen = false;
         PlayerMovement(false);
         CurrentUI(EndGameUI, false);
     }
@@ -175,6 +208,7 @@ public class UIManager : MonoBehaviour
     public void ShowPicture(int pictureIndex)
     {
         PlayerMovement(false);
+        overlayActive = true;
         switch (pictureIndex)
         {
             case 1: pictureUI1.SetActive(true); break;
@@ -273,6 +307,28 @@ public class UIManager : MonoBehaviour
         {
             playerInput.actions.FindAction("Move").Enable();
             playerInput.actions.FindAction("Interact").Enable();
+        }
+    }
+    public void OnSlotSelect()
+    {
+        if(EventSystem.current.currentSelectedGameObject.transform.childCount == 1 && isHoldingItem == false)
+        {
+            GameObject itemToMove = EventSystem.current.currentSelectedGameObject.transform.GetChild(0).gameObject;
+            itemToMove.transform.SetParent(selector.transform);
+            isHoldingItem = true;
+            Debug.Log("Item Picked Up");
+        }
+        else if(EventSystem.current.currentSelectedGameObject.transform.childCount == 0 && isHoldingItem == true)
+        {
+            GameObject itemToMove = selector.transform.GetChild(0).gameObject;
+            selector.transform.GetChild(0).SetParent(EventSystem.current.currentSelectedGameObject.transform);
+            isHoldingItem = false;
+            EventSystem.current.currentSelectedGameObject.GetComponent<ArtifactSlot>().OnControllerDrop(itemToMove);
+            Debug.Log("Item Dropped");
+        }
+        else
+        {
+            Debug.Log("nothing to move from slot");
         }
     }
 }
