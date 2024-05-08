@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
     public GameObject PauseUI;
     public GameObject OptionsUI;
     public GameObject EndGameUI;
-    public GameObject ProjectInfo;
+    public GameObject ProjectInfoButton;
 
     [Header("Confirmation Exit")]
     public GameObject ConfirmationUI;
@@ -55,6 +55,7 @@ public class UIManager : MonoBehaviour
     public GameObject PictureUI;
     public Image currentImage; 
     public TextMeshProUGUI imageDescription;
+
     [Header("Puzzle 3 UI")]
     public GameObject pictureUI1;
     public GameObject pictureUI2;
@@ -65,6 +66,7 @@ public class UIManager : MonoBehaviour
     public GameObject player;
     private PlayerInput playerInput;
     private SpriteRenderer playerSprite;
+
     [Header("Target Buttons")] //Needed for controller suport for UI.
     public Button mainMenuTarget;
     public Button optionsTarget;
@@ -76,6 +78,7 @@ public class UIManager : MonoBehaviour
     //public TMP_InputField puzzle1Target;
     public Button puzzle2Target;
     public Button puzzle3Target;
+
     [Header("Needed for Controller")]
     public bool isHoldingItem;
     public bool puzzle2IsOpen;
@@ -95,6 +98,7 @@ public class UIManager : MonoBehaviour
         playerInput = player.GetComponent<PlayerInput>();
         soundManager = FindObjectOfType<SoundManager>();
     }
+
     void Update()
     {
         if(EventSystem.current.currentSelectedGameObject != null)
@@ -249,7 +253,7 @@ public class UIManager : MonoBehaviour
     // This is used at the beginning to turn on the project info UI for after you've interacted with the sign
     public void ShowProjectInfo()
     {
-        ProjectInfo.SetActive(true);
+        ProjectInfoButton.SetActive(true);
     }
 
     public void UI_Dialogue()
@@ -285,6 +289,7 @@ public class UIManager : MonoBehaviour
         Room3Puzzle.SetActive(false);
         InfoBookArtifact.SetActive(false);
         ConfirmationUI.SetActive(false);
+        PictureUI.SetActive(false);
         overlayActive = false;
 
         activeUI.SetActive(true);

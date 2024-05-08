@@ -90,7 +90,7 @@ public class PlayerInteraction : MonoBehaviour
     }
     void OnOpenPuzzle()
     {
-        if(UIManager.ProjectInfo.activeSelf && gameManager.gameState != GameManager.GameState.Puzzle)
+        if(UIManager.ProjectInfoButton.activeSelf && gameManager.gameState != GameManager.GameState.Puzzle)
         {
             gameManager.LoadState("Puzzle");
             soundManager.PlaySfxAudio("Book");

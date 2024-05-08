@@ -7049,7 +7049,7 @@ MonoBehaviour:
   PauseUI: {fileID: 716691576}
   OptionsUI: {fileID: 1535110660}
   EndGameUI: {fileID: 1958625399}
-  ProjectInfo: {fileID: 693224448}
+  ProjectInfoButton: {fileID: 693224448}
   ConfirmationUI: {fileID: 342914210}
   confirmationText: {fileID: 1474119769}
   yesButton: {fileID: 166520631}
