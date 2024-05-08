@@ -7038,7 +7038,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1289818631}
   levelManager: {fileID: 1990075885}
-  soundManager: {fileID: 0}
+  soundManager: {fileID: 711704829}
+  puzzleManager: {fileID: 981146684}
   MainMenuUI: {fileID: 2060204801}
   AcknowledgementUI: {fileID: 169268750}
   GameplayUI: {fileID: 1084218960}

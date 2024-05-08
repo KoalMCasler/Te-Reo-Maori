@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public GameManager gameManager;
     public LevelManager levelManager;
     public SoundManager soundManager;
+    public PuzzleManager puzzleManager;
 
     [Header("UI Panels")]
     public GameObject MainMenuUI;
@@ -324,6 +325,8 @@ public class UIManager : MonoBehaviour
             selector.transform.GetChild(0).SetParent(EventSystem.current.currentSelectedGameObject.transform);
             isHoldingItem = false;
             EventSystem.current.currentSelectedGameObject.GetComponent<ArtifactSlot>().OnControllerDrop(itemToMove);
+            puzzleManager.CheckSecondPuzzle(puzzleManager.puzzlesToComplete[1]);
+            puzzle2Target.Select();
             Debug.Log("Item Dropped");
         }
         else
