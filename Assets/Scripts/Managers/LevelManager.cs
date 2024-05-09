@@ -75,12 +75,12 @@ public class LevelManager : MonoBehaviour
         foundBoundingShape = GameObject.FindWithTag("Confiner").GetComponent<Collider2D>();
         confiner2D.m_BoundingShape2D = foundBoundingShape;
         player = GameObject.FindWithTag("Player");
-        Debug.Log("Level manager Has Player Referance");
+        //Debug.Log("Level manager Has Player Referance");
         playerSpawn = GameObject.FindWithTag("Spawn").GetComponent<Transform>();
-        Debug.Log("Level manager Has Player Spawn Referance");
+        //Debug.Log("Level manager Has Player Spawn Referance");
         player.transform.position = playerSpawn.position;
         fadeAnimator = gameObject.GetComponent<Animator>();
-        Debug.Log("Level manager Has Fade Animator Referance");
+        //Debug.Log("Level manager Has Fade Animator Referance");
         if (scene.name.StartsWith("Room"))
         {
             if (!GameplayMusicIsPlaying)

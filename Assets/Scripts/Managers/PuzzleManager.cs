@@ -42,6 +42,7 @@ public class PuzzleManager : MonoBehaviour
     // Should check through each input field to see if the input matches the answer of the puzzle
     public void CheckFirstPuzzle()
     {
+        Debug.Log("Puzzle 1 Checked");
         int interactableCount = 0;
 
         if (puzzleFields[0].text.ToLower() == "mountain")
@@ -97,6 +98,7 @@ public class PuzzleManager : MonoBehaviour
     #region Puzzle 2
     public void CheckSecondPuzzle(PuzzleAsset puzzleAsset)
     {
+        Debug.Log("Puzzle 2 Checked");
         int slotedCorrectly = 0;
 
         foreach (ArtifactSlot artifact in artifactSlots)
@@ -113,6 +115,7 @@ public class PuzzleManager : MonoBehaviour
     #region Puzzle 3
     public void CheckThirdPuzzle(PuzzleAsset puzzleAsset)
     {
+        Debug.Log("Puzzle 3 Checked");
         int slotedCorrectly = 0;
         int interactableCount = 0;
         if (pictureInputFields[0].text.ToLower() == "a")
@@ -135,9 +138,9 @@ public class PuzzleManager : MonoBehaviour
             soundManager.PlaySfxAudio("EnterText");
             pictureInputFields[3].interactable = false;
         }
-        foreach(PictureSlot slot in pictureSlots)
+        foreach(PictureSlot pictures in pictureSlots)
         {
-            if(slot.isSlotedCorrectly)
+            if(pictures.isSlotedCorrectly)
             {
                 slotedCorrectly++;
             }
@@ -163,7 +166,7 @@ public class PuzzleManager : MonoBehaviour
     public void CompletePuzzle(PuzzleAsset puzzle)
     {
         puzzle.status = PuzzleAsset.Status.Finished;
-
+        Debug.Log(puzzle.name + " Compleated");
         //enter door stuff
         door.GetComponent<InteractableObject>().isLocked = false;
         door.GetComponent<InteractableObject>().doorLight.SetActive(true);

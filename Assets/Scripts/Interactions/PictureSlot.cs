@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class PictureSlot : MonoBehaviour, IDropHandler
@@ -27,16 +28,39 @@ public class PictureSlot : MonoBehaviour, IDropHandler
             dropped = eventData.pointerDrag;
             dropped.GetComponent<Draggable>().parentAfterDrag = transform;
             puzzleManager.StartPuzzle(puzzleAsset);
-
             if(dropped.GetComponent<Draggable>().orderPosition == orderPosition)
             {
                 dropped.GetComponent<Draggable>().enabled = false;
                 dropped.transform.SetParent(transform);
                 isSlotedCorrectly = true;
+                this.GetComponent<Button>().interactable = false;
                 if(tape != null)
                     tape.SetActive(true);
             }
         }
-        puzzleManager.CheckSecondPuzzle(puzzleAsset);
+        if(puzzleAsset == puzzleManager.puzzlesToComplete[1])
+        {
+            puzzleManager.CheckSecondPuzzle(puzzleAsset);
+        }
+        if(puzzleAsset == puzzleManager.puzzlesToComplete[2])
+        {
+            puzzleManager.CheckThirdPuzzle(puzzleAsset);
+        }
+    }
+    public void OnControllerDrop(GameObject item)
+    {
+        if(item.GetComponent<Draggable>() != null)
+        {
+            dropped = item;
+            if(dropped.GetComponent<Draggable>().orderPosition == orderPosition)
+            {
+                dropped.GetComponent<Draggable>().enabled = false;
+                dropped.transform.SetParent(transform);
+                isSlotedCorrectly = true;
+                this.GetComponent<Button>().interactable = false;
+                if(tape != null)
+                    tape.SetActive(true);
+            }
+        }
     }
 }

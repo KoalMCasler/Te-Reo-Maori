@@ -33,6 +33,7 @@ public class ArtifactSlot : MonoBehaviour, IDropHandler
                 dropped.GetComponent<Draggable>().enabled = false;
                 dropped.transform.SetParent(transform);
                 isSlotedCorrectly = true;
+                this.GetComponent<Button>().interactable = false;
                 if(tape != null)
                     tape.SetActive(true);
             }
@@ -45,7 +46,6 @@ public class ArtifactSlot : MonoBehaviour, IDropHandler
         {
             puzzleManager.CheckThirdPuzzle(puzzleAsset);
         }
-
     }
     public void OnControllerDrop(GameObject item)
     {

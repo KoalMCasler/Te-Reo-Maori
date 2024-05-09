@@ -24766,11 +24766,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Place the artifacts in the correct order.
+  m_text: '
 
 
-    Consider the idea of a
-    timeline. '
+    Corectly place and lable all pictures
+
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6b0490b7d9778974394ecef04c28b18c, type: 2}
   m_sharedMaterial: {fileID: -4844301765400902384, guid: 6b0490b7d9778974394ecef04c28b18c, type: 2}
@@ -26889,6 +26891,30 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 726085299}
+        m_TargetAssemblyTypeName: InputFilter, Assembly-CSharp
+        m_MethodName: CheckInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 981146684}
+        m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
+        m_MethodName: CheckThirdPuzzle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 5f0804e285c30864ebc2f999650698e8, type: 2}
+          m_ObjectArgumentAssemblyTypeName: PuzzleAsset, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 711704829}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySfxAudio
@@ -26999,6 +27025,30 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 726085299}
+        m_TargetAssemblyTypeName: InputFilter, Assembly-CSharp
+        m_MethodName: CheckInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 981146684}
+        m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
+        m_MethodName: CheckThirdPuzzle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 5f0804e285c30864ebc2f999650698e8, type: 2}
+          m_ObjectArgumentAssemblyTypeName: PuzzleAsset, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 711704829}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySfxAudio
@@ -27109,6 +27159,30 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 726085299}
+        m_TargetAssemblyTypeName: InputFilter, Assembly-CSharp
+        m_MethodName: CheckInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 981146684}
+        m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
+        m_MethodName: CheckThirdPuzzle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 5f0804e285c30864ebc2f999650698e8, type: 2}
+          m_ObjectArgumentAssemblyTypeName: PuzzleAsset, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 711704829}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySfxAudio
@@ -27219,6 +27293,30 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 726085299}
+        m_TargetAssemblyTypeName: InputFilter, Assembly-CSharp
+        m_MethodName: CheckInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 981146684}
+        m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
+        m_MethodName: CheckThirdPuzzle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 5f0804e285c30864ebc2f999650698e8, type: 2}
+          m_ObjectArgumentAssemblyTypeName: PuzzleAsset, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 711704829}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySfxAudio
@@ -27915,7 +28013,7 @@ GameObject:
   - component: {fileID: 6016617550448659402}
   - component: {fileID: 6016617550448659403}
   m_Layer: 0
-  m_Name: Solution_ArtifactSlot
+  m_Name: Solution_PictureSlot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27937,7 +28035,7 @@ GameObject:
   - component: {fileID: 6016617550364365316}
   - component: {fileID: 6016617550364365317}
   m_Layer: 0
-  m_Name: Solution_ArtifactSlot
+  m_Name: Solution_PictureSlot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27959,7 +28057,7 @@ GameObject:
   - component: {fileID: 6016617549976996213}
   - component: {fileID: 6016617549976996214}
   m_Layer: 0
-  m_Name: Solution_ArtifactSlot
+  m_Name: Solution_PictureSlot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27981,7 +28079,7 @@ GameObject:
   - component: {fileID: 6016617550104241155}
   - component: {fileID: 6016617550104241156}
   m_Layer: 0
-  m_Name: Solution_ArtifactSlot
+  m_Name: Solution_PictureSlot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30255,7 +30353,7 @@ GameObject:
   - component: {fileID: 9124702556520823429}
   - component: {fileID: 9124702556520823430}
   m_Layer: 0
-  m_Name: PictureSlot
+  m_Name: PictureSlot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30277,7 +30375,7 @@ GameObject:
   - component: {fileID: 9124702556118420541}
   - component: {fileID: 9124702556118420542}
   m_Layer: 0
-  m_Name: PictureSlot
+  m_Name: PictureSlot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30299,7 +30397,7 @@ GameObject:
   - component: {fileID: 9124702555598228488}
   - component: {fileID: 9124702555598228489}
   m_Layer: 0
-  m_Name: PictureSlot
+  m_Name: PictureSlot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30321,7 +30419,7 @@ GameObject:
   - component: {fileID: 9124702555177924038}
   - component: {fileID: 9124702555177924039}
   m_Layer: 0
-  m_Name: PictureSlot
+  m_Name: PictureSlot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
