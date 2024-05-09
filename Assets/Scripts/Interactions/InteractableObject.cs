@@ -18,6 +18,7 @@ public class InteractableObject : MonoBehaviour
         Door,
         Artifact,
         Picture,
+        NPC,
     }
 
     [Header("Interaction Type")]
@@ -45,7 +46,7 @@ public class InteractableObject : MonoBehaviour
 
     //NPCS
     [Header("NPC Variables")]
-    public Dialogue dialogue;
+    [SerializeField] public Dialogue dialogue;
 
     // Managers
     [Header("Managers")]
@@ -198,5 +199,10 @@ public class InteractableObject : MonoBehaviour
             FindObjectOfType<SoundManager>().PlaySfxAudio("TypeEffect");
             yield return new WaitForSeconds(textSpeed);
         }
+    }
+
+    public void NPC()
+    {
+
     }
 }
