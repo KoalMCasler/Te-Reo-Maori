@@ -48,7 +48,7 @@ public class SoundManager : MonoBehaviour
         if(playSound)
         {
             PlaySfxAudio("Door");
-            Debug.Log("played");
+            //Debug.Log("played");
             playSound = !playSound;
         }
 
@@ -72,15 +72,15 @@ public class SoundManager : MonoBehaviour
         switch (audio)
         {
             case "TypeEffect": sfxSource.PlayOneShot(typeEffect, 1f);
-            Debug.Log("typewrite played"); break;
+            /*Debug.Log("typewrite played");*/ break;
             case "PlayerWalk": sfxSource.PlayOneShot(footsteps, 1f);
-            Debug.Log("Walk played"); break;
+            /*Debug.Log("Walk played");*/ break;
             case "Door": sfxSource.PlayOneShot(doorUnlock, 1f);  
-            Debug.Log("door played"); break;
+            /*Debug.Log("door played");*/ break;
             case "Book": sfxSource.PlayOneShot(openBook, 1f);
-            Debug.Log("Book played");  break;
+            /*Debug.Log("Book played");*/  break;
             case "EnterText": sfxSource.PlayOneShot(enterText, 1f);
-            Debug.Log("Text played"); break;
+            /*Debug.Log("Text played");*/ break;
 
         }
         //sfxSource.PlayOneShot(sfxSource.clip, 1f);

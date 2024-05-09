@@ -33,16 +33,17 @@ public class LevelManager : MonoBehaviour
     {
         GameplayMusicIsPlaying = false;
         gameManager = FindObjectOfType<GameManager>();
+        fadeAnimator = GetComponent<Animator>();
         fadeAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
         // makes sure on scene loaded works. 
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        //SceneManager.sceneLoaded += OnSceneLoaded; <--- where the problem was.
     }
 
     public void LoadScene(string sceneName)
     {
         Fade("FadeOut", () =>
         {
-            SceneManager.sceneLoaded += OnSceneLoaded;
+            SceneManager.sceneLoaded += OnSceneLoaded; // <---- only call needed. 
 
             switch (sceneName)
             {
@@ -69,10 +70,17 @@ public class LevelManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        foundBoundingShape = null;
         // used to find bouding shape and set it to the virtual camera. 
         foundBoundingShape = GameObject.FindWithTag("Confiner").GetComponent<Collider2D>();
         confiner2D.m_BoundingShape2D = foundBoundingShape;
-
+        player = GameObject.FindWithTag("Player");
+        Debug.Log("Level manager Has Player Referance");
+        playerSpawn = GameObject.FindWithTag("Spawn").GetComponent<Transform>();
+        Debug.Log("Level manager Has Player Spawn Referance");
+        player.transform.position = playerSpawn.position;
+        fadeAnimator = gameObject.GetComponent<Animator>();
+        Debug.Log("Level manager Has Fade Animator Referance");
         if (scene.name.StartsWith("Room"))
         {
             if (!GameplayMusicIsPlaying)
@@ -80,8 +88,6 @@ public class LevelManager : MonoBehaviour
                 soundManager.PlayAudio("Gameplay");
                 GameplayMusicIsPlaying = true;
             }
-            playerSpawn = GameObject.FindWithTag("Spawn").GetComponent<Transform>();
-            player.transform.position = playerSpawn.position;
             puzzleManager.door = GameObject.Find("Door");
         }
 
