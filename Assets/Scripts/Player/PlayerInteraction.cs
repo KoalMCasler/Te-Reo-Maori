@@ -63,6 +63,10 @@ public class PlayerInteraction : MonoBehaviour
             {
                 currentInterObjScript.Picture();
             }
+            if(currentInterObjScript.interactType == InteractableObject.InteractType.NPC)
+            {
+                currentInterObjScript.NPC();
+            }
         }
         else
         {

@@ -21,6 +21,12 @@ public class InteractableObject : MonoBehaviour
         NPC,
     }
 
+    // Managers
+    [Header("Managers")]
+    [SerializeField] private SoundManager soundManager;
+    [SerializeField] private UIManager uiManager;
+    [SerializeField] private DialogueManager dialogueManager;
+
     [Header("Interaction Type")]
     public InteractType interactType;
 
@@ -46,12 +52,7 @@ public class InteractableObject : MonoBehaviour
 
     //NPCS
     [Header("NPC Variables")]
-    [SerializeField] public Dialogue dialogue;
-
-    // Managers
-    [Header("Managers")]
-    [SerializeField] private SoundManager soundManager;
-    [SerializeField] private UIManager uiManager;
+    public Dialogue dialogue;
 
     // Fog
     [Header("Fog Settings")]
@@ -87,6 +88,10 @@ public class InteractableObject : MonoBehaviour
             isLocked = true;
             isClosed = true;
             doorLight.SetActive(false);
+        }
+        if (interactType == InteractType.NPC)
+        {
+            dialogueManager = FindObjectOfType<DialogueManager>();
         }
     }
 
@@ -203,6 +208,6 @@ public class InteractableObject : MonoBehaviour
 
     public void NPC()
     {
-
+        dialogueManager.StartDialogue(dialogue);
     }
 }
