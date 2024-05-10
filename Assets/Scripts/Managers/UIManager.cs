@@ -213,7 +213,6 @@ public class UIManager : MonoBehaviour
     public void ShowPicture(int pictureIndex)
     {
         PlayerMovement(false);
-        overlayActive = true;
         switch (pictureIndex)
         {
             case 1: pictureUI1.SetActive(true); break;
@@ -223,6 +222,7 @@ public class UIManager : MonoBehaviour
             default: Debug.Log($"No Matching picture index"); break;
         }
         CurrentUI(PictureUI, true);
+        overlayActive = true;
     }
 
     #endregion
