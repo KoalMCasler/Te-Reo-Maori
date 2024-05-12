@@ -60,9 +60,10 @@ public class InteractableObject : MonoBehaviour
     public GameObject fog;
     public VisualEffect fogAmount;
 
-    [Header("Image & Text")] // not sure if we're using text for the photos but adding that here anyways
+    [Header("Image & Text")] 
     [SerializeField] private Sprite picture;
     [SerializeField] private string pictureText;
+
     [Header("Picture Index")]
     public int pictureIndex;
 
