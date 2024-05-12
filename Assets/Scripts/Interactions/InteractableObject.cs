@@ -42,9 +42,8 @@ public class InteractableObject : MonoBehaviour
 
     //Info
     [Header("Info Object variables")]
-    [SerializeField]
-    private TextMeshProUGUI infoText;
-    private GameObject infoImage;
+    [SerializeField] private TextMeshProUGUI infoText;
+    [SerializeField] private GameObject infoImage;
     public float InfoTextDelay = 3;
     public string message;
     public float textSpeed = 0.01f;
@@ -61,6 +60,7 @@ public class InteractableObject : MonoBehaviour
     public VisualEffect fogAmount;
 
     [Header("Image & Text")] 
+    public bool isVertical;
     [SerializeField] private Sprite picture;
     [SerializeField] private string pictureText;
 
@@ -116,12 +116,20 @@ public class InteractableObject : MonoBehaviour
     public void Picture()
     {
         soundManager.PlaySfxAudio("Book");
-        if(picture != null)
+        if(picture != null) //remove later. Using this for testing purposes.
         {
-            uiManager.currentImage.sprite = picture;
-            uiManager.imageDescription.text = pictureText;
+            if(isVertical == false)
+            {
+                uiManager.horizontalCurrentImage.sprite = picture;
+                uiManager.horizontalImageDescript.text = pictureText;
+            }
+            if(isVertical == true)
+            {
+                uiManager.verticalCurrentImage.sprite = picture;
+                uiManager.verticalImageDescript.text = pictureText;           
+            }
         }
-        uiManager.ShowPicture(pictureIndex);
+        uiManager.ShowPicture(pictureIndex, isVertical);
     }
 
     // All needed for door objects to work. 

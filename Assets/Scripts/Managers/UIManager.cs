@@ -52,9 +52,12 @@ public class UIManager : MonoBehaviour
     public GameObject ArtifactUI4;
 
     [Header("Puzzle 3")]
-    public GameObject PictureUI;
-    public Image currentImage; 
-    public TextMeshProUGUI imageDescription;
+    public GameObject horizontalPictureUI;
+    public Image horizontalCurrentImage; 
+    public TextMeshProUGUI horizontalImageDescript;
+    public GameObject verticalPictureUI;
+    public Image verticalCurrentImage;
+    public TextMeshProUGUI verticalImageDescript;
 
     [Header("Puzzle 3 UI")]
     public GameObject pictureUI1;
@@ -210,7 +213,7 @@ public class UIManager : MonoBehaviour
     }
 
     // Shows picture. The plan is to use 1 UI object and just change the image depending on the object (Image should be stored on the interactable)
-    public void ShowPicture(int pictureIndex)
+    public void ShowPicture(int pictureIndex, bool isVertical)
     {
         PlayerMovement(false);
         switch (pictureIndex)
@@ -221,7 +224,10 @@ public class UIManager : MonoBehaviour
             case 4: pictureUI4.SetActive(true); break;
             default: Debug.Log($"No Matching picture index"); break;
         }
-        CurrentUI(PictureUI, true);
+        if(isVertical == false)
+            CurrentUI(horizontalPictureUI, true);
+            if(isVertical == true)
+            CurrentUI(verticalPictureUI, true);
         overlayActive = true;
     }
 
@@ -289,7 +295,8 @@ public class UIManager : MonoBehaviour
         Room3Puzzle.SetActive(false);
         InfoBookArtifact.SetActive(false);
         ConfirmationUI.SetActive(false);
-        PictureUI.SetActive(false);
+        horizontalPictureUI.SetActive(false);
+        verticalPictureUI.SetActive(false);
         overlayActive = false;
 
         activeUI.SetActive(true);
@@ -315,6 +322,7 @@ public class UIManager : MonoBehaviour
             playerInput.actions.FindAction("Interact").Enable();
         }
     }
+    
     public void OnSlotSelect()
     {
         if(EventSystem.current.currentSelectedGameObject.transform.childCount == 1 && isHoldingItem == false)
