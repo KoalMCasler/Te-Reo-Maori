@@ -62,5 +62,13 @@ public class ArtifactSlot : MonoBehaviour, IDropHandler
                     tape.SetActive(true);
             }
         }
+        if(puzzleAsset == puzzleManager.puzzlesToComplete[1])
+        {
+            puzzleManager.CheckSecondPuzzle(puzzleAsset);
+        }
+        if(puzzleAsset == puzzleManager.puzzlesToComplete[2])
+        {
+            puzzleManager.CheckThirdPuzzle(puzzleAsset);
+        }
     }
 }
