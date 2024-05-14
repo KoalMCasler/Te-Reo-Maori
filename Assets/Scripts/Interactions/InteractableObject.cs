@@ -62,7 +62,9 @@ public class InteractableObject : MonoBehaviour
     [Header("Image & Text")] 
     public bool isVertical;
     [SerializeField] private Sprite picture;
+    [SerializeField] private string pictureTitle;
     [SerializeField] private string pictureText;
+    private string finalText;
 
     [Header("Picture Index")]
     public int pictureIndex;
@@ -116,17 +118,18 @@ public class InteractableObject : MonoBehaviour
     public void Picture()
     {
         soundManager.PlaySfxAudio("Book");
+        finalText = string.Format("{0} \n {1}", pictureTitle,pictureText);
         if(picture != null) //remove later. Using this for testing purposes.
         {
             if(isVertical == false)
             {
                 uiManager.horizontalCurrentImage.sprite = picture;
-                uiManager.horizontalImageDescript.text = pictureText;
+                uiManager.horizontalImageDescript.text = finalText;
             }
             if(isVertical == true)
             {
                 uiManager.verticalCurrentImage.sprite = picture;
-                uiManager.verticalImageDescript.text = pictureText;           
+                uiManager.verticalImageDescript.text = finalText;           
             }
         }
         uiManager.ShowPicture(pictureIndex, isVertical);

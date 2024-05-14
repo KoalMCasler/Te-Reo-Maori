@@ -238,6 +238,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494d79ad7cc1a78469b50edf2952262d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManager: {fileID: 0}
+  uiManager: {fileID: 0}
+  dialogueManager: {fileID: 0}
   interactType: 5
   isLocked: 0
   isClosed: 0
@@ -247,16 +250,18 @@ MonoBehaviour:
   newDoor: {fileID: 0}
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
+  infoImage: {fileID: 0}
   InfoTextDelay: 3
   message: 
   textSpeed: 0.01
   isDisplayingText: 0
-  soundManager: {fileID: 0}
-  uiManager: {fileID: 0}
+  dialogue: {fileID: 0}
   hasFog: 0
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
+  isVertical: 0
   picture: {fileID: 21300000, guid: 60b57a316e92edc4db0e4c40fee1e999, type: 3}
+  pictureTitle: 
   pictureText: insert stuff here
   pictureIndex: 0
 --- !u!212 &65435298
@@ -13562,8 +13567,8 @@ Tilemap:
   - first: {x: -34, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileIndex: 32
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14034,6 +14039,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 56
       m_TileSpriteIndex: 56
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 31, y: 2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 68
+      m_TileSpriteIndex: 68
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -32383,7 +32398,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: ecc5a86e5694230409f7b9532c4b4774, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: ea9271f69d677204c873188657f1629b, type: 2}
-  - m_RefCount: 2518
+  - m_RefCount: 2517
     m_Data: {fileID: 11400000, guid: 77d17be765827774ba7978abfff50a49, type: 2}
   - m_RefCount: 68
     m_Data: {fileID: 11400000, guid: d3cb89c9c7d45ce4c9e56b07b7f2afc3, type: 2}
@@ -32435,8 +32450,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: c091ad6801ec3994f8547f407d126439, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 57d5bc933c083964cb55a85063ff3ae3, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 238b28879e9edf84194c373a465497a2, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: bc1b685d1a7a0db42be969ce5c2753d4, type: 2}
   - m_RefCount: 11
@@ -32507,6 +32522,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: fce52fa45958a3c43bce1a0c98f14e74, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 42305361ccc0f0247b59f7c50af369ad, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 398a8315415a0a7439d17d5b7092d87d, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 4
     m_Data: {fileID: -486194091, guid: 67a745ba7d6aedc4b85554352324b899, type: 3}
@@ -32518,9 +32535,9 @@ Tilemap:
     m_Data: {fileID: 706195520, guid: 67a745ba7d6aedc4b85554352324b899, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 2067155348, guid: 67a745ba7d6aedc4b85554352324b899, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 2518
+  - m_RefCount: 1
+    m_Data: {fileID: -1827831921, guid: 01948f16e552692469b03963b415b8a7, type: 3}
+  - m_RefCount: 2517
     m_Data: {fileID: -1870143148, guid: 01948f16e552692469b03963b415b8a7, type: 3}
   - m_RefCount: 68
     m_Data: {fileID: 2096698118, guid: 67a745ba7d6aedc4b85554352324b899, type: 3}
@@ -32644,8 +32661,10 @@ Tilemap:
     m_Data: {fileID: -1794215310, guid: 67a745ba7d6aedc4b85554352324b899, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 268484821, guid: 67a745ba7d6aedc4b85554352324b899, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1758224861, guid: 67a745ba7d6aedc4b85554352324b899, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 3193
+  - m_RefCount: 3194
     m_Data:
       e00: 1
       e01: 0
@@ -32664,7 +32683,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 3193
+  - m_RefCount: 3194
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -48093,6 +48112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494d79ad7cc1a78469b50edf2952262d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManager: {fileID: 0}
+  uiManager: {fileID: 0}
+  dialogueManager: {fileID: 0}
   interactType: 5
   isLocked: 0
   isClosed: 0
@@ -48102,16 +48124,18 @@ MonoBehaviour:
   newDoor: {fileID: 0}
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
+  infoImage: {fileID: 0}
   InfoTextDelay: 3
   message: 
   textSpeed: 0.01
   isDisplayingText: 0
-  soundManager: {fileID: 0}
-  uiManager: {fileID: 0}
+  dialogue: {fileID: 0}
   hasFog: 0
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
+  isVertical: 0
   picture: {fileID: 921023191, guid: 67a745ba7d6aedc4b85554352324b899, type: 3}
+  pictureTitle: 
   pictureText: Insert information
   pictureIndex: 0
 --- !u!212 &798550004
@@ -48426,6 +48450,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494d79ad7cc1a78469b50edf2952262d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManager: {fileID: 0}
+  uiManager: {fileID: 0}
+  dialogueManager: {fileID: 0}
   interactType: 5
   isLocked: 0
   isClosed: 0
@@ -48435,16 +48462,18 @@ MonoBehaviour:
   newDoor: {fileID: 0}
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
+  infoImage: {fileID: 0}
   InfoTextDelay: 3
   message: 
   textSpeed: 0.01
   isDisplayingText: 0
-  soundManager: {fileID: 0}
-  uiManager: {fileID: 0}
+  dialogue: {fileID: 0}
   hasFog: 0
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
+  isVertical: 0
   picture: {fileID: 21300000, guid: 6b17cbb13ec309646ac6288cdfdfe072, type: 3}
+  pictureTitle: 
   pictureText: Insert information
   pictureIndex: 0
 --- !u!212 &1281013533
@@ -50049,6 +50078,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494d79ad7cc1a78469b50edf2952262d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManager: {fileID: 0}
+  uiManager: {fileID: 0}
+  dialogueManager: {fileID: 0}
   interactType: 5
   isLocked: 0
   isClosed: 0
@@ -50058,16 +50090,18 @@ MonoBehaviour:
   newDoor: {fileID: 0}
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
+  infoImage: {fileID: 0}
   InfoTextDelay: 3
   message: 
   textSpeed: 0.01
   isDisplayingText: 0
-  soundManager: {fileID: 0}
-  uiManager: {fileID: 0}
+  dialogue: {fileID: 0}
   hasFog: 0
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
+  isVertical: 0
   picture: {fileID: 1814359040, guid: 01948f16e552692469b03963b415b8a7, type: 3}
+  pictureTitle: 
   pictureText: insert stuff about the thing
   pictureIndex: 0
 --- !u!70 &6267510682082714943
@@ -50154,8 +50188,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0033500195, y: -3.1996999, z: 0}
-    m_Extent: {x: 0.99395, y: 3.9467, z: 0}
+    m_Center: {x: -0.005850017, y: -3.20225, z: 0}
+    m_Extent: {x: 0.99575, y: 3.94495, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
