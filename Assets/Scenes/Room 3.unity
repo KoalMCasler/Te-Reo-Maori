@@ -151,6 +151,10 @@ PrefabInstance:
       propertyPath: pictureIndex
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: pictureTitle
+      value: '"Add title"'
+      objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.7
@@ -228,6 +232,10 @@ PrefabInstance:
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: pictureTitle
+      value: '"Add title"'
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -731,7 +739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: message
-      value: 'Indentify the pictures without tittles '
+      value: 'Indentify the pictures without titles '
       objectReference: {fileID: 0}
     - target: {fileID: 3381665521167207461, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16952,8 +16960,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0050500035, y: -3.1998, z: 0}
-    m_Extent: {x: 0.99555, y: 3.9496999, z: 0}
+    m_Center: {x: 0.00064998865, y: -3.19375, z: 0}
+    m_Extent: {x: 1.0013499, y: 3.9516501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17071,8 +17079,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: b54822b9fbb0c5644bbbc31ca458ada8, type: 3}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: pictureText
+      value: Fill in discription here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: pictureTitle
+      value: '"     "'
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17146,11 +17162,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 2016bf81cef4c5a47a859a420dccaf1c, type: 3}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
-      value: Moari King Flag
+      value: The flag of the Moari King Movement
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: pictureTitle
+      value: '"The Moari King Flag"'
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17350,8 +17370,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0028000474, y: -3.20465, z: 0}
-    m_Extent: {x: 1.004, y: 3.94555, z: 0}
+    m_Center: {x: -0.0015999973, y: -3.2065, z: 0}
+    m_Extent: {x: 0.997, y: 3.947, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17387,8 +17407,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: c7395004b2d07f14ba918048e845955d, type: 3}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: pictureText
+      value: Fill in discription here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: pictureTitle
+      value: '"     "'
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17706,8 +17734,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0061999857, y: -3.1914, z: 0}
-    m_Extent: {x: 0.995, y: 3.9485998, z: 0}
+    m_Center: {x: 0.005349964, y: -3.19415, z: 0}
+    m_Extent: {x: 0.99934995, y: 3.9471502, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -18042,8 +18070,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00075000525, y: -3.2080002, z: 0}
-    m_Extent: {x: 0.99595, y: 3.9494, z: 0}
+    m_Center: {x: -0.0019999743, y: -3.1937501, z: 0}
+    m_Extent: {x: 1.005, y: 3.94645, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -18937,6 +18965,10 @@ PrefabInstance:
       propertyPath: pictureIndex
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: pictureTitle
+      value: '"Sharing Culture"'
+      objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.488
@@ -19135,8 +19167,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0032500029, y: -3.1917, z: 0}
-    m_Extent: {x: 0.99375, y: 3.9496002, z: 0}
+    m_Center: {x: -0.007800013, y: -3.1999002, z: 0}
+    m_Extent: {x: 0.99670005, y: 3.9519, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19172,8 +19204,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 2e571e4ab8c233346bf2f55716345c8f, type: 3}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: pictureText
+      value: Fill in discription here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: pictureTitle
+      value: '"     "'
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21312,8 +21352,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0017500222, y: -3.2079499, z: 0}
-    m_Extent: {x: 0.99835, y: 3.95025, z: 0}
+    m_Center: {x: -0.00075000525, y: -3.2061498, z: 0}
+    m_Extent: {x: 1.0000501, y: 3.94645, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21394,8 +21434,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0059999824, y: -3.1986, z: 0}
-    m_Extent: {x: 0.9997, y: 3.956, z: 0}
+    m_Center: {x: -0.006700039, y: -3.2071002, z: 0}
+    m_Extent: {x: 1.0015, y: 3.9479, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67065,8 +67105,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0050499737, y: -3.19465, z: 0}
-    m_Extent: {x: 1.00125, y: 3.9470499, z: 0}
+    m_Center: {x: 0.0009999871, y: -3.1983, z: 0}
+    m_Extent: {x: 0.9913, y: 3.9462, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67204,11 +67244,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
-      value: Moari King Movement
+      value: The Moari King Movement
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: pictureTitle
+      value: '"     "'
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
