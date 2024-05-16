@@ -88,11 +88,17 @@ public class UIManager : MonoBehaviour
     public bool puzzle3IsOpen;
     public GameObject selector; //needed to attach objects for drag and drop. 
 
+    [Header("UI for Binding")]
+    public GameObject keyboardBindings;
+    public GameObject gamepadBindings;
+
 
    
 
     private void Start()
     {
+        keyboardBindings.SetActive(true);
+        gamepadBindings.SetActive(false);
         isHoldingItem = false;
         puzzle2IsOpen =false;
         puzzle3IsOpen =false;
@@ -277,6 +283,14 @@ public class UIManager : MonoBehaviour
     {
         CurrentUI(CreditsUI, false);
         creditsTarget.Select();
+    }
+
+    public void ShowBinding(GameObject activeBind)
+    {
+        keyboardBindings.SetActive(false);
+        gamepadBindings.SetActive(false);
+
+        activeBind.SetActive(true);
     }
 
     // Sets UI to the required panel & enables or disables player sprite
