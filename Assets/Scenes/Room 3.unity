@@ -744,7 +744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: message
-      value: 'Indentify the pictures without titles '
+      value: Construct a timeline with the pictures without titles!
       objectReference: {fileID: 0}
     - target: {fileID: 3381665521167207461, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16965,8 +16965,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.000100016594, y: -3.194, z: 0}
-    m_Extent: {x: 0.9918, y: 3.9489, z: 0}
+    m_Center: {x: 0.0009999871, y: -3.19935, z: 0}
+    m_Extent: {x: 0.9925, y: 3.95735, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17375,8 +17375,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0050500333, y: -3.1969, z: 0}
-    m_Extent: {x: 1.00025, y: 3.9449, z: 0}
+    m_Center: {x: -0.0017000139, y: -3.19345, z: 0}
+    m_Extent: {x: 0.9951, y: 3.94765, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17903,8 +17903,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00040000677, y: -3.19815, z: 0}
-    m_Extent: {x: 1.0002999, y: 3.9428499, z: 0}
+    m_Center: {x: 0.00020000339, y: -3.19455, z: 0}
+    m_Extent: {x: 0.9965, y: 3.94445, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -18166,13 +18166,21 @@ MonoBehaviour:
   nameOfInteraction: Curator
   introDialogue:
   - Hello and welcome to the gallary!
-  optinalDialogue1: []
-  optinalDialogue2: []
-  optinalDialogue3: []
-  optinalDialogue4: []
-  optinalDialogue5: []
+  optinalDialogue1:
+  - What pictures do you want more information on?
+  optinalDialogue2:
+  - Info on first picture goes here.
+  optinalDialogue3:
+  - Info on 2nd picture goes here.
+  optinalDialogue4:
+  - Info on 3rd picture goes here.
+  optinalDialogue5:
+  - Info on 4th picture goes here.
+  optinalDialogue6:
+  - Do you want information on any other pictures?
   outroDialogue:
   - Thanks for visiting!
+  dialogueOptionCount: 4
 --- !u!1 &1149254651
 GameObject:
   m_ObjectHideFlags: 0
@@ -18239,8 +18247,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00055003166, y: -3.20755, z: 0}
-    m_Extent: {x: 1.00115, y: 3.94695, z: 0}
+    m_Center: {x: 0.00040000677, y: -3.2012, z: 0}
+    m_Extent: {x: 0.995, y: 3.9467, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19336,8 +19344,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0016999841, y: -3.2015, z: 0}
-    m_Extent: {x: 0.999, y: 3.9552002, z: 0}
+    m_Center: {x: 0.002550006, y: -3.2024999, z: 0}
+    m_Extent: {x: 1.00315, y: 3.9515, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19512,7 +19520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
       propertyPath: destinantionRoom
-      value: Room 0
+      value: GameEnd
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21685,8 +21693,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.005950004, y: -3.1983, z: 0}
-    m_Extent: {x: 1.00045, y: 3.9529, z: 0}
+    m_Center: {x: 0.005300015, y: -3.2013, z: 0}
+    m_Extent: {x: 0.9999, y: 3.9419, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21767,8 +21775,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0024500191, y: -3.2048, z: 0}
-    m_Extent: {x: 0.99905, y: 3.9454, z: 0}
+    m_Center: {x: -0.002550006, y: -3.2064002, z: 0}
+    m_Extent: {x: 1.00475, y: 3.9507, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67520,8 +67528,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0048999786, y: -3.2024, z: 0}
-    m_Extent: {x: 0.99619997, y: 3.951, z: 0}
+    m_Center: {x: -0.0033499599, y: -3.1992998, z: 0}
+    m_Extent: {x: 0.99775, y: 3.9396, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

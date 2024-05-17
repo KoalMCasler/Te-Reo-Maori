@@ -14,6 +14,7 @@ public class PuzzleManager : MonoBehaviour
 
     [Header("Puzzle Information")]
     public PuzzleAsset[] puzzlesToComplete;
+    public bool puzzle3TextDone;
 
     [Header("Pepeha Puzzle")]
     public TMP_InputField[] puzzleFields;
@@ -27,6 +28,7 @@ public class PuzzleManager : MonoBehaviour
 
     private void Start()
     {
+        puzzle3TextDone = false;
         soundManager = FindObjectOfType<SoundManager>();
         ResetAllPuzzles();
     }
@@ -47,25 +49,25 @@ public class PuzzleManager : MonoBehaviour
 
         if (puzzleFields[0].text.ToLower() == "mountain")
         {
-            soundManager.PlaySfxAudio("EnterText");
+            //soundManager.PlaySfxAudio("EnterText");
             puzzleFields[0].interactable = false;
         }
         if ((puzzleFields[1].text.ToLower() == "water") || (puzzleFields[1].text.ToLower() == "river"))
         {
-            soundManager.PlaySfxAudio("EnterText");
+            //soundManager.PlaySfxAudio("EnterText");
             puzzleFields[1].interactable = false;
         }
         if ((puzzleFields[2].text.ToLower() == "tribe") || (puzzleFields[2].text.ToLower() == "people"))
         {
-            soundManager.PlaySfxAudio("EnterText");
+            //soundManager.PlaySfxAudio("EnterText");
             puzzleFields[2].interactable = false;
         }
         if (puzzleFields[3].text.ToLower() == "name")
         {
-            soundManager.PlaySfxAudio("EnterText");
+            //soundManager.PlaySfxAudio("EnterText");
             puzzleFields[3].interactable = false;
         }
-
+        //soundManager.PlaySfxAudio("EnterText");
         foreach (TMP_InputField field in puzzleFields)
         {
             if (!field.interactable)
@@ -120,36 +122,40 @@ public class PuzzleManager : MonoBehaviour
         int interactableCount = 0;
         if (pictureInputFields[0].text.ToLower() == "a")
         {
-            soundManager.PlaySfxAudio("EnterText");
+            //soundManager.PlaySfxAudio("EnterText");
             pictureInputFields[0].interactable = false;
         }
         if (pictureInputFields[1].text.ToLower() == "b")
         {
-            soundManager.PlaySfxAudio("EnterText");
+            //soundManager.PlaySfxAudio("EnterText");
             pictureInputFields[1].interactable = false;
         }
         if (pictureInputFields[2].text.ToLower() == "c")
         {
-            soundManager.PlaySfxAudio("EnterText");
+            //soundManager.PlaySfxAudio("EnterText");
             pictureInputFields[2].interactable = false;
         }
         if (pictureInputFields[3].text.ToLower() == "d")
         {
-            soundManager.PlaySfxAudio("EnterText");
+            //soundManager.PlaySfxAudio("EnterText");
             pictureInputFields[3].interactable = false;
-        }
-        foreach(PictureSlot pictures in pictureSlots)
-        {
-            if(pictures.isSlotedCorrectly)
-            {
-                slotedCorrectly++;
-            }
         }
         foreach (TMP_InputField field in pictureInputFields)
         {
             if (!field.interactable)
             {
                 interactableCount++;
+            }
+            if(interactableCount == pictureInputFields.Length)
+            {
+                puzzle3TextDone = true;
+            }
+        }
+        foreach(PictureSlot pictures in pictureSlots)
+        {
+            if(pictures.isSlotedCorrectly)
+            {
+                slotedCorrectly++;
             }
         }
         if(slotedCorrectly == pictureSlots.Length && interactableCount == pictureInputFields.Length)

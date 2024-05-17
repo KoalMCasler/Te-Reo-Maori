@@ -11,12 +11,14 @@ public class PictureSlot : MonoBehaviour, IDropHandler
     public int orderPosition;
     public bool isSlotedCorrectly;
     private PuzzleManager puzzleManager;
+    private SoundManager soundManager;
     [SerializeField] PuzzleAsset puzzleAsset;
     [SerializeField] GameObject tape;
 
     private void Start()
     {   
         puzzleManager = FindObjectOfType<PuzzleManager>();
+        soundManager = FindObjectOfType<SoundManager>();
         if(tape != null)
             tape.SetActive(false);
     }
@@ -33,6 +35,7 @@ public class PictureSlot : MonoBehaviour, IDropHandler
                 dropped.GetComponent<Draggable>().enabled = false;
                 dropped.transform.SetParent(transform);
                 isSlotedCorrectly = true;
+                soundManager.PlaySfxAudio("correct");
                 this.GetComponent<Button>().interactable = false;
                 if(tape != null)
                     tape.SetActive(true);
@@ -57,10 +60,19 @@ public class PictureSlot : MonoBehaviour, IDropHandler
                 dropped.GetComponent<Draggable>().enabled = false;
                 dropped.transform.SetParent(transform);
                 isSlotedCorrectly = true;
+                soundManager.PlaySfxAudio("correct");
                 this.GetComponent<Button>().interactable = false;
                 if(tape != null)
                     tape.SetActive(true);
             }
+        }
+        if(puzzleAsset == puzzleManager.puzzlesToComplete[1])
+        {
+            puzzleManager.CheckSecondPuzzle(puzzleAsset);
+        }
+        if(puzzleAsset == puzzleManager.puzzlesToComplete[2])
+        {
+            puzzleManager.CheckThirdPuzzle(puzzleAsset);
         }
     }
 }

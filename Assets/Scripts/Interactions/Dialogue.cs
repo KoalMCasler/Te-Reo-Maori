@@ -11,6 +11,8 @@ public class Dialogue : MonoBehaviour
     public string[] optinalDialogue3;
     public string[] optinalDialogue4;
     public string[] optinalDialogue5;
+    public string[] optinalDialogue6;
     public string[] outroDialogue;
+    public int dialogueOptionCount;
     // Need to figure out how we're handling dialogue.
 }

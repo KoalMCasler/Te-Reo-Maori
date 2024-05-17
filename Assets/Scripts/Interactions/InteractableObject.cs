@@ -97,12 +97,7 @@ public class InteractableObject : MonoBehaviour
             dialogueManager = FindObjectOfType<DialogueManager>();
         }
     }
-
-    public void Dialogue()
-    {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-    }
-
+    
     public void Book()
     {
         soundManager.PlaySfxAudio("Book");

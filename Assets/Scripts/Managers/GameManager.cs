@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
         Pause,
         Options,
         GameEnd,
+        Dialogue,
     }
 
     public GameState gameState;
@@ -26,6 +27,8 @@ public class GameManager : MonoBehaviour
     public SoundManager soundManager;
 
     internal bool isPaused;
+
+    public GameObject player;
 
     private void Start()
     {
@@ -42,6 +45,7 @@ public class GameManager : MonoBehaviour
             case GameState.MainMenu: MainMenu(); break;
             case GameState.Acknowledgment: Acknowledgment(); break;
             case GameState.Gameplay: Gameplay(); break;
+            case GameState.Dialogue: Dialogue(); break;
             case GameState.Pause: Pause(); break;
             case GameState.Options: Options(); break;
             case GameState.Puzzle: Puzzle(); break;
@@ -96,6 +100,7 @@ public class GameManager : MonoBehaviour
     {
         isPaused = false;
         uiManager.UI_Gameplay();
+        player.GetComponent<PlayerInteraction>().enabled = true;
     }
 
     private void Pause()
@@ -119,6 +124,11 @@ public class GameManager : MonoBehaviour
     {
         isPaused = false;
         uiManager.UI_EndGame();
+    }
+    private void Dialogue()
+    {
+        uiManager.UI_Dialogue();
+        player.GetComponent<PlayerInteraction>().enabled = false;
     }
 
     public void QuitGame()

@@ -43,6 +43,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         if(currentInterObj == true)
         {
+            Debug.Log("Interacting with " + currentInterObj.name);
             if(currentInterObjScript.interactType == InteractableObject.InteractType.Info)
             {
                 currentInterObjScript.Info();
@@ -90,6 +91,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             UIManager.UI_Gameplay();
             soundManager.PlaySfxAudio("Book");
+            gameManager.LoadState("Gameplay");
         }
     }
     void OnOpenPuzzle()

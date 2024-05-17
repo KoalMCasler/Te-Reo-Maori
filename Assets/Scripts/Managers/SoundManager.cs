@@ -18,6 +18,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip doorUnlock;
     [SerializeField] private AudioClip openBook;
     [SerializeField] private AudioClip enterText;
+    [SerializeField] private AudioClip correct;
 
     [Header("Audio Settings")]
     [SerializeField] private AudioMixer audioMixer;
@@ -80,6 +81,8 @@ public class SoundManager : MonoBehaviour
             case "Book": sfxSource.PlayOneShot(openBook, 1f);
             /*Debug.Log("Book played");*/  break;
             case "EnterText": sfxSource.PlayOneShot(enterText, 1f);
+            /*Debug.Log("Text played");*/ break;
+            case "correct": sfxSource.PlayOneShot(correct, 1f);
             /*Debug.Log("Text played");*/ break;
 
         }

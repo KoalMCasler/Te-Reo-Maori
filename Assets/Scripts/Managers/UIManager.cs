@@ -1,9 +1,11 @@
 using TMPro;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+
 
 public class UIManager : MonoBehaviour
 {
@@ -19,6 +21,8 @@ public class UIManager : MonoBehaviour
     public GameObject AcknowledgementUI;
     public GameObject GameplayUI;
     public GameObject DialogueUI;
+    public GameObject DialogueUIOptions;
+    public GameObject NextDialogueButton;
     public GameObject CreditsUI;
     public GameObject ControlsUI;
     public GameObject PauseUI;
@@ -81,6 +85,8 @@ public class UIManager : MonoBehaviour
     //public TMP_InputField puzzle1Target;
     public Button puzzle2Target;
     public Button puzzle3Target;
+    public Button dialogueTarget;
+    public Button dialogueOptionsTarget;
 
     [Header("Needed for Controller")]
     public bool isHoldingItem;
@@ -270,7 +276,22 @@ public class UIManager : MonoBehaviour
 
     public void UI_Dialogue()
     {
+        PlayerMovement(false);
         CurrentUI(DialogueUI, true);
+        overlayActive = true;
+        StartCoroutine(dialogueSelectDelay());
+    }
+    public void UI_DialogueOptions(bool isActive)
+    {
+        if(isActive == false)
+        {
+            DialogueUIOptions.SetActive(false);
+        }
+        else
+        {
+            DialogueUIOptions.SetActive(true);
+            dialogueOptionsTarget.Select();
+        }
     }
 
     public void UI_Controls()
@@ -312,7 +333,8 @@ public class UIManager : MonoBehaviour
         horizontalPictureUI.SetActive(false);
         verticalPictureUI.SetActive(false);
         overlayActive = false;
-
+        DialogueUI.SetActive(false);
+        DialogueUIOptions.SetActive(false);
         activeUI.SetActive(true);
         playerSprite.enabled = isActive; // Enables or disables player sprite
 
@@ -341,6 +363,11 @@ public class UIManager : MonoBehaviour
     {
         if(EventSystem.current.currentSelectedGameObject.transform.childCount == 1 && isHoldingItem == false)
         {
+            if(EventSystem.current.currentSelectedGameObject.GetComponent<PictureSlot>() != null && !puzzleManager.puzzle3TextDone)
+            {
+               Debug.Log("Finish the text first"); //this is to prevent issues with the controller having the dragable moved to a text box.
+               return;
+            }
             GameObject itemToMove = EventSystem.current.currentSelectedGameObject.transform.GetChild(0).gameObject;
             itemToMove.transform.SetParent(selector.transform);
             isHoldingItem = true;
@@ -351,14 +378,34 @@ public class UIManager : MonoBehaviour
             GameObject itemToMove = selector.transform.GetChild(0).gameObject;
             selector.transform.GetChild(0).SetParent(EventSystem.current.currentSelectedGameObject.transform);
             isHoldingItem = false;
-            EventSystem.current.currentSelectedGameObject.GetComponent<ArtifactSlot>().OnControllerDrop(itemToMove);
-            puzzleManager.CheckSecondPuzzle(puzzleManager.puzzlesToComplete[1]);
-            puzzle2Target.Select();
+            if(EventSystem.current.currentSelectedGameObject.GetComponent<ArtifactSlot>() != null)
+            {
+                EventSystem.current.currentSelectedGameObject.GetComponent<ArtifactSlot>().OnControllerDrop(itemToMove);
+            }
+            else
+            {
+                EventSystem.current.currentSelectedGameObject.GetComponent<PictureSlot>().OnControllerDrop(itemToMove);
+            }
+            if(puzzleManager.puzzlesToComplete[1].status != PuzzleAsset.Status.Finished)
+            {
+                puzzle2Target.Select();
+            }
+            if(puzzleManager.puzzlesToComplete[2].status != PuzzleAsset.Status.Finished && puzzleManager.puzzlesToComplete[1].status == PuzzleAsset.Status.Finished)
+            {
+                puzzle3Target.Select();
+            }
             Debug.Log("Item Dropped");
         }
         else
         {
             Debug.Log("nothing to move from slot");
         }
+    }
+
+    private IEnumerator dialogueSelectDelay()
+    {
+        // this is needed to prevent skiping into text on controller use.
+        yield return new WaitForSeconds(0.1f);
+        dialogueTarget.Select();
     }
 }

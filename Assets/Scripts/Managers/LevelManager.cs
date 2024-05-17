@@ -57,7 +57,7 @@ public class LevelManager : MonoBehaviour
                     break;
                 case "GameEnd":
                     soundManager.PlayAudio("MainMenu");
-                    gameManager.LoadState(sceneName);
+                    gameManager.LoadState("GameEnd");
                     GameplayMusicIsPlaying = false;
                     break;
                 default:

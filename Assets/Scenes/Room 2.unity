@@ -49829,7 +49829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: message
-      value: Gather and Identify all 4 artifacts
+      value: Gather and match all 4 artifacts to the corect names!
       objectReference: {fileID: 0}
     - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: textSpeed
@@ -50188,8 +50188,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.005850017, y: -3.20225, z: 0}
-    m_Extent: {x: 0.99575, y: 3.94495, z: 0}
+    m_Center: {x: 0.00069999695, y: -3.1983, z: 0}
+    m_Extent: {x: 0.9932, y: 3.9506001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
