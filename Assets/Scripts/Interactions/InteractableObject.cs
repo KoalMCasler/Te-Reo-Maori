@@ -61,7 +61,7 @@ public class InteractableObject : MonoBehaviour
 
     [Header("Image & Text")] 
     public bool isVertical;
-    [SerializeField] private Sprite picture;
+    public Sprite picture;
     [SerializeField] private string pictureTitle;
     [TextArea(2,10)]
     [SerializeField] private string pictureText;
