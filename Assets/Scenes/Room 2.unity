@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 65435297}
   - component: {fileID: 65435296}
   m_Layer: 0
-  m_Name: Artifact2
+  m_Name: Artifact2_Aroha
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,11 +241,11 @@ MonoBehaviour:
   soundManager: {fileID: 0}
   uiManager: {fileID: 0}
   dialogueManager: {fileID: 0}
+  levelManager: {fileID: 0}
   interactType: 5
   isLocked: 0
   isClosed: 0
   destinantionRoom: 
-  levelManager: {fileID: 0}
   doorSprite: {fileID: 0}
   newDoor: {fileID: 0}
   doorLight: {fileID: 0}
@@ -260,9 +260,10 @@ MonoBehaviour:
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
   isVertical: 0
-  picture: {fileID: 21300000, guid: 60b57a316e92edc4db0e4c40fee1e999, type: 3}
+  picture: {fileID: 21300000, guid: 8728dfc7e4ba6d84f9d54827c1e31490, type: 3}
   pictureTitle: 
-  pictureText: insert stuff here
+  pictureText: Essence of love, of loving but not a deep love. Love that you'd have
+    for your friends.
   pictureIndex: 0
 --- !u!212 &65435298
 SpriteRenderer:
@@ -48044,7 +48045,7 @@ GameObject:
   - component: {fileID: 798550003}
   - component: {fileID: 798550002}
   m_Layer: 0
-  m_Name: Artifact4
+  m_Name: Artifact4_Wehi
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48115,11 +48116,11 @@ MonoBehaviour:
   soundManager: {fileID: 0}
   uiManager: {fileID: 0}
   dialogueManager: {fileID: 0}
+  levelManager: {fileID: 0}
   interactType: 5
   isLocked: 0
   isClosed: 0
   destinantionRoom: 
-  levelManager: {fileID: 0}
   doorSprite: {fileID: 0}
   newDoor: {fileID: 0}
   doorLight: {fileID: 0}
@@ -48134,9 +48135,13 @@ MonoBehaviour:
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
   isVertical: 0
-  picture: {fileID: 921023191, guid: 67a745ba7d6aedc4b85554352324b899, type: 3}
+  picture: {fileID: 21300000, guid: 1c0577c9386eb20488dfdc15f5795753, type: 3}
   pictureTitle: 
-  pictureText: Insert information
+  pictureText: 'Humilty. Being humble.
+
+
+    Wehi is depicted as a pou holding his
+    tongue.'
   pictureIndex: 0
 --- !u!212 &798550004
 SpriteRenderer:
@@ -48382,7 +48387,7 @@ GameObject:
   - component: {fileID: 1281013532}
   - component: {fileID: 1281013531}
   m_Layer: 0
-  m_Name: Artifact3
+  m_Name: Artifact3_Ihi
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48453,11 +48458,11 @@ MonoBehaviour:
   soundManager: {fileID: 0}
   uiManager: {fileID: 0}
   dialogueManager: {fileID: 0}
+  levelManager: {fileID: 0}
   interactType: 5
   isLocked: 0
   isClosed: 0
   destinantionRoom: 
-  levelManager: {fileID: 0}
   doorSprite: {fileID: 0}
   newDoor: {fileID: 0}
   doorLight: {fileID: 0}
@@ -48472,9 +48477,9 @@ MonoBehaviour:
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
   isVertical: 0
-  picture: {fileID: 21300000, guid: 6b17cbb13ec309646ac6288cdfdfe072, type: 3}
+  picture: {fileID: 21300000, guid: 0868b8453ad21ac4d9d8915081307ef6, type: 3}
   pictureTitle: 
-  pictureText: Insert information
+  pictureText: Quest for excellence in everything we do.
   pictureIndex: 0
 --- !u!212 &1281013533
 SpriteRenderer:
@@ -49991,7 +49996,7 @@ GameObject:
   - component: {fileID: 6152299117587362985}
   - component: {fileID: 6267510682082714943}
   m_Layer: 0
-  m_Name: Artifact1
+  m_Name: Artifact1_Mana
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50081,11 +50086,11 @@ MonoBehaviour:
   soundManager: {fileID: 0}
   uiManager: {fileID: 0}
   dialogueManager: {fileID: 0}
+  levelManager: {fileID: 0}
   interactType: 5
   isLocked: 0
   isClosed: 0
   destinantionRoom: 
-  levelManager: {fileID: 0}
   doorSprite: {fileID: 0}
   newDoor: {fileID: 0}
   doorLight: {fileID: 0}
@@ -50100,9 +50105,14 @@ MonoBehaviour:
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
   isVertical: 0
-  picture: {fileID: 1814359040, guid: 01948f16e552692469b03963b415b8a7, type: 3}
+  picture: {fileID: 21300000, guid: 184ad3507be52aa43a3e96aa5eeee57f, type: 3}
   pictureTitle: 
-  pictureText: insert stuff about the thing
+  pictureText: 'Your authority as a person. Your prestige.
+
+    You do not control
+    how much mana you have as a person.
+
+    Mana is depicted as '
   pictureIndex: 0
 --- !u!70 &6267510682082714943
 CapsuleCollider2D:
@@ -50188,8 +50198,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00069999695, y: -3.1983, z: 0}
-    m_Extent: {x: 0.9932, y: 3.9506001, z: 0}
+    m_Center: {x: 0.008049995, y: -3.19995, z: 0}
+    m_Extent: {x: 1.00045, y: 3.94855, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

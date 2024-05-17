@@ -26,6 +26,7 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private SoundManager soundManager;
     [SerializeField] private UIManager uiManager;
     [SerializeField] private DialogueManager dialogueManager;
+    [SerializeField] private LevelManager levelManager;
 
     [Header("Interaction Type")]
     public InteractType interactType;
@@ -35,7 +36,6 @@ public class InteractableObject : MonoBehaviour
     public bool isLocked;
     public bool isClosed;
     public string destinantionRoom;
-    public LevelManager levelManager;
     public SpriteRenderer doorSprite;
     public Sprite newDoor;
     public GameObject doorLight;
@@ -63,6 +63,7 @@ public class InteractableObject : MonoBehaviour
     public bool isVertical;
     [SerializeField] private Sprite picture;
     [SerializeField] private string pictureTitle;
+    [TextArea(2,10)]
     [SerializeField] private string pictureText;
     private string finalText;
 
