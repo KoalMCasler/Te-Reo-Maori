@@ -262,8 +262,11 @@ MonoBehaviour:
   isVertical: 0
   picture: {fileID: 21300000, guid: 717b53bbe15a0df488f5a33f181b4724, type: 3}
   pictureTitle: 
-  pictureText: Essence of love, of loving but not a deep love. Love that you'd have
-    for your friends.
+  pictureText: 'Essence of love, of loving but not a deep love. Love that you''d
+    have for your friends.
+
+
+    In this carving Aroha is shown to be'
   pictureIndex: 0
 --- !u!212 &65435298
 SpriteRenderer:
@@ -48140,8 +48143,8 @@ MonoBehaviour:
   pictureText: 'Humilty. Being humble.
 
 
-    Wehi is depicted as a pou holding his
-    tongue.'
+    In this carving Wehi is depicted as
+    holding his tongue.'
   pictureIndex: 0
 --- !u!212 &798550004
 SpriteRenderer:
@@ -48479,7 +48482,11 @@ MonoBehaviour:
   isVertical: 0
   picture: {fileID: 21300000, guid: 18307f21739a2934a824f6582b46bc1f, type: 3}
   pictureTitle: 
-  pictureText: Quest for excellence in everything we do.
+  pictureText: 'Quest for excellence in everything we do. Striving for the most out
+    of everything we do.
+
+
+    In this carving Ihi is shown as'
   pictureIndex: 0
 --- !u!212 &1281013533
 SpriteRenderer:
@@ -50112,7 +50119,8 @@ MonoBehaviour:
     You do not control
     how much mana you have as a person.
 
-    Mana is depicted as '
+    In this specific carving Mana has very
+    watchful eyes as your mana is <<insert word>> by others.'
   pictureIndex: 0
 --- !u!70 &6267510682082714943
 CapsuleCollider2D:
@@ -50198,8 +50206,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0020500124, y: -3.19985, z: 0}
-    m_Extent: {x: 0.99735, y: 3.9502501, z: 0}
+    m_Center: {x: 0.00060001016, y: -3.20265, z: 0}
+    m_Extent: {x: 0.99469995, y: 3.94235, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

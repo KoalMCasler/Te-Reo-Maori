@@ -22705,12 +22705,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3520567263663958720, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: m_Name
-      value: Book4
+      value: Book4 - Name
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: picture
       value: 
-      objectReference: {fileID: -1785934031, guid: 7bed07b47e4b9d540b1869c2fb3b86f8, type: 3}
+      objectReference: {fileID: 21300000, guid: ffbc4845b0965ba479761fcf832424a2, type: 3}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: openBook
       value: 
@@ -25067,8 +25067,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.007049978, y: -4.8737, z: 0}
-    m_Extent: {x: 1.0014501, y: 5.6271, z: 0}
+    m_Center: {x: 0.00485003, y: -4.87305, z: 0}
+    m_Extent: {x: 0.99905, y: 5.63055, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25149,8 +25149,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0021499991, y: -4.876, z: 0}
-    m_Extent: {x: 0.99575, y: 5.6296, z: 0}
+    m_Center: {x: -0.007499963, y: -4.88145, z: 0}
+    m_Extent: {x: 1.0015, y: 5.62715, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25231,8 +25231,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.008399993, y: -4.8774, z: 0}
-    m_Extent: {x: 1.0001, y: 5.6252, z: 0}
+    m_Center: {x: 0, y: -4.8766503, z: 0}
+    m_Extent: {x: 1.0068, y: 5.62355, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25297,7 +25297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3520567263663958720, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: m_Name
-      value: Book3
+      value: Book3 - People
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: picture
@@ -25401,8 +25401,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.002249986, y: -4.87555, z: 0}
-    m_Extent: {x: 0.99265003, y: 5.62865, z: 0}
+    m_Center: {x: 0.0019999743, y: -4.87195, z: 0}
+    m_Extent: {x: 1.0007, y: 5.6192503, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25986,7 +25986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3520567263663958720, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: m_Name
-      value: Book2
+      value: Book2 - River
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: picture
@@ -26386,8 +26386,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.005799979, y: -4.87965, z: 0}
-    m_Extent: {x: 0.99979997, y: 5.62955, z: 0}
+    m_Center: {x: 0.000049978495, y: -4.8762503, z: 0}
+    m_Extent: {x: 0.99654996, y: 5.61985, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -26686,7 +26686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3520567263663958720, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: m_Name
-      value: Book1
+      value: Book1 - Mountain
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: picture

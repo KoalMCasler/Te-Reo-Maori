@@ -16965,8 +16965,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0009999871, y: -3.19935, z: 0}
-    m_Extent: {x: 0.9925, y: 3.95735, z: 0}
+    m_Center: {x: 0.005499989, y: -3.1938, z: 0}
+    m_Extent: {x: 0.9986, y: 3.9481, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17375,8 +17375,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0017000139, y: -3.19345, z: 0}
-    m_Extent: {x: 0.9951, y: 3.94765, z: 0}
+    m_Center: {x: -0.003700018, y: -3.19095, z: 0}
+    m_Extent: {x: 1.0001, y: 3.94835, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17903,8 +17903,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00020000339, y: -3.19455, z: 0}
-    m_Extent: {x: 0.9965, y: 3.94445, z: 0}
+    m_Center: {x: -0.00064998865, y: -3.1976001, z: 0}
+    m_Extent: {x: 0.99855, y: 3.9464, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -18083,11 +18083,11 @@ MonoBehaviour:
   soundManager: {fileID: 0}
   uiManager: {fileID: 0}
   dialogueManager: {fileID: 0}
+  levelManager: {fileID: 0}
   interactType: 7
   isLocked: 0
   isClosed: 0
   destinantionRoom: 
-  levelManager: {fileID: 0}
   doorSprite: {fileID: 0}
   newDoor: {fileID: 0}
   doorLight: {fileID: 0}
@@ -18247,8 +18247,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00040000677, y: -3.2012, z: 0}
-    m_Extent: {x: 0.995, y: 3.9467, z: 0}
+    m_Center: {x: 0.00090000033, y: -3.2005, z: 0}
+    m_Extent: {x: 0.99530005, y: 3.9499998, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19344,8 +19344,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.002550006, y: -3.2024999, z: 0}
-    m_Extent: {x: 1.00315, y: 3.9515, z: 0}
+    m_Center: {x: 0.002750039, y: -3.2038, z: 0}
+    m_Extent: {x: 1.00335, y: 3.9444, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21693,8 +21693,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.005300015, y: -3.2013, z: 0}
-    m_Extent: {x: 0.9999, y: 3.9419, z: 0}
+    m_Center: {x: -0.0015999973, y: -3.2002, z: 0}
+    m_Extent: {x: 0.9978, y: 3.9485002, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21775,8 +21775,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.002550006, y: -3.2064002, z: 0}
-    m_Extent: {x: 1.00475, y: 3.9507, z: 0}
+    m_Center: {x: 0.0015000105, y: -3.1925502, z: 0}
+    m_Extent: {x: 1.0056, y: 3.94945, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67528,8 +67528,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0033499599, y: -3.1992998, z: 0}
-    m_Extent: {x: 0.99775, y: 3.9396, z: 0}
+    m_Center: {x: -0.0069999993, y: -3.195, z: 0}
+    m_Extent: {x: 0.9973, y: 3.9486, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67667,7 +67667,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
-      value: The Moari King Movement
+      value: "Founded in 1858, with the aim of uniting M\u0101ori under a single
+        sovereign and because The Crown didn't understand chiefs, it became this."
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
@@ -67675,7 +67676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureTitle
-      value: '"     "'
+      value: "The M\u0101ori King Movement"
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
