@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_Name
-      value: Picture (7)
+      value: Picture -WelcomingCeremony
       objectReference: {fileID: 0}
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_TagString
@@ -216,7 +216,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_Name
-      value: Picture (6)
+      value: Picture - ReturnOfLand
       objectReference: {fileID: 0}
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_TagString
@@ -17156,7 +17156,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_Name
-      value: Picture (5)
+      value: Picture - KingFlag
       objectReference: {fileID: 0}
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_TagString
@@ -17165,7 +17165,7 @@ PrefabInstance:
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: picture
       value: 
-      objectReference: {fileID: 21300000, guid: 2016bf81cef4c5a47a859a420dccaf1c, type: 3}
+      objectReference: {fileID: 21300000, guid: 12d134ac5f9ba9245ae460dcd631df65, type: 3}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
       value: "The flag of the M\u0101ori King Movement"
@@ -17176,7 +17176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureTitle
-      value: "\"The M\u0101ori King Flag\""
+      value: '"Making Poi"'
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18167,18 +18167,19 @@ MonoBehaviour:
   nameOfInteraction: Curator
   introDialogue:
   - Hello and welcome to the gallary!
-  optinalDialogue1:
-  - What pictures do you want more information on?
-  optinalDialogue2:
-  - Info on first picture goes here.
-  optinalDialogue3:
-  - Info on 2nd picture goes here.
-  optinalDialogue4:
-  - Info on 3rd picture goes here.
-  optinalDialogue5:
-  - Info on 4th picture goes here.
-  optinalDialogue6:
-  - Do you want information on any other pictures?
+  optionalDialogue1:
+  - What picture would you like to know more about?
+  optionalDialogue2:
+  - "The first M\u0101ori King was P\u014Dtatau Te Wherowhero, who was crowned in
+    1858. The <color=#9E9E9E>K\u012Bngitanga</color> movement has continued to the
+    present day, with the current king being T\u016Bheitia Paki. "
+  - "The monarchy plays a crucial role in advocating for M\u0101ori rights and preserving
+    M\u0101ori culture and traditions. The Waikato region is particularly significant
+    as it is the heartland of the <color=#9E9E9E>K\u012Bngitanga</color> movement."
+  optionalDialogue3: []
+  optionalDialogue4: []
+  optionalDialogue5: []
+  optionalDialogue6: []
   outroDialogue:
   - Thanks for visiting!
   dialogueOptionCount: 4
@@ -19125,7 +19126,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_Name
-      value: Picture (4)
+      value: Picture -SharingCulture
       objectReference: {fileID: 0}
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_TagString
@@ -19134,10 +19135,10 @@ PrefabInstance:
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: picture
       value: 
-      objectReference: {fileID: 21300000, guid: b3bc87d1747da994abc74c4d26bb7614, type: 3}
+      objectReference: {fileID: 21300000, guid: 89eff7c4b0ed7bc479b1866b4325a3ba, type: 3}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
-      value: Teaching Maori Students about Mikmaq culture
+      value: Teaching Maori Students about Mi'kmaq culture
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex

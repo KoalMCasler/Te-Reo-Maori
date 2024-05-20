@@ -172,7 +172,7 @@ public class PuzzleManager : MonoBehaviour
     public void CompletePuzzle(PuzzleAsset puzzle)
     {
         puzzle.status = PuzzleAsset.Status.Finished;
-        Debug.Log(puzzle.name + " Compleated");
+        Debug.Log(puzzle.name + " Completed");
         //enter door stuff
         door.GetComponent<InteractableObject>().isLocked = false;
         door.GetComponent<InteractableObject>().doorLight.SetActive(true);

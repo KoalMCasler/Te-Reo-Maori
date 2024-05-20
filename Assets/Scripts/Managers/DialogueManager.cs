@@ -96,14 +96,14 @@ public class DialogueManager : MonoBehaviour
         sentences.Clear();
         if(isAskingQustions)
         {
-            foreach(string currentLine in activeDialogue.optinalDialogue6)
+            foreach(string currentLine in activeDialogue.optionalDialogue6)
             {
                 sentences.Enqueue(currentLine);
             }
         }
         else
         {
-            foreach(string currentLine in activeDialogue.optinalDialogue1)
+            foreach(string currentLine in activeDialogue.optionalDialogue1)
             {
                 sentences.Enqueue(currentLine);
             }
@@ -137,7 +137,7 @@ public class DialogueManager : MonoBehaviour
         if(optionNumber == 1)
         {
             sentences.Clear();
-            foreach(string currentLine in activeDialogue.optinalDialogue2)
+            foreach(string currentLine in activeDialogue.optionalDialogue2)
             {
                 sentences.Enqueue(currentLine);
             } 
@@ -148,7 +148,7 @@ public class DialogueManager : MonoBehaviour
         if(optionNumber == 2)
         {
             sentences.Clear();
-            foreach(string currentLine in activeDialogue.optinalDialogue3)
+            foreach(string currentLine in activeDialogue.optionalDialogue3)
             {
                 sentences.Enqueue(currentLine);
             }
@@ -159,7 +159,7 @@ public class DialogueManager : MonoBehaviour
         if(optionNumber == 3)
         {
             sentences.Clear();
-            foreach(string currentLine in activeDialogue.optinalDialogue4)
+            foreach(string currentLine in activeDialogue.optionalDialogue4)
             {
                 sentences.Enqueue(currentLine);
             }
@@ -170,7 +170,7 @@ public class DialogueManager : MonoBehaviour
         if(optionNumber == 4)
         {
             sentences.Clear();
-            foreach(string currentLine in activeDialogue.optinalDialogue5)
+            foreach(string currentLine in activeDialogue.optionalDialogue5)
             {
                 sentences.Enqueue(currentLine);
             }
