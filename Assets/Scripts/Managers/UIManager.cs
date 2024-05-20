@@ -46,7 +46,7 @@ public class UIManager : MonoBehaviour
     public GameObject InfoBookArtifact;
     public TextMeshProUGUI bookArtifactText;
     public Image bookArtifactImage;
-   
+
     //Artifact for room 2
     [Header("Puzzle 2 UI")]
     public GameObject ArtifactUI1;
@@ -56,7 +56,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Puzzle 3")]
     public GameObject horizontalPictureUI;
-    public Image horizontalCurrentImage; 
+    public Image horizontalCurrentImage;
     public TextMeshProUGUI horizontalImageDescript;
     public GameObject verticalPictureUI;
     public Image verticalCurrentImage;
@@ -67,7 +67,7 @@ public class UIManager : MonoBehaviour
     public GameObject pictureUI2;
     public GameObject pictureUI3;
     public GameObject pictureUI4;
-    
+
     [Header("Player Settings")]
     public GameObject player;
     private PlayerInput playerInput;
@@ -81,6 +81,7 @@ public class UIManager : MonoBehaviour
     public Button pauseTarget;
     public Button controlsTarget;
     public Button confirmationTarget;
+
     //public TMP_InputField puzzle1Target;
     public Button puzzle2Target;
     public Button puzzle3Target;
@@ -97,17 +98,13 @@ public class UIManager : MonoBehaviour
     [Header("UI for Binding")]
     public GameObject keyboardBindings;
     public GameObject gamepadBindings;
-
-
-   
+    public GameObject gamepadButton;
 
     private void Start()
     {
-        keyboardBindings.SetActive(true);
-        gamepadBindings.SetActive(false);
         isHoldingItem = false;
-        puzzle2IsOpen =false;
-        puzzle3IsOpen =false;
+        puzzle2IsOpen = false;
+        puzzle3IsOpen = false;
         overlayActive = false;
         playerSprite = player.GetComponent<SpriteRenderer>();
         playerInput = player.GetComponent<PlayerInput>();
@@ -120,35 +117,32 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        if(EventSystem.current.currentSelectedGameObject != null)
+        if (EventSystem.current.currentSelectedGameObject != null)
         {
-            if(puzzle2IsOpen || puzzle3IsOpen)
+            if (puzzle2IsOpen || puzzle3IsOpen)
             {
                 selector.transform.position = EventSystem.current.currentSelectedGameObject.transform.position;
             }
         }
-
     }
 
     #region GameState UI
     public void UI_MainMenu()
     {
-        puzzle3IsOpen =false;
-        puzzle2IsOpen =false;
+        puzzle3IsOpen = false;
+        puzzle2IsOpen = false;
         PlayerMovement(false);
         CurrentUI(MainMenuUI, false);
-       // mainMenuTarget.Select();
     }
 
     public void UI_Acknowledgement()
     {
         CurrentUI(AcknowledgementUI, false);
-        acknowledgmentTarget.Select();
     }
 
     public void UI_Gameplay()
     {
-        puzzle3IsOpen =false;
+        puzzle3IsOpen = false;
         puzzle2IsOpen = false;
         PlayerMovement(true);
         CurrentUI(GameplayUI, true);
@@ -165,87 +159,128 @@ public class UIManager : MonoBehaviour
             case "Room 2":
                 CurrentUI(Room2Puzzle, true); puzzle2Target.Select(); puzzle2IsOpen = true; break;
             case "Room 3":
-                CurrentUI(Room3Puzzle, true); puzzle3Target.Select(); puzzle3IsOpen = true;break;
+                CurrentUI(Room3Puzzle, true); puzzle3Target.Select(); puzzle3IsOpen = true; break;
         }
         soundManager.PlaySfxAudio("Book");
     }
 
     public void UI_Pause()
     {
-        puzzle3IsOpen =false;
+        puzzle3IsOpen = false;
         puzzle2IsOpen = false;
         PlayerMovement(false);
         CurrentUI(PauseUI, true);
-        //pauseTarget.Select();
     }
 
     public void UI_Options()
     {
-        puzzle3IsOpen =false;
+        puzzle3IsOpen = false;
         puzzle2IsOpen = false;
         CurrentUI(OptionsUI, true);
-        //optionsTarget.Select();
     }
 
     public void UI_EndGame()
     {
-        puzzle3IsOpen =false;
+        puzzle3IsOpen = false;
         puzzle2IsOpen = false;
         PlayerMovement(false);
         CurrentUI(EndGameUI, false);
     }
 
-    #endregion
-
-private void CheckControllerConnection()
-{
-    InputSystem.onDeviceChange += (device, change) =>
+    // UI confirmation for exiting to main menu or quit
+    public void UI_Confirmation(string name)
     {
-        switch (change)
+        yesButton.onClick.RemoveAllListeners(); // removes listeners from the yes button.
+        CurrentUI(ConfirmationUI, true);
+        // Based on the string name, it will decide what's shown on the confirmation page.
+        switch (name)
         {
-            case InputDeviceChange.Added:
-                Debug.Log("New device added: " + device);
-                SelectButtonForActiveUI();
+            case "quit":
+                confirmationText.text = "Are you sure you want to quit?";
+                yesButton.onClick.AddListener(() => gameManager.QuitGame());
                 break;
-
-            case InputDeviceChange.Removed:
-                Debug.Log("Device removed: " + device);
-                UnselectCurrentButton();
+            case "mainmenu":
+                confirmationText.text = "Are you sure you want to go to Main Menu? All progress will not be saved";
+                yesButton.onClick.AddListener(() => levelManager.LoadScene("MainMenu"));
+                break;
+            default:
+                confirmationText.text = "";
                 break;
         }
-    };
-}
+    }
 
-private void SelectButtonForActiveUI()
-{
-    if (MainMenuUI.activeSelf)
+    public void UI_Dialogue()
     {
-        mainMenuTarget.Select();
+        PlayerMovement(false);
+        CurrentUI(DialogueUI, true);
+        overlayActive = true;
+        StartCoroutine(dialogueSelectDelay());
     }
-    else if (AcknowledgementUI.activeSelf)
-    {
-        acknowledgmentTarget.Select();
-    }
-    else if (Room2Puzzle.activeSelf)
-    {
-        puzzle2Target.Select();
-    }
-    else if (Room3Puzzle.activeSelf)
-    {
-        puzzle3Target.Select();
-    }
-    else if (PauseUI.activeSelf)
-    {
-        pauseTarget.Select();
-    }
-    else if (OptionsUI.activeSelf)
-    {
-        optionsTarget.Select();
-    }
-}
 
-private void UnselectCurrentButton()
+    public void UI_DialogueOptions(bool isActive)
     {
+        if (isActive == false)
+        {
+            DialogueUIOptions.SetActive(false);
+        }
+        else
+        {
+            DialogueUIOptions.SetActive(true);
+        }
+    }
+
+    public void UI_Controls()
+    {
+        CurrentUI(ControlsUI, false);
+    }
+
+    public void UI_Credits()
+    {
+        CurrentUI(CreditsUI, false);
+    }
+    #endregion
+
+    public void CheckControllerConnection()
+    {
+        InputSystem.onDeviceChange += (device, change) =>
+        {
+            switch (change)
+            {
+                case InputDeviceChange.Added:
+                    Debug.Log("New device added: " + device);
+                    SelectButtonForActiveUI();
+                    ShowBinding(gamepadBindings);
+                    break;
+
+                case InputDeviceChange.Removed:
+                    Debug.Log("Device removed: " + device);
+                    UnselectCurrentButton();
+                    ShowBinding(keyboardBindings);
+                    break;
+            }
+        };
+    }
+
+    private void SelectButtonForActiveUI()
+    {
+        gamepadButton.SetActive(true);
+
+        if (MainMenuUI.activeSelf) mainMenuTarget.Select();
+        else if (AcknowledgementUI.activeSelf) acknowledgmentTarget.Select();
+        else if (Room2Puzzle.activeSelf) puzzle2Target.Select();
+        else if (Room3Puzzle.activeSelf) puzzle3Target.Select();
+        else if (PauseUI.activeSelf) pauseTarget.Select();
+        else if (OptionsUI.activeSelf) optionsTarget.Select();
+        else if (CreditsUI.activeSelf) creditsTarget.Select();
+        else if (ConfirmationUI.activeSelf) confirmationTarget.Select();
+        else if (ControlsUI.activeSelf) controlsTarget.Select();
+        else if (DialogueUIOptions.activeSelf) dialogueOptionsTarget.Select();
+    }
+
+    private void UnselectCurrentButton()
+    {
+        gamepadButton.SetActive(false);
+
         if (eventSystem.currentSelectedGameObject != null)
         {
             eventSystem.SetSelectedGameObject(null);
@@ -253,7 +288,6 @@ private void UnselectCurrentButton()
     }
 
     #region Puzzle UI
-
     // Depending on the book that's opening, it will open the corresponding UI. (I'd like to change this if I find time.)
     public void ShowBook(Sprite image, string infoText)
     {
@@ -294,9 +328,9 @@ private void UnselectCurrentButton()
             case 4: pictureUI4.SetActive(true); break;
             default: Debug.Log($"No Matching picture index"); break;
         }
-        if(isVertical == false)
+        if (isVertical == false)
             CurrentUI(horizontalPictureUI, true);
-            if(isVertical == true)
+        if (isVertical == true)
             CurrentUI(verticalPictureUI, true);
         overlayActive = true;
     }
@@ -309,70 +343,13 @@ private void UnselectCurrentButton()
 
     #endregion
 
-    // UI confirmation for exiting to main menu or quit
-    public void UI_Confirmation(string name)
-    {
-        yesButton.onClick.RemoveAllListeners(); // removes listeners from the yes button.
-        CurrentUI(ConfirmationUI, true);
-        confirmationTarget.Select();
-        // Based on the string name, it will decide what's shown on the confirmation page.
-        switch (name)
-        {
-            case "quit":
-                confirmationText.text = "Are you sure you want to quit?";
-                yesButton.onClick.AddListener(() => gameManager.QuitGame());
-                break;
-            case "mainmenu":
-                confirmationText.text = "Are you sure you want to go to Main Menu? All progress will not be saved";
-                yesButton.onClick.AddListener(() => levelManager.LoadScene("MainMenu"));
-                break;
-            default:
-                confirmationText.text = "";
-                break;
-        }
-    }
-
-
-    public void UI_Dialogue()
-    {
-        PlayerMovement(false);
-        CurrentUI(DialogueUI, true);
-        overlayActive = true;
-        StartCoroutine(dialogueSelectDelay());
-    }
-    public void UI_DialogueOptions(bool isActive)
-    {
-        if(isActive == false)
-        {
-            DialogueUIOptions.SetActive(false);
-        }
-        else
-        {
-            DialogueUIOptions.SetActive(true);
-            dialogueOptionsTarget.Select();
-        }
-    }
-
-    public void UI_Controls()
-    {
-        CurrentUI(ControlsUI, false);
-        controlsTarget.Select();
-    }
-
-    public void UI_Credits()
-    {
-        CurrentUI(CreditsUI, false);
-        creditsTarget.Select();
-    }
-
     public void ShowBinding(GameObject activeBind)
     {
         keyboardBindings.SetActive(false);
         gamepadBindings.SetActive(false);
 
-        
-
         activeBind.SetActive(true);
+        StartCoroutine(SelectButtonAfterDelay());
     }
 
     // Sets UI to the required panel & enables or disables player sprite
@@ -403,6 +380,13 @@ private void UnselectCurrentButton()
             Time.timeScale = 0f;
         else
             Time.timeScale = 1f;
+        StartCoroutine(SelectButtonAfterDelay());
+    }
+
+    private IEnumerator SelectButtonAfterDelay()
+    {
+        yield return new WaitForEndOfFrame(); // Wait until the end of the frame to ensure the UI transition is complete
+        SelectButtonForActiveUI(); // Select the appropriate button for the currently active UI
     }
 
     // Enable and disable player Movement & interaction
@@ -419,27 +403,27 @@ private void UnselectCurrentButton()
             playerInput.actions.FindAction("Interact").Enable();
         }
     }
-    
+
     public void OnSlotSelect()
     {
-        if(EventSystem.current.currentSelectedGameObject.transform.childCount == 1 && isHoldingItem == false)
+        if (EventSystem.current.currentSelectedGameObject.transform.childCount == 1 && isHoldingItem == false)
         {
-            if(EventSystem.current.currentSelectedGameObject.GetComponent<PictureSlot>() != null && !puzzleManager.puzzle3TextDone)
+            if (EventSystem.current.currentSelectedGameObject.GetComponent<PictureSlot>() != null && !puzzleManager.puzzle3TextDone)
             {
-               Debug.Log("Finish the text first"); //this is to prevent issues with the controller having the dragable moved to a text box.
-               return;
+                Debug.Log("Finish the text first"); //this is to prevent issues with the controller having the dragable moved to a text box.
+                return;
             }
             GameObject itemToMove = EventSystem.current.currentSelectedGameObject.transform.GetChild(0).gameObject;
             itemToMove.transform.SetParent(selector.transform);
             isHoldingItem = true;
             Debug.Log("Item Picked Up");
         }
-        else if(EventSystem.current.currentSelectedGameObject.transform.childCount == 0 && isHoldingItem == true)
+        else if (EventSystem.current.currentSelectedGameObject.transform.childCount == 0 && isHoldingItem == true)
         {
             GameObject itemToMove = selector.transform.GetChild(0).gameObject;
             selector.transform.GetChild(0).SetParent(EventSystem.current.currentSelectedGameObject.transform);
             isHoldingItem = false;
-            if(EventSystem.current.currentSelectedGameObject.GetComponent<ArtifactSlot>() != null)
+            if (EventSystem.current.currentSelectedGameObject.GetComponent<ArtifactSlot>() != null)
             {
                 EventSystem.current.currentSelectedGameObject.GetComponent<ArtifactSlot>().OnControllerDrop(itemToMove);
             }
@@ -447,11 +431,11 @@ private void UnselectCurrentButton()
             {
                 EventSystem.current.currentSelectedGameObject.GetComponent<PictureSlot>().OnControllerDrop(itemToMove);
             }
-            if(puzzleManager.puzzlesToComplete[1].status != PuzzleAsset.Status.Finished)
+            if (puzzleManager.puzzlesToComplete[1].status != PuzzleAsset.Status.Finished)
             {
                 puzzle2Target.Select();
             }
-            if(puzzleManager.puzzlesToComplete[2].status != PuzzleAsset.Status.Finished && puzzleManager.puzzlesToComplete[1].status == PuzzleAsset.Status.Finished)
+            if (puzzleManager.puzzlesToComplete[2].status != PuzzleAsset.Status.Finished && puzzleManager.puzzlesToComplete[1].status == PuzzleAsset.Status.Finished)
             {
                 puzzle3Target.Select();
             }
