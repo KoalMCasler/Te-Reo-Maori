@@ -5867,6 +5867,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2247592648582538640, guid: a00e82a364fb46c44a4c94668f7600b2, type: 3}
+      propertyPath: tape
+      value: 
+      objectReference: {fileID: 1000700238}
+    - target: {fileID: 2247592648582538640, guid: a00e82a364fb46c44a4c94668f7600b2, type: 3}
       propertyPath: orderPosition
       value: 4
       objectReference: {fileID: 0}
@@ -12198,6 +12202,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!1 &1000700238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3099915626316767996, guid: a00e82a364fb46c44a4c94668f7600b2, type: 3}
+  m_PrefabInstance: {fileID: 1317088670}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1000860817
 GameObject:
   m_ObjectHideFlags: 0
@@ -16927,10 +16936,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2222116156325281984, guid: a00e82a364fb46c44a4c94668f7600b2, type: 3}
+      propertyPath: m_CellSize.x
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222116156325281984, guid: a00e82a364fb46c44a4c94668f7600b2, type: 3}
+      propertyPath: m_CellSize.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 2247592648582538640, guid: a00e82a364fb46c44a4c94668f7600b2, type: 3}
       propertyPath: tape
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1000700238}
     - target: {fileID: 2350982794267582577, guid: a00e82a364fb46c44a4c94668f7600b2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -20016,6 +20033,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2247592648582538640, guid: a00e82a364fb46c44a4c94668f7600b2, type: 3}
+      propertyPath: tape
+      value: 
+      objectReference: {fileID: 1000700238}
+    - target: {fileID: 2247592648582538640, guid: a00e82a364fb46c44a4c94668f7600b2, type: 3}
       propertyPath: orderPosition
       value: 3
       objectReference: {fileID: 0}
@@ -21101,6 +21122,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2247592648582538640, guid: a00e82a364fb46c44a4c94668f7600b2, type: 3}
+      propertyPath: tape
+      value: 
+      objectReference: {fileID: 1000700238}
     - target: {fileID: 2247592648582538640, guid: a00e82a364fb46c44a4c94668f7600b2, type: 3}
       propertyPath: orderPosition
       value: 2
