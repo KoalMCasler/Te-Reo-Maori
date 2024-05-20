@@ -7613,7 +7613,7 @@ MonoBehaviour:
   creditsTarget: {fileID: 477849418}
   pauseTarget: {fileID: 1185403467}
   controlsTarget: {fileID: 1624074359}
-  confermationTarget: {fileID: 1689113928}
+  confirmationTarget: {fileID: 0}
   puzzle2Target: {fileID: 1355430399}
   puzzle3Target: {fileID: 9124702555177924039}
   dialogueTarget: {fileID: 1875532405}
@@ -7622,6 +7622,7 @@ MonoBehaviour:
   puzzle2IsOpen: 0
   puzzle3IsOpen: 0
   selector: {fileID: 1671921889}
+  eventSystem: {fileID: 1711230320}
   keyboardBindings: {fileID: 2028364511}
   gamepadBindings: {fileID: 679600410}
 --- !u!4 &606552429

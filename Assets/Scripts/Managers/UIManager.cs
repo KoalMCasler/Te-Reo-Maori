@@ -2,7 +2,6 @@ using TMPro;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
@@ -81,7 +80,7 @@ public class UIManager : MonoBehaviour
     public Button creditsTarget;
     public Button pauseTarget;
     public Button controlsTarget;
-    public Button confermationTarget;
+    public Button confirmationTarget;
     //public TMP_InputField puzzle1Target;
     public Button puzzle2Target;
     public Button puzzle3Target;
@@ -93,6 +92,7 @@ public class UIManager : MonoBehaviour
     public bool puzzle2IsOpen;
     public bool puzzle3IsOpen;
     public GameObject selector; //needed to attach objects for drag and drop. 
+    public EventSystem eventSystem; // Add a reference to the EventSystem
 
     [Header("UI for Binding")]
     public GameObject keyboardBindings;
@@ -112,6 +112,10 @@ public class UIManager : MonoBehaviour
         playerSprite = player.GetComponent<SpriteRenderer>();
         playerInput = player.GetComponent<PlayerInput>();
         soundManager = FindObjectOfType<SoundManager>();
+
+        eventSystem = EventSystem.current;
+
+        CheckControllerConnection();
     }
 
     void Update()
@@ -123,6 +127,7 @@ public class UIManager : MonoBehaviour
                 selector.transform.position = EventSystem.current.currentSelectedGameObject.transform.position;
             }
         }
+
     }
 
     #region GameState UI
@@ -132,7 +137,7 @@ public class UIManager : MonoBehaviour
         puzzle2IsOpen =false;
         PlayerMovement(false);
         CurrentUI(MainMenuUI, false);
-        mainMenuTarget.Select();
+       // mainMenuTarget.Select();
     }
 
     public void UI_Acknowledgement()
@@ -171,7 +176,7 @@ public class UIManager : MonoBehaviour
         puzzle2IsOpen = false;
         PlayerMovement(false);
         CurrentUI(PauseUI, true);
-        pauseTarget.Select();
+        //pauseTarget.Select();
     }
 
     public void UI_Options()
@@ -179,7 +184,7 @@ public class UIManager : MonoBehaviour
         puzzle3IsOpen =false;
         puzzle2IsOpen = false;
         CurrentUI(OptionsUI, true);
-        optionsTarget.Select();
+        //optionsTarget.Select();
     }
 
     public void UI_EndGame()
@@ -192,7 +197,60 @@ public class UIManager : MonoBehaviour
 
     #endregion
 
+private void CheckControllerConnection()
+{
+    InputSystem.onDeviceChange += (device, change) =>
+    {
+        switch (change)
+        {
+            case InputDeviceChange.Added:
+                Debug.Log("New device added: " + device);
+                SelectButtonForActiveUI();
+                break;
 
+            case InputDeviceChange.Removed:
+                Debug.Log("Device removed: " + device);
+                UnselectCurrentButton();
+                break;
+        }
+    };
+}
+
+private void SelectButtonForActiveUI()
+{
+    if (MainMenuUI.activeSelf)
+    {
+        mainMenuTarget.Select();
+    }
+    else if (AcknowledgementUI.activeSelf)
+    {
+        acknowledgmentTarget.Select();
+    }
+    else if (Room2Puzzle.activeSelf)
+    {
+        puzzle2Target.Select();
+    }
+    else if (Room3Puzzle.activeSelf)
+    {
+        puzzle3Target.Select();
+    }
+    else if (PauseUI.activeSelf)
+    {
+        pauseTarget.Select();
+    }
+    else if (OptionsUI.activeSelf)
+    {
+        optionsTarget.Select();
+    }
+}
+
+private void UnselectCurrentButton()
+    {
+        if (eventSystem.currentSelectedGameObject != null)
+        {
+            eventSystem.SetSelectedGameObject(null);
+        }
+    }
 
     #region Puzzle UI
 
@@ -243,6 +301,12 @@ public class UIManager : MonoBehaviour
         overlayActive = true;
     }
 
+    // This is used at the beginning to turn on the project info UI for after you've interacted with the sign
+    public void ShowProjectInfo()
+    {
+        ProjectInfoButton.SetActive(true);
+    }
+
     #endregion
 
     // UI confirmation for exiting to main menu or quit
@@ -250,7 +314,7 @@ public class UIManager : MonoBehaviour
     {
         yesButton.onClick.RemoveAllListeners(); // removes listeners from the yes button.
         CurrentUI(ConfirmationUI, true);
-        confermationTarget.Select();
+        confirmationTarget.Select();
         // Based on the string name, it will decide what's shown on the confirmation page.
         switch (name)
         {
@@ -268,11 +332,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // This is used at the beginning to turn on the project info UI for after you've interacted with the sign
-    public void ShowProjectInfo()
-    {
-        ProjectInfoButton.SetActive(true);
-    }
 
     public void UI_Dialogue()
     {
@@ -310,6 +369,8 @@ public class UIManager : MonoBehaviour
     {
         keyboardBindings.SetActive(false);
         gamepadBindings.SetActive(false);
+
+        
 
         activeBind.SetActive(true);
     }
