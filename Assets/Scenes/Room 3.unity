@@ -16965,8 +16965,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.005499989, y: -3.1938, z: 0}
-    m_Extent: {x: 0.9986, y: 3.9481, z: 0}
+    m_Center: {x: -0.0042000115, y: -3.194, z: 0}
+    m_Extent: {x: 0.9934, y: 3.9506, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17073,7 +17073,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_Name
-      value: Picture (1)
+      value: Picture - BattleOfWaikato
       objectReference: {fileID: 0}
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_TagString
@@ -17375,8 +17375,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.003700018, y: -3.19095, z: 0}
-    m_Extent: {x: 1.0001, y: 3.94835, z: 0}
+    m_Center: {x: 0.005300015, y: -3.19385, z: 0}
+    m_Extent: {x: 0.997, y: 3.94695, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17483,7 +17483,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_Name
-      value: Picture (3)
+      value: Picture - Now
       objectReference: {fileID: 0}
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_TagString
@@ -17903,8 +17903,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00064998865, y: -3.1976001, z: 0}
-    m_Extent: {x: 0.99855, y: 3.9464, z: 0}
+    m_Center: {x: -0.008349985, y: -3.195, z: 0}
+    m_Extent: {x: 1.00015, y: 3.9447, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -18247,8 +18247,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00090000033, y: -3.2005, z: 0}
-    m_Extent: {x: 0.99530005, y: 3.9499998, z: 0}
+    m_Center: {x: 0.0013000071, y: -3.1989, z: 0}
+    m_Extent: {x: 0.99160004, y: 3.9472, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19344,8 +19344,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.002750039, y: -3.2038, z: 0}
-    m_Extent: {x: 1.00335, y: 3.9444, z: 0}
+    m_Center: {x: -0.0075000226, y: -3.1948, z: 0}
+    m_Extent: {x: 0.9993, y: 3.9498, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19370,7 +19370,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_Name
-      value: Picture (2)
+      value: Picture - GainingBack
       objectReference: {fileID: 0}
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_TagString
@@ -21693,8 +21693,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0015999973, y: -3.2002, z: 0}
-    m_Extent: {x: 0.9978, y: 3.9485002, z: 0}
+    m_Center: {x: 0.00034999847, y: -3.20575, z: 0}
+    m_Extent: {x: 1.00405, y: 3.94725, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21775,8 +21775,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0015000105, y: -3.1925502, z: 0}
-    m_Extent: {x: 1.0056, y: 3.94945, z: 0}
+    m_Center: {x: 0.0011000037, y: -3.2024, z: 0}
+    m_Extent: {x: 1.0067999, y: 3.9492, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67528,8 +67528,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0069999993, y: -3.195, z: 0}
-    m_Extent: {x: 0.9973, y: 3.9486, z: 0}
+    m_Center: {x: 0.0023500323, y: -3.1989, z: 0}
+    m_Extent: {x: 1.00155, y: 3.9469998, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67651,7 +67651,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_Name
-      value: Picture
+      value: Picture - MaoriKing
       objectReference: {fileID: 0}
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_TagString
