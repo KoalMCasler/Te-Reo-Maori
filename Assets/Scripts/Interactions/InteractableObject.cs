@@ -50,16 +50,18 @@ public class InteractableObject : MonoBehaviour
     public GameObject fog;
     public VisualEffect fogAmount;
 
-    [Header("Image & Text")] 
+    [Header("Image & Text")]
     public bool isVertical;
     public Sprite picture;
     [SerializeField] private string pictureTitle;
-    [TextArea(2,10)]
+    [TextArea(2, 10)]
     [SerializeField] private string pictureText;
     private string finalText;
 
     [Header("Picture Index")]
     public int pictureIndex;
+
+    private Coroutine infoCoroutine;
 
     void Start()
     {
@@ -86,7 +88,7 @@ public class InteractableObject : MonoBehaviour
             dialogueManager = FindObjectOfType<DialogueManager>();
         }
     }
-    
+
     public void Book()
     {
         soundManager.PlaySfxAudio("Book");
@@ -97,24 +99,24 @@ public class InteractableObject : MonoBehaviour
     {
         soundManager.PlaySfxAudio("Book");
         uiManager.ShowArtifact(picture, pictureText, this.name);
-        
+
     }
 
     public void Picture()
     {
         soundManager.PlaySfxAudio("Book");
-        finalText = string.Format("{0} \n {1}", pictureTitle,pictureText);
-        if(picture != null) //remove later. Using this for testing purposes.
+        finalText = string.Format("{0} \n {1}", pictureTitle, pictureText);
+        if (picture != null) //remove later. Using this for testing purposes.
         {
-            if(isVertical == false)
+            if (isVertical == false)
             {
                 uiManager.horizontalCurrentImage.sprite = picture;
                 uiManager.horizontalImageDescript.text = finalText;
             }
-            if(isVertical == true)
+            if (isVertical == true)
             {
                 uiManager.verticalCurrentImage.sprite = picture;
-                uiManager.verticalImageDescript.text = finalText;           
+                uiManager.verticalImageDescript.text = finalText;
             }
         }
         uiManager.ShowPicture(pictureIndex, isVertical);
@@ -127,10 +129,13 @@ public class InteractableObject : MonoBehaviour
         {
             if (isLocked)
             {
-                if(isDisplayingText == false)
+                if (isDisplayingText == false)
                 {
                     isDisplayingText = true;
-                    StartCoroutine(ShowInfo(message, InfoTextDelay));
+                    if (infoCoroutine != null)
+                        StopAllCoroutines();
+
+                    infoCoroutine = StartCoroutine(ShowInfo(message, InfoTextDelay));
                 }
                 //isLocked = false; //Debug line to test before quest is added.
             }
@@ -156,7 +161,7 @@ public class InteractableObject : MonoBehaviour
     // All needed for info text.
     public void Info()
     {
-        if(!isDisplayingText)
+        if (!isDisplayingText)
         {
             isDisplayingText = true;
             if (hasFog)
@@ -168,7 +173,10 @@ public class InteractableObject : MonoBehaviour
 
             Debug.Log("Reading info from " + this.name);
             //Debug.Log(message);
-            StartCoroutine(ShowInfo(message, InfoTextDelay));
+            if (infoCoroutine != null)
+                StopAllCoroutines();
+
+            infoCoroutine = StartCoroutine(ShowInfo(message, InfoTextDelay));
 
             if (hasFog)
                 StartCoroutine(GoAwayFog());
@@ -184,6 +192,8 @@ public class InteractableObject : MonoBehaviour
         infoText.text = "";
         isDisplayingText = false;
         infoImage.GetComponent<Image>().enabled = false;
+
+        infoCoroutine = null;
     }
 
     // Sets fog inactive after 2 seconds
