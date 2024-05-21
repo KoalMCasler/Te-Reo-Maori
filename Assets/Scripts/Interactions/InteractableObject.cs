@@ -61,16 +61,6 @@ public class InteractableObject : MonoBehaviour
     [Header("Picture Index")]
     public int pictureIndex;
 
-
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            OpenDoor();
-        }
-    }
-
-
     void Start()
     {
         soundManager = FindObjectOfType<SoundManager>();
