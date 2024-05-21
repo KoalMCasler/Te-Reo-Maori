@@ -155,4 +155,9 @@ public class SoundManager : MonoBehaviour
                 break;
         }
     }
+
+    public void StopMusic()
+    {
+        audioSource.Stop();
+    }
 }

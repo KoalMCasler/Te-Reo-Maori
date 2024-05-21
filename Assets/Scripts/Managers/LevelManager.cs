@@ -56,7 +56,7 @@ public class LevelManager : MonoBehaviour
                     gameManager.LoadState("Gameplay");
                     break;
                 case "GameEnd":
-                    soundManager.PlayAudio("MainMenu");
+                    soundManager.StopMusic();
                     gameManager.LoadState("GameEnd");
                     GameplayMusicIsPlaying = false;
                     break;
