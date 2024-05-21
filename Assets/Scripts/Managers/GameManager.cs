@@ -8,16 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public enum GameState
-    {
-        MainMenu,
-        Acknowledgment,
-        Gameplay,
-        Puzzle,
-        Pause,
-        Options,
-        GameEnd,
-        Dialogue,
-    }
+    { MainMenu, Acknowledgment, Gameplay, Puzzle, Pause, Options, GameEnd, Dialogue, }
 
     public GameState gameState;
     public GameState beforeSettings; // Used to know what state happened before Settings to know where to go back to.
@@ -123,7 +114,7 @@ public class GameManager : MonoBehaviour
     private void GameEnd()
     {
         isPaused = false;
-        uiManager.UI_EndGame();
+        uiManager.UI_EndGameVideo();
     }
     private void Dialogue()
     {

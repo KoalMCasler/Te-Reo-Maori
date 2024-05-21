@@ -6,17 +6,20 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Runtime.CompilerServices;
+using UnityEngine.Video;
 
 
 public class UIManager : MonoBehaviour
 {
     //Managers
+    [Header("Managers")]
     public GameManager gameManager;
     public LevelManager levelManager;
     public SoundManager soundManager;
     public PuzzleManager puzzleManager;
 
     //UI Panels
+    [Header("UI Panels")]
     public GameObject MainMenuUI;
     public GameObject AcknowledgementUI;
     public GameObject GameplayUI;
@@ -28,25 +31,30 @@ public class UIManager : MonoBehaviour
     public GameObject PauseUI;
     public GameObject OptionsUI;
     public GameObject EndGameUI;
+    public GameObject EndGameVideoUI;
     public GameObject ProjectInfoButton;
 
     // Confirmation UI
+    [Header("Confirmation UI")]
     public GameObject ConfirmationUI;
     public TextMeshProUGUI confirmationText;
     public Button yesButton;
 
     // UI for puzzles
+    [Header("Puzzle UI")]
     public bool overlayActive;
     public GameObject Room1Puzzle;
     public GameObject Room2Puzzle;
     public GameObject Room3Puzzle;
 
     // shows Books for room 1 & Artifacts for room 2
+    [Header("Book / Artifact UI")]
     public GameObject InfoBookArtifact;
     public TextMeshProUGUI bookArtifactText;
     public Image bookArtifactImage;
 
     //Artifact for room 2
+    [Header("Artifact UI For Room 2")]
     public Image ArtifactUI1;
     public Image ArtifactUI2;
     public Image ArtifactUI3;
@@ -57,6 +65,7 @@ public class UIManager : MonoBehaviour
     public Sprite newArtifact4;
 
     // picture frames for puzzle 3
+    [Header("Picture Frame UI")]
     public GameObject horizontalPictureUI;
     public Image horizontalCurrentImage;
     public TextMeshProUGUI horizontalImageDescript;
@@ -65,17 +74,20 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI verticalImageDescript;
 
     // Picture UI for puzzle 3
+    [Header("Picture UI Puzzle 3")]
     public GameObject pictureUI1;
     public GameObject pictureUI2;
     public GameObject pictureUI3;
     public GameObject pictureUI4;
 
     //player settings
+    [Header("Player Settings")]
     public GameObject player;
     private PlayerInput playerInput;
     private SpriteRenderer playerSprite;
 
     // target buttons -- needed for controller support
+    [Header("Target Buttons")]
     public Button mainMenuTarget;
     public Button optionsTarget;
     public Button acknowledgmentTarget;
@@ -87,8 +99,10 @@ public class UIManager : MonoBehaviour
     public Button puzzle3Target;
     public Button dialogueTarget;
     public Button dialogueOptionsTarget;
+    public Button endVideoSkipTarget;
 
     // other settings needed for controller
+    [Header("Controller Settings")]
     public bool isHoldingItem;
     public bool puzzle2IsOpen;
     public bool puzzle3IsOpen;
@@ -97,9 +111,15 @@ public class UIManager : MonoBehaviour
     private bool isGamepadConnected;
 
     // ui for binding
+    [Header("UI for Binding Keys")]
     public GameObject keyboardBindings;
     public GameObject gamepadBindings;
     public GameObject bindingButton;
+
+    [Header("End Video")]
+    public VideoPlayer videoPlayer;
+    private bool skipVideo = false;
+
 
     private void Start()
     {
@@ -182,6 +202,34 @@ public class UIManager : MonoBehaviour
         puzzle3IsOpen = false;
         puzzle2IsOpen = false;
         CurrentUI(OptionsUI, true);
+    }
+
+    public void UI_EndGameVideo()
+    {
+        playerInput.actions.FindAction("Pause").Disable();
+        puzzle3IsOpen = false;
+        puzzle2IsOpen = false;
+        PlayerMovement(false);
+        CurrentUI(EndGameVideoUI, false);
+        StartCoroutine(WaitForVideoEnd());
+    }
+
+    IEnumerator WaitForVideoEnd()
+    {
+        videoPlayer.Play();
+
+        while (videoPlayer.isPlaying && !skipVideo)
+            yield return null;
+
+        if(skipVideo)
+            videoPlayer.Stop();
+
+        CurrentUI(EndGameUI, false);
+    }
+
+    public void SkipVideo()
+    {
+        skipVideo = true;
     }
 
     public void UI_EndGame()
@@ -418,6 +466,7 @@ public class UIManager : MonoBehaviour
         PauseUI.SetActive(false);
         OptionsUI.SetActive(false);
         EndGameUI.SetActive(false);
+        EndGameVideoUI.SetActive(false);
         Room1Puzzle.SetActive(false);
         Room2Puzzle.SetActive(false);
         Room3Puzzle.SetActive(false);
