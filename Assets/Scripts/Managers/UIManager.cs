@@ -79,8 +79,6 @@ public class UIManager : MonoBehaviour
     public Button pauseTarget;
     public Button controlsTarget;
     public Button confirmationTarget;
-
-    //public TMP_InputField puzzle1Target;
     public Button puzzle2Target;
     public Button puzzle3Target;
     public Button dialogueTarget;
