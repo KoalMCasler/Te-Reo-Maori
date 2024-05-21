@@ -8,13 +8,13 @@ using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
 {
-    [Header("Managers")]
+    //Managers
     public GameManager gameManager;
     public LevelManager levelManager;
     public SoundManager soundManager;
     public PuzzleManager puzzleManager;
 
-    [Header("UI Panels")]
+    //UI Panels
     public GameObject MainMenuUI;
     public GameObject AcknowledgementUI;
     public GameObject GameplayUI;
@@ -28,33 +28,29 @@ public class UIManager : MonoBehaviour
     public GameObject EndGameUI;
     public GameObject ProjectInfoButton;
 
-    [Header("Confirmation Exit")]
+    // Confirmation UI
     public GameObject ConfirmationUI;
     public TextMeshProUGUI confirmationText;
     public Button yesButton;
 
     // UI for puzzles
-    [Header("Puzzle UI")]
     public bool overlayActive;
     public GameObject Room1Puzzle;
     public GameObject Room2Puzzle;
     public GameObject Room3Puzzle;
 
-    //Books for room 1
-    [Header("Puzzle 1/2 - Info UI")]
+    // shows Books for room 1 & Artifacts for room 2
     public GameObject InfoBookArtifact;
     public TextMeshProUGUI bookArtifactText;
     public Image bookArtifactImage;
 
     //Artifact for room 2
-    [Header("Puzzle 2 UI")]
     public GameObject ArtifactUI1;
     public GameObject ArtifactUI2;
     public GameObject ArtifactUI3;
     public GameObject ArtifactUI4;
 
     // picture frames for puzzle 3
-    [Header("Puzzle 3")]
     public GameObject horizontalPictureUI;
     public Image horizontalCurrentImage;
     public TextMeshProUGUI horizontalImageDescript;
@@ -62,18 +58,18 @@ public class UIManager : MonoBehaviour
     public Image verticalCurrentImage;
     public TextMeshProUGUI verticalImageDescript;
 
-    [Header("Puzzle 3 UI")]
+    // Picture UI for puzzle 3
     public GameObject pictureUI1;
     public GameObject pictureUI2;
     public GameObject pictureUI3;
     public GameObject pictureUI4;
 
-    [Header("Player Settings")]
+    //player settings
     public GameObject player;
     private PlayerInput playerInput;
     private SpriteRenderer playerSprite;
 
-    [Header("Target Buttons")] //Needed for controller suport for UI.
+    // target buttons -- needed for controller support
     public Button mainMenuTarget;
     public Button optionsTarget;
     public Button acknowledgmentTarget;
@@ -88,14 +84,14 @@ public class UIManager : MonoBehaviour
     public Button dialogueTarget;
     public Button dialogueOptionsTarget;
 
-    [Header("Needed for Controller")]
+    // other settings needed for controller
     public bool isHoldingItem;
     public bool puzzle2IsOpen;
     public bool puzzle3IsOpen;
     public GameObject selector; //needed to attach objects for drag and drop. 
     public EventSystem eventSystem; // Add a reference to the EventSystem
 
-    [Header("UI for Binding")]
+    // ui for binding
     public GameObject keyboardBindings;
     public GameObject gamepadBindings;
     public GameObject gamepadButton;
