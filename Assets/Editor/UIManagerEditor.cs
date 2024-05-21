@@ -1,7 +1,7 @@
-using UnityEngine;
-using UnityEditor;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEditor;
 
 [CustomEditor(typeof(UIManager))]
 public class UIManagerEditor : Editor
@@ -41,6 +41,10 @@ public class UIManagerEditor : Editor
     SerializedProperty artifactUI2;
     SerializedProperty artifactUI3;
     SerializedProperty artifactUI4;
+    SerializedProperty newArtifact1;
+    SerializedProperty newArtifact2;
+    SerializedProperty newArtifact3;
+    SerializedProperty newArtifact4;
 
     SerializedProperty horizontalPictureUI;
     SerializedProperty horizontalCurrentImage;
@@ -65,7 +69,6 @@ public class UIManagerEditor : Editor
     SerializedProperty pauseTarget;
     SerializedProperty controlsTarget;
     SerializedProperty confirmationTarget;
-
     SerializedProperty puzzle2Target;
     SerializedProperty puzzle3Target;
     SerializedProperty dialogueTarget;
@@ -76,22 +79,21 @@ public class UIManagerEditor : Editor
     SerializedProperty puzzle3IsOpen;
     SerializedProperty selector;
     SerializedProperty eventSystem;
+    SerializedProperty isGamepadConnected;
 
     SerializedProperty keyboardBindings;
     SerializedProperty gamepadBindings;
-    SerializedProperty gamepadButton;
+    SerializedProperty bindingButton;
 
     bool showManagers = true;
     bool showUIPanels = true;
-    bool showConfirmationExit = true;
+    bool showConfirmationUI = true;
     bool showPuzzleUI = true;
-    bool showPuzzleInfoUI = true;
     bool showArtifactUI = true;
-    bool showPuzzle3UI = true;
+    bool showPictureUI = true;
     bool showPlayerSettings = true;
-    bool showTargetButtons = true;
     bool showControllerSettings = true;
-    bool showUIBinding = true;
+    bool showBindingUI = true;
 
     void OnEnable()
     {
@@ -130,6 +132,10 @@ public class UIManagerEditor : Editor
         artifactUI2 = serializedObject.FindProperty("ArtifactUI2");
         artifactUI3 = serializedObject.FindProperty("ArtifactUI3");
         artifactUI4 = serializedObject.FindProperty("ArtifactUI4");
+        newArtifact1 = serializedObject.FindProperty("newArtifact1");
+        newArtifact2 = serializedObject.FindProperty("newArtifact2");
+        newArtifact3 = serializedObject.FindProperty("newArtifact3");
+        newArtifact4 = serializedObject.FindProperty("newArtifact4");
 
         horizontalPictureUI = serializedObject.FindProperty("horizontalPictureUI");
         horizontalCurrentImage = serializedObject.FindProperty("horizontalCurrentImage");
@@ -154,7 +160,6 @@ public class UIManagerEditor : Editor
         pauseTarget = serializedObject.FindProperty("pauseTarget");
         controlsTarget = serializedObject.FindProperty("controlsTarget");
         confirmationTarget = serializedObject.FindProperty("confirmationTarget");
-
         puzzle2Target = serializedObject.FindProperty("puzzle2Target");
         puzzle3Target = serializedObject.FindProperty("puzzle3Target");
         dialogueTarget = serializedObject.FindProperty("dialogueTarget");
@@ -165,10 +170,11 @@ public class UIManagerEditor : Editor
         puzzle3IsOpen = serializedObject.FindProperty("puzzle3IsOpen");
         selector = serializedObject.FindProperty("selector");
         eventSystem = serializedObject.FindProperty("eventSystem");
+        isGamepadConnected = serializedObject.FindProperty("isGamepadConnected");
 
         keyboardBindings = serializedObject.FindProperty("keyboardBindings");
         gamepadBindings = serializedObject.FindProperty("gamepadBindings");
-        gamepadButton = serializedObject.FindProperty("gamepadButton");
+        bindingButton = serializedObject.FindProperty("bindingButton");
     }
 
     public override void OnInspectorGUI()
@@ -184,6 +190,8 @@ public class UIManagerEditor : Editor
             EditorGUILayout.PropertyField(puzzleManager);
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
+
+        EditorGUILayout.Space();
 
         showUIPanels = EditorGUILayout.BeginFoldoutHeaderGroup(showUIPanels, "UI Panels");
         if (showUIPanels)
@@ -203,14 +211,18 @@ public class UIManagerEditor : Editor
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
 
-        showConfirmationExit = EditorGUILayout.BeginFoldoutHeaderGroup(showConfirmationExit, "Confirmation Exit");
-        if (showConfirmationExit)
+        EditorGUILayout.Space();
+
+        showConfirmationUI = EditorGUILayout.BeginFoldoutHeaderGroup(showConfirmationUI, "Confirmation UI");
+        if (showConfirmationUI)
         {
             EditorGUILayout.PropertyField(confirmationUI);
             EditorGUILayout.PropertyField(confirmationText);
             EditorGUILayout.PropertyField(yesButton);
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
+
+        EditorGUILayout.Space();
 
         showPuzzleUI = EditorGUILayout.BeginFoldoutHeaderGroup(showPuzzleUI, "Puzzle UI");
         if (showPuzzleUI)
@@ -222,91 +234,87 @@ public class UIManagerEditor : Editor
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
 
-        showPuzzleInfoUI = EditorGUILayout.BeginFoldoutHeaderGroup(showPuzzleInfoUI, "Puzzle 1/2 - Info UI");
-        if (showPuzzleInfoUI)
+        EditorGUILayout.Space();
+
+        showArtifactUI = EditorGUILayout.BeginFoldoutHeaderGroup(showArtifactUI, "Artifact UI");
+        if (showArtifactUI)
         {
             EditorGUILayout.PropertyField(infoBookArtifact);
             EditorGUILayout.PropertyField(bookArtifactText);
             EditorGUILayout.PropertyField(bookArtifactImage);
-        }
-        EditorGUILayout.EndFoldoutHeaderGroup();
-
-        showArtifactUI = EditorGUILayout.BeginFoldoutHeaderGroup(showArtifactUI, "Puzzle 2 UI");
-        if (showArtifactUI)
-        {
             EditorGUILayout.PropertyField(artifactUI1);
             EditorGUILayout.PropertyField(artifactUI2);
             EditorGUILayout.PropertyField(artifactUI3);
             EditorGUILayout.PropertyField(artifactUI4);
+            EditorGUILayout.PropertyField(newArtifact1);
+            EditorGUILayout.PropertyField(newArtifact2);
+            EditorGUILayout.PropertyField(newArtifact3);
+            EditorGUILayout.PropertyField(newArtifact4);
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
 
-        showPuzzle3UI = EditorGUILayout.BeginFoldoutHeaderGroup(showPuzzle3UI, "Puzzle 3 UI");
-        if (showPuzzle3UI)
+        EditorGUILayout.Space();
+
+        showPictureUI = EditorGUILayout.BeginFoldoutHeaderGroup(showPictureUI, "Picture UI");
+        if (showPictureUI)
         {
             EditorGUILayout.PropertyField(horizontalPictureUI);
             EditorGUILayout.PropertyField(horizontalCurrentImage);
             EditorGUILayout.PropertyField(horizontalImageDescript);
             EditorGUILayout.PropertyField(verticalPictureUI);
             EditorGUILayout.PropertyField(verticalCurrentImage);
-            EditorGUILayout.PropertyField(verticalPictureUI);
+            EditorGUILayout.PropertyField(verticalImageDescript);
+            EditorGUILayout.PropertyField(pictureUI1);
+            EditorGUILayout.PropertyField(pictureUI2);
+            EditorGUILayout.PropertyField(pictureUI3);
+            EditorGUILayout.PropertyField(pictureUI4);
+        }
+        EditorGUILayout.EndFoldoutHeaderGroup();
 
-               EditorGUILayout.PropertyField(pictureUI1);
-               EditorGUILayout.PropertyField(pictureUI2);
-               EditorGUILayout.PropertyField(pictureUI3);
-               EditorGUILayout.PropertyField(pictureUI4);
-           }
-           EditorGUILayout.EndFoldoutHeaderGroup();
+        EditorGUILayout.Space();
 
-           showPlayerSettings = EditorGUILayout.BeginFoldoutHeaderGroup(showPlayerSettings, "Player Settings");
-           if (showPlayerSettings)
-           {
-               EditorGUILayout.PropertyField(player);
-               EditorGUILayout.PropertyField(playerInput);
-               EditorGUILayout.PropertyField(playerSprite);
-           }
-           EditorGUILayout.EndFoldoutHeaderGroup();
+        showPlayerSettings = EditorGUILayout.BeginFoldoutHeaderGroup(showPlayerSettings, "Player Settings");
+        if (showPlayerSettings)
+        {
+            EditorGUILayout.PropertyField(player);
+        }
+        EditorGUILayout.EndFoldoutHeaderGroup();
 
-           showTargetButtons = EditorGUILayout.BeginFoldoutHeaderGroup(showTargetButtons, "Target Buttons");
-           if (showTargetButtons)
-           {
-               EditorGUILayout.PropertyField(mainMenuTarget);
-               EditorGUILayout.PropertyField(optionsTarget);
-               EditorGUILayout.PropertyField(acknowledgmentTarget);
-               EditorGUILayout.PropertyField(creditsTarget);
-               EditorGUILayout.PropertyField(pauseTarget);
-               EditorGUILayout.PropertyField(controlsTarget);
-               EditorGUILayout.PropertyField(confirmationTarget);
+        EditorGUILayout.Space();
 
-               EditorGUILayout.Space();
+        showControllerSettings = EditorGUILayout.BeginFoldoutHeaderGroup(showControllerSettings, "Controller Settings");
+        if (showControllerSettings)
+        {
+            EditorGUILayout.PropertyField(mainMenuTarget);
+            EditorGUILayout.PropertyField(optionsTarget);
+            EditorGUILayout.PropertyField(acknowledgmentTarget);
+            EditorGUILayout.PropertyField(creditsTarget);
+            EditorGUILayout.PropertyField(pauseTarget);
+            EditorGUILayout.PropertyField(controlsTarget);
+            EditorGUILayout.PropertyField(confirmationTarget);
+            EditorGUILayout.PropertyField(puzzle2Target);
+            EditorGUILayout.PropertyField(puzzle3Target);
+            EditorGUILayout.PropertyField(dialogueTarget);
+            EditorGUILayout.PropertyField(dialogueOptionsTarget);
+            EditorGUILayout.PropertyField(isHoldingItem);
+            EditorGUILayout.PropertyField(puzzle2IsOpen);
+            EditorGUILayout.PropertyField(puzzle3IsOpen);
+            EditorGUILayout.PropertyField(selector);
+            EditorGUILayout.PropertyField(eventSystem);
+        }
+        EditorGUILayout.EndFoldoutHeaderGroup();
 
-               EditorGUILayout.PropertyField(puzzle2Target);
-               EditorGUILayout.PropertyField(puzzle3Target);
-               EditorGUILayout.PropertyField(dialogueTarget);
-               EditorGUILayout.PropertyField(dialogueOptionsTarget);
-           }
-           EditorGUILayout.EndFoldoutHeaderGroup();
+        EditorGUILayout.Space();
 
-           showControllerSettings = EditorGUILayout.BeginFoldoutHeaderGroup(showControllerSettings, "Needed for Controller");
-           if (showControllerSettings)
-           {
-               EditorGUILayout.PropertyField(isHoldingItem);
-               EditorGUILayout.PropertyField(puzzle2IsOpen);
-               EditorGUILayout.PropertyField(puzzle3IsOpen);
-               EditorGUILayout.PropertyField(selector);
-               EditorGUILayout.PropertyField(eventSystem);
-           }
-           EditorGUILayout.EndFoldoutHeaderGroup();
+        showBindingUI = EditorGUILayout.BeginFoldoutHeaderGroup(showBindingUI, "Binding UI");
+        if (showBindingUI)
+        {
+            EditorGUILayout.PropertyField(keyboardBindings);
+            EditorGUILayout.PropertyField(gamepadBindings);
+            EditorGUILayout.PropertyField(bindingButton);
+        }
+        EditorGUILayout.EndFoldoutHeaderGroup();
 
-           showUIBinding = EditorGUILayout.BeginFoldoutHeaderGroup(showUIBinding, "UI for Binding");
-           if (showUIBinding)
-           {
-               EditorGUILayout.PropertyField(keyboardBindings);
-               EditorGUILayout.PropertyField(gamepadBindings);
-               EditorGUILayout.PropertyField(gamepadButton);
-           }
-           EditorGUILayout.EndFoldoutHeaderGroup();
-
-           serializedObject.ApplyModifiedProperties();
-       }
-   }
+        serializedObject.ApplyModifiedProperties();
+    }
+}

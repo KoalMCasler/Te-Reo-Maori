@@ -266,7 +266,10 @@ MonoBehaviour:
     have for your friends.
 
 
-    In this carving Aroha is shown to be'
+    The figure has its hands raised towards its mouth,
+    as if in the act of ingesting or savoring something. This could symbolize the
+    internalization of aroha, suggesting the importance of taking love and compassion
+    into oneself and embodying these values in daily life.'
   pictureIndex: 0
 --- !u!212 &65435298
 SpriteRenderer:
@@ -48154,7 +48157,8 @@ MonoBehaviour:
 
 
     In this carving Wehi is depicted as
-    holding his tongue.'
+    holding his tongue The act of holding his tongue could symbolize restraint, wisdom,
+    or respect.'
   pictureIndex: 0
 --- !u!212 &798550004
 SpriteRenderer:
@@ -48496,7 +48500,10 @@ MonoBehaviour:
     of everything we do.
 
 
-    In this carving Ihi is shown as'
+    In this carving Ihi has open mouth signifies the vocalization
+    and expression of aspirations and goals. The split tongue could symbolize the
+    power of speech and the duality of wisdom, guiding one''s journey towards achieving
+    greatness'
   pictureIndex: 0
 --- !u!212 &1281013533
 SpriteRenderer:
@@ -50129,8 +50136,9 @@ MonoBehaviour:
     You do not control
     how much mana you have as a person.
 
-    In this specific carving Mana has very
-    watchful eyes as your mana is <<insert word>> by others.'
+
+    In this specific figure Mana has very
+    watchful eyes as your mana is perceived by others.'
   pictureIndex: 0
 --- !u!70 &6267510682082714943
 CapsuleCollider2D:
@@ -50216,8 +50224,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0079, y: -3.2065501, z: 0}
-    m_Extent: {x: 0.9999, y: 3.9507499, z: 0}
+    m_Center: {x: 0.0021499991, y: -3.1966, z: 0}
+    m_Extent: {x: 1.00225, y: 3.9505, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

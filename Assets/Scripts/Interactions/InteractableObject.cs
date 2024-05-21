@@ -99,6 +99,7 @@ public class InteractableObject : MonoBehaviour
     {
         soundManager.PlaySfxAudio("Book");
         uiManager.ShowArtifact(picture, pictureText, this.name);
+        
     }
 
     public void Picture()

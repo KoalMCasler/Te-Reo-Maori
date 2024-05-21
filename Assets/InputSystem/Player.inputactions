@@ -197,6 +197,17 @@
                 },
                 {
                     "name": "",
+                    "id": "8da0ad3d-4ffd-4733-8994-6b1b9bbf767a",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "OpenPuzzle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "5fe930f4-ade7-4ec6-a534-4d0efd8d62a6",
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "",

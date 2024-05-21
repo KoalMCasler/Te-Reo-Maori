@@ -47,10 +47,14 @@ public class UIManager : MonoBehaviour
     public Image bookArtifactImage;
 
     //Artifact for room 2
-    public GameObject ArtifactUI1;
-    public GameObject ArtifactUI2;
-    public GameObject ArtifactUI3;
-    public GameObject ArtifactUI4;
+    public Image ArtifactUI1;
+    public Image ArtifactUI2;
+    public Image ArtifactUI3;
+    public Image ArtifactUI4;
+    public Sprite newArtifact1;
+    public Sprite newArtifact2;
+    public Sprite newArtifact3;
+    public Sprite newArtifact4;
 
     // picture frames for puzzle 3
     public GameObject horizontalPictureUI;
@@ -95,7 +99,7 @@ public class UIManager : MonoBehaviour
     // ui for binding
     public GameObject keyboardBindings;
     public GameObject gamepadBindings;
-    public GameObject gamepadButton;
+    public GameObject bindingButton;
 
     private void Start()
     {
@@ -110,6 +114,7 @@ public class UIManager : MonoBehaviour
         eventSystem = EventSystem.current;
 
         CheckControllerConnection();
+        SetBindingButton();
     }
 
     void Update()
@@ -126,6 +131,7 @@ public class UIManager : MonoBehaviour
     #region GameState UI
     public void UI_MainMenu()
     {
+        playerInput.actions.FindAction("Pause").Disable();
         puzzle3IsOpen = false;
         puzzle2IsOpen = false;
         PlayerMovement(false);
@@ -139,6 +145,7 @@ public class UIManager : MonoBehaviour
 
     public void UI_Gameplay()
     {
+        playerInput.actions.FindAction("Pause").Enable();
         puzzle3IsOpen = false;
         puzzle2IsOpen = false;
         PlayerMovement(true);
@@ -149,6 +156,7 @@ public class UIManager : MonoBehaviour
     public void UI_Puzzle(string name)
     {
         PlayerMovement(false);
+        playerInput.actions.FindAction("Pause").Disable();
         switch (name)
         {
             case "Room 1":
@@ -178,6 +186,7 @@ public class UIManager : MonoBehaviour
 
     public void UI_EndGame()
     {
+        playerInput.actions.FindAction("Pause").Disable();
         puzzle3IsOpen = false;
         puzzle2IsOpen = false;
         PlayerMovement(false);
@@ -281,8 +290,6 @@ public class UIManager : MonoBehaviour
 
     private void SelectButtonForActiveUI()
     {
-        gamepadButton.SetActive(true);
-
         if (MainMenuUI.activeSelf == true) mainMenuTarget.Select();
         if (AcknowledgementUI.activeSelf == true) acknowledgmentTarget.Select();
         if (Room2Puzzle.activeSelf == true) puzzle2Target.Select();
@@ -297,8 +304,6 @@ public class UIManager : MonoBehaviour
 
     private void UnselectCurrentButton()
     {
-        gamepadButton.SetActive(false);
-
         if (eventSystem.currentSelectedGameObject != null)
         {
             eventSystem.SetSelectedGameObject(null);
@@ -317,6 +322,7 @@ public class UIManager : MonoBehaviour
     // Depending on the book that's opening, it will open the corresponding UI.
     public void ShowBook(Sprite image, string infoText)
     {
+        playerInput.actions.FindAction("Pause").Disable();
         PlayerMovement(false);
         CurrentUI(InfoBookArtifact, true);
         bookArtifactImage.sprite = image;
@@ -327,17 +333,19 @@ public class UIManager : MonoBehaviour
     //Artifact objects work like books.
     public void ShowArtifact(Sprite image, string infoText, string artifactName)
     {
+        playerInput.actions.FindAction("Pause").Disable();
         PlayerMovement(false);
         CurrentUI(InfoBookArtifact, true);
         bookArtifactImage.sprite = image;
         bookArtifactText.text = infoText;
         overlayActive = true;
+
         switch (artifactName)
         {
-            case "Artifact1": ArtifactUI1.SetActive(true); break;
-            case "Artifact2": ArtifactUI2.SetActive(true); break;
-            case "Artifact3": ArtifactUI3.SetActive(true); break;
-            case "Artifact4": ArtifactUI4.SetActive(true); break;
+            case "Artifact1_Mana": ArtifactUI1.sprite = newArtifact1; break;
+            case "Artifact2_Aroha": ArtifactUI2.sprite = newArtifact2; break;
+            case "Artifact3_Ihi": ArtifactUI3.sprite = newArtifact3; break;
+            case "Artifact4_Wehi": ArtifactUI4.sprite = newArtifact4; break;
             default: Debug.Log($"{artifactName} doesnt exist"); break;
         }
     }
@@ -345,6 +353,7 @@ public class UIManager : MonoBehaviour
     // Shows picture. (Image should be stored on the interactable)
     public void ShowPicture(int pictureIndex, bool isVertical)
     {
+        playerInput.actions.FindAction("Pause").Disable();
         PlayerMovement(false);
         switch (pictureIndex)
         {
@@ -375,7 +384,27 @@ public class UIManager : MonoBehaviour
         gamepadBindings.SetActive(false);
 
         activeBind.SetActive(true);
+        SetBindingButton();
         StartCoroutine(SelectButtonAfterDelay());
+    }
+
+    public void SetBindingButton()
+    {
+        bindingButton.GetComponent<Button>().onClick.RemoveAllListeners();
+        bindingButton.SetActive(false);
+
+        if (keyboardBindings.activeSelf && isGamepadConnected)
+        {
+            bindingButton.SetActive(true);
+            bindingButton.GetComponent<TextMeshProUGUI>().text = "Gamepad Binding";
+            bindingButton.GetComponent<Button>().onClick.AddListener(() => ShowBinding(gamepadBindings));
+        }
+        if (gamepadBindings.activeSelf)
+        {
+            bindingButton.SetActive(true);
+            bindingButton.GetComponent<TextMeshProUGUI>().text = "Keyboard Binding";
+            bindingButton.GetComponent<Button>().onClick.AddListener(() => ShowBinding(keyboardBindings));
+        }
     }
 
     // Sets UI to the required panel & enables or disables player sprite

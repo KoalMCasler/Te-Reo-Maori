@@ -154,7 +154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureTitle
-      value: '"Welcoming Ceremony"'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -236,7 +236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureTitle
-      value: '"Return Of Land"'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16966,8 +16966,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.007800013, y: -3.19525, z: 0}
-    m_Extent: {x: 0.998, y: 3.9453502, z: 0}
+    m_Center: {x: -0.005300015, y: -3.20085, z: 0}
+    m_Extent: {x: 1, y: 3.9471498, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17158,7 +17158,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_Name
-      value: Picture - KingFlag
+      value: Picture - LearningCulture
       objectReference: {fileID: 0}
     - target: {fileID: 3194657613137048418, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_TagString
@@ -17170,7 +17170,9 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 12d134ac5f9ba9245ae460dcd631df65, type: 3}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
-      value: "The flag of the M\u0101ori King Movement"
+      value: Learning how to make a poi. These poi were made from yarn, plastic bags
+        and tape. Poi are used in various ceremonies but are often used during Kapa
+        Haka events.
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
@@ -17178,7 +17180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureTitle
-      value: '"Making Poi"'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17378,8 +17380,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0055000186, y: -3.2053502, z: 0}
-    m_Extent: {x: 0.9946, y: 3.95275, z: 0}
+    m_Center: {x: -0.0029999614, y: -3.20435, z: 0}
+    m_Extent: {x: 0.9988, y: 3.9471502, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17908,8 +17910,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.001150012, y: -3.19405, z: 0}
-    m_Extent: {x: 1.00405, y: 3.95175, z: 0}
+    m_Center: {x: -0.0031499863, y: -3.1998, z: 0}
+    m_Extent: {x: 1.00455, y: 3.9583, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -18188,11 +18190,11 @@ MonoBehaviour:
   - "Today, it is a significant historical site, commemorating the battle and M\u0101ori
     resilience."
   optionalDialogue4:
-  - The Waikato-Tainui <color=#9E9E9E>Raupatu</color> Settlement is a landmark agreement
-    between the New Zealand Crown and the Waikato-Tainui iwi (tribe) to address historical
-    injustices. In the mid-19th century, the Crown confiscated over a million acres
-    of land from Waikato-Tainui, leading to significant loss and hardship for the
-    iwi.
+  - The Waikato-Tainui <color=#9E9E9E>Raupatu</color> (confiscation) Settlement is
+    a landmark agreement between the New Zealand Crown and the Waikato-Tainui iwi
+    (tribe) to address historical injustices. In the mid-19th century, the Crown
+    confiscated over a million acres of land from Waikato-Tainui, leading to significant
+    loss and hardship for the iwi.
   - "The Crown's apology and the settlement as a whole are seen as important milestones
     in the journey toward reconciliation and healing for Waikato-Tainui and the broader
     M\u0101ori community."
@@ -18271,8 +18273,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0015999973, y: -3.1985, z: 0}
-    m_Extent: {x: 0.99240005, y: 3.9490001, z: 0}
+    m_Center: {x: 0.0067500174, y: -3.20025, z: 0}
+    m_Extent: {x: 0.99575007, y: 3.95305, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19168,7 +19170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureTitle
-      value: '"Sharing Culture"'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19368,8 +19370,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0012999773, y: -3.2031999, z: 0}
-    m_Extent: {x: 0.9975, y: 3.9446, z: 0}
+    m_Center: {x: -0.0034999847, y: -3.19745, z: 0}
+    m_Extent: {x: 1.0008, y: 3.94935, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21720,8 +21722,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00395, y: -3.2052, z: 0}
-    m_Extent: {x: 0.99885, y: 3.9508998, z: 0}
+    m_Center: {x: 0.0076000094, y: -3.20355, z: 0}
+    m_Extent: {x: 1.0005, y: 3.95425, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21802,8 +21804,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.006700009, y: -3.19575, z: 0}
-    m_Extent: {x: 0.9963, y: 3.95235, z: 0}
+    m_Center: {x: 0.0032500029, y: -3.20265, z: 0}
+    m_Extent: {x: 0.99965, y: 3.94735, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67555,8 +67557,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0016499758, y: -3.20605, z: 0}
-    m_Extent: {x: 0.99675, y: 3.94655, z: 0}
+    m_Center: {x: -0.002550006, y: -3.20275, z: 0}
+    m_Extent: {x: 0.99555, y: 3.94605, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
