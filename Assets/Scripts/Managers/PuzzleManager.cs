@@ -123,22 +123,22 @@ public class PuzzleManager : MonoBehaviour
         Debug.Log("Puzzle 3 Checked");
         int slotedCorrectly = 0;
         int interactableCount = 0;
-        if (pictureInputFields[0].text.ToLower() == "a")
+        if (pictureInputFields[0].text.ToLower() == "kīngitanga" || pictureInputFields[0].text.ToLower() == "a")
         {
             //soundManager.PlaySfxAudio("EnterText");
             pictureInputFields[0].interactable = false;
         }
-        if (pictureInputFields[1].text.ToLower() == "b")
+        if (pictureInputFields[1].text.ToLower() == "rangiriri" || pictureInputFields[1].text.ToLower() == "b")
         {
             //soundManager.PlaySfxAudio("EnterText");
             pictureInputFields[1].interactable = false;
         }
-        if (pictureInputFields[2].text.ToLower() == "c")
+        if (pictureInputFields[2].text.ToLower() == "raupatu" || pictureInputFields[2].text.ToLower() == "c")
         {
             //soundManager.PlaySfxAudio("EnterText");
             pictureInputFields[2].interactable = false;
         }
-        if (pictureInputFields[3].text.ToLower() == "d")
+        if (pictureInputFields[3].text.ToLower() == "rangatahi" || pictureInputFields[3].text.ToLower() == "d")
         {
             //soundManager.PlaySfxAudio("EnterText");
             pictureInputFields[3].interactable = false;
