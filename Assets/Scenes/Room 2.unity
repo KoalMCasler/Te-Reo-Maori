@@ -260,7 +260,7 @@ MonoBehaviour:
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
   isVertical: 0
-  picture: {fileID: 21300000, guid: 717b53bbe15a0df488f5a33f181b4724, type: 3}
+  picture: {fileID: 21300000, guid: 8728dfc7e4ba6d84f9d54827c1e31490, type: 3}
   pictureTitle: 
   pictureText: 'Essence of love, of loving but not a deep love. Love that you''d
     have for your friends.
@@ -48151,7 +48151,7 @@ MonoBehaviour:
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
   isVertical: 0
-  picture: {fileID: 21300000, guid: 0d0043899a4cf8a4296c1453804ee37b, type: 3}
+  picture: {fileID: 21300000, guid: 1c0577c9386eb20488dfdc15f5795753, type: 3}
   pictureTitle: 
   pictureText: 'Humilty. Being humble.
 
@@ -48494,7 +48494,7 @@ MonoBehaviour:
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
   isVertical: 0
-  picture: {fileID: 21300000, guid: 18307f21739a2934a824f6582b46bc1f, type: 3}
+  picture: {fileID: 21300000, guid: 0868b8453ad21ac4d9d8915081307ef6, type: 3}
   pictureTitle: 
   pictureText: 'Quest for excellence in everything we do. Striving for the most out
     of everything we do.
@@ -50129,7 +50129,7 @@ MonoBehaviour:
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
   isVertical: 0
-  picture: {fileID: 21300000, guid: 549fc82332a85f1419e4b3fee8519f58, type: 3}
+  picture: {fileID: 21300000, guid: 184ad3507be52aa43a3e96aa5eeee57f, type: 3}
   pictureTitle: 
   pictureText: 'Your authority as a person. Your prestige.
 
@@ -50224,8 +50224,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0021499991, y: -3.1966, z: 0}
-    m_Extent: {x: 1.00225, y: 3.9505, z: 0}
+    m_Center: {x: 0.00015002489, y: -3.20055, z: 0}
+    m_Extent: {x: 1.00085, y: 3.94135, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
