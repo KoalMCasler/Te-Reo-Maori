@@ -8,7 +8,6 @@ using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
 {
-
     [Header("Managers")]
     public GameManager gameManager;
     public LevelManager levelManager;
@@ -54,6 +53,7 @@ public class UIManager : MonoBehaviour
     public GameObject ArtifactUI3;
     public GameObject ArtifactUI4;
 
+    // picture frames for puzzle 3
     [Header("Puzzle 3")]
     public GameObject horizontalPictureUI;
     public Image horizontalCurrentImage;
@@ -204,7 +204,7 @@ public class UIManager : MonoBehaviour
                 yesButton.onClick.AddListener(() => levelManager.LoadScene("MainMenu"));
                 break;
             default:
-                confirmationText.text = "";
+                confirmationText.text = "Yes button will not work.";
                 break;
         }
     }
@@ -265,16 +265,16 @@ public class UIManager : MonoBehaviour
     {
         gamepadButton.SetActive(true);
 
-        if (MainMenuUI.activeSelf) mainMenuTarget.Select();
-        else if (AcknowledgementUI.activeSelf) acknowledgmentTarget.Select();
-        else if (Room2Puzzle.activeSelf) puzzle2Target.Select();
-        else if (Room3Puzzle.activeSelf) puzzle3Target.Select();
-        else if (PauseUI.activeSelf) pauseTarget.Select();
-        else if (OptionsUI.activeSelf) optionsTarget.Select();
-        else if (CreditsUI.activeSelf) creditsTarget.Select();
-        else if (ConfirmationUI.activeSelf) confirmationTarget.Select();
-        else if (ControlsUI.activeSelf) controlsTarget.Select();
-        else if (DialogueUIOptions.activeSelf) dialogueOptionsTarget.Select();
+        if (MainMenuUI.activeSelf == true) mainMenuTarget.Select();
+        if (AcknowledgementUI.activeSelf == true) acknowledgmentTarget.Select();
+        if (Room2Puzzle.activeSelf == true) puzzle2Target.Select();
+        if (Room3Puzzle.activeSelf == true) puzzle3Target.Select();
+        if (PauseUI.activeSelf == true) pauseTarget.Select();
+        if (OptionsUI.activeSelf == true) optionsTarget.Select();
+        if (CreditsUI.activeSelf == true) creditsTarget.Select();
+        if (ConfirmationUI.activeSelf == true) confirmationTarget.Select();
+        if (ControlsUI.activeSelf == true) controlsTarget.Select();
+        if (DialogueUIOptions.activeSelf == true) dialogueOptionsTarget.Select();
     }
 
     private void UnselectCurrentButton()
@@ -288,7 +288,7 @@ public class UIManager : MonoBehaviour
     }
 
     #region Puzzle UI
-    // Depending on the book that's opening, it will open the corresponding UI. (I'd like to change this if I find time.)
+    // Depending on the book that's opening, it will open the corresponding UI.
     public void ShowBook(Sprite image, string infoText)
     {
         PlayerMovement(false);
@@ -316,7 +316,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // Shows picture. The plan is to use 1 UI object and just change the image depending on the object (Image should be stored on the interactable)
+    // Shows picture. (Image should be stored on the interactable)
     public void ShowPicture(int pictureIndex, bool isVertical)
     {
         PlayerMovement(false);
