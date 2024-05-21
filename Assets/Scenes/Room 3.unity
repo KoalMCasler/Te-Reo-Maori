@@ -16966,8 +16966,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0042000115, y: -3.194, z: 0}
-    m_Extent: {x: 0.9934, y: 3.9506, z: 0}
+    m_Center: {x: -0.004150003, y: -3.19355, z: 0}
+    m_Extent: {x: 1.00385, y: 3.94555, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17083,10 +17083,12 @@ PrefabInstance:
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: picture
       value: 
-      objectReference: {fileID: 21300000, guid: b54822b9fbb0c5644bbbc31ca458ada8, type: 3}
+      objectReference: {fileID: 21300000, guid: dc83039dd2075e845a895bd66c7a7c75, type: 3}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
-      value: Fill in discription here.
+      value: "This is where the British stormed Waikato in order to destroy the king
+        movement. While visiting, we did an exercise where we were British soldiers
+        forced to move towards m\u0101ori children."
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
@@ -17094,7 +17096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureTitle
-      value: '"     "'
+      value: Reflecting on the Battle of Waikato
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17376,8 +17378,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.005300015, y: -3.19385, z: 0}
-    m_Extent: {x: 0.997, y: 3.94695, z: 0}
+    m_Center: {x: 0.004700005, y: -3.2001, z: 0}
+    m_Extent: {x: 1.0002999, y: 3.9498, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17493,10 +17495,12 @@ PrefabInstance:
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: picture
       value: 
-      objectReference: {fileID: 21300000, guid: c7395004b2d07f14ba918048e845955d, type: 3}
+      objectReference: {fileID: 21300000, guid: 392b1ddea77563b418668a9ad04eefb2, type: 3}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
-      value: Fill in discription here.
+      value: After some of the experiences we've learned about, we got to meet with
+        some year 10 students. They taught us things about their culture and we tought
+        them things as well.
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
@@ -17504,7 +17508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureTitle
-      value: '"     "'
+      value: Global Citizenship Education
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17904,8 +17908,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.008349985, y: -3.195, z: 0}
-    m_Extent: {x: 1.00015, y: 3.9447, z: 0}
+    m_Center: {x: 0.0012500286, y: -3.20415, z: 0}
+    m_Extent: {x: 0.99965, y: 3.9486501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -18176,9 +18180,27 @@ MonoBehaviour:
   - "The monarchy plays a crucial role in advocating for M\u0101ori rights and preserving
     M\u0101ori culture and traditions. The Waikato region is particularly significant
     as it is the heartland of the <color=#9E9E9E>K\u012Bngitanga</color> movement."
-  optionalDialogue3: []
-  optionalDialogue4: []
-  optionalDialogue5: []
+  optionalDialogue3:
+  - " Despite eventually capturing the p\u0101, the battle was costly for the British
+    and highlighted the M\u0101ori's strong resistance. The fall of <color=#9E9E9E>Rangiriri</color>
+    P\u0101 was a turning point, leading to further British advances in the Waikato
+    region."
+  - "Today, it is a significant historical site, commemorating the battle and M\u0101ori
+    resilience."
+  optionalDialogue4:
+  - The Waikato-Tainui <color=#9E9E9E>Raupatu</color> Settlement is a landmark agreement
+    between the New Zealand Crown and the Waikato-Tainui iwi (tribe) to address historical
+    injustices. In the mid-19th century, the Crown confiscated over a million acres
+    of land from Waikato-Tainui, leading to significant loss and hardship for the
+    iwi.
+  - "The Crown's apology and the settlement as a whole are seen as important milestones
+    in the journey toward reconciliation and healing for Waikato-Tainui and the broader
+    M\u0101ori community."
+  optionalDialogue5:
+  - "Included in a global citizenship education course, this picture features a group
+    of Year 10 M\u0101ori students, embodying the spirit of <color=#9E9E9E>rangatahi</color>,
+    or youth, engaged in learning about global issues and fostering cross-cultural
+    understanding"
   optionalDialogue6: []
   outroDialogue:
   - Thanks for visiting!
@@ -18249,8 +18271,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0013000071, y: -3.1989, z: 0}
-    m_Extent: {x: 0.99160004, y: 3.9472, z: 0}
+    m_Center: {x: -0.0041999817, y: -3.2024999, z: 0}
+    m_Extent: {x: 0.997, y: 3.9445, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19346,8 +19368,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0075000226, y: -3.1948, z: 0}
-    m_Extent: {x: 0.9993, y: 3.9498, z: 0}
+    m_Center: {x: 0.000050008297, y: -3.19995, z: 0}
+    m_Extent: {x: 0.99525, y: 3.95205, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19384,7 +19406,10 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 5f83d8a426b773d45b9d913b39ad2a99, type: 3}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
-      value: Fill in discription here.
+      value: The settlement, reached in 1995, included a formal apology from the
+        Crown, financial compensation, and the return of some confiscated lands.
+        The Crown's apology acknowledged the unjust confiscation and its impacts,
+        aiming to rebuild a partnership based on mutual respect and cooperation.
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
@@ -19392,7 +19417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureTitle
-      value: The Crown Appology
+      value: The Crown Apology
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21695,8 +21720,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00034999847, y: -3.20575, z: 0}
-    m_Extent: {x: 1.00405, y: 3.94725, z: 0}
+    m_Center: {x: -0.00019997358, y: -3.19695, z: 0}
+    m_Extent: {x: 1.0063, y: 3.95115, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21777,8 +21802,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0011000037, y: -3.2024, z: 0}
-    m_Extent: {x: 1.0067999, y: 3.9492, z: 0}
+    m_Center: {x: -0.00089997053, y: -3.2022, z: 0}
+    m_Extent: {x: 1.0018001, y: 3.9562001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67530,8 +67555,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0023500323, y: -3.1989, z: 0}
-    m_Extent: {x: 1.00155, y: 3.9469998, z: 0}
+    m_Center: {x: -0.009000003, y: -3.1973999, z: 0}
+    m_Extent: {x: 0.9982, y: 3.9489, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

@@ -7,22 +7,25 @@ using Unity.VisualScripting;
 
 public class PuzzleManager : MonoBehaviour
 {
+    // managers
     private SoundManager soundManager;
 
-    [Header("Pepeha Puzzle")]
+    // door
     public GameObject door;
 
-    [Header("Puzzle Information")]
+    // puzzle information
     public PuzzleAsset[] puzzlesToComplete;
     public bool puzzle3TextDone;
 
-    [Header("Pepeha Puzzle")]
+    // pepeha puzzle 1
     public TMP_InputField[] puzzleFields;
     public TMP_InputField[] inputFields;
     public GameObject createOwn;
-    [Header("Artifact Puzzle")]
+
+    // artifact puzzle 2
     public ArtifactSlot[] artifactSlots;
-    [Header("Picture Lable Puzzle")]
+
+    // picture label puzzle 3
     public PictureSlot[] pictureSlots;
     public TMP_InputField[] pictureInputFields;
 

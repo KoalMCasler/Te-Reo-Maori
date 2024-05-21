@@ -9,17 +9,7 @@ using UnityEngine.VFX;
 public class InteractableObject : MonoBehaviour
 {
     //All objects
-    public enum InteractType
-    {
-        Nothing,
-        Info,
-        Dialogue,
-        Book,
-        Door,
-        Artifact,
-        Picture,
-        NPC,
-    }
+    public enum InteractType { Nothing, Info, Dialogue, Book, Door, Artifact, Picture, NPC, }
 
     // Managers
     [Header("Managers")]

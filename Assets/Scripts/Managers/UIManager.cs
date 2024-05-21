@@ -1,9 +1,11 @@
 using TMPro;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Runtime.CompilerServices;
 
 
 public class UIManager : MonoBehaviour
@@ -90,6 +92,7 @@ public class UIManager : MonoBehaviour
     public bool puzzle3IsOpen;
     public GameObject selector; //needed to attach objects for drag and drop. 
     public EventSystem eventSystem; // Add a reference to the EventSystem
+    private bool isGamepadConnected;
 
     // ui for binding
     public GameObject keyboardBindings;
@@ -236,22 +239,43 @@ public class UIManager : MonoBehaviour
     }
     #endregion
 
+    #region Controller Connection
     public void CheckControllerConnection()
     {
+        // Initial check for connected gamepads
+        if (Gamepad.all.Count > 0)
+        {
+            isGamepadConnected = true;
+            ShowBinding(gamepadBindings);
+            SelectButtonForActiveUI(); // Ensure the correct button is selected
+        }
+        else
+        {
+            isGamepadConnected = false;
+            ShowBinding(keyboardBindings);
+        }
+
+        // Subscribe to device change events
         InputSystem.onDeviceChange += (device, change) =>
         {
             switch (change)
             {
                 case InputDeviceChange.Added:
-                    Debug.Log("New device added: " + device);
-                    SelectButtonForActiveUI();
-                    ShowBinding(gamepadBindings);
+                    if (device is Gamepad)
+                    {
+                        isGamepadConnected = true;
+                        ShowBinding(gamepadBindings);
+                        SelectButtonForActiveUI(); // Ensure the correct button is selected
+                    }
                     break;
 
                 case InputDeviceChange.Removed:
-                    Debug.Log("Device removed: " + device);
-                    UnselectCurrentButton();
-                    ShowBinding(keyboardBindings);
+                    if (device is Gamepad)
+                    {
+                        isGamepadConnected = false;
+                        ShowBinding(keyboardBindings);
+                        UnselectCurrentButton();
+                    }
                     break;
             }
         };
@@ -282,6 +306,14 @@ public class UIManager : MonoBehaviour
             eventSystem.SetSelectedGameObject(null);
         }
     }
+
+    private IEnumerator SelectButtonAfterDelay()
+    {
+        yield return new WaitForEndOfFrame(); // Wait until the end of the frame to ensure the UI transition is complete
+        SelectButtonForActiveUI(); // Select the appropriate button for the currently active UI
+    }
+
+    #endregion
 
     #region Puzzle UI
     // Depending on the book that's opening, it will open the corresponding UI.
@@ -370,20 +402,19 @@ public class UIManager : MonoBehaviour
         DialogueUI.SetActive(false);
         DialogueUIOptions.SetActive(false);
         activeUI.SetActive(true);
+
         playerSprite.enabled = isActive; // Enables or disables player sprite
+
 
         if (gameManager.isPaused)
             Time.timeScale = 0f;
         else
             Time.timeScale = 1f;
-        StartCoroutine(SelectButtonAfterDelay());
+
+        if (isGamepadConnected)
+            SelectButtonForActiveUI();
     }
 
-    private IEnumerator SelectButtonAfterDelay()
-    {
-        yield return new WaitForEndOfFrame(); // Wait until the end of the frame to ensure the UI transition is complete
-        SelectButtonForActiveUI(); // Select the appropriate button for the currently active UI
-    }
 
     // Enable and disable player Movement & interaction
     private void PlayerMovement(bool playerMove)
