@@ -25067,8 +25067,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0045000017, y: -4.8805, z: 0}
-    m_Extent: {x: 1.004, y: 5.6259003, z: 0}
+    m_Center: {x: 0.0021000504, y: -4.87195, z: 0}
+    m_Extent: {x: 1.0039, y: 5.62675, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25149,8 +25149,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0028000474, y: -4.8798, z: 0}
-    m_Extent: {x: 1.004, y: 5.6277, z: 0}
+    m_Center: {x: 0.00024998188, y: -4.87535, z: 0}
+    m_Extent: {x: 1.00485, y: 5.6228504, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25231,8 +25231,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.005249977, y: -4.87025, z: 0}
-    m_Extent: {x: 0.99735, y: 5.62015, z: 0}
+    m_Center: {x: -0.0071499944, y: -4.87965, z: 0}
+    m_Extent: {x: 0.99925, y: 5.6276503, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25401,8 +25401,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0032999814, y: -4.8705, z: 0}
-    m_Extent: {x: 1.0023, y: 5.6200004, z: 0}
+    m_Center: {x: -0.0010000169, y: -4.8733, z: 0}
+    m_Extent: {x: 1, y: 5.6304, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -26386,8 +26386,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.003799975, y: -4.87435, z: 0}
-    m_Extent: {x: 1.0018001, y: 5.6245503, z: 0}
+    m_Center: {x: -0.00034999847, y: -4.8791504, z: 0}
+    m_Extent: {x: 1.00685, y: 5.62955, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -26773,7 +26773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
       propertyPath: message
-      value: 'Its locked, I think I need to do somthing to open it. '
+      value: 'Its locked, I think I need to do something to open it. '
       objectReference: {fileID: 0}
     - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
       propertyPath: newDoor

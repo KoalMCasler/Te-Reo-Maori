@@ -49971,6 +49971,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
+      propertyPath: message
+      value: 'Its locked, I think I need to do something to open it. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
       propertyPath: newDoor
       value: 
       objectReference: {fileID: 1678966699, guid: bc70ccbe4f4437641bfc7f91b96d2159, type: 3}
@@ -50224,8 +50228,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00015002489, y: -3.20055, z: 0}
-    m_Extent: {x: 1.00085, y: 3.94135, z: 0}
+    m_Center: {x: -0.00060001016, y: -3.2088501, z: 0}
+    m_Extent: {x: 0.99880004, y: 3.94895, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

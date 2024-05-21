@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.VFX;
+using Unity.VisualScripting;
 
 public class InteractableObject : MonoBehaviour
 {
@@ -61,6 +62,13 @@ public class InteractableObject : MonoBehaviour
     public int pictureIndex;
 
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            OpenDoor();
+        }
+    }
 
 
     void Start()
