@@ -33,6 +33,7 @@ public class UIManager : MonoBehaviour
     public GameObject EndGameUI;
     public GameObject EndGameVideoUI;
     public GameObject ProjectInfoButton;
+    public Image imageInfo;
 
     // Confirmation UI
     [Header("Confirmation UI")]
@@ -165,6 +166,7 @@ public class UIManager : MonoBehaviour
 
     public void UI_Gameplay()
     {
+        imageInfo.enabled = false;
         playerInput.actions.FindAction("Pause").Enable();
         puzzle3IsOpen = false;
         puzzle2IsOpen = false;

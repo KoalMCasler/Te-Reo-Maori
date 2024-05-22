@@ -16966,8 +16966,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.007249981, y: -3.2032502, z: 0}
-    m_Extent: {x: 0.99625003, y: 3.94785, z: 0}
+    m_Center: {x: -0.0031999946, y: -3.1911, z: 0}
+    m_Extent: {x: 0.9953, y: 3.9493, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17096,7 +17096,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureTitle
-      value: Reflecting on the Battle of Waikato
+      value: <b>Reflecting on the Battle of Waikato</b>
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: apartOfPuzzle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17168,6 +17172,10 @@ PrefabInstance:
       propertyPath: picture
       value: 
       objectReference: {fileID: 21300000, guid: 12d134ac5f9ba9245ae460dcd631df65, type: 3}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: isVertical
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
       value: Learning how to make a poi. These poi were made from yarn, plastic bags
@@ -17380,8 +17388,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0011000037, y: -3.20065, z: 0}
-    m_Extent: {x: 0.9904, y: 3.95095, z: 0}
+    m_Center: {x: 0.0024999976, y: -3.2073998, z: 0}
+    m_Extent: {x: 1.0042, y: 3.9477, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17510,7 +17518,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureTitle
-      value: Global Citizenship Education
+      value: <b>Global Citizenship Education</b>
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: apartOfPuzzle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17910,8 +17922,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00020000339, y: -3.19775, z: 0}
-    m_Extent: {x: 0.9937, y: 3.94205, z: 0}
+    m_Center: {x: -0.00079998374, y: -3.196, z: 0}
+    m_Extent: {x: 0.9999, y: 3.9476, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -18109,6 +18121,7 @@ MonoBehaviour:
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
   isVertical: 0
+  apartOfPuzzle: 0
   picture: {fileID: 0}
   pictureTitle: 
   pictureText: 
@@ -18172,37 +18185,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfInteraction: Curator
   introDialogue:
-  - Hello and welcome to the gallary!
+  - Hello and welcome to the gallery!
   optionalDialogue1:
   - What picture would you like to know more about?
   optionalDialogue2:
   - "The first M\u0101ori King was P\u014Dtatau Te Wherowhero, who was crowned in
-    1858. The <color=#9E9E9E>K\u012Bngitanga</color> movement has continued to the
-    present day, with the current king being T\u016Bheitia Paki. "
+    1858. The <b>K\u012Bngitanga</b> movement has continued to the present day, with
+    the current king being T\u016Bheitia Paki. "
   - "The monarchy plays a crucial role in advocating for M\u0101ori rights and preserving
     M\u0101ori culture and traditions. The Waikato region is particularly significant
-    as it is the heartland of the <color=#9E9E9E>K\u012Bngitanga</color> movement."
+    as it is the heartland of the <b>K\u012Bngitanga</b> movement."
   optionalDialogue3:
   - " Despite eventually capturing the p\u0101, the battle was costly for the British
-    and highlighted the M\u0101ori's strong resistance. The fall of <color=#9E9E9E>Rangiriri</color>
+    and highlighted the M\u0101ori's strong resistance. The fall of <b>Rangiriri</b>
     P\u0101 was a turning point, leading to further British advances in the Waikato
     region."
   - "Today, it is a significant historical site, commemorating the battle and M\u0101ori
     resilience."
   optionalDialogue4:
-  - The Waikato-Tainui <color=#9E9E9E>Raupatu</color> (confiscation) Settlement is
-    a landmark agreement between the New Zealand Crown and the Waikato-Tainui iwi
-    (tribe) to address historical injustices. In the mid-19th century, the Crown
-    confiscated over a million acres of land from Waikato-Tainui, leading to significant
-    loss and hardship for the iwi.
+  - The Waikato-Tainui <b>Raupatu</b> (confiscation) Settlement is a landmark agreement
+    between the New Zealand Crown and the Waikato-Tainui iwi (tribe) to address historical
+    injustices. In the mid-19th century, the Crown confiscated over a million acres
+    of land from Waikato-Tainui, leading to significant loss and hardship for the
+    iwi.
   - "The Crown's apology and the settlement as a whole are seen as important milestones
     in the journey toward reconciliation and healing for Waikato-Tainui and the broader
     M\u0101ori community."
   optionalDialogue5:
   - "Included in a global citizenship education course, this picture features a group
-    of Year 10 M\u0101ori students, embodying the spirit of <color=#9E9E9E>rangatahi</color>,
-    or youth, engaged in learning about global issues and fostering cross-cultural
-    understanding"
+    of Year 10 M\u0101ori students, embodying the spirit of <b>rangatahi</b>, or
+    youth, engaged in learning about global issues and fostering cross-cultural understanding"
   optionalDialogue6: []
   outroDialogue:
   - Thanks for visiting!
@@ -18273,8 +18285,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0014500022, y: -3.2035, z: 0}
-    m_Extent: {x: 0.99465, y: 3.9454, z: 0}
+    m_Center: {x: -0.0012500286, y: -3.1993, z: 0}
+    m_Extent: {x: 1.00045, y: 3.9458, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19161,6 +19173,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 89eff7c4b0ed7bc479b1866b4325a3ba, type: 3}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: isVertical
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
       value: Teaching Maori Students about Mi'kmaq culture
       objectReference: {fileID: 0}
@@ -19370,8 +19386,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00075000525, y: -3.20105, z: 0}
-    m_Extent: {x: 0.98945, y: 3.95245, z: 0}
+    m_Center: {x: -0.0015000105, y: -3.2033, z: 0}
+    m_Extent: {x: 0.9976, y: 3.9527001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19407,6 +19423,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 5f83d8a426b773d45b9d913b39ad2a99, type: 3}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: isVertical
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
       value: The settlement, reached in 1995, included a formal apology from the
         Crown, financial compensation, and the return of some confiscated lands.
@@ -19419,7 +19439,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureTitle
-      value: The Crown Apology
+      value: <b>The Crown Apology</b>
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: apartOfPuzzle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21726,8 +21750,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0071499646, y: -3.2032502, z: 0}
-    m_Extent: {x: 1.00115, y: 3.95065, z: 0}
+    m_Center: {x: -0.00085002184, y: -3.1964998, z: 0}
+    m_Extent: {x: 1.00295, y: 3.9505, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21808,8 +21832,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0014999807, y: -3.2018, z: 0}
-    m_Extent: {x: 0.99979997, y: 3.9511, z: 0}
+    m_Center: {x: -0.004000008, y: -3.20485, z: 0}
+    m_Extent: {x: 1.0009999, y: 3.9456499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67561,8 +67585,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00040000677, y: -3.20145, z: 0}
-    m_Extent: {x: 0.992, y: 3.95495, z: 0}
+    m_Center: {x: 0.006349981, y: -3.2033, z: 0}
+    m_Extent: {x: 0.99575, y: 3.9436998, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67709,7 +67733,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureTitle
-      value: "The M\u0101ori King Movement"
+      value: "<b>The M\u0101ori King Movement</b>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: apartOfPuzzle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x

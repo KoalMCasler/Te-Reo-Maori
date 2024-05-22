@@ -45,7 +45,6 @@ public class DialogueManager : MonoBehaviour
     {
         introTextPlayed = false;
         isAskingQustions = false;
-        Debug.Log("Starting Dialogue");
         gameManager.LoadState("Dialogue");
         activeDialogue = dialogue;
         dialogueName.text = activeDialogue.nameOfInteraction;
@@ -92,7 +91,6 @@ public class DialogueManager : MonoBehaviour
 
     private void OpenDialogueOptions()
     {
-        Debug.Log("Showing Dialogue Options");
         sentences.Clear();
         if(isAskingQustions)
         {
@@ -114,7 +112,7 @@ public class DialogueManager : MonoBehaviour
 
     private void PlayOutroDialogue()
     {
-        Debug.Log("Player Outro Dialogue");
+        uIManager.UI_DialogueOptions(false);
         sentences.Clear();
         outroHasBeenPlayed = true;
         foreach(string currentLine in activeDialogue.outroDialogue)
@@ -219,7 +217,6 @@ public class DialogueManager : MonoBehaviour
     // Clears sentences queue & loads the new gamestate
     private void EndDialogue()
     {
-        Debug.Log("Ending Dialogue");
         sentences.Clear();
         gameManager.LoadState("Gameplay");
         uIManager.UI_Gameplay();

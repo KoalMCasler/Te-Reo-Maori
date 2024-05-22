@@ -43,7 +43,6 @@ public class PlayerInteraction : MonoBehaviour
     {
         if(currentInterObj == true)
         {
-            Debug.Log("Interacting with " + currentInterObj.name);
             if(currentInterObjScript.interactType == InteractableObject.InteractType.Info)
             {
                 currentInterObjScript.Info();

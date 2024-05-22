@@ -52,6 +52,7 @@ public class InteractableObject : MonoBehaviour
 
     [Header("Image & Text")]
     public bool isVertical;
+    public bool apartOfPuzzle;
     public Sprite picture;
     [SerializeField] private string pictureTitle;
     [TextArea(2, 10)]
@@ -105,20 +106,24 @@ public class InteractableObject : MonoBehaviour
     public void Picture()
     {
         soundManager.PlaySfxAudio("Book");
-        finalText = string.Format("{0} \n {1}", pictureTitle, pictureText);
-        if (picture != null) //remove later. Using this for testing purposes.
+
+        if (apartOfPuzzle)
+            finalText = string.Format("{0} \n {1}", pictureTitle, pictureText);
+        else
+            finalText = string.Format("{0}", pictureText);
+
+
+        if (isVertical == false)
         {
-            if (isVertical == false)
-            {
-                uiManager.horizontalCurrentImage.sprite = picture;
-                uiManager.horizontalImageDescript.text = finalText;
-            }
-            if (isVertical == true)
-            {
-                uiManager.verticalCurrentImage.sprite = picture;
-                uiManager.verticalImageDescript.text = finalText;
-            }
+            uiManager.horizontalCurrentImage.sprite = picture;
+            uiManager.horizontalImageDescript.text = finalText;
         }
+        if (isVertical == true)
+        {
+            uiManager.verticalCurrentImage.sprite = picture;
+            uiManager.verticalImageDescript.text = finalText;
+        }
+
         uiManager.ShowPicture(pictureIndex, isVertical);
     }
 
@@ -133,15 +138,25 @@ public class InteractableObject : MonoBehaviour
                 {
                     isDisplayingText = true;
                     if (infoCoroutine != null)
+                    {
                         StopAllCoroutines();
+                        infoImage = GameObject.Find("Image_Info");
+                        infoImage.GetComponent<Image>().enabled = false;
+                    }
 
                     infoCoroutine = StartCoroutine(ShowInfo(message, InfoTextDelay));
                 }
-                //isLocked = false; //Debug line to test before quest is added.
             }
             else
             {
                 OpenDoor();
+
+                if (infoCoroutine != null)
+                {
+                    StopAllCoroutines();
+                    infoImage = GameObject.Find("Image_Info");
+                    infoImage.GetComponent<Image>().enabled = false;
+                }
             }
         }
         else if (!isClosed)
@@ -171,8 +186,6 @@ public class InteractableObject : MonoBehaviour
                 FindObjectOfType<UIManager>().ShowProjectInfo();
             }
 
-            Debug.Log("Reading info from " + this.name);
-            //Debug.Log(message);
             if (infoCoroutine != null)
                 StopAllCoroutines();
 
