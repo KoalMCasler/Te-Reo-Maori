@@ -39,6 +39,8 @@ public class InteractableObject : MonoBehaviour
     public string message;
     public float textSpeed = 0.01f;
     public bool isDisplayingText;
+    private SpriteRenderer bookSprite;
+    public Sprite newBookSprite;
 
     //NPCS
     [Header("NPC Variables")]
@@ -88,12 +90,18 @@ public class InteractableObject : MonoBehaviour
         {
             dialogueManager = FindObjectOfType<DialogueManager>();
         }
+        if(interactType == InteractType.Book)
+        {
+            bookSprite = GetComponent<SpriteRenderer>();
+        }
     }
 
     public void Book()
     {
         soundManager.PlaySfxAudio("Book");
         uiManager.ShowBook(picture, pictureText);
+        bookSprite.sprite = newBookSprite;
+
     }
 
     public void Artifact()
