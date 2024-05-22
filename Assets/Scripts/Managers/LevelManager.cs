@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using System;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 
 public class LevelManager : MonoBehaviour
 {
@@ -10,6 +13,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private PuzzleManager puzzleManager;
     [SerializeField] private SoundManager soundManager;
+    public Singleton singleton;
 
     //used for the camera and bounding shape, lets each scene have its own shape. 
     [Header("Camera & bounding shape")]
@@ -51,6 +55,7 @@ public class LevelManager : MonoBehaviour
                     gameManager.LoadState(sceneName);
                     soundManager.PlayAudio("MainMenu");
                     GameplayMusicIsPlaying = false;
+
                     break;
                 case string name when name.StartsWith("Room"):
                     gameManager.LoadState("Gameplay");
@@ -65,6 +70,7 @@ public class LevelManager : MonoBehaviour
                     break;
             }
             SceneManager.LoadScene(sceneName);
+
         });
     }
 
@@ -93,6 +99,12 @@ public class LevelManager : MonoBehaviour
 
         Fade("FadeIn");
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        if (scene.name == "MainMenu")
+        {
+            Debug.Log("replace instance called");
+            Destroy(singleton);
+        }
+
     }
 
     public void Fade(string fadeDir, System.Action callback = null)

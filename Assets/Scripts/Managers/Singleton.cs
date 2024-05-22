@@ -3,17 +3,24 @@ using UnityEngine;
 public class Singleton : MonoBehaviour
 {
     static Singleton instance;
+    public bool replaceExistingInstance;
 
     private void Awake()
     {
         if(instance != null)
         {
-            GameObject.Destroy(gameObject);
+            if(replaceExistingInstance)
+            {
+                Destroy(instance.gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+                return;
+            }
         }
-        else
-        {
-            GameObject.DontDestroyOnLoad(this.gameObject);
-            instance = this;
-        }
+ 
+        instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 }

@@ -260,15 +260,16 @@ MonoBehaviour:
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
   isVertical: 0
+  apartOfPuzzle: 0
   picture: {fileID: 21300000, guid: 8728dfc7e4ba6d84f9d54827c1e31490, type: 3}
   pictureTitle: 
   pictureText: 'Essence of love, of loving but not a deep love. Love that you''d
     have for your friends.
 
 
-    The figure has its hands raised towards its mouth,
-    as if in the act of ingesting or savoring something. This could symbolize the
-    internalization of aroha, suggesting the importance of taking love and compassion
+    The figure Aroha has its hands raised towards its
+    mouth, as if in the act of ingesting or savoring something. This could symbolize
+    the internalization of aroha, suggesting the importance of taking love and compassion
     into oneself and embodying these values in daily life.'
   pictureIndex: 0
 --- !u!212 &65435298
@@ -48151,6 +48152,7 @@ MonoBehaviour:
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
   isVertical: 0
+  apartOfPuzzle: 0
   picture: {fileID: 21300000, guid: 1c0577c9386eb20488dfdc15f5795753, type: 3}
   pictureTitle: 
   pictureText: 'Humilty. Being humble.
@@ -48494,6 +48496,7 @@ MonoBehaviour:
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
   isVertical: 0
+  apartOfPuzzle: 0
   picture: {fileID: 21300000, guid: 0868b8453ad21ac4d9d8915081307ef6, type: 3}
   pictureTitle: 
   pictureText: 'Quest for excellence in everything we do. Striving for the most out
@@ -50133,6 +50136,7 @@ MonoBehaviour:
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
   isVertical: 0
+  apartOfPuzzle: 0
   picture: {fileID: 21300000, guid: 184ad3507be52aa43a3e96aa5eeee57f, type: 3}
   pictureTitle: 
   pictureText: 'Your authority as a person. Your prestige.
@@ -50228,8 +50232,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00060001016, y: -3.2088501, z: 0}
-    m_Extent: {x: 0.99880004, y: 3.94895, z: 0}
+    m_Center: {x: -0.0018499792, y: -3.2013502, z: 0}
+    m_Extent: {x: 1.00165, y: 3.94415, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

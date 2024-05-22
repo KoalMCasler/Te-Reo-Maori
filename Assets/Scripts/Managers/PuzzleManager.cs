@@ -189,5 +189,13 @@ public class PuzzleManager : MonoBehaviour
         {
             puzzle.status = PuzzleAsset.Status.NotStarted;
         }
+        foreach(TMP_InputField puzzlefield in puzzleFields)
+        {
+            puzzlefield.text = "";
+        } 
+        foreach(TMP_InputField inputfield in inputFields)
+        {
+            inputfield.text = "";
+        }
     }
 }

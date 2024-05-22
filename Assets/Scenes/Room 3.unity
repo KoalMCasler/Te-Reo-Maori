@@ -16966,8 +16966,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0031999946, y: -3.1911, z: 0}
-    m_Extent: {x: 0.9953, y: 3.9493, z: 0}
+    m_Center: {x: 0.003799975, y: -3.2081501, z: 0}
+    m_Extent: {x: 1.0041001, y: 3.94825, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17084,6 +17084,10 @@ PrefabInstance:
       propertyPath: picture
       value: 
       objectReference: {fileID: 21300000, guid: dc83039dd2075e845a895bd66c7a7c75, type: 3}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: isVertical
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
       value: "This is where the British stormed Waikato in order to destroy the king
@@ -17388,8 +17392,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0024999976, y: -3.2073998, z: 0}
-    m_Extent: {x: 1.0042, y: 3.9477, z: 0}
+    m_Center: {x: 0.0047499835, y: -3.1952, z: 0}
+    m_Extent: {x: 0.99485004, y: 3.9476, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17922,8 +17926,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00079998374, y: -3.196, z: 0}
-    m_Extent: {x: 0.9999, y: 3.9476, z: 0}
+    m_Center: {x: -0.0027000308, y: -3.19965, z: 0}
+    m_Extent: {x: 0.9975, y: 3.95485, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -18285,8 +18289,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0012500286, y: -3.1993, z: 0}
-    m_Extent: {x: 1.00045, y: 3.9458, z: 0}
+    m_Center: {x: 0.0057500005, y: -3.1977499, z: 0}
+    m_Extent: {x: 1.00015, y: 3.95485, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19386,8 +19390,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0015000105, y: -3.2033, z: 0}
-    m_Extent: {x: 0.9976, y: 3.9527001, z: 0}
+    m_Center: {x: -0.002000004, y: -3.20295, z: 0}
+    m_Extent: {x: 0.99170005, y: 3.95155, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21750,8 +21754,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00085002184, y: -3.1964998, z: 0}
-    m_Extent: {x: 1.00295, y: 3.9505, z: 0}
+    m_Center: {x: 0.0013999939, y: -3.193, z: 0}
+    m_Extent: {x: 1.004, y: 3.9479, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21832,8 +21836,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.004000008, y: -3.20485, z: 0}
-    m_Extent: {x: 1.0009999, y: 3.9456499, z: 0}
+    m_Center: {x: -0.00069999695, y: -3.2056, z: 0}
+    m_Extent: {x: 0.9975, y: 3.9490001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67585,8 +67589,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.006349981, y: -3.2033, z: 0}
-    m_Extent: {x: 0.99575, y: 3.9436998, z: 0}
+    m_Center: {x: 0.004099995, y: -3.2013001, z: 0}
+    m_Extent: {x: 0.9965, y: 3.9496999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
