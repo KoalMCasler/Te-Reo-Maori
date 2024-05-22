@@ -4432,7 +4432,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'V1.0
+  m_text: 'V1.02
 
 '
   m_isRightToLeft: 0
@@ -27774,9 +27774,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1289818631}
+  gameManagerObject: {fileID: 1289818628}
   puzzleManager: {fileID: 981146684}
   soundManager: {fileID: 711704829}
-  singleton: {fileID: 0}
+  singleton: {fileID: 1289818630}
   mainCamera: {fileID: 1385452072}
   foundBoundingShape: {fileID: 1689798628}
   confiner2D: {fileID: 1385452073}
