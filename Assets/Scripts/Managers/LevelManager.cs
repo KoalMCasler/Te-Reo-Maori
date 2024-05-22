@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
 {
     [Header("Managers")]
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private GameObject gameManagerObject;
     [SerializeField] private PuzzleManager puzzleManager;
     [SerializeField] private SoundManager soundManager;
     public Singleton singleton;
@@ -55,7 +56,8 @@ public class LevelManager : MonoBehaviour
                     gameManager.LoadState(sceneName);
                     soundManager.PlayAudio("MainMenu");
                     GameplayMusicIsPlaying = false;
-
+                    singleton.ClearInstance();
+                    SceneManager.MoveGameObjectToScene(gameManagerObject, SceneManager.GetActiveScene());
                     break;
                 case string name when name.StartsWith("Room"):
                     gameManager.LoadState("Gameplay");
@@ -76,35 +78,37 @@ public class LevelManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        foundBoundingShape = null;
-        // used to find bouding shape and set it to the virtual camera. 
-        foundBoundingShape = GameObject.FindWithTag("Confiner").GetComponent<Collider2D>();
-        confiner2D.m_BoundingShape2D = foundBoundingShape;
-        player = GameObject.FindWithTag("Player");
-        //Debug.Log("Level manager Has Player Referance");
-        playerSpawn = GameObject.FindWithTag("Spawn").GetComponent<Transform>();
-        //Debug.Log("Level manager Has Player Spawn Referance");
-        player.transform.position = playerSpawn.position;
-        fadeAnimator = gameObject.GetComponent<Animator>();
-        //Debug.Log("Level manager Has Fade Animator Referance");
-        if (scene.name.StartsWith("Room"))
+        if(scene.name == "MainMenu")
         {
-            if (!GameplayMusicIsPlaying)
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+            return;
+        }
+        else
+        {
+            foundBoundingShape = null;
+            // used to find bouding shape and set it to the virtual camera. 
+            foundBoundingShape = GameObject.FindWithTag("Confiner").GetComponent<Collider2D>();
+            confiner2D.m_BoundingShape2D = foundBoundingShape;
+            player = GameObject.FindWithTag("Player");
+            //Debug.Log("Level manager Has Player Referance");
+            playerSpawn = GameObject.FindWithTag("Spawn").GetComponent<Transform>();
+            //Debug.Log("Level manager Has Player Spawn Referance");
+            player.transform.position = playerSpawn.position;
+            fadeAnimator = gameObject.GetComponent<Animator>();
+            //Debug.Log("Level manager Has Fade Animator Referance");
+            if (scene.name.StartsWith("Room"))
             {
-                soundManager.PlayAudio("Gameplay");
-                GameplayMusicIsPlaying = true;
+                if (!GameplayMusicIsPlaying)
+                {
+                    soundManager.PlayAudio("Gameplay");
+                    GameplayMusicIsPlaying = true;
+                }
+                puzzleManager.door = GameObject.Find("Door");
             }
-            puzzleManager.door = GameObject.Find("Door");
-        }
 
-        Fade("FadeIn");
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-        if (scene.name == "MainMenu")
-        {
-            Debug.Log("replace instance called");
-            Destroy(singleton);
+            Fade("FadeIn");
+            SceneManager.sceneLoaded -= OnSceneLoaded;
         }
-
     }
 
     public void Fade(string fadeDir, System.Action callback = null)

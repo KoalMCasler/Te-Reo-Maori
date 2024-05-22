@@ -16966,8 +16966,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.003799975, y: -3.2081501, z: 0}
-    m_Extent: {x: 1.0041001, y: 3.94825, z: 0}
+    m_Center: {x: -0.00084999204, y: -3.19825, z: 0}
+    m_Extent: {x: 0.99165, y: 3.9463499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17392,8 +17392,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0047499835, y: -3.1952, z: 0}
-    m_Extent: {x: 0.99485004, y: 3.9476, z: 0}
+    m_Center: {x: 0.0017499924, y: -3.20105, z: 0}
+    m_Extent: {x: 0.99165, y: 3.95515, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17926,8 +17926,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0027000308, y: -3.19965, z: 0}
-    m_Extent: {x: 0.9975, y: 3.95485, z: 0}
+    m_Center: {x: 0.0058999658, y: -3.20755, z: 0}
+    m_Extent: {x: 0.9959, y: 3.95055, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -18194,11 +18194,11 @@ MonoBehaviour:
   - What picture would you like to know more about?
   optionalDialogue2:
   - "The first M\u0101ori King was P\u014Dtatau Te Wherowhero, who was crowned in
-    1858. The <b>K\u012Bngitanga</b> movement has continued to the present day, with
-    the current king being T\u016Bheitia Paki. "
+    1858. The <b>Kingitanga</b> movement has continued to the present day, with the
+    current king being T\u016Bheitia Paki. "
   - "The monarchy plays a crucial role in advocating for M\u0101ori rights and preserving
     M\u0101ori culture and traditions. The Waikato region is particularly significant
-    as it is the heartland of the <b>K\u012Bngitanga</b> movement."
+    as it is the heartland of the <b>Kingitanga</b> movement."
   optionalDialogue3:
   - " Despite eventually capturing the p\u0101, the battle was costly for the British
     and highlighted the M\u0101ori's strong resistance. The fall of <b>Rangiriri</b>
@@ -18289,8 +18289,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0057500005, y: -3.1977499, z: 0}
-    m_Extent: {x: 1.00015, y: 3.95485, z: 0}
+    m_Center: {x: 0.0036500096, y: -3.19405, z: 0}
+    m_Extent: {x: 1.00285, y: 3.94615, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19390,8 +19390,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.002000004, y: -3.20295, z: 0}
-    m_Extent: {x: 0.99170005, y: 3.95155, z: 0}
+    m_Center: {x: 0.0009499788, y: -3.2001, z: 0}
+    m_Extent: {x: 0.99385, y: 3.9533, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21754,8 +21754,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0013999939, y: -3.193, z: 0}
-    m_Extent: {x: 1.004, y: 3.9479, z: 0}
+    m_Center: {x: -0.00395, y: -3.2013001, z: 0}
+    m_Extent: {x: 0.99355, y: 3.9519, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21836,8 +21836,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00069999695, y: -3.2056, z: 0}
-    m_Extent: {x: 0.9975, y: 3.9490001, z: 0}
+    m_Center: {x: -0.0019500256, y: -3.20005, z: 0}
+    m_Extent: {x: 0.99785, y: 3.94675, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67589,8 +67589,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.004099995, y: -3.2013001, z: 0}
-    m_Extent: {x: 0.9965, y: 3.9496999, z: 0}
+    m_Center: {x: -0.00060001016, y: -3.19915, z: 0}
+    m_Extent: {x: 0.9941, y: 3.95395, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
