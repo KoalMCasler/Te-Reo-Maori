@@ -162,6 +162,7 @@ public class UIManager : MonoBehaviour
     public void UI_Acknowledgement()
     {
         CurrentUI(AcknowledgementUI, false);
+        acknowledgmentTarget.Select();
     }
 
     public void UI_Gameplay()
