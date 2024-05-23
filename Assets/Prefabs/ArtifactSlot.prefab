@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 6938252689584071031}
   - component: {fileID: 3816386023093283637}
   - component: {fileID: 6327647435202998683}
+  - component: {fileID: -4077297654144520326}
   m_Layer: 0
   m_Name: ArtifactSlot
   m_TagString: Untagged
@@ -242,3 +243,27 @@ MonoBehaviour:
   isSlotedCorrectly: 0
   puzzleAsset: {fileID: 11400000, guid: 0f849536038efe84b907cf691e57468d, type: 2}
   tape: {fileID: 0}
+--- !u!114 &-4077297654144520326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158749308719990222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 156.7}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
