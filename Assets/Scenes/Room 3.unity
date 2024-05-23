@@ -146,7 +146,7 @@ PrefabInstance:
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
       value: "P\u014Dwhiri - Begins with a formal speech, then singing of songs and
-        end you end it with food. All of this is done without speaking English."
+        you end it with food. All of this is done without speaking English."
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
@@ -16966,8 +16966,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00084999204, y: -3.19825, z: 0}
-    m_Extent: {x: 0.99165, y: 3.9463499, z: 0}
+    m_Center: {x: -0.0034499764, y: -3.19705, z: 0}
+    m_Extent: {x: 0.99855, y: 3.94705, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17392,8 +17392,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0017499924, y: -3.20105, z: 0}
-    m_Extent: {x: 0.99165, y: 3.95515, z: 0}
+    m_Center: {x: -0.0058499873, y: -3.20325, z: 0}
+    m_Extent: {x: 0.99975, y: 3.9493499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17513,7 +17513,7 @@ PrefabInstance:
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
       value: After some of the experiences we've learned about, we got to meet with
-        some year 10 students. They taught us things about their culture and we tought
+        some year 10 students. They taught us things about their culture and we taught
         them things as well.
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
@@ -17926,8 +17926,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0058999658, y: -3.20755, z: 0}
-    m_Extent: {x: 0.9959, y: 3.95055, z: 0}
+    m_Center: {x: 0.00395, y: -3.1991, z: 0}
+    m_Extent: {x: 1.00105, y: 3.9572, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -18120,6 +18120,7 @@ MonoBehaviour:
   message: 
   textSpeed: 0.01
   isDisplayingText: 0
+  newBookSprite: {fileID: 0}
   dialogue: {fileID: 1086237565}
   hasFog: 0
   fog: {fileID: 0}
@@ -18289,8 +18290,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0036500096, y: -3.19405, z: 0}
-    m_Extent: {x: 1.00285, y: 3.94615, z: 0}
+    m_Center: {x: 0.0020499825, y: -3.1984499, z: 0}
+    m_Extent: {x: 1.00495, y: 3.94155, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19390,8 +19391,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0009499788, y: -3.2001, z: 0}
-    m_Extent: {x: 0.99385, y: 3.9533, z: 0}
+    m_Center: {x: -0.0020499825, y: -3.20135, z: 0}
+    m_Extent: {x: 1.0044501, y: 3.9511502, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21754,8 +21755,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00395, y: -3.2013001, z: 0}
-    m_Extent: {x: 0.99355, y: 3.9519, z: 0}
+    m_Center: {x: 0.0011499822, y: -3.2002501, z: 0}
+    m_Extent: {x: 0.99004996, y: 3.94695, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21836,8 +21837,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0019500256, y: -3.20005, z: 0}
-    m_Extent: {x: 0.99785, y: 3.94675, z: 0}
+    m_Center: {x: 0.0044499934, y: -3.1993, z: 0}
+    m_Extent: {x: 0.99405, y: 3.9398, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67589,8 +67590,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00060001016, y: -3.19915, z: 0}
-    m_Extent: {x: 0.9941, y: 3.95395, z: 0}
+    m_Center: {x: -0.006450027, y: -3.19945, z: 0}
+    m_Extent: {x: 0.99605, y: 3.95475, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

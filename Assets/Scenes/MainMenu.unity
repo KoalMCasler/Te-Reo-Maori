@@ -4432,7 +4432,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'V1.02
+  m_text: 'V1.03
 
 '
   m_isRightToLeft: 0
@@ -19619,7 +19619,8 @@ MonoBehaviour:
     the M\u0101ori people. While we strive for accuracy and respect, we acknowledge
     that our interpretations may differ from the experiences and perspectives of
     others. \nThis game is a tribute to the M\u0101ori people and their traditions,
-    as seen through our own lens.\n\nKoal & Adrian"
+    as seen through our own lens.\n\nAll photos were taken on site during Adrian's
+    2024 trip.\n\nKoal & Adrian"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6b0490b7d9778974394ecef04c28b18c, type: 2}
   m_sharedMaterial: {fileID: -4844301765400902384, guid: 6b0490b7d9778974394ecef04c28b18c, type: 2}
@@ -19646,10 +19647,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44
+  m_fontSize: 42.75
   m_fontSizeBase: 44
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -27996,8 +27997,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Place the images in chronilogical order and label them with the maori word
-    (Lable each one first)
+  m_text: Place the images in chronological order and label them with the maori word
+    (Label each one first)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6b0490b7d9778974394ecef04c28b18c, type: 2}
   m_sharedMaterial: {fileID: -4844301765400902384, guid: 6b0490b7d9778974394ecef04c28b18c, type: 2}

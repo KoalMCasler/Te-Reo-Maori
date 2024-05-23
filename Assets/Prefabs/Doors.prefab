@@ -144,24 +144,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494d79ad7cc1a78469b50edf2952262d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManager: {fileID: 0}
+  uiManager: {fileID: 0}
+  dialogueManager: {fileID: 0}
+  levelManager: {fileID: 0}
   interactType: 4
   isLocked: 1
   isClosed: 1
   destinantionRoom: Room 2
-  levelManager: {fileID: 0}
   doorSprite: {fileID: 2238758350406404474}
   newDoor: {fileID: 0}
   doorLight: {fileID: 5281551087430971397}
   infoText: {fileID: 0}
+  infoImage: {fileID: 0}
   InfoTextDelay: 5
-  message: 'Its locked, I think I need to do somthing to open it. '
+  message: 'It is locked, I think I need to do somthing to open it. '
   textSpeed: 0.05
-  soundManager: {fileID: 0}
-  uiManager: {fileID: 0}
+  isDisplayingText: 0
+  newBookSprite: {fileID: 0}
+  dialogue: {fileID: 0}
   hasFog: 0
   fog: {fileID: 0}
   fogAmount: {fileID: 0}
+  isVertical: 0
+  apartOfPuzzle: 0
   picture: {fileID: 0}
+  pictureTitle: 
   pictureText: 
   pictureIndex: 0
 --- !u!1 &5281551087430971397

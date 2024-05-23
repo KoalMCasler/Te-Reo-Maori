@@ -255,6 +255,7 @@ MonoBehaviour:
   message: 
   textSpeed: 0.01
   isDisplayingText: 0
+  newBookSprite: {fileID: 0}
   dialogue: {fileID: 0}
   hasFog: 0
   fog: {fileID: 0}
@@ -48147,6 +48148,7 @@ MonoBehaviour:
   message: 
   textSpeed: 0.01
   isDisplayingText: 0
+  newBookSprite: {fileID: 0}
   dialogue: {fileID: 0}
   hasFog: 0
   fog: {fileID: 0}
@@ -48491,6 +48493,7 @@ MonoBehaviour:
   message: 
   textSpeed: 0.01
   isDisplayingText: 0
+  newBookSprite: {fileID: 0}
   dialogue: {fileID: 0}
   hasFog: 0
   fog: {fileID: 0}
@@ -49861,7 +49864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: message
-      value: Gather and match all 4 artifacts to the corect names!
+      value: Gather and match all 4 artifacts to the correct names!
       objectReference: {fileID: 0}
     - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: textSpeed
@@ -49870,6 +49873,10 @@ PrefabInstance:
     - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: InfoTextDelay
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547921791021515700, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
+      propertyPath: isDisplayingText
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3381665521167207461, guid: d7ccc4f7c301d834d9d71ff7c8227598, type: 3}
       propertyPath: m_LocalPosition.x
@@ -50131,6 +50138,7 @@ MonoBehaviour:
   message: 
   textSpeed: 0.01
   isDisplayingText: 0
+  newBookSprite: {fileID: 0}
   dialogue: {fileID: 0}
   hasFog: 0
   fog: {fileID: 0}
@@ -50232,8 +50240,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0018499792, y: -3.2013502, z: 0}
-    m_Extent: {x: 1.00165, y: 3.94415, z: 0}
+    m_Center: {x: 0.00069999695, y: -3.1961, z: 0}
+    m_Extent: {x: 0.9986, y: 3.9455998, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

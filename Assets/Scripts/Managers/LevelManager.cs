@@ -100,6 +100,7 @@ public class LevelManager : MonoBehaviour
             {
                 if (!GameplayMusicIsPlaying)
                 {
+                    soundManager.StopMusic();
                     soundManager.PlayAudio("Gameplay");
                     GameplayMusicIsPlaying = true;
                 }
