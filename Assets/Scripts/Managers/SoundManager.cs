@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource audioSource; // for looping audio
+    public AudioSource audioSource; // for looping audio
     [SerializeField] private AudioSource sfxSource; // for sfx
     [SerializeField] private AudioSource playerSFX; // for player walk, needed to prevent sfx interuptions. 
 

@@ -119,7 +119,9 @@ public class UIManager : MonoBehaviour
 
     [Header("End Video")]
     public VideoPlayer videoPlayer;
+    public Button endVideoSkipButton;
     private bool skipVideo = false;
+
 
     private void Start()
     {
@@ -207,10 +209,29 @@ public class UIManager : MonoBehaviour
 
     public void UI_EndGameVideo()
     {
+        soundManager.StopMusic();
         playerInput.actions.FindAction("Pause").Disable();
         puzzle3IsOpen = false;
         puzzle2IsOpen = false;
         PlayerMovement(false);
+
+        endVideoSkipButton.onClick.RemoveListener(() => UI_Credits());
+        endVideoSkipButton.onClick.RemoveListener(() => levelManager.LoadScene("MainMenu"));
+
+        switch (gameManager.gameState)
+        {
+            case GameManager.GameState.MainMenu:
+                endVideoSkipButton.onClick.AddListener(() => UI_Credits());
+                endVideoSkipButton.GetComponentInChildren<TMP_Text>().text = "Back to Credits";
+                break;
+            case GameManager.GameState.GameEnd:
+                endVideoSkipButton.onClick.AddListener(() => levelManager.LoadScene("MainMenu"));
+                endVideoSkipButton.GetComponentInChildren<TMP_Text>().text = "Skip";
+                break;
+            default:
+                break;
+        }
+
         CurrentUI(EndGameVideoUI, false);
         StartCoroutine(WaitForVideoEnd());
     }
@@ -222,10 +243,21 @@ public class UIManager : MonoBehaviour
         while (videoPlayer.isPlaying && !skipVideo)
             yield return null;
 
-        if(skipVideo)
+        if (skipVideo)
             videoPlayer.Stop();
 
-        CurrentUI(EndGameUI, false);
+        if (!videoPlayer.isPlaying)
+        {
+            switch (gameManager.gameState)
+            {
+                case GameManager.GameState.MainMenu:
+                    UI_Credits();
+                    break;
+                case GameManager.GameState.GameEnd:
+                    levelManager.LoadScene("MainMenu");
+                    break;
+            }
+        }
     }
 
     public void SkipVideo()
@@ -235,6 +267,10 @@ public class UIManager : MonoBehaviour
 
     public void UI_EndGame()
     {
+        if (!soundManager.audioSource.isPlaying)
+        {
+            soundManager.PlayAudio("MainMenu");
+        }
         playerInput.actions.FindAction("Pause").Disable();
         puzzle3IsOpen = false;
         puzzle2IsOpen = false;
@@ -292,75 +328,79 @@ public class UIManager : MonoBehaviour
 
     public void UI_Credits()
     {
+        if (!soundManager.audioSource.isPlaying)
+        {
+            soundManager.PlayAudio("MainMenu");
+        }
         CurrentUI(CreditsUI, false);
     }
     #endregion
 
     #region Controller Connection
     public void CheckControllerConnection()
-{
-    // Initial check for connected gamepads
-    UpdateGamepadConnection(Gamepad.all.Count > 0);
-
-    // Subscribe to device change events
-    InputSystem.onDeviceChange += (device, change) =>
     {
-        switch (change)
+        // Initial check for connected gamepads
+        UpdateGamepadConnection(Gamepad.all.Count > 0);
+
+        // Subscribe to device change events
+        InputSystem.onDeviceChange += (device, change) =>
         {
-            case InputDeviceChange.Added:
-                if (device is Gamepad)
-                {
-                    UpdateGamepadConnection(true);
-                }
-                break;
+            switch (change)
+            {
+                case InputDeviceChange.Added:
+                    if (device is Gamepad)
+                    {
+                        UpdateGamepadConnection(true);
+                    }
+                    break;
 
-            case InputDeviceChange.Removed:
-                if (device is Gamepad)
-                {
-                    UpdateGamepadConnection(false);
-                }
-                break;
+                case InputDeviceChange.Removed:
+                    if (device is Gamepad)
+                    {
+                        UpdateGamepadConnection(false);
+                    }
+                    break;
+            }
+        };
+    }
+
+    private void UpdateGamepadConnection(bool isConnected)
+    {
+        isGamepadConnected = isConnected;
+
+        if (isGamepadConnected)
+        {
+            ShowBinding(gamepadBindings);
+            SelectButtonForActiveUI(); // Ensure the correct button is selected
         }
-    };
-}
-
-private void UpdateGamepadConnection(bool isConnected)
-{
-    isGamepadConnected = isConnected;
-
-    if (isGamepadConnected)
-    {
-        ShowBinding(gamepadBindings);
-        SelectButtonForActiveUI(); // Ensure the correct button is selected
+        else
+        {
+            ShowBinding(keyboardBindings);
+            UnselectCurrentButton(); // Unselect any selected button
+        }
     }
-    else
-    {
-        ShowBinding(keyboardBindings);
-        UnselectCurrentButton(); // Unselect any selected button
-    }
-}
 
-private void SelectButtonForActiveUI()
-{
-    if (MainMenuUI.activeSelf) mainMenuTarget.Select();
-    else if (AcknowledgementUI.activeSelf) acknowledgmentTarget.Select();
-    else if (Room2Puzzle.activeSelf) puzzle2Target.Select();
-    else if (Room3Puzzle.activeSelf) puzzle3Target.Select();
-    else if (PauseUI.activeSelf) pauseTarget.Select();
-    else if (OptionsUI.activeSelf) optionsTarget.Select();
-    else if (CreditsUI.activeSelf) creditsTarget.Select();
-    else if (ConfirmationUI.activeSelf) confirmationTarget.Select();
-    else if (ControlsUI.activeSelf) controlsTarget.Select();
-    else if (DialogueUIOptions.activeSelf) dialogueOptionsTarget.Select();
-}
-
-private void UnselectCurrentButton()
-{
-    if (eventSystem.currentSelectedGameObject != null)
+    private void SelectButtonForActiveUI()
     {
-        eventSystem.SetSelectedGameObject(null);
+        if (MainMenuUI.activeSelf) mainMenuTarget.Select();
+        else if (AcknowledgementUI.activeSelf) acknowledgmentTarget.Select();
+        else if (Room2Puzzle.activeSelf) puzzle2Target.Select();
+        else if (Room3Puzzle.activeSelf) puzzle3Target.Select();
+        else if (PauseUI.activeSelf) pauseTarget.Select();
+        else if (OptionsUI.activeSelf) optionsTarget.Select();
+        else if (CreditsUI.activeSelf) creditsTarget.Select();
+        else if (ConfirmationUI.activeSelf) confirmationTarget.Select();
+        else if (ControlsUI.activeSelf) controlsTarget.Select();
+        else if (DialogueUIOptions.activeSelf) dialogueOptionsTarget.Select();
     }
-}
+
+    private void UnselectCurrentButton()
+    {
+        if (eventSystem.currentSelectedGameObject != null)
+        {
+            eventSystem.SetSelectedGameObject(null);
+        }
+    }
 
     private IEnumerator SelectButtonAfterDelay()
     {
