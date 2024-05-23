@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
     {
         if (Enum.TryParse(state, out GameState gameState))
             LoadState(gameState);
+        else if (state == "beforeSettings")
+            LoadState(beforeSettings);
         else
             Debug.LogError("Invalid state: " + state);
     }
@@ -67,7 +69,7 @@ public class GameManager : MonoBehaviour
     {
         if (gameState == GameState.Pause)
             SetState(GameState.Gameplay);
-        else if(gameState == GameState.Gameplay)
+        else if (gameState == GameState.Gameplay)
             SetState(GameState.Pause);
         else if (gameState == GameState.Options)
             LoadState(beforeSettings);

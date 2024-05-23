@@ -121,7 +121,6 @@ public class UIManager : MonoBehaviour
     public VideoPlayer videoPlayer;
     private bool skipVideo = false;
 
-
     private void Start()
     {
         isHoldingItem = false;
@@ -247,6 +246,7 @@ public class UIManager : MonoBehaviour
     // UI confirmation for exiting to main menu or quit
     public void UI_Confirmation(string name)
     {
+        gameManager.beforeSettings = gameManager.gameState;
         yesButton.onClick.RemoveAllListeners(); // removes listeners from the yes button.
         CurrentUI(ConfirmationUI, true);
         // Based on the string name, it will decide what's shown on the confirmation page.
