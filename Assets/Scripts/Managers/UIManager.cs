@@ -161,7 +161,6 @@ public class UIManager : MonoBehaviour
     public void UI_Acknowledgement()
     {
         CurrentUI(AcknowledgementUI, false);
-        acknowledgmentTarget.Select();
     }
 
     public void UI_Gameplay()
@@ -299,67 +298,69 @@ public class UIManager : MonoBehaviour
 
     #region Controller Connection
     public void CheckControllerConnection()
+{
+    // Initial check for connected gamepads
+    UpdateGamepadConnection(Gamepad.all.Count > 0);
+
+    // Subscribe to device change events
+    InputSystem.onDeviceChange += (device, change) =>
     {
-        // Initial check for connected gamepads
-        if (Gamepad.all.Count > 0)
+        switch (change)
         {
-            isGamepadConnected = true;
-            ShowBinding(gamepadBindings);
-            SelectButtonForActiveUI(); // Ensure the correct button is selected
+            case InputDeviceChange.Added:
+                if (device is Gamepad)
+                {
+                    UpdateGamepadConnection(true);
+                }
+                break;
+
+            case InputDeviceChange.Removed:
+                if (device is Gamepad)
+                {
+                    UpdateGamepadConnection(false);
+                }
+                break;
         }
-        else
-        {
-            isGamepadConnected = false;
-            ShowBinding(keyboardBindings);
-        }
+    };
+}
 
-        // Subscribe to device change events
-        InputSystem.onDeviceChange += (device, change) =>
-        {
-            switch (change)
-            {
-                case InputDeviceChange.Added:
-                    if (device is Gamepad)
-                    {
-                        isGamepadConnected = true;
-                        ShowBinding(gamepadBindings);
-                        SelectButtonForActiveUI(); // Ensure the correct button is selected
-                    }
-                    break;
+private void UpdateGamepadConnection(bool isConnected)
+{
+    isGamepadConnected = isConnected;
 
-                case InputDeviceChange.Removed:
-                    if (device is Gamepad)
-                    {
-                        isGamepadConnected = false;
-                        ShowBinding(keyboardBindings);
-                        UnselectCurrentButton();
-                    }
-                    break;
-            }
-        };
-    }
-
-    private void SelectButtonForActiveUI()
+    if (isGamepadConnected)
     {
-        if (MainMenuUI.activeSelf == true) mainMenuTarget.Select();
-        if (AcknowledgementUI.activeSelf == true) acknowledgmentTarget.Select();
-        if (Room2Puzzle.activeSelf == true) puzzle2Target.Select();
-        if (Room3Puzzle.activeSelf == true) puzzle3Target.Select();
-        if (PauseUI.activeSelf == true) pauseTarget.Select();
-        if (OptionsUI.activeSelf == true) optionsTarget.Select();
-        if (CreditsUI.activeSelf == true) creditsTarget.Select();
-        if (ConfirmationUI.activeSelf == true) confirmationTarget.Select();
-        if (ControlsUI.activeSelf == true) controlsTarget.Select();
-        if (DialogueUIOptions.activeSelf == true) dialogueOptionsTarget.Select();
+        ShowBinding(gamepadBindings);
+        SelectButtonForActiveUI(); // Ensure the correct button is selected
     }
-
-    private void UnselectCurrentButton()
+    else
     {
-        if (eventSystem.currentSelectedGameObject != null)
-        {
-            eventSystem.SetSelectedGameObject(null);
-        }
+        ShowBinding(keyboardBindings);
+        UnselectCurrentButton(); // Unselect any selected button
     }
+}
+
+private void SelectButtonForActiveUI()
+{
+    if (MainMenuUI.activeSelf) mainMenuTarget.Select();
+    else if (AcknowledgementUI.activeSelf) acknowledgmentTarget.Select();
+    else if (Room2Puzzle.activeSelf) puzzle2Target.Select();
+    else if (Room3Puzzle.activeSelf) puzzle3Target.Select();
+    else if (PauseUI.activeSelf) pauseTarget.Select();
+    else if (OptionsUI.activeSelf) optionsTarget.Select();
+    else if (CreditsUI.activeSelf) creditsTarget.Select();
+    else if (ConfirmationUI.activeSelf) confirmationTarget.Select();
+    else if (ControlsUI.activeSelf) controlsTarget.Select();
+    else if (DialogueUIOptions.activeSelf) dialogueOptionsTarget.Select();
+}
+
+private void UnselectCurrentButton()
+{
+    if (eventSystem.currentSelectedGameObject != null)
+    {
+        eventSystem.SetSelectedGameObject(null);
+    }
+}
 
     private IEnumerator SelectButtonAfterDelay()
     {
