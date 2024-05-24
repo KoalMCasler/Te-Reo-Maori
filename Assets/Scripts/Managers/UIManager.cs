@@ -254,7 +254,7 @@ public class UIManager : MonoBehaviour
                     UI_Credits();
                     break;
                 case GameManager.GameState.GameEnd:
-                    levelManager.LoadScene("MainMenu");
+                    UI_EndGame();
                     break;
             }
         }
