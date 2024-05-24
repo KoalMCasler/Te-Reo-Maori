@@ -488,13 +488,13 @@ public class UIManager : MonoBehaviour
         if (keyboardBindings.activeSelf && isGamepadConnected)
         {
             bindingButton.SetActive(true);
-            bindingButton.GetComponent<TextMeshProUGUI>().text = "Gamepad Binding";
+            bindingButton.GetComponentInChildren<TextMeshProUGUI>().text = "Gamepad Binding";
             bindingButton.GetComponent<Button>().onClick.AddListener(() => ShowBinding(gamepadBindings));
         }
         if (gamepadBindings.activeSelf)
         {
             bindingButton.SetActive(true);
-            bindingButton.GetComponent<TextMeshProUGUI>().text = "Keyboard Binding";
+            bindingButton.GetComponentInChildren<TextMeshProUGUI>().text = "Keyboard Binding";
             bindingButton.GetComponent<Button>().onClick.AddListener(() => ShowBinding(keyboardBindings));
         }
     }
