@@ -22,7 +22,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Interactable") == true)
+        if (other.CompareTag("Interactable") == true)
         {
             currentInterObj = other.gameObject;
             currentInterObjScript = currentInterObj.GetComponent<InteractableObject>();
@@ -32,7 +32,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if(other.CompareTag("Interactable") == true)  
+        if (other.CompareTag("Interactable") == true)
         {
             currentInterObj = null;
             indicator.SetActive(false);
@@ -41,52 +41,35 @@ public class PlayerInteraction : MonoBehaviour
 
     void OnInteract()
     {
-        if(currentInterObj == true)
+        if (currentInterObj == true)
         {
-            if(currentInterObjScript.interactType == InteractableObject.InteractType.Info)
+            switch (currentInterObjScript.interactType)
             {
-                currentInterObjScript.Info();
-            }
-            if(currentInterObjScript.interactType == InteractableObject.InteractType.Door)
-            {
-                currentInterObjScript.Door();
-            }
-            if(currentInterObjScript.interactType == InteractableObject.InteractType.Book)
-            {
-                currentInterObjScript.Book();
-            }
-            if(currentInterObjScript.interactType == InteractableObject.InteractType.Artifact)
-            {
-                currentInterObjScript.Artifact();
-            }
-            if(currentInterObjScript.interactType == InteractableObject.InteractType.Picture)
-            {
-                currentInterObjScript.Picture();
-            }
-            if(currentInterObjScript.interactType == InteractableObject.InteractType.NPC)
-            {
-                currentInterObjScript.NPC();
+                case InteractableObject.InteractType.Info: currentInterObjScript.Info(); break;
+                case InteractableObject.InteractType.Book: currentInterObjScript.Book(); break;
+                case InteractableObject.InteractType.Door: currentInterObjScript.Door(); break;
+                case InteractableObject.InteractType.Artifact: currentInterObjScript.Artifact(); break;
+                case InteractableObject.InteractType.Picture: currentInterObjScript.Picture(); break;
+                case InteractableObject.InteractType.NPC: currentInterObjScript.NPC(); break;
             }
         }
         else
-        {
             Debug.Log("Nothing to interact with.");
-        }
     }
 
     void OnBackFromUI()
     {
-        if(gameManager.gameState == GameManager.GameState.Options)
+        if (gameManager.gameState == GameManager.GameState.Options)
         {
             gameManager.PausingState();
             soundManager.PlaySfxAudio("TypeEffect");
         }
-        else if(gameManager.gameState == GameManager.GameState.Pause || gameManager.gameState == GameManager.GameState.Puzzle)
+        else if (gameManager.gameState == GameManager.GameState.Pause || gameManager.gameState == GameManager.GameState.Puzzle)
         {
             gameManager.LoadState("Gameplay");
             soundManager.PlaySfxAudio("Book");
         }
-        else if(UIManager.overlayActive)
+        else if (UIManager.overlayActive)
         {
             UIManager.UI_Gameplay();
             soundManager.PlaySfxAudio("Book");
@@ -95,7 +78,7 @@ public class PlayerInteraction : MonoBehaviour
     }
     void OnOpenPuzzle()
     {
-        if(UIManager.ProjectInfoButton.activeSelf && gameManager.gameState != GameManager.GameState.Puzzle)
+        if (UIManager.ProjectInfoButton.activeSelf && gameManager.gameState != GameManager.GameState.Puzzle)
         {
             gameManager.LoadState("Puzzle");
             soundManager.PlaySfxAudio("Book");

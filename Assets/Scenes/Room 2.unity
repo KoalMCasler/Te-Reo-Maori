@@ -242,7 +242,7 @@ MonoBehaviour:
   uiManager: {fileID: 0}
   dialogueManager: {fileID: 0}
   levelManager: {fileID: 0}
-  interactType: 5
+  interactType: 4
   isLocked: 0
   isClosed: 0
   destinantionRoom: 
@@ -250,7 +250,7 @@ MonoBehaviour:
   newDoor: {fileID: 0}
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
-  infoImage: {fileID: 0}
+  infoGameObject: {fileID: 0}
   InfoTextDelay: 3
   message: 
   textSpeed: 0.01
@@ -268,10 +268,9 @@ MonoBehaviour:
     have for your friends.
 
 
-    The figure Aroha has its hands raised towards its
-    mouth, as if in the act of ingesting or savoring something. This could symbolize
-    the internalization of aroha, suggesting the importance of taking love and compassion
-    into oneself and embodying these values in daily life.'
+    The figure Aroha, with hands raised towards its
+    mouth, this could symbolize the internalization of love and compassion, emphasizing
+    the importance of embodying these values in daily life.'
   pictureIndex: 0
 --- !u!212 &65435298
 SpriteRenderer:
@@ -48135,7 +48134,7 @@ MonoBehaviour:
   uiManager: {fileID: 0}
   dialogueManager: {fileID: 0}
   levelManager: {fileID: 0}
-  interactType: 5
+  interactType: 4
   isLocked: 0
   isClosed: 0
   destinantionRoom: 
@@ -48143,7 +48142,7 @@ MonoBehaviour:
   newDoor: {fileID: 0}
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
-  infoImage: {fileID: 0}
+  infoGameObject: {fileID: 0}
   InfoTextDelay: 3
   message: 
   textSpeed: 0.01
@@ -48480,7 +48479,7 @@ MonoBehaviour:
   uiManager: {fileID: 0}
   dialogueManager: {fileID: 0}
   levelManager: {fileID: 0}
-  interactType: 5
+  interactType: 4
   isLocked: 0
   isClosed: 0
   destinantionRoom: 
@@ -48488,7 +48487,7 @@ MonoBehaviour:
   newDoor: {fileID: 0}
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
-  infoImage: {fileID: 0}
+  infoGameObject: {fileID: 0}
   InfoTextDelay: 3
   message: 
   textSpeed: 0.01
@@ -48502,14 +48501,10 @@ MonoBehaviour:
   apartOfPuzzle: 0
   picture: {fileID: 21300000, guid: 0868b8453ad21ac4d9d8915081307ef6, type: 3}
   pictureTitle: 
-  pictureText: 'Quest for excellence in everything we do. Striving for the most out
-    of everything we do.
-
-
-    In this carving Ihi has open mouth signifies the vocalization
-    and expression of aspirations and goals. The split tongue could symbolize the
-    power of speech and the duality of wisdom, guiding one''s journey towards achieving
-    greatness'
+  pictureText: "Quest for excellence and striving for the most out of everything
+    we do.\n\nIn this carving, Ihi\u2019s open mouth represents the vocalization
+    of aspirations, while the split tongue symbolizes the power of speech and the
+    duality of wisdom in guiding one\u2019s journey to greatness."
   pictureIndex: 0
 --- !u!212 &1281013533
 SpriteRenderer:
@@ -49989,6 +49984,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1678966699, guid: bc70ccbe4f4437641bfc7f91b96d2159, type: 3}
     - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
+      propertyPath: interactType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
       propertyPath: InfoTextDelay
       value: 5
       objectReference: {fileID: 0}
@@ -50125,7 +50124,7 @@ MonoBehaviour:
   uiManager: {fileID: 0}
   dialogueManager: {fileID: 0}
   levelManager: {fileID: 0}
-  interactType: 5
+  interactType: 4
   isLocked: 0
   isClosed: 0
   destinantionRoom: 
@@ -50133,7 +50132,7 @@ MonoBehaviour:
   newDoor: {fileID: 0}
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
-  infoImage: {fileID: 0}
+  infoGameObject: {fileID: 0}
   InfoTextDelay: 3
   message: 
   textSpeed: 0.01
@@ -50240,8 +50239,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00069999695, y: -3.1961, z: 0}
-    m_Extent: {x: 0.9986, y: 3.9455998, z: 0}
+    m_Center: {x: 0.0067499876, y: -3.19695, z: 0}
+    m_Extent: {x: 0.99875, y: 3.9535499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

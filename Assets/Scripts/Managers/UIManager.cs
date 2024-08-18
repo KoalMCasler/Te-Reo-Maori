@@ -122,6 +122,10 @@ public class UIManager : MonoBehaviour
     public Button endVideoSkipButton;
     private bool skipVideo = false;
 
+    [Header("Info Image")]
+    public Image infoImage;
+    public TextMeshProUGUI infoTextImage;
+    public bool StopCoroutineBool = false;
 
     private void Start()
     {
@@ -178,6 +182,10 @@ public class UIManager : MonoBehaviour
     // Shows The UI for the puzzle depending on the room name.
     public void UI_Puzzle(string name)
     {
+        StopCoroutineBool = true;
+        infoImage.enabled = false;
+        infoTextImage.text = "";
+
         PlayerMovement(false);
         playerInput.actions.FindAction("Pause").Disable();
         switch (name)
@@ -477,7 +485,7 @@ public class UIManager : MonoBehaviour
 
         activeBind.SetActive(true);
         SetBindingButton();
-        StartCoroutine(SelectButtonAfterDelay());
+        //StartCoroutine(SelectButtonAfterDelay());
     }
 
     public void SetBindingButton()

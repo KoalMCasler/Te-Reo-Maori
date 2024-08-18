@@ -10,7 +10,7 @@ using Unity.VisualScripting;
 public class InteractableObject : MonoBehaviour
 {
     //All objects
-    public enum InteractType { Nothing, Info, Dialogue, Book, Door, Artifact, Picture, NPC, }
+    public enum InteractType { Nothing, Info, Book, Door, Artifact, Picture, NPC, }
 
     // Managers
     [Header("Managers")]
@@ -34,7 +34,8 @@ public class InteractableObject : MonoBehaviour
     //Info
     [Header("Info Object variables")]
     [SerializeField] private TextMeshProUGUI infoText;
-    [SerializeField] private GameObject infoImage;
+    [SerializeField] private GameObject infoGameObject;
+    private Image infoPictureImage;
     public float InfoTextDelay = 3;
     public string message;
     public float textSpeed = 0.01f;
@@ -63,8 +64,7 @@ public class InteractableObject : MonoBehaviour
 
     [Header("Picture Index")]
     public int pictureIndex;
-
-    private Coroutine infoCoroutine;
+    public Coroutine infoCoroutine;
 
     void Start()
     {
@@ -74,25 +74,17 @@ public class InteractableObject : MonoBehaviour
         infoText = GameObject.Find("InfoText").GetComponent<TextMeshProUGUI>();
         infoText.text = null;
         isDisplayingText = false;
-        if (interactType == InteractType.Nothing)
-        {
-            Debug.Log(this.name + " Has a type of nothing, Was this by mistake?");
-        }
 
-        if (interactType == InteractType.Door)
+        switch (interactType)
         {
-            levelManager = FindObjectOfType<LevelManager>();
-            isLocked = true;
-            isClosed = true;
-            doorLight.SetActive(false);
-        }
-        if (interactType == InteractType.NPC)
-        {
-            dialogueManager = FindObjectOfType<DialogueManager>();
-        }
-        if(interactType == InteractType.Book)
-        {
-            bookSprite = GetComponent<SpriteRenderer>();
+            case InteractType.Nothing: Debug.Log(this.name + " Has a type of nothing, was this by mistake?"); break;
+            case InteractType.NPC: dialogueManager = FindObjectOfType<DialogueManager>(); break;
+            case InteractType.Book: bookSprite = GetComponent<SpriteRenderer>(); break;
+            case InteractType.Door:
+                levelManager = FindObjectOfType<LevelManager>();
+                isLocked = true;
+                isClosed = true;
+                doorLight.SetActive(false); break;
         }
     }
 
@@ -101,24 +93,20 @@ public class InteractableObject : MonoBehaviour
         soundManager.PlaySfxAudio("Book");
         uiManager.ShowBook(picture, pictureText);
         bookSprite.sprite = newBookSprite;
-
     }
 
     public void Artifact()
     {
         soundManager.PlaySfxAudio("Book");
         uiManager.ShowArtifact(picture, pictureText, this.name);
-
     }
 
     public void Picture()
     {
         soundManager.PlaySfxAudio("Book");
 
-        if (apartOfPuzzle)
-            finalText = string.Format("{0} \n {1}", pictureTitle, pictureText);
-        else
-            finalText = string.Format("{0}", pictureText);
+        if (apartOfPuzzle) finalText = string.Format("{0} \n {1}", pictureTitle, pictureText);
+        else finalText = string.Format("{0}", pictureText);
 
 
         if (isVertical == false)
@@ -146,88 +134,76 @@ public class InteractableObject : MonoBehaviour
                 {
                     isDisplayingText = true;
                     if (infoCoroutine != null)
-                    {
                         StopAllCoroutines();
-                        infoImage = GameObject.Find("Image_Info");
-                        infoImage.GetComponent<Image>().enabled = false;
-                    }
 
                     infoCoroutine = StartCoroutine(ShowInfo(message, InfoTextDelay));
                 }
             }
             else
-            {
-                OpenDoor();
-
-                if (infoCoroutine != null)
-                {
-                    StopAllCoroutines();
-                    infoImage = GameObject.Find("Image_Info");
-                    infoImage.GetComponent<Image>().enabled = false;
-                }
-            }
-        }
-        else if (!isClosed)
-        {
-            levelManager.LoadScene(destinantionRoom);
+                StartCoroutine(OpenDoor());
         }
     }
 
-    // Changes door sprite
-    private void OpenDoor()
+    // Changes door sprite & changes to next room
+    private IEnumerator OpenDoor()
     {
         doorSprite.sprite = newDoor;
         isClosed = false;
         FindObjectOfType<SoundManager>().PlaySfxAudio("Door");
+
+        yield return new WaitForSeconds(1f);
+
+        levelManager.LoadScene(destinantionRoom);
     }
 
     // All needed for info text.
     public void Info()
     {
-        if (!isDisplayingText)
+        if (hasFog)
         {
-            isDisplayingText = true;
-            if (hasFog)
-            {
-                fogAmount.SetFloat("FogAmount", 0);
-                fogAmount.SetFloat("Lifetime", 1);
-                FindObjectOfType<UIManager>().ShowProjectInfo();
-            }
-
-            if (infoCoroutine != null)
-                StopAllCoroutines();
-
-            infoCoroutine = StartCoroutine(ShowInfo(message, InfoTextDelay));
-
-            if (hasFog)
-                StartCoroutine(GoAwayFog());
+            fogAmount.SetFloat("FogAmount", 0);
+            fogAmount.SetFloat("Lifetime", 1);
+            FindObjectOfType<UIManager>().ShowProjectInfo();
         }
+
+        if (infoCoroutine != null)
+            StopAllCoroutines();
+
+        infoCoroutine = StartCoroutine(ShowInfo(message, InfoTextDelay));
+
+        if (hasFog)
+            StartCoroutine(GoAwayFog());
     }
 
     IEnumerator ShowInfo(string message, float delay)
     {
-        infoImage = GameObject.Find("Image_Info");
-        infoImage.GetComponent<Image>().enabled = true;
+        infoPictureImage = GameObject.Find("Image_Info").GetComponent<Image>();
+        infoPictureImage.enabled = true;
         StartCoroutine(ScrollingText(message));
         yield return new WaitForSeconds(delay);
         infoText.text = "";
         isDisplayingText = false;
-        infoImage.GetComponent<Image>().enabled = false;
+        infoPictureImage.enabled = false;
 
         infoCoroutine = null;
     }
 
-    // Sets fog inactive after 2 seconds
+    // Sets fog inactive after 1.5 seconds
     IEnumerator GoAwayFog()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
         fog.SetActive(false);
     }
 
     private IEnumerator ScrollingText(string currentLine)
     {
+        uiManager = FindObjectOfType<UIManager>();
+        uiManager.StopCoroutineBool = false;
+
         for (int i = 0; i < currentLine.Length + 1; i++)
         {
+            if (uiManager.StopCoroutineBool)
+                break;
             infoText.text = currentLine.Substring(0, i);
             FindObjectOfType<SoundManager>().PlaySfxAudio("TypeEffect");
             yield return new WaitForSeconds(textSpeed);

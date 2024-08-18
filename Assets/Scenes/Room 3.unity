@@ -149,6 +149,10 @@ PrefabInstance:
         you end it with food. All of this is done without speaking English."
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: interactType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
       value: 8
       objectReference: {fileID: 0}
@@ -229,6 +233,10 @@ PrefabInstance:
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
       value: Commemorating the return of University Land to the Waikato Tainui
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: interactType
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
@@ -16966,8 +16974,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0034499764, y: -3.19705, z: 0}
-    m_Extent: {x: 0.99855, y: 3.94705, z: 0}
+    m_Center: {x: 0.0073499978, y: -3.198, z: 0}
+    m_Extent: {x: 0.99965, y: 3.9424, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17090,9 +17098,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
-      value: "This is where the British stormed Waikato in order to destroy the king
-        movement. While visiting, we did an exercise where we were British soldiers
-        forced to move towards m\u0101ori children."
+      value: This is where the British advanced into Waikato to crush the King movement.
+        Reflecting on this moment not only highlights the historical events here
+        but also echoes the struggles faced by our own people.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: interactType
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
@@ -17185,6 +17197,10 @@ PrefabInstance:
       value: Learning how to make a poi. These poi were made from yarn, plastic bags
         and tape. Poi are used in various ceremonies but are often used during Kapa
         Haka events.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: interactType
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
@@ -17392,8 +17408,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0058499873, y: -3.20325, z: 0}
-    m_Extent: {x: 0.99975, y: 3.9493499, z: 0}
+    m_Center: {x: -0.0014500022, y: -3.20665, z: 0}
+    m_Extent: {x: 0.99595, y: 3.94925, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17512,9 +17528,13 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 392b1ddea77563b418668a9ad04eefb2, type: 3}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
-      value: After some of the experiences we've learned about, we got to meet with
-        some year 10 students. They taught us things about their culture and we taught
-        them things as well.
+      value: "Indigenous peoples from Turtle Island and M\u0101ori from New Zealand
+        connect deeply, having shared their experiences and perspectives on being
+        indigenous."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: interactType
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
@@ -17530,7 +17550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30
+      value: -32
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17926,8 +17946,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00395, y: -3.1991, z: 0}
-    m_Extent: {x: 1.00105, y: 3.9572, z: 0}
+    m_Center: {x: 0.0056500137, y: -3.1951, z: 0}
+    m_Extent: {x: 0.99525, y: 3.9513, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -18012,7 +18032,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1086237562}
-  - component: {fileID: 1086237561}
   - component: {fileID: 1086237563}
   - component: {fileID: 1086237565}
   - component: {fileID: 1086237564}
@@ -18023,58 +18042,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!212 &1086237561
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086237559}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -2045815319, guid: 699e9e47552866d4fb06add2aef59b41, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 4.001502, y: 4}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!4 &1086237562
 Transform:
   m_ObjectHideFlags: 0
@@ -18089,6 +18056,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 344870126}
+  - {fileID: 1973637706}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1086237563
@@ -18107,7 +18075,7 @@ MonoBehaviour:
   uiManager: {fileID: 0}
   dialogueManager: {fileID: 0}
   levelManager: {fileID: 0}
-  interactType: 7
+  interactType: 6
   isLocked: 0
   isClosed: 0
   destinantionRoom: 
@@ -18115,7 +18083,7 @@ MonoBehaviour:
   newDoor: {fileID: 0}
   doorLight: {fileID: 0}
   infoText: {fileID: 0}
-  infoImage: {fileID: 0}
+  infoGameObject: {fileID: 0}
   InfoTextDelay: 3
   message: 
   textSpeed: 0.01
@@ -18167,8 +18135,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.001502, y: 4}
-    newSize: {x: 4.001502, y: 4}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -18197,9 +18165,10 @@ MonoBehaviour:
   - "The first M\u0101ori King was P\u014Dtatau Te Wherowhero, who was crowned in
     1858. The <b>Kingitanga</b> movement has continued to the present day, with the
     current king being T\u016Bheitia Paki. "
-  - "The monarchy plays a crucial role in advocating for M\u0101ori rights and preserving
-    M\u0101ori culture and traditions. The Waikato region is particularly significant
-    as it is the heartland of the <b>Kingitanga</b> movement."
+  - "The monarchy plays a vital role in this ongoing mission, with the current king,
+    continuing to represent and uphold the principles established by his predecessor.
+    The Waikato region, as the heartland of the <b>Kingitanga</b>, holds profound
+    cultural and historical importance for M\u0101ori people."
   optionalDialogue3:
   - " Despite eventually capturing the p\u0101, the battle was costly for the British
     and highlighted the M\u0101ori's strong resistance. The fall of <b>Rangiriri</b>
@@ -18218,8 +18187,12 @@ MonoBehaviour:
     M\u0101ori community."
   optionalDialogue5:
   - "Included in a global citizenship education course, this picture features a group
-    of Year 10 M\u0101ori students, embodying the spirit of <b>rangatahi</b>, or
-    youth, engaged in learning about global issues and fostering cross-cultural understanding"
+    from North Island College, Nova Scotia Community College and a group of Year
+    10 M\u0101ori students, embodying the spirit of <b>rangatahi</b>, or youth, engaged
+    in learning about global issues and fostering cross-cultural understanding"
+  - The day showcased diverse aspects of each culture, featuring dances, songs, and
+    languages, while highlighting what makes each indigenous community integral to
+    their land.
   optionalDialogue6: []
   outroDialogue:
   - Thanks for visiting!
@@ -18290,8 +18263,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0020499825, y: -3.1984499, z: 0}
-    m_Extent: {x: 1.00495, y: 3.94155, z: 0}
+    m_Center: {x: -0.001150012, y: -3.1990502, z: 0}
+    m_Extent: {x: 0.99635, y: 3.95665, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19186,6 +19159,10 @@ PrefabInstance:
       value: Teaching Maori Students about Mi'kmaq culture
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: interactType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
       value: 5
       objectReference: {fileID: 0}
@@ -19391,8 +19368,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0020499825, y: -3.20135, z: 0}
-    m_Extent: {x: 1.0044501, y: 3.9511502, z: 0}
+    m_Center: {x: -0.0019500256, y: -3.1973, z: 0}
+    m_Extent: {x: 0.99825, y: 3.9429998, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -19433,10 +19410,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
-      value: The settlement, reached in 1995, included a formal apology from the
-        Crown, financial compensation, and the return of some confiscated lands.
-        The Crown's apology acknowledged the unjust confiscation and its impacts,
-        aiming to rebuild a partnership based on mutual respect and cooperation.
+      value: In 1995, a settlement included a Crown apology, financial compensation,
+        and the return of some lands, aiming to acknowledge past wrongs and rebuild
+        a respectful partnership.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: interactType
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
@@ -19452,7 +19432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19579,6 +19559,10 @@ PrefabInstance:
     - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
       propertyPath: textSpeed
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
+      propertyPath: interactType
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
       propertyPath: destinantionRoom
@@ -21755,8 +21739,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0011499822, y: -3.2002501, z: 0}
-    m_Extent: {x: 0.99004996, y: 3.94695, z: 0}
+    m_Center: {x: -0.0024499893, y: -3.2019, z: 0}
+    m_Extent: {x: 0.99605, y: 3.9531002, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21837,8 +21821,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0044499934, y: -3.1993, z: 0}
-    m_Extent: {x: 0.99405, y: 3.9398, z: 0}
+    m_Center: {x: 0.0019999743, y: -3.1974, z: 0}
+    m_Extent: {x: 1.0029, y: 3.949, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67442,6 +67426,90 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1973637705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1973637706}
+  - component: {fileID: 1973637707}
+  m_Layer: 0
+  m_Name: Square
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1973637706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973637705}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1086237562}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1973637707
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973637705}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -2037148769, guid: 699e9e47552866d4fb06add2aef59b41, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &2133296903
 GameObject:
   m_ObjectHideFlags: 0
@@ -67590,8 +67658,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.006450027, y: -3.19945, z: 0}
-    m_Extent: {x: 0.99605, y: 3.95475, z: 0}
+    m_Center: {x: 0.00044998527, y: -3.19595, z: 0}
+    m_Extent: {x: 0.99695003, y: 3.9482498, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -67729,8 +67797,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureText
-      value: "Founded in 1858, with the aim of uniting M\u0101ori under a single
-        sovereign and because The Crown didn't understand chiefs, it became this."
+      value: "The King Movement aimed to establish a M\u0101ori sovereign authority
+        to negotiate with the Crown on equal terms and to preserve M\u0101ori land
+        and rights."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
+      propertyPath: interactType
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5824327489472372441, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: pictureIndex
@@ -67746,7 +67819,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 6042191123389186146, guid: d59b8c77bde2ed148bfcbfc257c7a1e3, type: 3}
       propertyPath: m_LocalPosition.y

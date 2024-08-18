@@ -22726,7 +22726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: interactType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: newBookSprite
@@ -25071,8 +25071,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00515002, y: -4.8828497, z: 0}
-    m_Extent: {x: 1.0030501, y: 5.62265, z: 0}
+    m_Center: {x: 0.0026499927, y: -4.8805, z: 0}
+    m_Extent: {x: 0.99955, y: 5.6275997, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25153,8 +25153,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00024998188, y: -4.87845, z: 0}
-    m_Extent: {x: 1.00375, y: 5.62515, z: 0}
+    m_Center: {x: 0.002849996, y: -4.8745003, z: 0}
+    m_Extent: {x: 0.99245, y: 5.6265, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25235,8 +25235,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0020500124, y: -4.869, z: 0}
-    m_Extent: {x: 0.99885, y: 5.6247, z: 0}
+    m_Center: {x: 0.0069000125, y: -4.8792, z: 0}
+    m_Extent: {x: 1.0011001, y: 5.6285, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -25322,7 +25322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: interactType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: newBookSprite
@@ -25409,8 +25409,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00090003014, y: -4.8793497, z: 0}
-    m_Extent: {x: 1.0022, y: 5.62805, z: 0}
+    m_Center: {x: 0.0045000017, y: -4.8685, z: 0}
+    m_Extent: {x: 0.9985, y: 5.6253, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -26015,7 +26015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: interactType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: newBookSprite
@@ -26398,8 +26398,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00055003166, y: -4.87545, z: 0}
-    m_Extent: {x: 1.00595, y: 5.6269503, z: 0}
+    m_Center: {x: -0.0020999908, y: -4.8749, z: 0}
+    m_Extent: {x: 1.0059, y: 5.6273003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -26719,7 +26719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: interactType
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6229395284695854257, guid: 25fe28527e2959d42a5b44cc68c1b6a7, type: 3}
       propertyPath: newBookSprite
@@ -26803,6 +26803,10 @@ PrefabInstance:
       propertyPath: doorLight
       value: 
       objectReference: {fileID: 4865820670912236909}
+    - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
+      propertyPath: interactType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8837261881501411051, guid: 71b574cd6d318a84baa6ae6e91e7eafc, type: 3}
       propertyPath: InfoTextDelay
       value: 5

@@ -49,6 +49,7 @@ public class DialogueManager : MonoBehaviour
         activeDialogue = dialogue;
         dialogueName.text = activeDialogue.nameOfInteraction;
         sentences.Clear();
+
         foreach(string currentLine in activeDialogue.introDialogue)
         {
             sentences.Enqueue(currentLine);
@@ -85,6 +86,7 @@ public class DialogueManager : MonoBehaviour
 
             string sentence = sentences.Dequeue();
             skipText = false;
+
             displayLineCoroutine = StartCoroutine(DisplayLine(sentence));
         }
     }
